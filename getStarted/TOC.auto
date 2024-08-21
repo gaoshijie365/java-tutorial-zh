@@ -1,11 +1,11 @@
 
 #define TOPOFTRAIL yesplease
 
-<ul><li class="tocli"><a href="intro/index.html">The Java Technology Phenomenon</a>
+<ul><li class="tocli"><a href="intro/index.html">Java 技术现象</a>
 <ul>
-<li class="tocli"><a href="intro/definition.html">About the Java Technology</a></li>
-<li class="tocli"><a href="intro/cando.html">What Can Java Technology Do?</a></li>
-<li class="tocli"><a href="intro/changemylife.html">How Will Java Technology Change My Life?</a>
+<li class="tocli"><a href="intro/definition.html">关于 Java 技术</a></li>
+<li class="tocli"><a href="intro/cando.html">Java 技术可以做什么？</a></li>
+<li class="tocli"><a href="intro/changemylife.html">Java 技术将如何改变我们的生活？</a>
 </li>
 </ul>
 </li>
