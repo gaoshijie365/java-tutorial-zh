@@ -10,7 +10,7 @@
 </li>
 <li class="tocli"><a href="basics/index.html">JDBC Basics</a>
 <ul>
-<li class="tocli"><a href="basics/gettingstarted.html">Getting Started</a></li>
+<li class="tocli"><a href="basics/gettingstarted.html">入门</a></li>
 <li class="tocli"><a href="basics/processingsqlstatements.html">Processing SQL Statements with JDBC</a></li>
 <li class="tocli"><a href="basics/connecting.html">Establishing a Connection</a></li>
 <li class="tocli"><a href="basics/sqldatasources.html">Connecting with DataSource Objects</a></li>
