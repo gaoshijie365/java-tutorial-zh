@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>"Hello World!" for Solaris OS, Linux, and Mac OS X (Java&trade; 教程 &gt;
+        <title>针对 Solaris OS，Linux 和 Mac OS X 的 "Hello World!" (Java&trade; 教程 &gt;
             入门 &gt; "Hello World!" 应用)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -477,8 +477,8 @@
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">"Hello World!" 应用</a></div>
 <div class="linkAHEAD"><a href="netbeans.html">针对 NetBeans IDE 的 "Hello World!"</a></div>
-<div class="linkAHEAD"><a href="win32.html">"Hello World!" for Microsoft Windows</a></div>
-<div class="nolinkAHEAD">"Hello World!" for Solaris OS, Linux, and Mac OS X</div>
+<div class="linkAHEAD"><a href="win32.html">针对 Microsoft Windows 的 "Hello World!"</a></div>
+<div class="nolinkAHEAD">针对 Solaris OS，Linux 和 Mac OS X 的 "Hello World!"</div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
@@ -497,35 +497,35 @@
                 <a target="_top" href="win32.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="../application/index.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>"Hello World!" for Solaris OS, Linux, and Mac OS X</h1></div>
+            <div id="PageTitle"><h1>针对 Solaris OS，Linux 和 Mac OS X 的 "Hello World!"</h1></div>
             <div id="PageContent">
 
 <p><a name="unix-top" id="unix-top"></a></p>
     <p>It&#39;s time to write your first application! These detailed instructions are for users of Solaris OS, Linux, and Mac OS X. Instructions for other platforms are in 
-<a class="TutorialLink" target="_top" href="win32.html">"Hello World!" for Microsoft Windows</a> and 
+<a class="TutorialLink" target="_top" href="win32.html">针对 Microsoft Windows 的 "Hello World!"</a> and
 <a class="TutorialLink" target="_top" href="netbeans.html">针对 NetBeans IDE 的 "Hello World!"</a>.</p>
 <p>If you encounter problems with the instructions on this page, consult the 
-<a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>. 
+<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>.
 
 <ul>
-<li><a href="#unix-1">A Checklist</a></li>
-<li><a href="#unix-2">Creating Your First Application</a>
+<li><a href="#unix-1">核对表</a></li>
+<li><a href="#unix-2">创建您的首个应用</a>
     <ul>
-      <li><a href="#unix-2a">Create a Source File</a></li>
-      <li><a href="#unix-2b">Compile the Source File into a <code>.class</code> File</a></li>
-      <li><a href="#unix-2c">Run the Program</a></li>
+      <li><a href="#unix-2a">创建源文件</a></li>
+      <li><a href="#unix-2b">将源文件编译为 <code>.class</code> 文件</a></li>
+      <li><a href="#unix-2c">运行程序</a></li>
     </ul>
 </li>
 </ul>
 
 <hr />
 </p>
-<h2><a name="unix-1" id="unix-1"></a> A Checklist&nbsp; 
+<h2><a name="unix-1" id="unix-1"></a> 核对表&nbsp;
 <img src="../../figures/getStarted/check.gif" width="56" height="68" alt="a checkmark" /></h2>
-<p>To write your first program, you&#39;ll need:</p>
+<p>要编写您的首个程序，需要：</p>
 <ol>
 <li>
-<p style="font-weight: bold">The Java SE Development Kit 8 (JDK 8)</p>
+<p style="font-weight: bold">Java SE 8 开发工具 (JDK 8)</p>
 <p>You can 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the version for Solaris OS, Linux, or Mac OS X</a>. (Make sure you download the <b>JDK</b>, <i>not</i> the JRE.) Consult the 
 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">installation instructions</a>.</p>
@@ -539,23 +539,23 @@
 <p>
           <hr />
 </p>
-<h2><a name="unix-2" id="unix-2"></a> Creating Your First Application</h2>
+<h2><a name="unix-2" id="unix-2"></a> 创建您的首个应用</h2>
 <p>Your first application, <code>HelloWorldApp</code>, will simply display the greeting &quot;Hello world!&quot;. To create this program, you will:</p>
 <ul>
 <li>
-<p style="font-weight: bold">Create a source file</p>
+<p style="font-weight: bold">创建源文件</p>
 <p>A source file contains code, written in the Java programming language, that you and other programmers can understand. You can use any text editor to create and edit source files.</p>
 </li>
 <li>
-<p style="font-weight: bold">Compile the source file into a .class file</p>
+<p style="font-weight: bold">将源文件编译为 .class 文件</p>
 <p>The Java programming language <i>compiler</i> (<code>javac</code>) takes your source file and translates its text into instructions that the Java virtual machine can understand. The instructions contained within this <code>.class</code> file are known as <em>bytecodes</em>.</p>
 </li>
 <li>
-<p style="font-weight: bold">Run the program</p>
+<p style="font-weight: bold">运行程序</p>
 <p>The Java application <i>launcher tool</i> (<code>java</code>) uses the Java virtual machine to run your application.</p>
 </li>
 </ul>
-<h3><a name="unix-2a" id="unix-2a"></a> Create a Source File</h3>
+<h3><a name="unix-2a" id="unix-2a"></a> 创建源文件</h3>
 <p>To create a source file, you have two options:</p>
 <ul>
 <li>
@@ -595,11 +595,12 @@ class HelloWorldApp {
 &nbsp;&nbsp;&nbsp;&nbsp;}
 }
 </pre></div>
-<p><b>Be Careful When You Type</b>
+<p><b>输入时要注意</b>
 <img src="../../figures/getStarted/typeA.gif" width="51" height="36" alt="uppercase letter A" />&nbsp;&nbsp;
 <img src="../../figures/getStarted/typea2.gif" width="51" height="36" alt="lowercase letter A" /></p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Type all code, commands, and file names exactly as shown. Both the compiler (<code>javac</code>) and launcher (<code>java</code>) are <em>case-sensitive</em>, so you must capitalize consistently.<br /><br />
-<code>HelloWorldApp</code> is <em>not</em> the same as <code>helloworldapp</code>.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;输入的所有代码，注释和文件名，包括编译器 (<code>javac</code>) 和启动器
+    (<code>java</code>) 都是大小写敏感的。<br /><br />
+    <code>HelloWorldApp</code> 是 <em>不同于</em> <code>helloworldapp</code> 的。
 <hr /></div>
 <p>Save the code in a file with the name <code>HelloWorldApp.java</code>. In the Pico editor, you do this by typing <b> Ctrl-O</b> and then, at the bottom where you see the prompt <code>File Name to write:</code>, entering the directory in which you wish to create the file, followed by <code>HelloWorldApp.java</code>. For example, if you wish to save <code>HelloWorldApp.java</code> in the directory <code>/tmp/examples/java</code>, then you type <code>/tmp/examples/java/HelloWorldApp.java</code> and press <b> Return</b>.</p>
 <p>You can type <b> Ctrl-X</b> to exit Pico.</p>
@@ -617,9 +618,9 @@ javac HelloWorldApp.java
 <p>The compiler has generated a bytecode file, <code>HelloWorldApp.class</code>. At the prompt, type <code>ls</code> to see the new file that was generated: 
 <span id="figure:secondls.gif">the following figure</span>.</p>
 <center><img src="../../figures/getStarted/secondls.gif" width="754" height="453" align="bottom" alt="Results of the ls command, showing the generated .class file." /></p><p class="FigureCaption">Results of the <code>ls</code> command, showing the generated <code>.class</code> file.</p></center><p>Now that you have a <code>.class</code> file, you can run your program.</p>
-<p>If you encounter problems with the instructions in this step, consult the 
-<a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>.</p>
-<h3><a name="unix-2c" id="unix-2c"></a> Run the Program</h3>
+<p>如果您在这一步遇到了问题， consult the
+<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>.</p>
+<h3><a name="unix-2c" id="unix-2c"></a> 运行程序</h3>
 <p>In the same directory, enter at the prompt:</p>
 <div class="codeblock"><pre>
 java HelloWorldApp
@@ -627,8 +628,8 @@ java HelloWorldApp
 <p>
 <span id="figure:result.gif">The next figure</span> shows what you should now see.</p>
 <center><img src="../../figures/getStarted/result.gif" width="754" height="453" align="bottom" alt="The output prints Hello World! to the screen." /></p><p class="FigureCaption">The output prints "Hello World!" to the screen.</p></center><p>Congratulations! Your program works!</p>
-<p>If you encounter problems with the instructions in this step, consult the 
-<a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>.</p>
+<p>如果您在这一步遇到了问题， consult the
+<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>.</p>
 
 
         </div>
@@ -657,7 +658,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> "Hello World!" for Microsoft Windows
+        <b>上一页：</b> 针对 Microsoft Windows 的 "Hello World!"
         <br /><b>下一页：</b> A Closer Look at the "Hello World!" Application
     </div>
 </body>

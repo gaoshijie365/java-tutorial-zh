@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>"Hello World!" for Microsoft Windows (Java&trade; 教程 &gt;
+        <title>针对 Microsoft Windows 的 "Hello World!" (Java&trade; 教程 &gt;
             入门 &gt; "Hello World!" 应用)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -477,8 +477,8 @@
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">"Hello World!" 应用</a></div>
 <div class="linkAHEAD"><a href="netbeans.html">针对 NetBeans IDE 的 "Hello World!"</a></div>
-<div class="nolinkAHEAD">"Hello World!" for Microsoft Windows</div>
-<div class="linkAHEAD"><a href="unix.html">"Hello World!" for Solaris OS, Linux, and Mac OS X</a></div>
+<div class="nolinkAHEAD">针对 Microsoft Windows 的 "Hello World!"</div>
+<div class="linkAHEAD"><a href="unix.html">针对 Solaris OS，Linux 和 Mac OS X 的 "Hello World!"</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
@@ -497,76 +497,80 @@
                 <a target="_top" href="netbeans.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="unix.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>"Hello World!" for Microsoft Windows</h1></div>
+            <div id="PageTitle"><h1>针对 Microsoft Windows 的 "Hello World!"</h1></div>
             <div id="PageContent">
 
 <p><a name="win32-top" id="win32-top"></a></p>
-<p>It&#39;s time to write your first application! The following instructions are for users of Windows Vista, Windows 7, and Windows 8. Instructions for other platforms are in 
-<a class="TutorialLink" target="_top" href="unix.html">"Hello World!" for Solaris OS, Linux, and Mac OS X</a> and 
-<a class="TutorialLink" target="_top" href="netbeans.html">针对 NetBeans IDE 的 "Hello World!"</a>.</p>
-<p>If you encounter problems with the instructions on this page, consult the 
-<a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>. 
+<p>是时候编写您的首个应用了！下面的操作是针对 Windows Vista，Windows 7 和 Windows 8 的用户的。针对其它平台的操作在
+<a class="TutorialLink" target="_top" href="unix.html">针对 Solaris OS，Linux 和 Mac OS X 的 "Hello World!"</a> 和
+<a class="TutorialLink" target="_top" href="netbeans.html">针对 NetBeans IDE 的 "Hello World!"</a> 中。</p>
+<p>如果您在使用本页的操作时遇到了问题，查看
+<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>。
 <ul>
-  <li><a href="#win32-1">A Checklist</a></li>
-  <li><a href="#win32-2">Creating Your First Application</a>
+  <li><a href="#win32-1">核对表</a></li>
+  <li><a href="#win32-2">创建您的首个应用</a>
     <ul>
-    <li><a href="#win32-2a">Create a Source File</a></li>
-    <li><a href="#win32-2b">Compile the Source File into a <code>.class</code> File</a></li>
-    <li><a href="#win32-2c">Run the Program</a></li>
+    <li><a href="#win32-2a">创建源文件</a></li>
+    <li><a href="#win32-2b">将源文件编译为 <code>.class</code> 文件</a></li>
+    <li><a href="#win32-2c">运行程序</a></li>
     </ul>
 </li>
 </ul>
           <hr />
 </p>
-<h2><a name="win32-1" id="win32-1"></a> A Checklist&nbsp; 
+<h2><a name="win32-1" id="win32-1"></a> 核对表&nbsp;
 <img src="../../figures/getStarted/check.gif" width="56" height="68" alt="a checkmark" /></h2>
-<p>To write your first program, you&#39;ll need:</p>
+<p>要编写您的首个程序，需要：</p>
 <ol>
 <li>
-<p style="font-weight: bold">The Java SE Development Kit 8 (JDK 8)</p>
-<p>You can 
-<a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the Windows version now</a>. (Make sure you download the <b>JDK</b>, <i>not</i> the JRE.) Consult the 
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">installation instructions</a>.</p>
+<p style="font-weight: bold">Java SE 8 开发工具 (JDK 8)</p>
+<p>您可以
+<a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">下载
+    Windows 版本的 JDK
+</a>。 (确保您下载的是 <b>JDK</b>，<i>而不是</i> JRE。) 查看
+<a class="OutsideLink" target="_blank"
+   href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">安装指南</a>。</p>
 </li>
 <li>
-<p style="font-weight: bold">A text editor</p>
-<p>In this example, we&#39;ll use Notepad, a simple editor included with the Windows platforms. You can easily adapt these instructions if you use a different text editor.</p>
+<p style="font-weight: bold">文本编辑器</p>
+<p>本例中，我们使用 Notepad，它是 Windows 自带的编辑器。如果您使用的是其它的文本编辑器，也可以采用本页中的操作。</p>
 </li>
 </ol>
-<p>These two items are all you&#39;ll need to write your first application.</p>
+<p>这两项是您编写首个应用所需的全部。</p>
 <p>
           <hr />
 </p>
-<h2><a name="win32-2" id="win32-2"></a> Creating Your First Application</h2>
+<h2><a name="win32-2" id="win32-2"></a>创建您的首个应用</h2>
 <p>
 </p>
-<p>Your first application, <code>HelloWorldApp</code>, will simply display the greeting &quot;Hello world!&quot;. To create this program, you will:&nbsp;</p>
+<p>您的首个应用 <code>HelloWorldApp</code>，仅仅简单地显示问候语 &quot;Hello world!&quot;。为创建这个程序，您需要：</p>
 <ul>
 <li>
-<p style="font-weight: bold">Create a source file</p>
-<p>A source file contains code, written in the Java programming language, that you and other programmers can understand. You can use any text editor to create and edit source files.</p>
+<p style="font-weight: bold">创建源文件</p>
+<p>源文件包含用 Java 编程语言编写的代码。您可以使用任何文本编辑器创建和编辑源文件。</p>
 </li>
 <li>
-<p style="font-weight: bold">Compile the source file into a .class file</p>
-<p>The Java programming language <i>compiler</i> (<code>javac</code>) takes your source file and translates its text into instructions that the Java virtual machine can understand. The instructions contained within this file are known as <i>bytecodes</i>.</p>
+<p style="font-weight: bold">将源文件编译为 .class 文件</p>
+<p>Java 编程语言 <i>编译器</i> (<code>javac</code>) 接收源文件并将其翻译为 JVM 可以理解的指令。这些指令叫做 <i>字节码</i>。</p>
 </li>
 <li>
-<p style="font-weight: bold">Run the program</p>
-<p>The Java application <i>launcher tool</i> (<code>java</code>) uses the Java virtual machine to run your application.</p>
+<p style="font-weight: bold">运行程序</p>
+<p>Java 应用 <i>启动工具</i> (<code>java</code>) 使用 JVM 运行您的应用。</p>
 </li>
 </ul>
-<h3><a name="win32-2a" id="win32-2a"></a> Create a Source File</h3>
-<p>To create a source file, you have two options:</p>
+<h3><a name="win32-2a" id="win32-2a"></a> 创建源文件</h3>
+<p>要创建源文件，您有两个选项：</p>
 <ul>
 <li>
-<p>You can save the file <code>
-<a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a></code> on your computer and avoid a lot of typing. Then, you can go straight to <a href="#win32-2b">Compile the Source File into a <code>.class</code> File</a>.</p>
+<p>您可以保存 <code>
+<a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a></code>
+    文件到您的电脑上，然后直接 <a href="#win32-2b">将源文件编译为 <code>.class</code> 文件</a>。</p>
 </li>
 <li>
-<p>Or, you can use the following (longer) instructions.</p>
+<p>或者，您可以使用下面的操作。</p>
 </li>
 </ul>
-<p>First, start your editor. You can launch the Notepad editor from the <b> Start</b> menu by selecting <b> Programs &gt; Accessories &gt; Notepad</b>. In a new document, type in the following code:</p>
+<p>首先，打开您的编辑器。您可以在 <b>开始</b> 菜单中选择 <b>Programs &gt; Accessories &gt; Notepad</b> 启动 Notepad 编辑器。在新文档中，键入以下代码：</p>
 <div class="codeblock"><pre>
 /**
 &nbsp;* The HelloWorldApp class implements an application that
@@ -578,32 +582,37 @@ class HelloWorldApp {
 &nbsp;&nbsp;&nbsp;&nbsp;}
 }
 </pre></div>
-<p><b>Be Careful When You Type</b>
+<p><b>输入时要注意</b>
 <img src="../../figures/getStarted/typeA.gif" width="51" height="36" alt="uppercase letter A" />&nbsp;&nbsp;
 <img src="../../figures/getStarted/typea2.gif" width="51" height="36" alt="lowercase letter A" /></p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Type all code, commands, and file names exactly as shown. Both the compiler (<code>javac</code>) and launcher (<code>java</code>) are <em>case-sensitive</em>, so you must capitalize consistently.<br /><br />
-<code>HelloWorldApp</code> is <em>not</em> the same as <code>helloworldapp</code>.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;输入的所有代码，注释和文件名，包括编译器 (<code>javac</code>) 和启动器
+    (<code>java</code>) 都是大小写敏感的。<br /><br />
+    <code>HelloWorldApp</code> 是 <em>不同于</em> <code>helloworldapp</code> 的。
 <hr /></div>
-<p>Save the code in a file with the name <code>HelloWorldApp.java</code>. To do this in Notepad, first choose the <b> File &gt; Save As ...</b> menu item. Then, in the <b> Save As</b> dialog box:</p>
+<p>将代码保存在名称为 <code>HelloWorldApp.java</code> 的文件中。在 Notepad 中，先选择 <b>File &gt; Save As ...</b>，然后在 <b> Save As</b> 对话框：</p>
 <ol>
-<li>Using the <b> Save in</b> combo box, specify the folder (directory) where you&#39;ll save your file. In this example, the directory is <code>myapplication</code> on the <code>C</code> drive.</li>
-<li>In the <b> File name</b> text field, type <code>&quot;HelloWorldApp.java&quot;</code>, without the quotation marks.</li>
-<li>From the <b> Save as type</b> combo box, choose <b> Text Documents (*.txt)</b>.</li>
-<li>In the <b> Encoding</b> combo box, leave the encoding as ANSI.</li>
+<li>使用 <b>Save in</b> 组合框，指定文件的保存位置。本例中，保存在 <code>C</code> 盘的 <code>myapplication</code> 目录中。</li>
+<li>在 <b>File name</b> 文本域，键入 <code>&quot;HelloWorldApp.java&quot;</code>，不带引号。</li>
+<li>在 <b>Save as type</b> 组合框，选择 <b>Text Documents (*.txt)</b>。</li>
+<li>在 <b>Encoding</b> 组合框，使用默认编码 ANSI。</li>
 </ol>
-<p>When you&#39;re finished, the dialog box should look like 
-<span id="figure:saveas.png">this</span>.</p>
-<center><img src="../../figures/getStarted/saveas.png" width="781" height="241" align="bottom" alt="TEXT The Save As dialog, as described in the text." /></p><p class="FigureCaption">The Save As dialog just before you click <b> Save</b>.</p></center><p>Now click <b> Save</b>, and exit Notepad.</p>
-<h3><a name="win32-2b" id="win32-2b"></a>Compile the Source File into a .class File</h3>
-<p>Bring up a shell, or &quot;command,&quot; window. You can do this from the <b> Start</b> menu by choosing <b> Run...</b> and then entering <code>cmd</code>. The shell window should look similar to 
-<span id="figure:dos.png">the following figure</span>.</p>
-<center><img src="../../figures/getStarted/dos.png" width="992" height="542" align="bottom" alt="a window where you can enter DOS commands" /></p><p class="FigureCaption">A shell window.</p></center><p>The prompt shows your <i>current directory</i>. When you bring up the prompt, your current directory is usually your home directory for Windows XP (as shown in the preceding figure.</p>
-<p>To compile your source file, change your current directory to the directory where your file is located. For example, if your source directory is <code>myapplication</code> on the <code>C</code> drive, type the following command at the prompt and press <b> Enter</b>:</p>
+<p>之后，对话框应如下：</p>
+<center><img src="../../figures/getStarted/saveas.png" width="781" height="241" align="bottom" alt="TEXT The Save As dialog, as described in the text." /></p>
+    <p class="FigureCaption">点击 <b>Save</b> 之前的 Save As 对话框。</p></center>
+<p>现在点击 <b>Save</b>，并退出 Notepad。</p>
+<h3><a name="win32-2b" id="win32-2b"></a>将源文件编译为 .class 文件</h3>
+<p>打开 shell 或 &quot;终端&quot; 窗口。您可以在 <b>开始</b> 菜单中，选择 <b>Run...</b> 并输入 <code>cmd</code>。shell 窗口看起来应如<span
+        id="figure:dos.png">下图</span>所示：</p>
+<center><img src="../../figures/getStarted/dos.png" width="992" height="542" align="bottom"
+             alt="a window where you can enter DOS commands" /></p><p class="FigureCaption">shell 窗口。</p></center>
+<p>提示显示的是 <i>当前目录</i>。当前目录通常是 Windows XP 的主目录。</p>
+<p>为了编译源文件，将当前目录改为源文件所在目录。比如，如果你的当前目录是 <code>C</code> 盘中的 <code>myapplication</code>，键入下面的命令并点击 <b>Enter</b>：</p>
 <div class="codeblock"><pre>
 cd C:\myapplication
 </pre></div>
-<p>Now the prompt should change to <code>C:\myapplication&gt;</code>.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>To change to a directory on a different drive, you must type an extra command: the name of the drive. For example, to change to the <code>myapplication</code> directory on the <code>D</code> drive, you must enter <code>D:</code>, as follows:</p>
+<p>现在提示应该变成了 <code>C:\myapplication&gt;</code>。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;
+<p>为了切换到其它的驱动盘，您需要键入额外的命令：驱动盘的名称。比如，切换到 D 盘中的 <code>myapplication</code> 目录，您必须输入 <code>D:</code>，如下所示：</p>
 
 <pre class="codeblock">C:\&gt;<strong>D:</strong>
 
@@ -613,7 +622,7 @@ D:\myapplication&gt;</pre>
 
 <hr /></div>
 
-<p>If you enter <code>dir</code> at the prompt, you should see your source file, as follows:</p>
+<p>如果您输入 <code>dir</code>，您应该会看到源文件，如下所示：</p>
 
 <pre class="codeblock">C:\&gt;<strong>cd myapplication</strong>
 
@@ -631,11 +640,11 @@ C:\myapplication&gt;<strong>dir</strong>
 
 C:\myapplication&gt;</pre>
 
-<p>Now you are ready to compile. At the prompt, type the following command and press <b> Enter</b>.</p>
+<p>现在已经做好了编译准备。键入下面命令并按 <b>Enter</b>。</p>
 <div class="codeblock"><pre>
 javac HelloWorldApp.java
 </pre></div>
-<p>The compiler has generated a bytecode file, <code>HelloWorldApp.class</code>. At the prompt, type <code>dir</code> to see the new file that was generated as follows:</p>
+<p>编译器生成了字节码文件 <code>HelloWorldApp.class</code>。键入 <code>dir</code> 将看到新生成的文件，如下所示：</p>
 
 <pre class="codeblock">C:\myapplication&gt;<strong>javac HelloWorldApp.java</strong>
 
@@ -654,26 +663,26 @@ C:\myapplication&gt;<strong>dir</strong>
 
 C:\myapplication&gt;</pre>
 
-<p>Now that you have a <code>.class</code> file, you can run your program.</p>
-<p>If you encounter problems with the instructions in this step, consult the 
-<a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>.</p>
-<h3><a name="win32-2c" id="win32-2c"></a> Run the Program</h3>
-<p>In the same directory, enter the following command at the prompt:</p>
+<p>现在已经有了 <code>.class</code> 文件，便可运行程序了。</p>
+<p>如果您在这一步遇到了问题，查阅
+<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>。</p>
+<h3><a name="win32-2c" id="win32-2c"></a>运行程序</h3>
+<p>在相同的目录，键入以下命令：</p>
 <div class="codeblock"><pre>
 java -cp . HelloWorldApp
 </pre></div>
 
-<p>You should see the following on your screen:</p>
+<p>您的屏幕上应会显示：</p>
 
 <pre class="codeblock">C:\myapplication&gt;<strong>java -cp . HelloWorldApp</strong>
 Hello World!
 
 C:\myapplication&gt;</pre>
 
-<p>Congratulations! Your program works!</p>
+<p>恭喜！您的程序可以正常工作！</p>
 
-<p>If you encounter problems with the instructions in this step, consult the 
-<a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>.</p>
+<p>如果您在这一步遇到了问题，查阅
+<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>。</p>
 
         </div>
         <div class="NavBit">
@@ -702,7 +711,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 针对 NetBeans IDE 的 "Hello World!"
-        <br /><b>下一页：</b> "Hello World!" for Solaris OS, Linux, and Mac OS X
+        <br /><b>下一页：</b> 针对 Solaris OS，Linux 和 Mac OS X 的 "Hello World!"
     </div>
 </body>
 </html> 
