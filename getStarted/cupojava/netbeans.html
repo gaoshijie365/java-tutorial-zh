@@ -5,8 +5,8 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>"Hello World!" for the NetBeans IDE (Java&trade; 教程 &gt;
-            Getting Started &gt; The "Hello World!" Application)
+        <title>针对 NetBeans IDE 的 "Hello World!" (Java&trade; 教程 &gt;
+            入门 &gt; "Hello World!" 应用)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes getting started with Java and setting up your Netbeans IDE" />
@@ -475,190 +475,197 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">The "Hello World!" Application</a></div>
-<div class="nolinkAHEAD">"Hello World!" for the NetBeans IDE</div>
+            <div class="linkLESSON"><a href="index.html">"Hello World!" 应用</a></div>
+<div class="nolinkAHEAD">针对 NetBeans IDE 的 "Hello World!"</div>
 <div class="linkAHEAD"><a href="win32.html">"Hello World!" for Microsoft Windows</a></div>
 <div class="linkAHEAD"><a href="unix.html">"Hello World!" for Solaris OS, Linux, and Mac OS X</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
-        <b>Trail:</b> Getting Started
-        <br /><b>Lesson:</b> The "Hello World!" Application
+        <b>路径：</b> 入门
+        <br /><b>课程：</b> "Hello World!" 应用
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">入门</a>
                 &gt;
-                <a href="index.html" target="_top">The "Hello World!" Application</a>
+                <a href="index.html" target="_top">"Hello World!" 应用</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="index.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="win32.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>"Hello World!" for the NetBeans IDE</h1></div>
+            <div id="PageTitle"><h1>针对 NetBeans IDE 的 "Hello World!"</h1></div>
             <div id="PageContent">
 
 <p><a name="netbeans-top" id="netbeans-top"></a></p>
-<p>It&#39;s time to write your first application! These detailed instructions are for users of the NetBeans IDE. The NetBeans IDE runs on the Java platform, which means that you can use it with any operating system for which there is a JDK available. These operating systems include Microsoft Windows, Solaris OS, Linux, and Mac OS X.</p>
+<p>是时候去写您的第一个应用了！这些详细的操作是为使用 NetBeans IDE 的用户准备的。NetBeans IDE 运行在 Java 平台上，这也就意味着您可以在任何操作系统上使用，
+只要安装了 JDK。这些操作系统包括 Microsoft Windows，Solaris OS，Linux，和 Mac OS X。
+</p>
 <p>
 
 <ul>
-  <li><a href="#netbeans-1">A Checklist</a></li>
-  <li><a href="#netbeans-2">Creating Your First Application</a>
+  <li><a href="#netbeans-1">核对表</a></li>
+  <li><a href="#netbeans-2">创建您的首个应用</a>
     <ul>
-      <li><a href="#netbeans-2a">Create an IDE Project</a></li>
-      <li><a href="#netbeans-jdk">Add JDK 8 to the Platform List (if necessary)</a></li>
-      <li><a href="#netbeans-2b">Add Code to the Generated Source File</a></li>
-      <li><a href="#netbeans-2c">Compile the Source File</a></li>
-      <li><a href="#netbeans-2d">Run the Program</a></li>
+      <li><a href="#netbeans-2a">创建 IDE 项目</a></li>
+      <li><a href="#netbeans-jdk">添加 JDK 8 到平台列表 (如果需要的话)</a></li>
+      <li><a href="#netbeans-2b">向生成的原文件中添加代码</a></li>
+      <li><a href="#netbeans-2c">编译源文件</a></li>
+      <li><a href="#netbeans-2d">运行程序</a></li>
     </ul>
   </li>
-  <li><a href="#netbeans-3">Continuing the Tutorial with the NetBeans IDE</a></li>
+  <li><a href="#netbeans-3">使用 NetBeans IDE 完成后续课程</a></li>
 </ul>
 
 <hr />
 
 </p>
-<h2><a name="netbeans-1" id="netbeans-1"></a> A Checklist&nbsp; 
+<h2><a name="netbeans-1" id="netbeans-1"></a> 核对表&nbsp; 
 <img src="../../figures/getStarted/check.gif" width="56" height="68" alt="a checkmark" /></h2>
-<p>To write your first program, you&#39;ll need:</p>
+<p>为编写首个程序，您需要：</p>
 <ol>
 <li>
-<p style="font-weight: bold">The Java SE Development Kit (JDK 7 has been selected in this example)</p>
+<p style="font-weight: bold">Java SE 开发工具箱 (本例中使用 JDK 7)</p>
 <ul>
-<li>For Microsoft Windows, Solaris OS, and Linux: 
-<a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads Index</a> page</li>
-<li>For Mac OS X: 
+<li>Microsoft Windows，Solaris OS，和 Linux：
+<a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE 下载</a></li>
+<li>Mac OS X：
 <a class="OutsideLink" target="_blank" href="https://developer.apple.com/">developer.apple.com</a></li>
 </ul>
 </li>
 <li>
-<p style="font-weight: bold">The NetBeans IDE</p>
+<p style="font-weight: bold">NetBeans IDE</p>
 <ul>
-<li>For all platforms: 
-<a class="OutsideLink" target="_blank" href="http://netbeans.org/downloads/index.html">NetBeans IDE Downloads Index </a>page</li>
+<li><a class="OutsideLink" target="_blank" href="http://netbeans.org/downloads/index.html">NetBeans IDE 下载</a></li>
 </ul>
 </li>
 </ol>
 <p>
           <hr />
 </p>
-<h2><a name="netbeans-2" id="netbeans-2"></a>Creating Your First Application</h2>
-<p>Your first application, <code>HelloWorldApp</code>, will simply display the greeting &quot;Hello World!&quot; To create this program, you will:</p>
+<h2><a name="netbeans-2" id="netbeans-2"></a>创建您的首个应用</h2>
+<p>您的首个应用，<code>HelloWorldApp</code>，只是简单地显示问候语 &quot;Hello World!&quot;，为了创建这个程序，需要：</p>
 <ul>
 <li>
-<p style="font-weight: bold">Create an IDE project</p>
-<p>When you create an IDE project, you create an environment in which to build and run your applications. Using IDE projects eliminates configuration issues normally associated with developing on the command line. You can build or run your application by choosing a single menu item within the IDE.</p>
+<p style="font-weight: bold">创建 IDE 项目</p>
+<p>当您创建 IDE 项目时，就是创建了构建和运行应用的环境。使用 IDE，消除了使用命令行开发时的配置问题。您仅需通过 IDE 中的一个菜单便可构建或运行应用。</p>
 </li>
 <li>
-<p style="font-weight: bold">Add code to the generated source file</p>
-<p>A source file contains code, written in the Java programming language, that you and other programmers can understand. As part of creating an IDE project, a skeleton source file will be automatically generated. You will then modify the source file to add the &quot;Hello World!&quot; message.</p>
+<p style="font-weight: bold">向生成的原文件中添加代码</p>
+<p>源文件中包含用 Java 编程语言写的代码。创建 IDE 项目时，会自动生成一个骨架源文件。您稍后将修改源文件并添加 &quot;Hello World!&quot; 消息。</p>
 </li>
 <li>
-<p style="font-weight: bold">Compile the source file into a .class file</p>
-<p>The IDE invokes the Java programming language <i>compiler</i> <code>(javac)</code>, which takes your source file and translates its text into instructions that the Java virtual machine can understand. The instructions contained within this file are known as <i>bytecodes</i>.</p>
+<p style="font-weight: bold">将源文件编译为 .class 文件</p>
+<p>IDE 调用 Java 编程语言的<i>编译器</i> <code>(javac)</code>，它接收源文件并将其翻译为 JVM 可以理解的指令。包含这些指令的文件叫做 <i>字节码</i>。</p>
 </li>
 <li>
-<p style="font-weight: bold">Run the program</p>
-<p>The IDE invokes the Java application <i>launcher tool</i> (<code>java</code>), which uses the Java virtual machine to run your application.</p>
+<p style="font-weight: bold">运行程序</p>
+<p>IDE 调用 Java 应用 <i>启动工具</i> <code>(java)</code>，它使用 JVM 运行您的应用。</p>
 </li>
 </ul>
-<h3><a name="netbeans-2a" id="netbeans-2a"></a>Create an IDE Project</h3>
-<p>To create an IDE project:</p>
+<h3><a name="netbeans-2a" id="netbeans-2a"></a>创建 IDE 项目</h3>
+<p>为了创建 IDE 项目：</p>
 <ol>
 <li>
-<p>Launch the NetBeans IDE.</p>
+<p>启动 NetBeans IDE。</p>
 <ul>
 <li>
-<p>On Microsoft Windows systems, you can use the NetBeans IDE item in the Start menu.</p>
+<p>在 Microsoft Windows 系统中，您可以使用启动菜单中的 NetBeans IDE 项。</p>
 </li>
 <li>
-<p>On Solaris OS and Linux systems, you execute the IDE launcher script by navigating to the IDE&#39;s <code>bin</code> directory and typing <code>./netbeans.</code></p>
+<p>在 Solaris OS 和 Linux 系统重，通过执行指向 IDE 的 <code>bin</code> 目录的启动脚本，并输入 <code>./netbeans</code> 启动。</p>
 </li>
 <li>
-<p>On Mac OS X systems, click the NetBeans IDE application icon.</p>
+<p>在 Mac OS X 系统中，点击 NetBeans IDE 应用程序图标。</p>
 </li>
 </ul>
 </li>
 <li>
-<p>In the NetBeans IDE, choose <strong>File</strong> | <strong>New Project...</strong>.</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-newprojectmenu.png" width="794" height="292" align="bottom" alt="NetBeans IDE with the File | New Project menu item selected." /></p><p class="FigureCaption">NetBeans IDE with the File | New Project menu item selected.</p></center></li>
+<p>在 NetBeans IDE 中，选择 <strong>File</strong> | <strong>New Project...</strong>。</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-newprojectmenu.png" width="794" height="292"
+             align="bottom" alt="选中 File | New Project 菜单项的 NetBeans IDE。"/></p><p class="FigureCaption">选中 File | New Project 菜单项的 NetBeans IDE。</p></center></li>
 <li>
-<p>In the <strong>New Project</strong> wizard, expand the <strong>Java</strong> category and select <strong>Java Application</strong> as shown in the following figure:</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-project1.png" width="729" height="511" align="bottom" alt="NetBeans IDE, New Project wizard, Choose Project page." /></p><p class="FigureCaption">NetBeans IDE, New Project wizard, Choose Project page.</p></center></li>
+<p>在 <strong>New Project</strong> 界面，展开 <strong>Java</strong> 分组并选择 <strong>Java Application</strong>。如下图所示：</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-project1.png" width="729" height="511" align="bottom" alt="NetBeans IDE，New Project，Choose Project 页。" /></p><p class="FigureCaption">NetBeans IDE，New Project，Choose Project 页。</p></center></li>
 <li>
-<p>In the <strong>Name and Location</strong> page of the wizard, do the following (as shown in the figure below):</p>
+<p>在 <strong>Name and Location</strong> 页，执行下述操作 (如下图所示那样)：</p>
 <ul>
 <li>
-<p>In the <strong>Project Name</strong> field, type <code>Hello World App</code>.</p>
+<p>在 <strong>Project Name</strong> 域，填入 <code>Hello World App</code>。</p>
 </li>
 <li>
-<p>In the <strong>Create Main Class</strong> field, type <code>helloworldapp.HelloWorldApp</code>.</p>
+<p>在 <strong>Create Main Class</strong> 域，填入 <code>helloworldapp.HelloWorldApp</code>。</p>
 </li>
 </ul>
-<center><img src="../../figures/getStarted/nb-javatutorial-project2.png" width="765" height="511" align="bottom" alt="NetBeans IDE, New Project wizard, Name and Location page." /></p><p class="FigureCaption">NetBeans IDE, New Project wizard, Name and Location page.</p></center></li>
+<center><img src="../../figures/getStarted/nb-javatutorial-project2.png" width="765" height="511" align="bottom" alt="NetBeans IDE，New Project，Name and Location 页。" /></p><p class="FigureCaption">NetBeans IDE，New Project，Name and Location 页。</p></center></li>
 <li>
-<p>Click Finish.</p>
+<p>点击 <strong>Finish</strong>。</p>
 </li>
 </ol>
-<p>The project is created and opened in the IDE. You should see the following components:</p>
+<p>项目已创建并在 IDE 中打开。您将看到如下内容：</p>
 <ul>
 <li>
-<p>The <strong>Projects</strong> window, which contains a tree view of the components of the project, including source files, libraries that your code depends on, and so on.</p>
+<p><strong>Projects</strong> 窗口，包含一个由项目组件构成的树视图，其中包括源文件，依赖库，等等。</p>
 </li>
 <li>
-<p>The <strong>Source Editor</strong> window with a file called <code>HelloWorldApp.java</code> open.</p>
+<p><strong>Source Editor</strong> 窗口，包含一个打开了的 <code>HelloWorldApp.java</code> 文件。</p>
 </li>
 <li>
-<p>The <strong>Navigator</strong> window, which you can use to quickly navigate between elements within the selected class.</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-project-opened.png" width="810" height="631" align="bottom" alt="NetBeans IDE with the HelloWorldApp project open." /></p><p class="FigureCaption">NetBeans IDE with the HelloWorldApp project open.</p></center></li>
+<p><strong>Navigator</strong> 窗口，您可以使用它来在选种类的不同元素之间快速导航。</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-project-opened.png" width="810" height="631" align="bottom" alt="打开项目 HelloWorldApp 的 NetBeans IDE。" /></p><p class="FigureCaption">打开项目 HelloWorldApp 的 NetBeans IDE。</p></center></li>
 </ul>
 <p>
 <hr />
 </p>
-<h3><a name="netbeans-jdk" id="netbeans-jdk"></a> Add JDK 8 to the Platform List (if necessary)</h3>
-<p>It may be necessary to add JDK 8 to the IDE&#39;s list of available platforms. To do this, choose Tools | Java Platforms as shown in the following figure:</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-platform-manager.png" width="825" height="461" align="bottom" alt="Selecting the Java Platform Manager from the Tools Menu" /></p><p class="FigureCaption">Selecting the Java Platform Manager from the Tools Menu</p></center><p>If you don&#39;t see JDK 8 (which might appear as 1.8 or 1.8.0) in the list of installed platforms, click <strong>Add Platform</strong>, navigate to your JDK 8 install directory, and click <strong>Finish</strong>. You should now see this newly added platform:</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-add-platform.png" width="822" height="534" align="bottom" alt="The Java Platform Manager from the Tools Menu" /></p><p class="FigureCaption">The Java Platform Manager</p></center><p>To set this JDK as the default for all projects, you can run the IDE with the <code>--jdkhome</code> switch on the command line, or by entering the path to the JDK in the <code>netbeans_j2sdkhome</code> property of your <code>INSTALLATION_DIRECTORY/etc/netbeans.conf</code> file.</p>
-<p>To specify this JDK for the current project only, select <strong>Hello World App</strong> in the <strong>Projects</strong> pane, choose <strong>File</strong> | <strong>Project Properties (Hello World App)</strong>, click <strong>Libraries</strong>, then select <strong>JDK 1.8</strong> in the <strong>Java Platform</strong> pulldown menu. You should see a screen similar to the following:</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-properties2.png" width="819" height="624" align="bottom" alt="" /></p><p class="FigureCaption"></p></center><p>The IDE is now configured for JDK 8.</p>
+<h3><a name="netbeans-jdk" id="netbeans-jdk"></a> 添加 JDK 8 到平台列表 (如果需要的话)</h3>
+<p>可能需要添加 JDK 8 到 IDE 的可用平台列表。如要添加，选择 Tools | Java Platforms，如下图所示：</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-platform-manager.png" width="825" height="461" align="bottom" alt="从 Tools 菜单选择 Java 平台管理器" /></p><p class="FigureCaption">从 Tools 菜单选择 Java 平台管理器</p></center>
+<p>如果在已安装平台列表中没看到 JDK 8 (也可能叫做 1.8 或 1.8.0)，点击 <strong>Add Platform</strong>，导航到您 JDK 8 的安装目录，然后点击 <strong>Finish</strong>。您现在应该可以看到这个新添加的平台：</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-add-platform.png" width="822" height="534" align="bottom" alt="Java 平台管理器" /></p><p class="FigureCaption">Java 平台管理器</p></center>
+<p>为了将此 JDK 设置为所有项目的默认 JDK，您可以切换到命令行，使用 <code>--jdkhome</code> 运行 IDE；或者在 <code>INSTALLATION_DIRECTORY/etc/netbeans.conf</code>
+    文件中的 <code>netbeans_j2sdkhome</code> 属性中输入 JDK 的路径。</p>
+<p>要是只为当前项目指定该 JDK，在项目面板中选择 <strong>Hello World App</strong>，选择 <strong>File</strong> | <strong>Project Properties
+    (Hello World App)</strong>，点击 <strong>Libraries</strong>，然后在 Java 平台下拉菜单中选择 <strong>JDK 1.8</strong>。您将看到如下屏幕：</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-properties2.png" width="819" height="624" align="bottom" alt="" /></p><p class="FigureCaption"></p></center>
+                <p>IDE 现已配置为 JDK 8。</p>
 <hr />
-<h3><a name="netbeans-2b" id="netbeans-2b"></a>Add Code to the Generated Source File</h3>
-<p>When you created this project, you left the <strong>Create Main Class</strong> checkcbox selected in the <strong>New Project</strong> wizard. The IDE has therefore created a skeleton class for you. You can add the &quot;Hello World!&quot; message to the skeleton code by replacing the line:</p>
+<h3><a name="netbeans-2b" id="netbeans-2b"></a>向生成的原文件中添加代码</h3>
+<p>在您创建这个项目的过程中，在 <strong>New Project</strong> 页面勾选了 <strong>Create Main Class</strong>。因此 IDE 会为您生成一个骨架类。
+你可以添加 &quot;Hello World!&quot; 消息到骨架代码，通过将：</p>
 <div class="codeblock"><pre>
 // TODO code application logic here
 </pre></div>
-<p>with the line:</p>
+<p>替换为：</p>
 <div class="codeblock"><pre>
 System.out.println("Hello World!"); // Display the string.
 </pre></div>
-<p>Optionally, you can replace these four lines of generated code:</p>
+<p>可选地，您可以将下面四行代码：</p>
 <div class="codeblock"><pre>
 /**
  *
  * @author
  */
 </pre></div>
-<p>with these lines:</p>
+<p>替换为：</p>
 <div class="codeblock"><pre>
 /**
  * The HelloWorldApp class implements an application that
  * simply prints "Hello World!" to standard output.
  */
 </pre></div>
-<p>These four lines are a code comment and do not affect how the program runs. 
-Later sections of this tutorial explain the use and format of code comments. 
-</p>
-<p><b>Be Careful When You Type</b>
+<p>这四行是代码注释，并不会影响程序的运行。后面小节将介绍代码注释的使用和格式。</p>
+<p><b>输入时要注意</b>
 <img src="../../figures/getStarted/typeA.gif" width="51" height="36" alt="uppercase letter A" />&nbsp;&nbsp;
 <img src="../../figures/getStarted/typea2.gif" width="51" height="36" alt="lowercase letter A" /></p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Type all code, commands, and file names exactly as shown. Both the compiler (<code>javac</code>) and launcher (<code>java</code>) are <em>case-sensitive</em>, so you must capitalize consistently.<br /><br />
-<code>HelloWorldApp</code> is <em>not</em> the same as <code>helloworldapp</code>.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;输入的所有代码，注释和文件名，包括编译器 (<code>javac</code>) 和启动器
+    (<code>java</code>) 都是大小写敏感的。<br /><br />
+<code>HelloWorldApp</code> 是 <em>不同于</em> <code>helloworldapp</code> 的。
 <hr /></div>
-<p>Save your changes by choosing <strong>File</strong> | <strong>Save</strong>.</p>
-<p>The file should look something like the following:</p>
+<p>选择 <strong>File</strong> | <strong>Save</strong> 保存修改。</p>
+<p>源文件看起来应如下：</p>
 <div class="codeblock"><pre>
 /*
  * To change this template, choose Tools | Templates
@@ -683,41 +690,53 @@ public class HelloWorldApp {
 
 }
 </pre></div>
-<h3><a name="netbeans-2c" id="netbeans-2c"></a>Compile the Source File into a .class File</h3>
-<p>To compile your source file, choose <strong>Run</strong> | <strong>Build Project (Hello World App)</strong> from the IDE&#39;s main menu.</p>
-<p>The Output window opens and displays output similar to what you see in the following figure:</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-project-compiled.png" width="971" height="685" align="bottom" alt="Output window showing results of building the HelloWorld project." /></p><p class="FigureCaption">Output window showing results of building the HelloWorld project.</p></center>
-<p>If the build output concludes with the statement <code>BUILD SUCCESSFUL</code>, congratulations! You have successfully compiled your program!</p>
+<h3><a name="netbeans-2c" id="netbeans-2c"></a>编译源为 .class 文件</h3>
+<p>选择 <strong>Run</strong> | <strong>Build Project (Hello World App)</strong> 进行编译。</p>
+<p>将自动打开输出窗口并显示下图所示的输出：</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-project-compiled.png" width="971" height="685" align="bottom" alt="显示 HelloWorld 项目构建结果的输出窗口。" /></p><p class="FigureCaption">显示 HelloWorld 项目构建结果的输出窗口。</p></center>
+<p>如果输出中包含 <code>BUILD SUCCESSFUL</code>，恭喜您！您已经成功编译了程序！</p>
 
-<p>If the build output concludes with the statement <code>BUILD FAILED</code>, you probably have a syntax error in your code. Errors are reported in the Output window as hyperlinked text. You double-click such a hyperlink to navigate to the source of an error. You can then fix the error and once again choose <strong>Run</strong> | <strong>Build Project</strong>.</p>
+<p>如果输出中包含 <code>BUILD FAILED</code>，您的代码中可能包含语法错误。输出窗口中会报告错误。您可以点击链接导航到出错的代码。然后修复错误并再次运行 <strong>Run</strong> |
+    <strong>Build Project</strong>。</p>
 
-<p>When you build the project, the bytecode file <code>HelloWorldApp.class</code> is generated. You can see where the new file is generated by opening the <strong>Files</strong> window and expanding the <strong>Hello&nbsp;World&nbsp;App/build/classes/helloworldapp</strong> node as shown in the following figure.</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-files-window.png" width="254" height="285" align="bottom" alt="Files window, showing the generated .class file." /></p><p class="FigureCaption">Files window, showing the generated .class file.</p></center><p>Now that you have built the project, you can run your program.</p>
-<h3><a name="netbeans-2d" id="netbeans-2d"></a> Run the Program</h3>
-<p>From the IDE&#39;s menu bar, choose <strong>Run</strong> | <strong>Run Main Project</strong>.</p>
-<p>The next figure shows what you should now see.</p>
-<center><img src="../../figures/getStarted/nb-javatutorial-project-run.png" width="393" height="131" align="bottom" alt="The program prints Hello World! to the Output window (along with other output from the build script)." /></p><p class="FigureCaption">The program prints "Hello World!" to the Output window (along with other output from the build script).</p></center><p>Congratulations! Your program works!</p>
-<h2><a name="netbeans-3" id="netbeans-3"></a>Continuing the Tutorial with the NetBeans IDE</h2>
-<p>The next few pages of the tutorial will explain the code in this simple application. After that, the lessons go deeper into core language features and provide many more examples. Although the rest of the tutorial does not give specific instructions about using the NetBeans IDE, you can easily use the IDE to write and run the sample code. The following are some tips on using the IDE and explanations of some IDE behavior that you are likely to see:</p>
+<p>构建项目后将生成字节码文件 <code>HelloWorldApp.class</code>。您可以打开 <strong>Files</strong> 窗口，并展开 <strong>Hello&nbsp;World&nbsp;App/build/classes/helloworldapp</strong>
+    节点查看生成的新文件，如下图所示：</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-files-window.png" width="254" height="285" align="bottom" alt="文件窗口，展示了生成的 .class 文件。" /></p><p class="FigureCaption">文件窗口，展示了生成的 .class 文件。</p></center>
+<p>现在，您已经构建了项目，接下来就可以运行程序了。</p>
+<h3><a name="netbeans-2d" id="netbeans-2d"></a>运行程序</h3>
+<p>选择菜单栏中的 <strong>Run</strong> | <strong>Run Main Project</strong>。</p>
+<p>您将看到下图所示内容。</p>
+<center><img src="../../figures/getStarted/nb-javatutorial-project-run.png" width="393" height="131" align="bottom" alt="程序打印出 Hello World! 到输出窗口 (还有构建脚本输出的其它信息)。" /></p><p class="FigureCaption">程序打印出 "Hello World!" 到输出窗口 (还有构建脚本输出的其它信息)。</p></center>
+<p>恭喜！您的程序可以正常运行！</p>
+<h2><a name="netbeans-3" id="netbeans-3"></a>使用 NetBeans IDE 完成后续课程</h2>
+<p>后续几节将详细剖析这个简单的应用。之后，将深入到核心语言特性的讲解，同时也会接触到更多的示例。尽管后续教程中没有给出使用 NetBeans IDE 的说明，
+您也可以轻松地使用 IDE 编写和运行示例代码。下面给出了一些关于使用 IDE 的提示，和对一些 IDE 行为的解释：</p>
 <ul>
 <li>
-<p>Once you have created a project in the IDE, you can add files to the project using the <strong>New File</strong> wizard. Choose <strong>File</strong> | <strong>New File</strong>, and then select a template in the wizard, such as the Empty Java File template.</p>
+<p>一旦创建了项目，就可以通过 <strong>New File</strong> 添加文件。选择 <strong>File</strong> | <strong>New File</strong>，然后选择一个模板，比如
+    Empty Java File。</p>
 </li>
 <li>
-<p>You can compile and run an individual file (as opposed to a whole project) using the IDE&#39;s <strong>Compile File</strong> (F9) and <strong>Run File</strong> (Shift-F6) commands. If you use the <strong>Run Main Project</strong> command, the IDE will run the file that the IDE associates as the main class of the main project. Therefore, if you create an additional class in your HelloWorldApp project and then try to run that file with the <strong>Run Main Project</strong> command, the IDE will run the <code>HelloWorldApp</code> file instead.</p>
+<p>您也可以编译和运行单独的文件，只需使用 <strong>Compile File</strong> (F9) 和 <strong>Run File</strong> (Shift-F6) 命令。如果您使用
+    <strong>Run Main Project</strong> 命令，将运行 IDE 中设置的主项目的主类。因此，如果您在 HelloWorldApp 中创建了其它类，同时尝试使用
+      <strong>Run Main Project</strong> 命令运行该文件，IDE 将会运行 <code>HelloWorldApp</code> 文件。</p>
 </li>
 <li>
-<p>You might want to create separate IDE projects for sample applications that include more than one source file.</p>
+<p>您可能想为包含多个源文件的示例应用创建独立的 IDE 项目。</p>
 </li>
 <li>
-<p>As you are typing in the IDE, a code completion box might periodically appear. You can either ignore the code completion box and keep typing, or you can select one of the suggested expressions. If you would prefer not to have the code completion box automatically appear, you can turn off the feature. Choose <strong>Tools</strong> | <strong>Options</strong> | <strong>Editor</strong>, click the <strong>Code Completion</strong> tab and clear the <strong>Auto Popup Completion Window</strong> check box.</p>
+<p>当您在键入代码时，可能会经常出现代码补全框。您可以选择忽略代码补全框并继续输入，或者从推荐的表达式中选择一个。如果您希望关闭代码补全框的自动出现，您可以关闭这项特性。
+选择 <strong>Tools</strong> | <strong>Options</strong> | <strong>Editor</strong>，点击 <strong>Code Completion</strong>
+标签页并取消选中 <strong>Auto Popup Completion Window</strong>。</p>
 </li>
 <li>
-<p>If you want to rename the node for a source file in the <strong>Projects</strong> window, choose <strong>Refactor</strong> from IDE&#39;s main menu. The IDE prompts you with the <strong>Rename</strong> dialog box to lead you through the options of renaming the class and the updating of code that refers to that class. Make the changes and click <strong>Refactor</strong> to apply the changes. This sequence of clicks might seem unnecessary if you have just a single class in your project, but it is very useful when your changes affect other parts of your code in larger projects.</p>
+<p>如果您想要对源文件重命名，可以在 <strong>Projects</strong> 窗口中，选择 <strong>Refactor</strong> 菜单。IDE 将弹出 <strong>Rename</strong>
+对话框，引导您重命名类并更新指向这个类的代码。然后点击 <strong>Refactor</strong> 应用这项更改。如果您的项目中只有一个类，那这一系列操作看起来是不必要的，
+但是在大项目中，当您的修改影响到其它部分代码时，这将是非常有用的。</p>
 </li>
 <li>
-<p>For a more thorough guide to the features of the NetBeans IDE, see the 
-<a class="OutsideLink" target="_blank" href="https://netbeans.org/kb/">NetBeans Documentation</a> page.</p>
+<p>关于 NetBeans IDE 更详细的指南，查看 <a class="OutsideLink" target="_blank" href="https://netbeans.org/kb/">NetBeans
+    文档</a>。</p>
 </li>
 </ul>
 
@@ -748,8 +767,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>Previous page:</b> The "Hello World!" Application
-        <br /><b>Next page:</b> "Hello World!" for Microsoft Windows
+        <b>上一页：</b> "Hello World!" 应用
+        <br /><b>下一页：</b> "Hello World!" for Microsoft Windows
     </div>
 </body>
 </html> 
