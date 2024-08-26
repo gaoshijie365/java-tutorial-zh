@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：JAR (Java&trade; 教程 &gt; Deployment &gt;
+        <title>问题和练习的答案：JAR (Java&trade; 教程 &gt; Deployment &gt;
             Packaging Programs in JAR Files)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,14 +402,14 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：JAR</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：JAR</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
 <ol>
 <li>
 <p>Question: How do you invoke an applet that is packaged as a JAR file?</p>
-<p>Answer: To invoke an applet packaged as a JAR file, open a page containing the applet:</p>
+<p>答案: To invoke an applet packaged as a JAR file, open a page containing the applet:</p>
 <div class="codeblock"><pre>
 &lt;applet code=AppletClassName.class
         archive="JarFileName.jar"
@@ -419,14 +419,14 @@
 </li>
 <li>
 <p>Question: What is the purpose of the <code>-e</code> option in a <code>jar</code> command?</p>
-<p>Answer: This option is available since Java SE 6. It sets the entrypoint as the application entry point for stand-alone applications bundled into executable jar file. The use of this option creates or overrides the Main-Class attribute value in the manifest file. This option can be used during creation of jar file or while updating the jar file. This option specifies the application entry point without editing or creating the manifest file. For example, this command creates Main.jar where the Main-Class attribute value in the manifest is set to Main:</p>
+<p>答案: This option is available since Java SE 6. It sets the entrypoint as the application entry point for stand-alone applications bundled into executable jar file. The use of this option creates or overrides the Main-Class attribute value in the manifest file. This option can be used during creation of jar file or while updating the jar file. This option specifies the application entry point without editing or creating the manifest file. For example, this command creates Main.jar where the Main-Class attribute value in the manifest is set to Main:</p>
 <div class="codeblock"><pre>
 jar cfe Main.jar Main Main.class
 </pre></div>
 </li>
 <li>
 <p>Question: What is the significance of the manifest in a JAR file?</p>
-<p>Answer: A JAR file&#39;s manifest provides meta-information about the other contents of the JAR file. The manifest itself resides in META-INF/MANIFEST.mf. The meta-information can include</p>
+<p>答案: A JAR file&#39;s manifest provides meta-information about the other contents of the JAR file. The manifest itself resides in META-INF/MANIFEST.mf. The meta-information can include</p>
 <ul>
 <li>Dependencies on other jar files</li>
 <li>The name of a class to run when &quot;java -jar file.jar&quot; is invoked</li>
@@ -436,7 +436,7 @@ jar cfe Main.jar Main Main.class
 </li>
 <li>
 <p>Question: How do you modify a JAR&#39;s manifest file?</p>
-<p>Answer: Typically, modifying the default manifest involves adding special-purpose headers to the manifest that allow the JAR file to perform a particular desired function.</p>
+<p>答案: Typically, modifying the default manifest involves adding special-purpose headers to the manifest that allow the JAR file to perform a particular desired function.</p>
 <p>To modify the manifest, you must first prepare a text file with a complete and valid manifest file. You then use the JAR tool&#39;s <code>m</code> option to add the information in your file to the manifest.</p>
 <p>The manifest file your prepare must end with a new line or carriage return. The last line will not be parsed properly if it does not end with a new line or carriage return.</p>
 </li>

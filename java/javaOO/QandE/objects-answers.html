@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：Objects (Java&trade; 教程 &gt; Learning the Java Language &gt;
+        <title>问题和练习的答案：Objects (Java&trade; 教程 &gt; Learning the Java Language &gt;
             Classes and Objects)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,7 +402,7 @@
             <a href="../QandE/objects-questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：Objects</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：Objects</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
@@ -419,7 +419,7 @@ public class SomethingIsWrong {
     }
 }
 </pre></div>
-<p><strong>Answer</strong>: The code never creates a 
+<p><strong>答案</strong>: The code never creates a
 <a class="SourceLink" target="_blank" href="Rectangle.java" onclick="showCode('../../../displayCode.html', 'Rectangle.java'); return false;"><code>Rectangle</code></a> object. With this simple program, the compiler generates an error. However, in a more realistic situation, <code>myRect</code> might be initialized to <code>null</code> in one place, say in a constructor, and used later. In that case, the program will compile just fine, but will generate a <code>NullPointerException</code> at runtime.</p>
 </li>
 <li>
@@ -432,18 +432,18 @@ students[0] = studentName;
 studentName = null;
 ...
 </pre></div>
-<p><strong>Answer</strong>: There is one reference to the <code>students</code> array and that array has one reference to the string <code>Peter Smith</code>. Neither object is eligible for garbage collection. The array <code>students</code> is not eligible for garbage collection because it has one reference to the object <code>studentName</code> even though that object has been assigned the value <code>null</code>. The object <code>studentName</code> is not eligible either because <code>students[0]</code> still refers to it.</p>
+<p><strong>答案</strong>: There is one reference to the <code>students</code> array and that array has one reference to the string <code>Peter Smith</code>. Neither object is eligible for garbage collection. The array <code>students</code> is not eligible for garbage collection because it has one reference to the object <code>studentName</code> even though that object has been assigned the value <code>null</code>. The object <code>studentName</code> is not eligible either because <code>students[0]</code> still refers to it.</p>
 </li>
 <li>
 <p><strong>Question</strong>: How does a program destroy an object that it creates?</p>
-<p><strong>Answer</strong>: A program does not explicitly destroy objects. A program can set all references to an object to <code>null</code> so that it becomes eligible for garbage collection. But the program does not actually destroy objects.</p>
+<p><strong>答案</strong>: A program does not explicitly destroy objects. A program can set all references to an object to <code>null</code> so that it becomes eligible for garbage collection. But the program does not actually destroy objects.</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
 <p><strong>Exercise</strong>: Fix the program called <code>SomethingIsWrong</code> shown in Question 1.</p>
-<p><strong>Answer</strong>: See 
+<p><strong>答案</strong>: See
 <a class="SourceLink" target="_blank" href="SomethingIsRight.java" onclick="showCode('../../../displayCode.html', 'SomethingIsRight.java'); return false;"><code>SomethingIsRight</code></a>:</p>
 <div class="codeblock"><pre>
 
@@ -467,7 +467,7 @@ public class NumberHolder {
     public float aFloat;
 }
 </pre></div>
-<p><strong>Answer</strong>: See 
+<p><strong>答案</strong>: See
 <a class="SourceLink" target="_blank" href="NumberHolderDisplay.java" onclick="showCode('../../../displayCode.html', 'NumberHolderDisplay.java'); return false;"><code>NumberHolderDisplay</code></a>:</p>
 <div class="codeblock"><pre>
 

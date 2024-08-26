@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：The Platform Environment (Java&trade; 教程 &gt; Essential Java Classes &gt;
+        <title>问题和练习的答案：The Platform Environment (Java&trade; 教程 &gt; Essential Java Classes &gt;
             The Platform Environment)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,7 +402,7 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：The Platform Environment</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：The Platform Environment</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
@@ -412,7 +412,7 @@
 Exception in thread "main" java.lang.NoClassDefFoundError: Hello
 </pre></div>
 <p>In this case, the <code>Hello</code> class is compiled into a .class file in the current directory &#151; yet the <code>java</code> command can&#39;t seem to find it. What&#39;s going wrong?</p>
-<p><strong>Answer 1.</strong> A class is only found if it appears in the class path. By default, the class path consists of the current directory. If the CLASSPATH environment variable is set, and doesn&#39;t include the current directory, the launcher can no longer find classes in the current directory. The solution is to change the CLASSPATH variable to include the current directory. For example, if the CLASSPATH value is <code>c:\java\newLibrary.jar</code> (Windows) or <code>/home/me/newLibrary.jar</code> (UNIX or Linux) it needs to be changed to <code>.;c:\java\newLibrary.jar</code> or <code>.:/home/me/newLibrary.jar</code>.</p>
+<p><strong>答案 1.</strong> A class is only found if it appears in the class path. By default, the class path consists of the current directory. If the CLASSPATH environment variable is set, and doesn&#39;t include the current directory, the launcher can no longer find classes in the current directory. The solution is to change the CLASSPATH variable to include the current directory. For example, if the CLASSPATH value is <code>c:\java\newLibrary.jar</code> (Windows) or <code>/home/me/newLibrary.jar</code> (UNIX or Linux) it needs to be changed to <code>.;c:\java\newLibrary.jar</code> or <code>.:/home/me/newLibrary.jar</code>.</p>
 <h2>练习</h2>
 <p><strong>练习 1.</strong></p>
 <p>Write an application, <code>PersistentEcho</code>, with the following features:</p>
@@ -421,7 +421,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: Hello
 <li>If <code>PersistentEcho</code> is run with no command line arguments, it looks for an environment variable called PERSISTENTECHO. If that variable exists, <code>PersistentEcho</code> prints out its value, and also saves the value in the same way it does for command line arguments.</li>
 <li>If <code>PersistentEcho</code> is run with no command line arguments, and the PERSISTENTECHO environment variable is not defined, it retrieves the property value from <code>PersistentEcho.txt</code> and prints that out.</li>
 </ul>
-<p><strong>Answer 1.</strong></p>
+<p><strong>答案 1.</strong></p>
 <div class="codeblock"><pre>
 
 import java.util.Properties;

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：入门 (Java&trade; 教程 &gt; 入门 &gt;
+        <title>问题和练习的答案：入门 (Java&trade; 教程 &gt; 入门 &gt;
             )</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -399,41 +399,43 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：入门</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：入门</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
-<p><b>问题 1</b>: When you compile a program written in the Java programming language, the compiler converts the human-readable source file into platform-independent code that a Java Virtual Machine can understand. What is this platform-independent code called?</p>
-<p><b>Answer 1</b>: Bytecode.</p>
-<p><b>问题 2</b>: Which of the following is <i>not</i> a valid comment:</p>
+<p><b>问题 1</b>：当您编译 Java 编写的程序时，编译器将人类可读的源文件编译为 JVM 可以理解的平台独立代码。这种平台独立的代码叫什么？</p>
+<p><b>答案 1</b>：字节码。</p>
+<p><b>问题 2</b>：下列哪一个 <i>不是</i> 合法的注释：</p>
 <p>a. <code>/** comment */</code><br />
 b. <code>/* comment */</code><br />
 c. <code>/* comment</code><br />
 d. <code>// comment</code><br /></p>
-<p><b>Answer 2</b>: c is an invalid comment.</p>
-<p><b>问题 3</b>: What is the first thing you should check if you see the following error at runtime:</p>
+<p><b>答案 2</b>：C 不是合法的注释。</p>
+<p><b>问题 3</b>：如果在运行时看到下面的错误，首先应该检查的是：</p>
 <div class="codeblock"><pre>
 Exception in thread "main" java.lang.NoClassDefFoundError:
 HelloWorldApp.java.
 </pre></div>
-<p><b>Answer 3</b>: Check your classpath. Your class cannot be found.</p>
-<p><b>问题 4</b>: What is the correct signature of <code>main</code> 方法?</p>
-<p><b>Answer 4</b>: The correct signature is <code>public static void main(String[] args)</code> or <code>public static void main(String... args)</code></p>
-<p><b>问题 5</b>: When declaring <code>main</code> 方法, which modifier must come first, <code>public</code> or <code>static</code>?</p>
-<p><b>Answer 5</b>: They can be in either order, but the convention is <code>public static</code>.</p>
-<p><b>问题 6</b>: What parameters does <code>main</code> 方法 define?</p>
-<p><b>Answer 6</b>: <code>main</code> 方法 defines a single parameter, usually named <code>args</code>, whose type is an array of <code>String</code> objects.</p>
+<p><b>答案 3</b>：检查类路径。找不到您的类。</p>
+<p><b>问题 4</b>：<code>main</code> 方法的签名是什么?</p>
+<p><b>答案 4</b>：正确的签名是 <code>public static void main(String[] args)</code> 或 <code>public static void main(String... args)</code>。</p>
+<p><b>问题 5</b>：声明 <code>main</code> 方法时，哪个修饰符放在最前面，<code>public</code> 还是 <code>static</code>？</p>
+<p><b>答案 5</b>：它们的顺序可以是任意的，但是习惯上用 <code>public static</code>。</p>
+<p><b>问题 6</b>：<code>main</code> 方法定义的参数是什么？</p>
+<p><b>答案 6</b>：<code>main</code> 方法定义了一个参数，通常叫做 <code>args</code>，其类型是 <code>String</code> 对象的数组。</p>
 <h2>练习</h2>
-<p><b>练习 1</b>: Change the
-<a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a> program so that it displays <code>Hola Mundo!</code> instead of <code>Hello World!</code>.</p>
-<p><b>Answer 1</b>: This is the only line of code that must change:</p>
+<p><b>练习 1</b>：修改
+    <a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java"
+       onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>
+        HelloWorldApp.java</code></a> 使其显示 <code>Hola Mundo!</code>。</p>
+<p><b>答案 1</b>：这是唯一需要修改的一行代码：</p>
 <div class="codeblock"><pre>
 System.out.println("Hola Mundo!"); //Display the string.
 </pre></div>
-<p><b>练习 2</b>: You can find a slightly modified version of <code>HelloWorldApp</code> here:
+<p><b>练习 2</b>：这里有一份对 <code>HelloWorldApp</code> 的修改：
 <a class="SourceLink" target="_blank" href="HelloWorldApp2.java" onclick="showCode('../../displayCode.html', 'HelloWorldApp2.java'); return false;"><code>HelloWorldApp2.java</code></a></p>
-<p>The program has an error. Fix the error so that the program successfully compiles and runs. What was the error?</p>
-<p><b>Answer 2</b>: Here&#39;s the error you get when you try to compile the program:</p>
+<p>这个程序中包含一个错误。修复这个错误使其可以编译和运行。这个错误是什么？</p>
+<p><b>答案 2</b>：当您试图编译程序时将遇到下面的错误：</p>
 <div class="codeblock"><pre>
 HelloWorldApp2.java:7: unclosed string literal
         System.out.println("Hello World!); //Display the string.
@@ -443,7 +445,7 @@ HelloWorldApp2.java:7: ')' expected
                                                                 ^
 2 errors
 </pre></div>
-<p>To fix this mistake, you need to close the quotation marks around the string. Here is the correct line of code:</p>
+<p>为修复这个错误，您需要使用引号包裹住字符串。正确的代码如下：</p>
 <div class="codeblock"><pre>
  System.out.println("Hello World!"); //Display the string.
 </pre></div>

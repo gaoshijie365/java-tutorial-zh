@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：(Java&trade; 教程 &gt; Essential Java Classes &gt;
+        <title>问题和练习的答案：(Java&trade; 教程 &gt; Essential Java Classes &gt;
             Regular Expressions)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,13 +402,13 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习:</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案:</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
 <ol>
 <li>Question: What are the three public classes in the <code>java.util.regex</code> package? Describe the purpose of each.
-<p>Answer:</p>
+<p>答案:</p>
 <ul>
 <li><code>Pattern</code> instances are compiled representations of regular expressions.</li>
 <li><code>Matcher</code> instances are engines that interpret patterns and perform match operations against input strings.</li>
@@ -416,23 +416,23 @@
 </ul>
 </li>
 <li>Question: Consider the string literal <code>&quot;foo&quot;</code>. What is the start index? What is the end index? Explain what these numbers mean.
-<p>Answer: Each character in the string resides in its own cell. Index positions point between cells. The string <code>&quot;foo&quot;</code> starts at index 0 and ends at index 3, even though the characters only occupy cells 0, 1, and 2.</p>
+<p>答案: Each character in the string resides in its own cell. Index positions point between cells. The string <code>&quot;foo&quot;</code> starts at index 0 and ends at index 3, even though the characters only occupy cells 0, 1, and 2.</p>
 </li>
 <li>Question: What is the difference between an ordinary character and a metacharacter? Give an example of each.
-<p>Answer: An ordinary character in a regular expression matches itself. A metacharacter is a special character that affects the way a pattern is matched. The letter <code>A</code> is an ordinary character. The punctuation mark <code>.</code> is a metacharacter that matches any single character.</p>
+<p>答案: An ordinary character in a regular expression matches itself. A metacharacter is a special character that affects the way a pattern is matched. The letter <code>A</code> is an ordinary character. The punctuation mark <code>.</code> is a metacharacter that matches any single character.</p>
 </li>
 <li>Question: How do you force a metacharacter to act like an ordinary character?
-<p>Answer: There are two ways:</p>
+<p>答案: There are two ways:</p>
 <ul>
 <li>Precede the metacharacter with a backslash (<code>\</code>);</li>
 <li>Enclose the metacharacter within the quote expressions, <code>\Q</code> (at the beginning) and <code>\E</code> (at the end).</li>
 </ul>
 </li>
 <li>Question: What do you call a set of characters enclosed in square brackets? What is it for?
-<p>Answer: This is a character class. It matches any single character that is in the class of characters specified by the expression between the brackets.</p>
+<p>答案: This is a character class. It matches any single character that is in the class of characters specified by the expression between the brackets.</p>
 </li>
 <li>Question: Here are three predefined character classes: <code>\d</code>, <code>\s</code>, and <code>\w</code>. Describe each one, and rewrite it using square brackets.
-<p>Answer:</p>
+<p>答案:</p>
 <table cellspacing="10" summary="">
 <tr>
 <td><code>\d</code></td>
@@ -452,7 +452,7 @@
 </table>
 </li>
 <li>Question: For each of <code>\d</code>, <code>\s</code>, and <code>\w</code>, write <i>two</i> simple expressions that match the <i>opposite</i> set of characters.
-<p>Answer:</p>
+<p>答案:</p>
 <table cellspacing="10" summary="">
 <tr>
 <td><code>\d</code></td>
@@ -472,7 +472,7 @@
 </table>
 </li>
 <li>Question: Consider the regular expression <code>(dog){3}</code>. Identify the two subexpressions. What string does the expression match?
-<p>Answer: The expression consists of a capturing group, <code>(dog)</code>, followed by a greedy quantifier <code>{3}</code>. It matches the string &quot;dogdogdog&quot;.</p>
+<p>答案: The expression consists of a capturing group, <code>(dog)</code>, followed by a greedy quantifier <code>{3}</code>. It matches the string &quot;dogdogdog&quot;.</p>
 <h2>练习</h2>
 <ol>
 <li>Exercise: Use a backreference to write an expression that will match a person&#39;s name only if that person&#39;s first name and last name are the same.

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：Creating and Using Packages (Java&trade; 教程 &gt; Learning the Java Language &gt;
+        <title>问题和练习的答案：Creating and Using Packages (Java&trade; 教程 &gt; Learning the Java Language &gt;
             Packages)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,7 +402,7 @@
             <a href="../QandE/packages-questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：Creating and Using Packages</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：Creating and Using Packages</h1></div>
         <div id="PageContent">
 
 <h2>Answers</h2>
@@ -442,7 +442,7 @@ Class Name
 </tr>
 </table>
 <p>a. What line of code will you need to add to each source file to put each class in the right package?<br />
-Answer 1a: The first line of each file must specify the package:</p>
+答案 1a: The first line of each file must specify the package:</p>
 <dl>
 <dt>In <code>Client.java</code> add:</dt>
 <dd><code>package mygame.client;</code></dd>
@@ -452,7 +452,7 @@ Answer 1a: The first line of each file must specify the package:</p>
 <dd><code>package mygame.shared;</code></dd>
 </dl>
 <p>b. To adhere to the directory structure, you will need to create some subdirectories in your development directory, and put source files in the correct subdirectories. What subdirectories must you create? Which subdirectory does each source file go in?<br />
-Answer 1b: Within the <code>mygame</code> directory, you need to create three subdirectories: <code>client</code>, <code>server</code>, and <code>shared</code>.</p>
+答案 1b: Within the <code>mygame</code> directory, you need to create three subdirectories: <code>client</code>, <code>server</code>, and <code>shared</code>.</p>
 <dl>
 <dt>In <code>mygame/client/</code> place:</dt>
 <dd><code>Client.java</code></dd>
@@ -462,7 +462,7 @@ Answer 1b: Within the <code>mygame</code> directory, you need to create three su
 <dd><code>Utilities.java</code></dd>
 </dl>
 <p>c. Do you think you&#39;ll need to make any other changes to the source files to make them compile correctly? If so, what?<br />
-Answer 1c: Yes, you need to add import statements. <code>Client.java</code> and <code>Server.java</code> need to import the <code>Utilities</code> class, which they can do in one of two ways:</p>
+答案 1c: Yes, you need to add import statements. <code>Client.java</code> and <code>Server.java</code> need to import the <code>Utilities</code> class, which they can do in one of two ways:</p>
 <div class="codeblock"><pre>
 import mygame.shared.*;
        --or--
@@ -483,7 +483,7 @@ import mygame.client.Client;
 <a class="SourceLink" target="_blank" href="question/Utilities.java" onclick="showCode('../../../displayCode.html', 'question/Utilities.java'); return false;"><code>Utilities</code></a></li>
 </ul>
 <p>a. Implement the changes you proposed in question 1, using the source files you just downloaded.<br />
-b. Compile the revised source files. (<i>Hint:</i> If you&#39;re invoking the compiler from the command line (as opposed to using a builder), invoke the compiler from the directory that contains the <code>mygame</code> directory you just created.) Answer 1: Download this zip file with the solution: 
+b. Compile the revised source files. (<i>Hint:</i> If you&#39;re invoking the compiler from the command line (as opposed to using a builder), invoke the compiler from the directory that contains the <code>mygame</code> directory you just created.) 答案 1: Download this zip file with the solution:
 <a class="SourceLink" target="_blank" href="mygame.zip" onclick="showCode('../../../displayCode.html', 'mygame.zip'); return false;"><code>mygame.zip</code></a><br />
 You might need to change your proposed import code to reflect our implementation.</p>
 

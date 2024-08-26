@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answer to 问题和练习：Generics (Java&trade; 教程 &gt; Learning the Java Language &gt;
+        <title>答案 to 问题和练习：Generics (Java&trade; 教程 &gt; Learning the Java Language &gt;
             Generics (Updated))</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,12 +402,12 @@
             <a href="../QandE/generics-questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answer to 问题和练习：Generics</h1></div>
+        <div id="PageTitle"><h1>答案 to 问题和练习：Generics</h1></div>
         <div id="PageContent">
 
 <ol>
 <li>Write a generic method to count the number of elements in a collection that have a specific property (for example, odd integers, prime numbers, palindromes).<br /><br />
-<strong>Answer</strong>:
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public final class Algorithm {
     public static &lt;T&gt; int countIf(Collection&lt;T&gt; c, UnaryPredicate&lt;T&gt; p) {
@@ -455,10 +455,10 @@ public final class Algorithm {
     }
 }
 </pre></div>
-<strong>Answer</strong>: No. The greater than (<tt>&gt;</tt>) operator applies only to primitive numeric types.<br /><br />
+<strong>答案</strong>: No. The greater than (<tt>&gt;</tt>) operator applies only to primitive numeric types.<br /><br />
 </li>
 <li>Write a generic method to exchange the positions of two different elements in an array.<br /><br />
-<strong>Answer</strong>:
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public final class Algorithm {
     public static &lt;T&gt; void swap(T[] a, int i, int j) {
@@ -470,7 +470,7 @@ public final class Algorithm {
 </pre></div>
 </li>
 <li>If the compiler erases all type parameters at compile time, why should you use generics?<br /><br />
-<strong>Answer</strong>: You should use generics because:
+<strong>答案</strong>: You should use generics because:
 <ul>
 <li>The Java compiler enforces tighter type checks on generic code at compile time.</li>
 <li>Generics support programming types as parameters.</li>
@@ -497,7 +497,7 @@ public class Pair&lt;K, V&gt; {
     private V value;
 }
 </pre></div>
-<strong>Answer</strong>:
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public class Pair {
 
@@ -524,7 +524,7 @@ public static &lt;T extends Comparable&lt;T&gt;&gt;
     // ...
 }
 </pre></div>
-<strong>Answer</strong>:
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public static int findFirstGreaterThan(Comparable[] at, Comparable elem) {
     // ...
@@ -539,11 +539,11 @@ public static void print(List&lt;? extends Number&gt; list) {
     System.out.println();
 }
 </pre></div>
-<strong>Answer</strong>: Yes.
+<strong>答案</strong>: Yes.
 <br /><br />
 </li>
 <li>Write a generic method to find the maximal element in the range <tt>[begin, end)</tt> of a list.<br /><br />
-<strong>Answer</strong>:
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 import java.util.*;
 
@@ -575,7 +575,7 @@ public class Singleton&lt;T&gt; {
     private static T instance = null;
 }
 </pre></div>
-<strong>Answer</strong>: No.  You cannot create a static field of the type parameter <tt>T</tt>.
+<strong>答案</strong>: No.  You cannot create a static field of the type parameter <tt>T</tt>.
 <br /><br />
 </li>
 <li> Given the following classes:
@@ -591,7 +591,7 @@ Will the following code compile? If not, why?
 Node&lt;Circle&gt; nc = new Node&lt;&gt;();
 Node&lt;Shape&gt;  ns = nc;
 </pre></div>
-<strong>Answer</strong>: No. Because <tt>Node&lt;Circle&gt;</tt> is not a subtype of <tt>Node&lt;Shape&gt;</tt>.
+<strong>答案</strong>: No. Because <tt>Node&lt;Circle&gt;</tt> is not a subtype of <tt>Node&lt;Shape&gt;</tt>.
 <br /><br />
 </li>
 <li>Consider this class:
@@ -606,7 +606,7 @@ Will the following code compile? If not, why?
 Node&lt;String&gt; node = new Node&lt;&gt;();
 Comparable&lt;String&gt; comp = node;
 </pre></div>
-<strong>Answer</strong>: Yes.
+<strong>答案</strong>: Yes.
 </li>
 <li>How do you invoke the following method to find the first integer in a list that is relatively prime to a list of specified integers?
 <div class="codeblock"><pre>
@@ -614,7 +614,7 @@ public static &lt;T&gt;
     int findFirst(List&lt;T&gt; list, int begin, int end, UnaryPredicate&lt;T&gt; p)
 </pre></div>
 Note that two integers <em>a</em> and <em>b</em> are relatively prime if gcd(<em>a, b</em>) = 1, where gcd is short for greatest common divisor.<br /><br />
-<strong>Answer</strong>:
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 import java.util.*;
 

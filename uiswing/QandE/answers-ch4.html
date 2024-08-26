@@ -416,7 +416,7 @@ b. <code>GridLayout</code><br />
 c. <code>GridBagLayout</code><br />
 d. a and b<br />
 e. b and c</p>
-<p><b>Answer 1</b>: d. <code>BorderLayout</code> and <code>GridLayout</code> easily deal with this situation. Although you could use <code>GridBagLayout</code>, it&#39;s much more complex than necessary.</p>
+<p><b>答案 1</b>: d. <code>BorderLayout</code> and <code>GridLayout</code> easily deal with this situation. Although you could use <code>GridBagLayout</code>, it&#39;s much more complex than necessary.</p>
 <p><br /></p>
 <p><b>问题 2</b>. The container has a row of components that should all be displayed at the same size, filling the container’s entire area.</p>
 <p><img src="../../figures/uiswing/QandE/Layout2-1.png" width="348" height="60" align="bottom" alt="Layout2-1.png" /> <img src="../../figures/uiswing/QandE/Layout2-2.png" width="395" height="89" align="bottom" alt="Layout2-2.png" /></p>
@@ -424,7 +424,7 @@ e. b and c</p>
 b. <code>GridLayout</code><br />
 c. <code>BoxLayout</code><br />
 d. a and b</p>
-<p><b>Answer 2</b>: b. This type of same-size layout &mdash; whether in a row, a column, or a grid &mdash; is what <code>GridLayout</code> is best at.</p>
+<p><b>答案 2</b>: b. This type of same-size layout &mdash; whether in a row, a column, or a grid &mdash; is what <code>GridLayout</code> is best at.</p>
 <p><br /></p>
 <p><b>问题 3</b>. The container displays a number of components in a column, with any extra space going between the first two components.<br /></p>
 <table width="450" border="0" cellspacing="2" cellpadding="0" summary="">
@@ -437,7 +437,7 @@ d. a and b</p>
 b. <code>BoxLayout</code><br />
 c. <code>GridLayout</code><br />
 d. <code>BorderLayout</code></p>
-<p><b>Answer 3</b>: b. <code>BoxLayout</code> lays out components in either a column or a row. You can specify extra space using an invisible component.</p>
+<p><b>答案 3</b>: b. <code>BoxLayout</code> lays out components in either a column or a row. You can specify extra space using an invisible component.</p>
 <p><br /></p>
 <p><b>问题 4</b>. The container can display three completely different components at different times, depending perhaps on user input or program state. Even if the components’ sizes differ, switching from one component to the next shouldn’t change the amount of space devoted to the component.</p>
 <p><img src="../../figures/uiswing/QandE/Layout4-1.png" width="347" height="132" align="bottom" alt="Layout4-1.png" /></p>
@@ -446,10 +446,10 @@ d. <code>BorderLayout</code></p>
 b. <code>BoxLayout</code><br />
 c. <code>CardLayout</code><br />
 d. <code>GridBagLayout</code></p>
-<p><b>Answer 4</b>: c. <code>CardLayout</code> exists to allow components to share the same space. Although it&#39;s simpler to use a <code>JTabbedPane</code> component to control an area, <code>CardLayout</code> is the solution when you don&#39;t want tabs.</p>
+<p><b>答案 4</b>: c. <code>CardLayout</code> exists to allow components to share the same space. Although it&#39;s simpler to use a <code>JTabbedPane</code> component to control an area, <code>CardLayout</code> is the solution when you don&#39;t want tabs.</p>
 <h2>练习</h2>
 <p><b>练习 1</b>. Implement the layout described and shown in question 1.<br />
-<b>Answer 1</b>: See <a target="source" href="../examples/QandE/Layout1Project/src/QandE/Layout1.java"><code>Layout1.java</code></a><a href="../examples/QandE/Layout1Project/src/QandE/Layout1.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
+<b>答案 1</b>: See <a target="source" href="../examples/QandE/Layout1Project/src/QandE/Layout1.java"><code>Layout1.java</code></a><a href="../examples/QandE/Layout1Project/src/QandE/Layout1.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
 <div class="codeblock"><pre>
 JPanel p = new JPanel(new BorderLayout());
 p.add(createComponent("Component 1"),
@@ -458,7 +458,7 @@ frame.setContentPane(p);
 </pre></div>
 <p><br /></p>
 <p><b>练习 2</b>. Implement the layout described and shown in question 2.<br />
-<b>Answer 2</b>: See <a target="source" href="../examples/QandE/Layout2Project/src/QandE/Layout2.java"><code>Layout2.java</code></a><a href="../examples/QandE/Layout2Project/src/QandE/Layout2.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
+<b>答案 2</b>: See <a target="source" href="../examples/QandE/Layout2Project/src/QandE/Layout2.java"><code>Layout2.java</code></a><a href="../examples/QandE/Layout2Project/src/QandE/Layout2.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
 <div class="codeblock"><pre>
 JPanel p = new JPanel(new GridLayout(1,0));
 p.add(createComponent("Component 1"));
@@ -469,7 +469,7 @@ frame.setContentPane(p);
 </pre></div>
 <p><br /></p>
 <p><b>Exercise 3</b>. Implement the layout described and shown in question 3.<br />
-<b>Answer 3</b>: See <a target="source" href="../examples/QandE/Layout3Project/src/QandE/Layout3.java"><code>Layout3.java</code></a><a href="../examples/QandE/Layout3Project/src/QandE/Layout3.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
+<b>答案 3</b>: See <a target="source" href="../examples/QandE/Layout3Project/src/QandE/Layout3.java"><code>Layout3.java</code></a><a href="../examples/QandE/Layout3Project/src/QandE/Layout3.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
 <div class="codeblock"><pre>
 JPanel p = new JPanel();
 p.setLayout(new BoxLayout(p, BoxLayout.PAGE_AXIS));
@@ -482,7 +482,7 @@ frame.setContentPane(p);
 </pre></div>
 <p><br /></p>
 <p><b>Exercise 4</b>. Implement the layout described and shown in question 4.<br />
-<b>Answer 4</b>: See <a target="source" href="../examples/QandE/Layout4Project/src/QandE/Layout4.java"><code>Layout4.java</code></a><a href="../examples/QandE/Layout4Project/src/QandE/Layout4.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
+<b>答案 4</b>: See <a target="source" href="../examples/QandE/Layout4Project/src/QandE/Layout4.java"><code>Layout4.java</code></a><a href="../examples/QandE/Layout4Project/src/QandE/Layout4.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
 <div class="codeblock"><pre>
 <em>...//Where the radio buttons are set up:</em>
 for (int i= 0; i &lt; strings.length; i++) {
@@ -506,7 +506,7 @@ public void actionPerformed(ActionEvent evt) {
 <p><br /></p>
 <p><b>Exercise 5</b>. By adding a single line of code, make the program you wrote for 练习 2 display the components from right-to-left, instead of from left-to-right.</p>
 <p><img src="../../figures/uiswing/QandE/Layout2-3.png" width="348" height="60" align="bottom" alt="Layout2-3.png" /></p>
-<p><b>Answer 5</b>: You can change the horizontal orientation using the
+<p><b>答案 5</b>: You can change the horizontal orientation using the
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#setComponentOrientation-java.awt.ComponentOrientation-"><code>setComponentOrientation</code></a> method defined by the <code>Component</code> class. For example:</p>
 <div class="codeblock"><pre>
 p.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);

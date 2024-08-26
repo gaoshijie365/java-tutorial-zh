@@ -404,23 +404,23 @@
 
 <h2>问题</h2>
 <p><b>问题 1.</b> What method defined by <code>JComponent</code> paints the inside of a component?<br />
-<b>Answer 1:</b> The <code>paintComponent</code> method paints a component&#39;s innards (with the exception of any children it contains).<br /></p>
+<b>答案 1:</b> The <code>paintComponent</code> method paints a component&#39;s innards (with the exception of any children it contains).<br /></p>
 <p><b>问题 2.</b> Which of the following code snippets paint a rectangle (filled or not) that is 100x100 pixels?</p>
 <p>a. <code>g.fillRect(x, y, 100, 100)</code><br />
 b. <code>g.fillRect(x, y, 99, 99)</code><br />
 c. <code>g.drawRect(x, y, 100, 100)</code><br />
 d. b and c<br />
 e. a and c</p>
-<p><b>Answer 2:</b> a. The <code>drawRect</code> methods paint lines just below the specified rectangle. So to get a 100x100 rectangle, you need to specify a width and height of 99, 99 to <code>drawRect</code>. For <code>fill<em>Xxx</em></code> methods, on the other hand, you specify exactly the desired width and height, so <code>g.fillRect(x, y, 100, 100)</code> results in a 100x100 rectangle.</p>
+<p><b>答案 2:</b> a. The <code>drawRect</code> methods paint lines just below the specified rectangle. So to get a 100x100 rectangle, you need to specify a width and height of 99, 99 to <code>drawRect</code>. For <code>fill<em>Xxx</em></code> methods, on the other hand, you specify exactly the desired width and height, so <code>g.fillRect(x, y, 100, 100)</code> results in a 100x100 rectangle.</p>
 <p><br /></p>
 <p><b>问题 3.</b> What code would you use to make a component perform the next painting operation using the background color at 50% transparency?<br />
-<b>Answer 3:</b></p>
+<b>答案 3:</b></p>
 <div class="codeblock"><pre>
 g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
 </pre></div>
 <h2>练习</h2>
 <p><b>练习 1.</b> Using a standard border and custom component painting, implement a component that has a preferred size of 250x100, is opaque by default, has a 5-pixel black border, and paints an “X” (using 5-pixel-thick lines) in the foreground color, as shown in the following figure. <img src="../../figures/uiswing/QandE/ComponentDisplayer-1.png" width="258" height="134" align="bottom" alt="ComponentDisplayer-1.png" /></p>
-<p><b>Answer 1:</b> See <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/XMarksTheSpot.java">XMarksTheSpot.java</a></code>, which you can run using <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/ComponentDisplayer.java">ComponentDisplayer.java</a></code>.</p>
+<p><b>答案 1:</b> See <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/XMarksTheSpot.java">XMarksTheSpot.java</a></code>, which you can run using <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/ComponentDisplayer.java">ComponentDisplayer.java</a></code>.</p>
 <p>Here&#39;s the code that sets the border of the <code>XMarksTheSpot</code> component:</p>
 <div class="codeblock"><pre>
 setBorder(BorderFactory.createMatteBorder(5,5,5,5, Color.BLACK));
@@ -447,7 +447,7 @@ g2.draw(new Line2D.Double(insets.left,
 <td width="50%"><img src="../../figures/uiswing/QandE/SquareIcon-2.png" width="111" height="44" align="bottom" alt="SquareIcon-2.png" /></td>
 </tr>
 </table>
-<p><b>Answer 2:</b> See <code><a href="../examples/QandE/ButtonDemoProject/src/QandE/SquareIcon.java">SquareIcon.java</a></code>, which you can run using this <a href="../examples/QandE/ButtonDemoProject/src/QandE/ButtonDemo.java">modified <code>ButtonDemo.java</code></a>.</p>
+<p><b>答案 2:</b> See <code><a href="../examples/QandE/ButtonDemoProject/src/QandE/SquareIcon.java">SquareIcon.java</a></code>, which you can run using this <a href="../examples/QandE/ButtonDemoProject/src/QandE/ButtonDemo.java">modified <code>ButtonDemo.java</code></a>.</p>
 <p>Here&#39;s the code that sets the icon:</p>
 <div class="codeblock"><pre>
 Icon middleButtonIcon = new SquareIcon();
@@ -476,7 +476,7 @@ public int getIconHeight() {
 }
 </pre></div>
 <p><br /></p>
-<p><b>Exercise 3.</b> Implement a border that paints a red 15-pixel-tall stripe all the way across the top of its component. Test this border by substituting it for the border on the component you created in exercise&nbsp;1. The result should look like the following figure. <img src="../../figures/uiswing/QandE/ComponentDisplayer-2.png" width="258" height="134" align="bottom" alt="ComponentDisplayer-2.png" /> <b>Answer 3:</b> See <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/StripeBorder.java">StripeBorder.java</a></code>, which you can run using <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/ComponentDisplayer.java">ComponentDisplayer.java</a></code> and <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/XMarksTheSpot.java">XMarksTheSpot.java</a></code> (be sure to uncomment the line that sets the border to <code>StripeBorder</code>). Here is <code>StripeBorder</code>&#39;s implementation of the three methods required by the <code>Border</code> interface:</p>
+<p><b>Exercise 3.</b> Implement a border that paints a red 15-pixel-tall stripe all the way across the top of its component. Test this border by substituting it for the border on the component you created in exercise&nbsp;1. The result should look like the following figure. <img src="../../figures/uiswing/QandE/ComponentDisplayer-2.png" width="258" height="134" align="bottom" alt="ComponentDisplayer-2.png" /> <b>答案 3:</b> See <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/StripeBorder.java">StripeBorder.java</a></code>, which you can run using <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/ComponentDisplayer.java">ComponentDisplayer.java</a></code> and <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/XMarksTheSpot.java">XMarksTheSpot.java</a></code> (be sure to uncomment the line that sets the border to <code>StripeBorder</code>). Here is <code>StripeBorder</code>&#39;s implementation of the three methods required by the <code>Border</code> interface:</p>
 <div class="codeblock"><pre>
 public void paintBorder(Component c, Graphics g,
                         int x, int y,

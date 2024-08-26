@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：(Java&trade; 教程 &gt; Collections &gt;
+        <title>问题和练习的答案：(Java&trade; 教程 &gt; Collections &gt;
             Implementations)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,30 +402,30 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习:</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案:</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
 <ol>
 <li>Question: You plan to write a program that uses several basic collection interfaces: <code>Set</code>, <code>List</code>, <code>Queue</code>, and <code>Map</code>. You&#39;re not sure which implementations will work best, so you decide to use general-purpose implementations until you get a better idea how your program will work in the real world. Which implementations are these?<br /> 
-Answer:<br />
+答案:<br />
 <code>Set</code>: <code>HashSet</code><br />
 <code>List</code>: <code>ArrayList</code><br />
 <code>Queue</code>: <code>LinkedList</code><br />
 <code>Map</code>: <code>HashMap</code>
 </li>
 <li>Question: If you need a <code>Set</code> implementation that provides value-ordered iteration, which class should you use? <br />
-Answer: <br /> 
+答案: <br />
 <code>TreeSet</code> guarantees that the sorted set is in ascending element order, sorted according to the natural order of the elements or by the <code>Comparator</code> provided.</li>
 <li>Question: Which class do you use to access wrapper implementations? <br /> 
-Answer: <br /> 
+答案: <br />
 You use the <code>Collections</code> class, which provides static methods that operate on or return collections.</li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>Exercise: Write a program that reads a text file, specified by the first command line argument, into a <code>List</code>. The program should then print random lines from the file, the number of lines printed to be specified by the second command line argument. Write the program so that a correctly-sized collection is allocated all at once, instead of being gradually expanded as the file is read in. Hint: To determine the number of lines in the file, use 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#length--"><code>java.io.File.length</code></a> to obtain the size of the file, then divide by an assumed size of an average line. <br /> 
- Answer: <br /> 
+ 答案: <br />
  Since we are accessing the <code>List</code> randomly, we will use <code>ArrayList</code>. We estimate the number of lines by taking the file size and dividing by 50. We then double that figure, since it is more efficient to overestimate than to underestimate.
 <div class="codeblock"><pre>
 

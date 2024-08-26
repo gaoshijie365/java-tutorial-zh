@@ -404,7 +404,7 @@
 
 <h2>问题</h2>
 <p><b>问题 1:</b> For each of the following tasks, specify which thread it should be executed in and why.<br />
-<b>Answer 1:</b></p>
+<b>答案 1:</b></p>
 <ul>
 <li>Initializing the GUI. The event dispatch thread; most interactions with the GUI framework must occur on this thread.</li>
 <li>Loading a large file. A worker thread. Executing this task on the event dispatch thread would prevent GUI events from being processed, &quot;freezing&quot; the GUI until the task is finished. Executing this task on an initial thread would cause a delay in creating the GUI.</li>
@@ -414,13 +414,13 @@
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html#setText-java.lang.String-"><code>javax.swing.text.JTextComponent.setText</code></a> to change the text of a component. This method is documented as thread-safe, so it can be invoked from any thread.</li>
 </ul>
 <p><b>问题 2:</b> One thread is not the preferred thread for any of the tasks mentioned in the previous question. Name this thread and explain why its applications are so limited.<br />
-<b>Answer 2:</b> The initial threads launch the first GUI task on the event dispatch thread. After that, a Swing program is primarily driven by GUI events, which trigger tasks on the event dispatch thread and the worker thread. Usually, the initial threads are left with nothing to do.</p>
+<b>答案 2:</b> The initial threads launch the first GUI task on the event dispatch thread. After that, a Swing program is primarily driven by GUI events, which trigger tasks on the event dispatch thread and the worker thread. Usually, the initial threads are left with nothing to do.</p>
 <p><b>问题 3:</b> <code>SwingWorker</code> has two type parameters. Explain how these type parameters are used, and why it often doesn&#39;t matter what they are.<br />
-<b>Answer 3:</b> The type parameters specify the type of the final result (also the return type of the <code>doInBackground</code> method) and the type of interim results (also the argument types for <code>publish</code> and <code>process</code>). Many background tasks do not provide final or interim results.</p>
+<b>答案 3:</b> The type parameters specify the type of the final result (also the return type of the <code>doInBackground</code> method) and the type of interim results (also the argument types for <code>publish</code> and <code>process</code>). Many background tasks do not provide final or interim results.</p>
 <h2>练习</h2>
 <p><b>问题 1:</b> Modify the
 <a class="SourceLink" target="_blank" href="../examples/concurrency/FlipperProject/src/concurrency/Flipper.java" onclick="showCode('../../displayCode.html', '../examples/concurrency/FlipperProject/src/concurrency/Flipper.java'); return false;"><code><code>Flipper</code></code></a> example so that it pauses 5 seconds between &quot;coin flips.&quot; If the user clicks the &quot;Cancel&quot;, the coin-flipping loop terminates immediately.<br />
-<b>Answer 1:</b> See the source code for 
+<b>答案 1:</b> See the source code for
 <a class="SourceLink" target="_blank" href="../examples/QandE/Flipper2Project/src/QandE/Flipper2.java" onclick="showCode('../../displayCode.html', '../examples/QandE/Flipper2Project/src/QandE/Flipper2.java'); return false;"><code><code>Flipper2</code></code></a>. The modified program adds a delay in the central <code>doInBackground</code> loop:</p>
 <div class="codeblock"><pre>
 protected Object doInBackground() {

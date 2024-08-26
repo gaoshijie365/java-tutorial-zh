@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：Date-Time API (Java&trade; 教程 &gt; Date Time &gt;
+        <title>问题和练习的答案：Date-Time API (Java&trade; 教程 &gt; Date Time &gt;
             Standard Calendar)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,16 +402,16 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：Date-Time API</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：Date-Time API</h1></div>
         <div id="PageContent">
 
 
 <h2>问题</h2>
 <p><strong>Question 1</strong>. Which class would you use to store your birthday in years, months, days, seconds, and nanoseconds?</p>
-<p><strong>Answer 1</strong>. Most likely you would use the <tt>LocalDateTime</tt> class. To take a particular time zone into account, you would use the <tt>ZonedDateTime</tt> class. Both classes track date and time to nanosecond precision and both classes, when used in conjunction with <tt>Period</tt>, give a result using a combination of human-based units, such as years, months, and days.</p>
+<p><strong>答案 1</strong>. Most likely you would use the <tt>LocalDateTime</tt> class. To take a particular time zone into account, you would use the <tt>ZonedDateTime</tt> class. Both classes track date and time to nanosecond precision and both classes, when used in conjunction with <tt>Period</tt>, give a result using a combination of human-based units, such as years, months, and days.</p>
 
 <p><strong>问题 2</strong>. Given a random date, how would you find the date of the previous Thursday?</p>
-<p><strong>Answer 2</strong>. You can use the <tt>previous</tt> method of a <tt>TemporalAdjuster</tt>:</p>
+<p><strong>答案 2</strong>. You can use the <tt>previous</tt> method of a <tt>TemporalAdjuster</tt>:</p>
 <div class="codeblock"><pre>
 LocalDate date = ...;
 System.out.printf("The previous Thursday is: %s%n",
@@ -420,11 +420,11 @@ System.out.printf("The previous Thursday is: %s%n",
 
 <p><strong>问题 3</strong>. What is the difference between a <tt>ZoneId</tt> and a <tt>ZoneOffset</tt>?
 </p>
-<p><strong>Answer 3</strong>. Both <tt>ZoneId</tt> and <tt>ZoneOffset</tt> track an offset from Greenwich/UTC time, but the <tt>ZoneOffset</tt> class tracks only the absolute offset from Greenwich/UTC. The <tt>ZoneId</tt> class also uses the <tt>ZoneRules</tt> to determine how an offset varies for a particular time of year and region.</p>
+<p><strong>答案 3</strong>. Both <tt>ZoneId</tt> and <tt>ZoneOffset</tt> track an offset from Greenwich/UTC time, but the <tt>ZoneOffset</tt> class tracks only the absolute offset from Greenwich/UTC. The <tt>ZoneId</tt> class also uses the <tt>ZoneRules</tt> to determine how an offset varies for a particular time of year and region.</p>
 
 <p><strong>问题 4</strong>. How would you convert an <tt>Instant</tt> to a <tt>ZonedDateTime</tt>? How would you convert a <tt>ZonedDateTime</tt> to an <tt>Instant</tt>?</p>
 
-<p><strong>Answer 4</strong>. You can convert an <tt>Instant</tt> to a <tt>ZonedDateTime</tt> by using the <tt>ZonedDateTime.ofInstant</tt> method. You also need to supply a <tt>ZoneId</tt>:</p>
+<p><strong>答案 4</strong>. You can convert an <tt>Instant</tt> to a <tt>ZonedDateTime</tt> by using the <tt>ZonedDateTime.ofInstant</tt> method. You also need to supply a <tt>ZoneId</tt>:</p>
 <div class="codeblock"><pre>
 ZonedDateTime zdt = ZonedDateTime.ofInstant(Instant.now(),
                                             ZoneId.systemDefault());
@@ -442,15 +442,15 @@ Instant inst = ZonedDateTime.now().toInstant();
 
 <h2>练习</h2>
 <p><strong>练习 1</strong>. Write an example that, for a given year, reports the length of each month within that year.<br /></p>
-<p><strong>Answer 1</strong>. See 
+<p><strong>答案 1</strong>. See
 <a class="SourceLink" target="_blank" href="MonthsInYear.java" onclick="showCode('../../../displayCode.html', 'MonthsInYear.java'); return false;"><code>MonthsInYear.java</code></a> for a solution.</p>
 
 <p><strong>练习 2</strong>. Write an example that, for a given month of the current year, lists all of the Mondays in that month.</p>
-<p><strong>Answer 2</strong>. See 
+<p><strong>答案 2</strong>. See
 <a class="SourceLink" target="_blank" href="ListMondays.java" onclick="showCode('../../../displayCode.html', 'ListMondays.java'); return false;"><code>ListMondays.java</code></a> for a solution.</p>
 
 <p><strong>Exercise 3</strong>. Write an example that tests whether a given date occurs on Friday the 13th.</p>
-<p><strong>Answer 3</strong>. See 
+<p><strong>答案 3</strong>. See
 <a class="SourceLink" target="_blank" href="Superstitious.java" onclick="showCode('../../../displayCode.html', 'Superstitious.java'); return false;"><code>Superstitious.java</code></a> and 
 <a class="SourceLink" target="_blank" href="FridayThirteenQuery.java" onclick="showCode('../../../displayCode.html', 'FridayThirteenQuery.java'); return false;"><code>FridayThirteenQuery.java</code></a> for a solution.</p>
 

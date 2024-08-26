@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：Numbers (Java&trade; 教程 &gt; Learning the Java Language &gt;
+        <title>问题和练习的答案：Numbers (Java&trade; 教程 &gt; Learning the Java Language &gt;
             Numbers and Strings)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,7 +402,7 @@
             <a href="../QandE/numbers-questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：Numbers</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：Numbers</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
@@ -412,11 +412,11 @@
 <ol type="a">
 <li>
 <p><strong>Question:</strong> What <code>Integer</code> method can you use to convert an <code>int</code> into a string that expresses the number in hexadecimal? For example, what method converts the integer 65 into the string &quot;41&quot;?</p>
-<p><strong>Answer:</strong> <code>toHexString</code></p>
+<p><strong>答案:</strong> <code>toHexString</code></p>
 </li>
 <li>
 <p><strong>Question:</strong>What <code>Integer</code> method would you use to convert a string expressed in base 5 into the equivalent <code>int</code>? For example, how would you convert the string &quot;230&quot; into the integer value 65? Show the code you would use to accomplish this task.</p>
-<p><strong>Answer:</strong> <code>valueOf</code>. Here&#39;s how:</p>
+<p><strong>答案:</strong> <code>valueOf</code>. Here&#39;s how:</p>
 <div class="codeblock"><pre>
 String base5String = "230";
 int result = Integer.valueOf(base5String, 5);
@@ -424,7 +424,7 @@ int result = Integer.valueOf(base5String, 5);
 </li>
 <li>
 <p><strong>Question:</strong> What Double method can you use to detect whether a floating-point number has the special value Not a Number (<code>NaN</code>)?</p>
-<p><strong>Answer:</strong> <code>isNaN</code></p>
+<p><strong>答案:</strong> <code>isNaN</code></p>
 </li>
 </ol>
 </li>
@@ -433,7 +433,7 @@ int result = Integer.valueOf(base5String, 5);
 <div class="codeblock"><pre>
 Integer.valueOf(1).equals(Long.valueOf(1))
 </pre></div>
-<p><strong>Answer:</strong> False. The two objects (the <code>Integer</code> and the <code>Long</code>) have different types.</p>
+<p><strong>答案:</strong> False. The two objects (the <code>Integer</code> and the <code>Long</code>) have different types.</p>
 </li>
 </ol>
 <h2>练习</h2>
@@ -441,7 +441,7 @@ Integer.valueOf(1).equals(Long.valueOf(1))
 <li>
 <p><strong>Exercise:</strong> Change 
 <a class="SourceLink" target="_blank" href="MaxVariablesDemo.java" onclick="showCode('../../../displayCode.html', 'MaxVariablesDemo.java'); return false;"><code>MaxVariablesDemo</code></a> to show minimum values instead of maximum values. You can delete all code related to the variables <code>aChar</code> and <code>aBoolean</code>. What is the output?</p>
-<p><strong>Answer:</strong> See 
+<p><strong>答案:</strong> See
 <a class="SourceLink" target="_blank" href="MinVariablesDemo.java" onclick="showCode('../../../displayCode.html', 'MinVariablesDemo.java'); return false;"><code>MinVariablesDemo</code></a>. Here is the output:</p>
 <div class="codeblock"><pre>
 The smallest byte value is -128
@@ -459,7 +459,7 @@ The smallest double value is 4.9E-324
 </pre></div>
 <p>The program should display <code>16</code> and then exit. The program should display an error message if the user enters only one argument. You can base your program on 
 <a class="SourceLink" target="_blank" href="../../data/examples/ValueOfDemo.java" onclick="showCode('../../../displayCode.html', '../../data/examples/ValueOfDemo.java'); return false;"><code>ValueOfDemo</code></a>.</p>
-<p><strong>Answer:</strong> See 
+<p><strong>答案:</strong> See
 <a class="SourceLink" target="_blank" href="Adder.java" onclick="showCode('../../../displayCode.html', 'Adder.java'); return false;"><code>Adder</code></a>.</p>
 </li>
 <li>
@@ -473,7 +473,7 @@ The smallest double value is 4.9E-324
 java FPAdder 1 1e2 3.0 4.754
 </pre></div>
 <p>The program would display <code>108.75</code>. Depending on your locale, the decimal point might be a comma (<code>,</code>) instead of a period (<code>.</code>).</p>
-<p><strong>Answer:</strong> See 
+<p><strong>答案:</strong> See
 <a class="SourceLink" target="_blank" href="FPAdder.java" onclick="showCode('../../../displayCode.html', 'FPAdder.java'); return false;"><code>FPAdder</code></a>.</p>
 </li>
 </ol>

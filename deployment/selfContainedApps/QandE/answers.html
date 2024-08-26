@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：Self-Contained Applications (Java&trade; 教程 &gt; Deployment &gt;
+        <title>问题和练习的答案：Self-Contained Applications (Java&trade; 教程 &gt; Deployment &gt;
             Deploying Self-Contained Applications)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,7 +402,7 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：Self-Contained Applications</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：Self-Contained Applications</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
@@ -416,24 +416,24 @@
   <li>You control the version of the JRE that is used by the application.</li>
   <li>The application does not require a browser to run.</li>
 </ol>
-<p><strong>Answer:</strong> C. The application requires more space because the JRE is bundled with the application.</p>
+<p><strong>答案:</strong> C. The application requires more space because the JRE is bundled with the application.</p>
 </li>
 
 <li>
 <p><strong>Question:</strong> True or False: MIME type must always be used to set up a file association.</p>
-<p><strong>Answer:</strong> <strong>False</strong>. Depending on the platform and the bundler used, a MIME type or file extension can be used. For Linux, the MIME type is required. For Windows, the file extension is required. For OS X, either the MIME type or the file extension is required. It is a good practice to provide both the MIME type and file extension when setting up file associations, regardless of the platform.</p>
+<p><strong>答案:</strong> <strong>False</strong>. Depending on the platform and the bundler used, a MIME type or file extension can be used. For Linux, the MIME type is required. For Windows, the file extension is required. For OS X, either the MIME type or the file extension is required. It is a good practice to provide both the MIME type and file extension when setting up file associations, regardless of the platform.</p>
 </li>
 
 <li>
 <p><strong>Question:</strong> What elements are used to identify the entry points for self-contained applications in the <code>&lt;fx:deploy&gt;</code> Ant task?</p>
-<p><strong>Answer:</strong> The <code>mainClass</code> attribute of the <code>&lt;fx:application&gt;</code> element is used to identify the main entry point. If the self-contained application has multiple entry points, the <code>&lt;fx:secondaryLauncher&gt;</code> element is used for each secondary entry point.</p>
+<p><strong>答案:</strong> The <code>mainClass</code> attribute of the <code>&lt;fx:application&gt;</code> element is used to identify the main entry point. If the self-contained application has multiple entry points, the <code>&lt;fx:secondaryLauncher&gt;</code> element is used for each secondary entry point.</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
 <p><strong>Exercise:</strong> Write the <code>&lt;fx:deploy&gt;</code> Ant task to generate a Windows MSI bundle for a simple application named My Sample App. The JAR file for the application is in the <code>dist</code> directory, the main class is <code>samples.MyApp</code>, and output files are to be written to the current directory.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>答案:</strong></p>
 <div class="codeblock"><pre>
 &lt;fx:deploy outdir="."
            outfile="MySampleApp"
@@ -454,7 +454,7 @@
 
 <li>
 <p><strong>Exercise:</strong> Enhance the code in the previous exercise to create bundles for all Windows installers and define a file association for text files.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>答案:</strong></p>
 <div class="codeblock"><pre>
 &lt;fx:deploy outdir="."
            outfile="MySampleApp"

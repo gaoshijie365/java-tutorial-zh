@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to 问题和练习：Applets (Java&trade; 教程 &gt; Deployment &gt;
+        <title>问题和练习的答案：Applets (Java&trade; 教程 &gt; Deployment &gt;
             Java Applets)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,43 +402,43 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to 问题和练习：Applets</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：Applets</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
 <ol>
 <li>
 <p>Question: Which classes can an applet extend?</p>
-<p>Answer: An applet can extend the <code>java.applet.Applet</code> class or the <code>java.swing.JApplet</code> class.</p>
+<p>答案: An applet can extend the <code>java.applet.Applet</code> class or the <code>java.swing.JApplet</code> class.</p>
 <p>The <code>java.applet.Applet</code> class extends the <code>java.awt.Panel</code> class and enables you to use the GUI tools in the AWT package.</p>
 <p>The <code>java.swing.JApplet</code> class is a subclass of <code>java.applet.Applet</code> that also enables you to use the Swing GUI tools.</p>
 </li>
 <li>
 <p>Question: For what do you use the <code>start()</code> method?</p>
-<p>Answer: You use the <code>start()</code> method when the applet must perform a task after it is initialized, before receiving user input. The <code>start()</code> method either performs the applet&#39;s work or (more likely) starts up one or more threads to perform the work.</p>
+<p>答案: You use the <code>start()</code> method when the applet must perform a task after it is initialized, before receiving user input. The <code>start()</code> method either performs the applet&#39;s work or (more likely) starts up one or more threads to perform the work.</p>
 </li>
 <li>
 <p>Question: True or false: An applet can make network connections to any host on the Internet.</p>
-<p>Answer: <strong>False</strong>: An applet can only connect to the host that it came from.</p>
+<p>答案: <strong>False</strong>: An applet can only connect to the host that it came from.</p>
 </li>
 <li>
 <p>Question: How do you get the value of a parameter specified in the JNLP file from within the applet&#39;s code?</p>
-<p>Answer: You use the <code>getParameter(&quot;<em>Parameter name</em>&quot;)</code> method, which returns the String value of the parameter.</p>
+<p>答案: You use the <code>getParameter(&quot;<em>Parameter name</em>&quot;)</code> method, which returns the String value of the parameter.</p>
 </li>
 <li>
 <p>Question: Which class enables applets to interact with JavaScript code in the applet&#39;s web page?</p>
-<p>Answer: The <code>netscape.javascript.JSObject</code> class enables applets to interact with JavaScript code in the applet&#39;s web page.</p>
+<p>答案: The <code>netscape.javascript.JSObject</code> class enables applets to interact with JavaScript code in the applet&#39;s web page.</p>
 </li>
 <li>
 <p>Question: True or False: Applets can modify the contents of the parent web page.</p>
-<p>Answer: <strong>True</strong>:Applets can modify the contents of the parent web page by using the <code>getDocument</code> method of the <code>com.sun.java.browser.plugin2.DOM</code> class and the Common DOM API.</p>
+<p>答案: <strong>True</strong>:Applets can modify the contents of the parent web page by using the <code>getDocument</code> method of the <code>com.sun.java.browser.plugin2.DOM</code> class and the Common DOM API.</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
 <p>Exercise: The <code>Exercise</code> applet&#39;s parent web page has a JavaScript variable called <code>memberId</code>. Write the code to set the value of the <code>memberId</code> equal to &quot;123489&quot; in the applet&#39;s <code>start</code> method.</p>
-<p>Answer:</p>
+<p>答案:</p>
 <div class="codeblock"><pre>
 import java.applet.Applet;
 import netscape.javascript.*; // add plugin.jar to
