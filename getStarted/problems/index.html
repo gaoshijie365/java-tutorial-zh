@@ -412,7 +412,7 @@
 <div class="codeblock"><pre>
 C:\jdk1.8.0\bin\javac HelloWorldApp.java
 </pre></div>
-<p>If you choose this option, you&#39;ll have to precede your <code>javac</code> and <code>java</code> commands with <code>C:\jdk1.8.0\bin\</code> each time you compile or run a program. To avoid this extra typing, consult the section 
+<p>If you choose this option, you&#39;ll have to precede your <code>javac</code> and <code>java</code> commands with <code>C:\jdk1.8.0\bin\</code> each time you compile or run a program. To avoid this extra typing, 查阅 section
 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jdk_install.html#BABGDJFH">Updating the PATH variable</a> in the JDK 8 installation instructions.</p>
 <p><code><strong>Class names, &#39;HelloWorldApp&#39;, are only accepted if annotation processing is explicitly requested</strong></code></p>
 <p>If you receive this error, you forgot to include the <code>.java</code> suffix when compiling the program. Remember, the command is <code>javac HelloWorldApp.java</code> not <code>javac HelloWorldApp</code>.</p>
@@ -460,7 +460,7 @@ cd c:\java
 <div class="codeblock"><pre>
 set CLASSPATH=
 </pre></div>
-<p>Now enter <code>java HelloWorldApp</code> again. If the program works now, you&#39;ll have to change your CLASSPATH variable. To set this variable, consult the 
+<p>Now enter <code>java HelloWorldApp</code> again. If the program works now, you&#39;ll have to change your CLASSPATH variable. To set this variable, 查阅
 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jdk_install.html#BABGDJFH">Updating the PATH variable</a> section in the JDK 8 installation instructions. The CLASSPATH variable is set in the same manner.</p>
 <p><code><strong> Could not find or load main class HelloWorldApp.class</strong></code></p>
 <p>A common mistake made by beginner programmers is to try and run the <code>java</code> launcher on the <code>.class</code> file that was created by the compiler. For example, you&#39;ll get this error if you try to run your program with <code>java HelloWorldApp.class</code> instead of <code>java HelloWorldApp</code>. Remember, the argument is the <em>name of the class</em> that you want to use, <em>not</em> the filename.</p>

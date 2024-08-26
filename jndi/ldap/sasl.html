@@ -567,7 +567,7 @@ Attributes attrs = ctx.getAttributes(
 <div class="codeblock"><pre>
 env.put(Context.SECURITY_AUTHENTICATION, "DIGEST-MD5 GSSAPI");
 </pre></div>
-<p>You might get this list of authentication mechanisms from the user of your application. Or you might get it by asking the LDAP server, via a call similar to that shown previously. The LDAP provider itself does not consult the server for this information. It simply attempts to locate and use the implementation of the specified mechanisms.</p>
+<p>You might get this list of authentication mechanisms from the user of your application. Or you might get it by asking the LDAP server, via a call similar to that shown previously. The LDAP provider itself does not 查阅 server for this information. It simply attempts to locate and use the implementation of the specified mechanisms.</p>
 <p>The LDAP provider in the platform has built-in support for the External, Digest-MD5, and GSSAPI (Kerberos v5) SASL mechanisms. You can add support for additional mechanisms.</p>
 <h2>Specifying Input for the Authentication Mechanism</h2>
 <p>Some mechanisms, such as External, require no additional input&mdash;the mechanism name alone is sufficient for the authentication to proceed. The 

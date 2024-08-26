@@ -501,11 +501,11 @@
             <div id="PageContent">
 
 <p><a name="unix-top" id="unix-top"></a></p>
-    <p>It&#39;s time to write your first application! These detailed instructions are for users of Solaris OS, Linux, and Mac OS X. Instructions for other platforms are in 
-<a class="TutorialLink" target="_top" href="win32.html">针对 Microsoft Windows 的 "Hello World!"</a> and
-<a class="TutorialLink" target="_top" href="netbeans.html">针对 NetBeans IDE 的 "Hello World!"</a>.</p>
-<p>If you encounter problems with the instructions on this page, consult the 
-<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>.
+    <p>是时候编写您的首个应用了！这些操作是针对使用 Solaris OS，Linux 和 Mac OS X 的用户的。其它平台的指令见
+<a class="TutorialLink" target="_top" href="win32.html">针对 Microsoft Windows 的 "Hello World!"</a> 和
+<a class="TutorialLink" target="_top" href="netbeans.html">针对 NetBeans IDE 的 "Hello World!"</a>。</p>
+<p>如果您在使用本页操作时遇到了问题，参阅
+<a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>。
 
 <ul>
 <li><a href="#unix-1">核对表</a></li>
@@ -526,64 +526,71 @@
 <ol>
 <li>
 <p style="font-weight: bold">Java SE 8 开发工具 (JDK 8)</p>
-<p>You can 
-<a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the version for Solaris OS, Linux, or Mac OS X</a>. (Make sure you download the <b>JDK</b>, <i>not</i> the JRE.) Consult the 
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">installation instructions</a>.</p>
+<p>您可以
+<a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">下载
+    Solaris OS，Linux 或 Mac OS X 版的 JDK</a>。 (确保您下载的是 <b>JDK</b>，<i>而不是</i> JRE。) 参见
+<a class="OutsideLink" target="_blank"
+   href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">安装指南</a>。</p>
 </li>
 <li>
-<p style="font-weight: bold">A text editor</p>
-<p>In this example, we&#39;ll use Pico, an editor available for many UNIX-based platforms. You can easily adapt these instructions if you use a different text editor, such as <code>vi</code> or <code>emacs</code>.</p>
+<p style="font-weight: bold">文本编辑器</p>
+<p>在本例中，我们将使用 Pico，这是一款很多基于 UNIX 的平台自带的编辑器。如果您使用其它的文本编辑器，比如 <code>vi</code> 或 <code>emacs</code>，
+    也可以轻松地采用这些操作指令。</p>
 </li>
 </ol>
-<p>These two items are all you&#39;ll need to write your first application.</p>
+<p>这就是您编写首个应用所需的全部。</p>
 <p>
           <hr />
 </p>
-<h2><a name="unix-2" id="unix-2"></a> 创建您的首个应用</h2>
-<p>Your first application, <code>HelloWorldApp</code>, will simply display the greeting &quot;Hello world!&quot;. To create this program, you will:</p>
+<h2><a name="unix-2" id="unix-2"></a>创建您的首个应用</h2>
+<p>您的首个应用 <code>HelloWorldApp</code>，仅简单地显示问候语 &quot;Hello World!&quot;。为创建这个程序，您需要：</p>
 <ul>
 <li>
 <p style="font-weight: bold">创建源文件</p>
-<p>A source file contains code, written in the Java programming language, that you and other programmers can understand. You can use any text editor to create and edit source files.</p>
+<p>源文件包含用 Java 语言写的代码。您可以使用任何文本编辑器创建和编辑源文件。</p>
 </li>
 <li>
 <p style="font-weight: bold">将源文件编译为 .class 文件</p>
-<p>The Java programming language <i>compiler</i> (<code>javac</code>) takes your source file and translates its text into instructions that the Java virtual machine can understand. The instructions contained within this <code>.class</code> file are known as <em>bytecodes</em>.</p>
+<p>Java 编程语言 <i>编译器</i> (<code>javac</code>) 接收源文件并将其转为 JVM 可以理解的指令。<code>.class</code> 文件中包含的指令叫做 <em>字节码</em>。</p>
 </li>
 <li>
 <p style="font-weight: bold">运行程序</p>
-<p>The Java application <i>launcher tool</i> (<code>java</code>) uses the Java virtual machine to run your application.</p>
+    <p>Java 应用 <i>启动工具</i> (<code>java</code>) 使用 JVM 运行您的应用。</p>
 </li>
 </ul>
-<h3><a name="unix-2a" id="unix-2a"></a> 创建源文件</h3>
-<p>To create a source file, you have two options:</p>
+<h3><a name="unix-2a" id="unix-2a"></a>创建源文件</h3>
+<p>要创建源文件，您有两个选项：</p>
 <ul>
 <li>
-<p>You can save the file <code>
-<a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a></code> on your computer and avoid a lot of typing. Then, you can go straight to <a href="#unix-2b">Compile the Source File</a>.</p>
+<p>您可以将文件 <code>
+<a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a>
+</code> 保存到您的电脑上。然后，直接 <a href="#unix-2b">编译源文件</a>。
+</p>
 </li>
 <li>
-<p>Or, you can use the following (longer) instructions.</p>
+<p>或者，您可以使用下面的操作指令。</p>
 </li>
 </ul>
-<p>First, open a shell, or &quot;terminal,&quot; window.</p>
-<center><img src="../../figures/getStarted/prompt.gif" width="754" height="453" align="bottom" alt="A new terminal window." /></p><p class="FigureCaption">A new terminal window.</p></center><p>When you first bring up the prompt, your <i>current directory</i> will usually be your <i>home directory</i>. You can change your current directory to your home directory at any time by typing <code>cd</code> at the prompt and then pressing <b> Return</b>.</p>
-<p>The source files you create should be kept in a separate directory. You can create a directory by using the command <code>mkdir</code>. For example, to create the directory <code>examples/java</code> in the <tt>/tmp</tt> directory, use the following commands:</p>
+<p>首先，打开 shell 或 &quot;终端&quot; 窗口。</p>
+<center><img src="../../figures/getStarted/prompt.gif" width="754" height="453" align="bottom" alt="新打开的终端窗口。" /></p><p class="FigureCaption">新打开的终端窗口。</p></center>
+<p><i>当前目录</i> 通常是您的 <i>主目录</i>。您可以随时将当前目录切换为主目录，通过键入 <code>cd</code> 然后点击 <b>Return</b>。</p>
+<p>您创建的源文件应保存在一个单独的目录中。您可以使用 <code>mkdir</code> 命令创建目录。比如，在 <tt>/tmp</tt> 目录中创建 <code>examples/java</code> 目录，使用下面的命令：</p>
 <div class="codeblock"><pre>
 cd /tmp
 mkdir examples
 cd examples
 mkdir java
 </pre></div>
-<p>To change your current directory to this new directory, you then enter:</p>
+<p>要将当前目录改为这个新建的目录，您需要输入：</p>
 <div class="codeblock"><pre>
 cd /tmp/examples/java
 </pre></div>
-<p>Now you can start creating your source file.</p>
-<p>Start the Pico editor by typing <code>pico</code> at the prompt and pressing <b> Return</b>. If the system responds with the message <code>pico: command not found</code>, then Pico is most likely unavailable. Consult your system administrator for more information, or use another editor.</p>
-<p>When you start Pico, it&#39;ll display a new, blank <i>buffer</i>. This is the area in which you will type your code. 
+<p>现在，您可以开始创建源文件了。</p>
+<p>通过键入 <code>pico</code> 并点击 <b>Return</b> 启动 Pico 编辑器。如果系统提示 <code>pico: command not found</code>，大概率是 Pico 不可用。
+您需要请教系统管理员，或者使用另一种编辑器。</p>
+<p>当您启动了 Pico，它将显示一个新的、空白的 <i>buffer</i>。在这里您可以键入代码。
 </p>
-<p>Type the following code into the new buffer:</p>
+<p>键入下面的代码：</p>
 <div class="codeblock"><pre>
 /**
 &nbsp;* The HelloWorldApp class implements an application that
@@ -602,33 +609,37 @@ class HelloWorldApp {
     (<code>java</code>) 都是大小写敏感的。<br /><br />
     <code>HelloWorldApp</code> 是 <em>不同于</em> <code>helloworldapp</code> 的。
 <hr /></div>
-<p>Save the code in a file with the name <code>HelloWorldApp.java</code>. In the Pico editor, you do this by typing <b> Ctrl-O</b> and then, at the bottom where you see the prompt <code>File Name to write:</code>, entering the directory in which you wish to create the file, followed by <code>HelloWorldApp.java</code>. For example, if you wish to save <code>HelloWorldApp.java</code> in the directory <code>/tmp/examples/java</code>, then you type <code>/tmp/examples/java/HelloWorldApp.java</code> and press <b> Return</b>.</p>
-<p>You can type <b> Ctrl-X</b> to exit Pico.</p>
-<h3><a name="unix-2b" id="unix-2b"></a>Compile the Source File into a <code>.class</code> File</h3>
-<p>Bring up another shell window. To compile your source file, change your current directory to the directory where your file is located. For example, if your source directory is <code>/tmp/examples/java</code>, type the following command at the prompt and press <b> Return</b>:</p>
+<p>将代码保存在名称为 <code>HelloWorldApp.java</code> 的文件中。在 Pico 编辑器中，输入 <code>Ctrl-O</code>，然后在底部会提示 <code>File Name to
+    write:</code>，输入文件将要在的保存目录，后跟 <code>HelloWorldApp.java</code>。比如，如果您要将文件 <code>HelloWorldApp.java</code> 保存在
+    <code>/tmp/examples/java</code> 目录中，就输入 <code>/tmp/examples/java/HelloWorldApp.java</code> 并按 <b>Return</b>。</p>
+<p>您可以输入 <b>Ctrl-X</b> 退出 Pico。</p>
+<h3><a name="unix-2b" id="unix-2b"></a>将源文件编译为 <code>.class</code> 文件</h3>
+<p>打开另一个 shell 窗口。将当前目录改为源文件所在的目录。比如，如果您的源文件在 <code>/tmp/examples/java</code> 目录总，输入以下命令并按 <b>Return</b>：</p>
 <div class="codeblock"><pre>
 cd /tmp/examples/java
 </pre></div>
-<p>If you enter <code>pwd</code> at the prompt, you should see the current directory, which in this example has been changed to <code>/tmp/examples/java</code>.</p>
-<p>If you enter <code>ls</code> at the prompt, you should see your file.</p>
-<center><img src="../../figures/getStarted/firstls.gif" width="754" height="453" align="bottom" alt="Results of the ls command, showing the .java source file." /></p><p class="FigureCaption">Results of the <code>ls</code> command, showing the <code>.java</code> source file.</p></center><p>Now are ready to compile the source file. At the prompt, type the following command and press <b> Return</b>.</p>
+<p>输入 <code>pwd</code>，您将看到当前目录。在本例中以及变为 <code>/tmp/examples/java</code>。</p>
+<p>输入 <code>ls</code> 您将看到：</p>
+<center><img src="../../figures/getStarted/firstls.gif" width="754" height="453" align="bottom" alt="ls 命令结果，显示 .java 源文件。" /></p><p class="FigureCaption"><code>ls</code> 命令结果，显示 <code>.java</code> 源文件。</p></center>
+<p>现在，已经准备好编译源文件了，输入以下命令并按 <b>Return</b>。</p>
 <div class="codeblock"><pre>
 javac HelloWorldApp.java
 </pre></div>
-<p>The compiler has generated a bytecode file, <code>HelloWorldApp.class</code>. At the prompt, type <code>ls</code> to see the new file that was generated: 
-<span id="figure:secondls.gif">the following figure</span>.</p>
-<center><img src="../../figures/getStarted/secondls.gif" width="754" height="453" align="bottom" alt="Results of the ls command, showing the generated .class file." /></p><p class="FigureCaption">Results of the <code>ls</code> command, showing the generated <code>.class</code> file.</p></center><p>Now that you have a <code>.class</code> file, you can run your program.</p>
-<p>如果您在这一步遇到了问题， consult the
+<p>编译器生成了字节码文件 <code>HelloWorldApp.class</code>。输入 <code>ls</code> 将看到新生成的文件：
+<span id="figure:secondls.gif">如下图</span>。</p>
+<center><img src="../../figures/getStarted/secondls.gif" width="754" height="453" align="bottom" alt="ls 命令结果，显示生成的 .class 文件。" /></p><p class="FigureCaption"><code>ls</code> 命令结果，显示生成的 <code>.class</code> 文件。</p></center>
+<p>现在，有了 <code>.class</code> 文件，就可以运行程序了。</p>
+<p>如果您在这一步遇到了问题， 查阅
 <a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>.</p>
-<h3><a name="unix-2c" id="unix-2c"></a> 运行程序</h3>
-<p>In the same directory, enter at the prompt:</p>
+<h3><a name="unix-2c" id="unix-2c"></a>运行程序</h3>
+<p>在相同的目录，输入：</p>
 <div class="codeblock"><pre>
 java HelloWorldApp
 </pre></div>
 <p>
-<span id="figure:result.gif">The next figure</span> shows what you should now see.</p>
-<center><img src="../../figures/getStarted/result.gif" width="754" height="453" align="bottom" alt="The output prints Hello World! to the screen." /></p><p class="FigureCaption">The output prints "Hello World!" to the screen.</p></center><p>Congratulations! Your program works!</p>
-<p>如果您在这一步遇到了问题， consult the
+<span id="figure:result.gif">下图</span>是您应该看到的结果。</p>
+<center><img src="../../figures/getStarted/result.gif" width="754" height="453" align="bottom" alt="打印 Hello World! 到屏幕。" /></p><p class="FigureCaption">打印 "Hello World!" 到屏幕。</p></center><p>恭喜！您的程序可以正常工作！</p>
+<p>如果您在这一步遇到了问题， 查阅
 <a class="TutorialLink" target="_top" href="../problems/index.html">常见问题 (和解决方案)</a>.</p>
 
 
