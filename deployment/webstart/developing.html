@@ -510,7 +510,7 @@
 <ul>
 <li>Create a <code>MyTopJPanel</code> class that is a subclass of <code>JPanel</code>. Lay out your application&#39;s GUI components in the constructor of the <code>MyTopJPanel</code> class.</li>
 <li>Create a class called <code>MyApplication</code> that is a subclass of the <code>JFrame</code> class.</li>
-<li>In the <code>main</code> method of the <code>MyApplication</code> class, instantiate the <code>MyTopJPanel</code> class and set it as the content pane of the <code>JFrame</code>.</li>
+<li>In <code>main</code> 方法 of the <code>MyApplication</code> class, instantiate the <code>MyTopJPanel</code> class and set it as the content pane of the <code>JFrame</code>.</li>
 </ul>
 
 <p>The following sections explore these steps in greater detail by using the Dynamic Tree Demo application. If you are not familiar with Swing, see 
@@ -569,7 +569,7 @@ public class DynamicTreePanel extends JPanel implements ActionListener {
 </pre></div>
 <h2>Creating the Application</h2>
 <p>For an application that has a Swing-based GUI, create a class that is a subclass of <code>javax.swing.JFrame</code>.</p>
-<p>Instantiate your top <code>JPanel</code> class and set it as the content pane of the <code>JFrame</code> in the application&#39;s <code>main</code> method. The <code>main</code> method of the <code>DynamicTreeApplication</code> class invokes the <code>createGUI</code> method in the AWT Event Dispatcher thread.</p>
+<p>Instantiate your top <code>JPanel</code> class and set it as the content pane of the <code>JFrame</code> in the application&#39;s <code>main</code> method. <code>main</code> 方法 of the <code>DynamicTreeApplication</code> class invokes the <code>createGUI</code> method in the AWT Event Dispatcher thread.</p>
 <div class="codeblock"><pre>
 package webstartComponentArch;
 

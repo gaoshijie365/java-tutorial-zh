@@ -503,13 +503,13 @@
 <p>The example featured in this section consists of two applications: a client and a server. The server continuously receives datagram packets over a datagram socket. Each datagram packet received by the server indicates a client request for a quotation. When the server receives a datagram, it replies by sending a datagram packet that contains a one-line &quot;quote of the moment&quot; back to the client.</p>
 <p>The client application in this example is fairly simple. It sends a single datagram packet to the server indicating that the client would like to receive a quote of the moment. The client then waits for the server to send a datagram packet in response.</p>
 <p>Two classes implement the server application: <code>QuoteServer</code> and <code>QuoteServerThread</code>. A single class implements the client application: <code>QuoteClient</code>.</p>
-<p>Let&#39;s investigate these classes, starting with the class that contains the <code>main</code> method for the server application. 
+<p>Let&#39;s investigate these classes, starting with the class that contains <code>main</code> 方法 for the server application.
 
 <a class="TutorialLink" target="_top" href="../../deployment/applet/server.html">Working With a Server-Side Application </a>
  contains an applet version of the <code>QuoteClient</code> class.</p>
 <h2><a name="mainprogram" id="mainprogram">The QuoteServer Class</a></h2>
 <p>The 
-<a class="SourceLink" target="_blank" href="examples/QuoteServer.java" onclick="showCode('../../displayCode.html', 'examples/QuoteServer.java'); return false;"><code>QuoteServer</code></a> class, shown here in its entirety, contains a single method: the <code>main</code> method for the quote server application. The <code>main</code> method simply creates a new <code>QuoteServerThread</code> object and starts it:</p>
+<a class="SourceLink" target="_blank" href="examples/QuoteServer.java" onclick="showCode('../../displayCode.html', 'examples/QuoteServer.java'); return false;"><code>QuoteServer</code></a> class, shown here in its entirety, contains a single method: <code>main</code> 方法 for the quote server application. <code>main</code> 方法 simply creates a new <code>QuoteServerThread</code> object and starts it:</p>
 <div class="codeblock"><pre>
 import java.io.*;
 
@@ -583,7 +583,7 @@ socket.close();
 <h2>The QuoteClient Class</h2>
 <p>The 
 <a class="SourceLink" target="_blank" href="examples/QuoteClient.java" onclick="showCode('../../displayCode.html', 'examples/QuoteClient.java'); return false;"><code>QuoteClient</code></a> class implements a client application for the <code>QuoteServer</code>. This application sends a request to the <code>QuoteServer</code>, waits for the response, and, when the response is received, displays it to the standard output. Let&#39;s look at the code in detail.</p>
-<p>The <code>QuoteClient</code> class contains one method, the <code>main</code> method for the client application. The top of the <code>main</code> method declares several local variables for its use:</p>
+<p>The <code>QuoteClient</code> class contains one method, <code>main</code> 方法 for the client application. The top of <code>main</code> 方法 declares several local variables for its use:</p>
 <div class="codeblock"><pre>
 int port;
 InetAddress address;
@@ -591,7 +591,7 @@ DatagramSocket socket = null;
 DatagramPacket packet;
 byte[] sendBuf = new byte[256];
 </pre></div>
-<p>First, the <code>main</code> method processes the command-line arguments used to invoke the <code>QuoteClient</code> application:</p>
+<p>First, <code>main</code> 方法 processes the command-line arguments used to invoke the <code>QuoteClient</code> application:</p>
 <div class="codeblock"><pre>
 if (args.length != 1) {
     System.out.println("Usage: java QuoteClient &lt;hostname&gt;");
@@ -599,7 +599,7 @@ if (args.length != 1) {
 }
 </pre></div>
 <p>The <code>QuoteClient</code> application requires one command-line arguments: the name of the machine on which the <code>QuoteServer</code> is running.</p>
-<p>Next, the <code>main</code> method creates a <code>DatagramSocket</code>:</p>
+<p>Next, <code>main</code> 方法 creates a <code>DatagramSocket</code>:</p>
 <div class="codeblock"><pre>
 DatagramSocket socket = new DatagramSocket();
 </pre></div>

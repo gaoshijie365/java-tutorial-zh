@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>课程：A Closer Look at the "Hello World!" Application (Java&trade; 教程 &gt; 入门)</title>
+        <title>课程：详细剖析 "Hello World!" 应用 (Java&trade; 教程 &gt; 入门)</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes getting started with Java and setting up your Netbeans IDE" />
      <meta name="keywords" content="java programming, learn java, java sample code, getting started with java, development environment setup" />
@@ -463,7 +463,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="nolinkLESSON">A Closer Look at the "Hello World!" Application</div>
+            <div class="nolinkLESSON">详细剖析 "Hello World!" 应用</div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
@@ -479,10 +479,10 @@
                 <a target="_top" href="../cupojava/index.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="../QandE/questions.html">下一页&nbsp;&raquo;</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>课程：A Closer Look at the "Hello World!" Application</h1></div>
+        <div id="PageTitle"><h1>课程：详细剖析 "Hello World!" 应用</h1></div>
         <div id="PageContent">
 
-<p>Now that you&#39;ve seen the &quot;Hello World!&quot; application (and perhaps even compiled and run it), you might be wondering how it works. Here again is its code:</p>
+<p>您已经见过 &quot;Hello World!&quot; 应用 (甚至编译和运行过它)，您可能很好奇它是如何工作的。这是它的代码：</p>
 <div class="codeblock"><pre>
 
 class HelloWorldApp {
@@ -491,9 +491,11 @@ class HelloWorldApp {
     }
 }
 </pre></div>
-<p>The &quot;Hello World!&quot; application consists of three primary components: <a href="#COMMENTS">source code comments</a>, <a href="#CLASS_DEF">the <code>HelloWorldApp</code> class definition</a>, and <a href="#MAIN">the <code>main</code> method</a>. The following explanation will provide you with a basic understanding of the code, but the deeper implications will only become apparent after you&#39;ve finished reading the rest of the tutorial.</p>
-<h2><a name="COMMENTS" id="COMMENTS">Source Code Comments</a></h2>
-<p><a name="COMMENTS__1" id="COMMENTS__1">The following bold text defines the <i>comments</i> of the &quot;Hello World!&quot; application:</a></p>
+<p>&quot;Hello World!&quot; 应用包含三部分：<a href="#COMMENTS">源码注释</a>，
+    <a href="#CLASS_DEF"><code>HelloWorldApp</code> 类定义</a>，和 <a href="#MAIN"><code>main</code> 方法</a>。
+    下面的说明帮助您初步理解代码，当您读完剩余的教程后会对代码有更深入的理解。</p>
+<h2><a name="COMMENTS" id="COMMENTS">源码注释</a></h2>
+<p><a name="COMMENTS__1" id="COMMENTS__1">下面的粗体字定义了 &quot;Hello World!&quot; 应用的 <i>注释</i>：</a></p>
 <div class="codeblock"><pre>
 <b>/**
  * The HelloWorldApp class implements an application that
@@ -505,18 +507,19 @@ class HelloWorldApp {
     }
 }
 </pre></div>
-<p>Comments are ignored by the compiler but are useful to other programmers. The Java programming language supports three kinds of comments:</p>
+<p>注释对程序员来说很有用，但是编译器会忽略它。Java 编程语言支持三种类型的注释：</p>
 <dl>
 <dt><code>/* <em>text</em> */</code></dt>
-<dd>The compiler ignores everything from <code>/*</code> to <code>*/</code>.</dd>
+<dd>编译器忽略从 <code>/*</code> 到 <code>*/</code> 的所有内容。</dd>
 <dt><code>/** <em>documentation</em> */</code></dt>
-<dd>This indicates a documentation comment (<em>doc comment</em>, for short). The compiler ignores this kind of comment, just like it ignores comments that use <code>/*</code> and <code>*/</code>. The <code>javadoc</code> tool uses doc comments when preparing automatically generated documentation. For more information on <code>javadoc</code>, see the 
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html">Javadoc&trade; tool documentation</a> .</dd>
+<dd>这是文档注释。编译器会忽略这种注释，就像忽略使用 <code>/*</code> 和 <code>*/</code> 的注释。<code>javadoc</code> 工具使用文档注释生成文档。更多信息，查看
+<a class="OutsideLink" target="_blank"
+   href="https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html">Javadoc&trade; 工具文档</a>。</dd>
 <dt><code>// <em>text</em></code></dt>
-<dd>The compiler ignores everything from <code>//</code> to the end of the line.</dd>
+<dd>编译器忽略从 <code>//</code> 到行尾的所有内容。</dd>
 </dl>
-<h2><a name="CLASS_DEF" id="CLASS_DEF">The <code>HelloWorldApp</code> Class Definition</a></h2>
-<p><a name="CLASS_DEF__1" id="CLASS_DEF__1">The following bold text begins the class definition block for the &quot;Hello World!&quot; application:</a></p>
+<h2><a name="CLASS_DEF" id="CLASS_DEF"><code>HelloWorldApp</code> 类定义</a></h2>
+<p><a name="CLASS_DEF__1" id="CLASS_DEF__1">下面的粗体文本是 &quot;Hello World!&quot; 应用的类定义：</a></p>
 <div class="codeblock"><pre>
 /**
  * The HelloWorldApp class implements an application that
@@ -528,15 +531,15 @@ class HelloWorldApp {
     }
 <b>}</b>
 </pre></div>
-<p>As shown above, the most basic form of a class definition is:</p>
+<p>如上所示，最基本的类定义形如：</p>
 <div class="codeblock"><pre>
 class <em>name</em> {
     . . .
 }
 </pre></div>
-<p>The keyword <code>class</code> begins the class definition for a class named <code>name</code>, and the code for each class appears between the opening and closing curly braces marked in bold above. Chapter 2 provides an overview of classes in general, and Chapter 4 discusses classes in detail. For now it is enough to know that every application begins with a class definition.</p>
-<h2><a name="MAIN" id="MAIN">The <code>main</code> Method</a></h2>
-<p><a name="MAIN__1" id="MAIN__1">The following bold text begins the definition of the <code>main</code> method:</a></p>
+<p>关键字 <code>class</code> 开启了 <code>name</code> 类的定义，每个类的代码出现在标记为粗体的开闭大括号之间。第 2 章提供了对类的概述，第 4 章详细讨论类。 现在，知道每个应用都是由类定义开始的就够了。</p>
+<h2><a name="MAIN" id="MAIN"><code>main</code> 方法</a></h2>
+<p><a name="MAIN__1" id="MAIN__1">下面的粗体文本定义了 <code>main</code> 方法：</a></p>
 <div class="codeblock"><pre>
 /**
  * The HelloWorldApp class implements an application that
@@ -548,30 +551,31 @@ class HelloWorldApp {
     <b>}</b>
 }
 </pre></div>
-<p>In the Java programming language, every application must contain a <code>main</code> method whose signature is:</p>
+<p>在 Java 语言中，每个应用都必须包含如下签名的 <code>main</code> 方法：</p>
 <div class="codeblock"><pre>
 public static void main(String[] args)
 </pre></div>
-<p>The modifiers <code>public</code> and <code>static</code> can be written in either order (<code>public static</code> or <code>static public</code>), but the convention is to use <code>public static</code> as shown above. You can name the argument anything you want, but most programmers choose &quot;args&quot; or &quot;argv&quot;.</p>
-<p>The <code>main</code> method is similar to the <code>main</code> function in C and C++; it&#39;s the entry point for your application and will subsequently invoke all the other methods required by your program.</p>
-<p>The <code>main</code> method accepts a single argument: an array of elements of type <code>String</code>.</p>
+<p><code>public</code> 和 <code>static</code> 可以按任意顺序书写 (<code>public static</code> 或者 <code>static public</code>)，
+但通常使用 <code>public static</code>。您也可以给参数起任意的名称，但大多数程序员会使用 &quot;args&quot; 或 &quot;argv&quot;。</p>
+<p><code>main</code> 方法很像 C 和 C++ 中的 <code>main</code> 函数，它是应用程序的入口点，接着调用程序所需的其它方法。</p>
+<p><code>main</code> 方法接收一个参数：<code>String</code> 类型的数组组。</p>
 <div class="codeblock"><pre>
 public static void main(<b>String[] args</b>)
 </pre></div>
-<p>This array is the mechanism through which the runtime system passes information to your application. For example:</p>
+<p>运行时系统使用数组向您的应用传递信息。比如：</p>
 <div class="codeblock"><pre>
 java <em>MyApp</em> <em>arg1</em> <em>arg2</em>
 </pre></div>
-<p>Each string in the array is called a <em>command-line argument</em>. Command-line arguments let users affect the operation of the application without recompiling it. For example, a sorting program might allow the user to specify that the data be sorted in descending order with this command-line argument:</p>
+<p>数组中的每个字符串叫做 <em>命令行参数</em>。命令行参数让用户无需重新编译应用便可影响应用的操作。比如，一个排序程序可能允许用户指定数据降序排列，使用如下的命令行参数：</p>
 <div class="codeblock"><pre>
 -descending
 </pre></div>
-<p>The &quot;Hello World!&quot; application ignores its command-line arguments, but you should be aware of the fact that such arguments do exist.</p>
-<p>Finally, the line:</p>
+<p>&quot;Hello World!&quot; 应用忽略命令行参数，但是您应该意识到有这样的参数存在。</p>
+<p>最后，下面这行：</p>
 <div class="codeblock"><pre>
 System.out.println("Hello World!");
 </pre></div>
-<p>uses the <code>System</code> class from the core library to print the &quot;Hello World!&quot; message to standard output. Portions of this library (also known as the &quot;Application Programming Interface&quot;, or &quot;API&quot;) will be discussed throughout the remainder of the tutorial.</p>
+<p>使用核心库的 <code>System</code> 类向标准输出打印 &quot;Hello World!&quot;。库 (叫做 &quot;Application Programming Interface&quot;，或 &quot;API&quot;) 的部分内容将在后续教程中讨论。</p>
 
 
         </div>
