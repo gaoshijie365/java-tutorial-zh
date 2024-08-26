@@ -43,7 +43,7 @@
 </ul>
 </li>
 <li class="tocli"><a href="applet/problemsindex.html">Solving Common Applet Problems</a></li>
-<li class="tocli"><a href="applet/QandE/questions.html">Questions and Exercises: Applets</a>
+<li class="tocli"><a href="applet/QandE/questions.html">问题和练习：Applets</a>
 </li>
 </ul>
 </li>
@@ -64,7 +64,7 @@
 <li class="tocli"><a href="webstart/running.html">Running a Java Web Start Application</a></li>
 <li class="tocli"><a href="webstart/security.html">Java Web Start and Security</a></li>
 <li class="tocli"><a href="webstart/problems.html">Common Java Web Start Problems</a></li>
-<li class="tocli"><a href="webstart/QandE/questions.html">Questions and Exercises: Java Web Start</a>
+<li class="tocli"><a href="webstart/QandE/questions.html">问题和练习：Java Web Start</a>
 </li>
 </ul>
 </li>
@@ -90,7 +90,7 @@
 </li>
 <li class="tocli"><a href="doingMoreWithRIA/security.html">Security in Rich Internet Applications </a></li>
 <li class="tocli"><a href="doingMoreWithRIA/devGuidelines.html">Guidelines for Securing Rich Internet Applications</a></li>
-<li class="tocli"><a href="doingMoreWithRIA/QandE/questions.html">Questions and Exercises: Doing More With Rich Internet Applications</a>
+<li class="tocli"><a href="doingMoreWithRIA/QandE/questions.html">问题和练习：Doing More With Rich Internet Applications</a>
 </li>
 </ul>
 </li>
@@ -130,7 +130,7 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="deploymentInDepth/QandE/questions.html">Questions and Exercises: Deployment In-Depth</a>
+<li class="tocli"><a href="deploymentInDepth/QandE/questions.html">问题和练习：Deployment In-Depth</a>
 </li>
 </ul>
 </li>
@@ -147,7 +147,7 @@
 </ul>
 </li>
 <li class="tocli"><a href="selfContainedApps/multiplelaunchers.html">Using Multiple Entry Points</a></li>
-<li class="tocli"><a href="selfContainedApps/QandE/questions.html">Questions and Exercises: Self-Contained Applications</a>
+<li class="tocli"><a href="selfContainedApps/QandE/questions.html">问题和练习：Self-Contained Applications</a>
 </li>
 </ul>
 </li>
@@ -190,7 +190,7 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="jar/QandE/questions.html">Questions and Exercises: JAR</a>
+<li class="tocli"><a href="jar/QandE/questions.html">问题和练习：JAR</a>
 </li>
 </ul>
 </li>

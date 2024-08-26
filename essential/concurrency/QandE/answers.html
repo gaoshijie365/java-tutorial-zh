@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Answers to Questions and Exercises: Concurrency (Java&trade; 教程 &gt; Essential Java Classes &gt;
+        <title>Answers to 问题和练习：Concurrency (Java&trade; 教程 &gt; Essential Java Classes &gt;
             Concurrency)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,16 +402,16 @@
             <a href="../QandE/questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>Answers to Questions and Exercises: Concurrency</h1></div>
+        <div id="PageTitle"><h1>Answers to 问题和练习：Concurrency</h1></div>
         <div id="PageContent">
 
-<h2>Questions</h2>
+<h2>问题</h2>
 <ol>
 <li><b>Question:</b> Can you pass a <code>Thread</code> object to <code>Executor.execute</code>? Would such an invocation make sense? Why or why not?
 <p><b>Answer:</b> <code>Thread</code> implements the <code>Runnable</code> interface, so you can pass an instance of <code>Thread</code> to <code>Executor.execute</code>. However it doesn&#39;t make sense to use <code>Thread</code> objects this way. If the object is directly instantiated from <code>Thread</code>, its <code>run</code> method doesn&#39;t do anything. You can define a subclass of <code>Thread</code> with a useful <code>run</code> method &#151; but such a class would implement features that the executor would not use.</p>
 </li>
 </ol>
-<h2>Exercises</h2>
+<h2>练习</h2>
 <ol>
 <li><b>Exercise:</b> Compile and run 
 <a class="SourceLink" target="_blank" href="BadThreads.java" onclick="showCode('../../../displayCode.html', 'BadThreads.java'); return false;"><code><code>BadThreads.java</code></code></a>:
@@ -565,7 +565,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> Questions and Exercises: Concurrency
+        <b>上一页：</b> 问题和练习：Concurrency
     </div>
 </body>
 </html> 

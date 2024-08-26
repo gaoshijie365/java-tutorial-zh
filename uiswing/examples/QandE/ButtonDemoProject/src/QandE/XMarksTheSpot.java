@@ -49,7 +49,7 @@ public class XMarksTheSpot extends JComponent {
         setOpaque(true);
         
         //Set the border using either a MatteBorder (standard, used in 
-        //Exercise 1) or a StripeBorder (custom, used in Exercise 3).
+        //练习 1) or a StripeBorder (custom, used in Exercise 3).
         //You can find the exercises here:
         //  http://docs.oracle.com/javase/javatutorials/tutorial/uiswing/QandE/questions-ch6.html
         setBorder(BorderFactory.createMatteBorder(5,5,5,5, Color.BLACK));

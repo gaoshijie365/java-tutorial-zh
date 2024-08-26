@@ -402,9 +402,9 @@
         <div id="PageTitle"><h1>Answers: Laying Out Components within a Container</h1></div>
         <div id="PageContent">
 
-<h2>Questions</h2>
+<h2>问题</h2>
 <p>In each of the following questions, choose the layout manager(s) most naturally suited for the described layout. Assume that the container controlled by the layout manager is a <code>JPanel</code>.</p>
-<p><b>Question 1</b>. The container has one component that should take up as much space as possible<br /></p>
+<p><b>问题 1</b>. The container has one component that should take up as much space as possible<br /></p>
 <table width="450" border="0" cellspacing="2" cellpadding="0" summary="">
 <tr>
 <td width="50%"><img src="../../figures/uiswing/QandE/Layout1-1.png" width="123" height="60" align="bottom" alt="Layout1-1.png" /></td>
@@ -418,7 +418,7 @@ d. a and b<br />
 e. b and c</p>
 <p><b>Answer 1</b>: d. <code>BorderLayout</code> and <code>GridLayout</code> easily deal with this situation. Although you could use <code>GridBagLayout</code>, it&#39;s much more complex than necessary.</p>
 <p><br /></p>
-<p><b>Question 2</b>. The container has a row of components that should all be displayed at the same size, filling the container’s entire area.</p>
+<p><b>问题 2</b>. The container has a row of components that should all be displayed at the same size, filling the container’s entire area.</p>
 <p><img src="../../figures/uiswing/QandE/Layout2-1.png" width="348" height="60" align="bottom" alt="Layout2-1.png" /> <img src="../../figures/uiswing/QandE/Layout2-2.png" width="395" height="89" align="bottom" alt="Layout2-2.png" /></p>
 <p>a. <code>FlowLayout</code><br />
 b. <code>GridLayout</code><br />
@@ -426,7 +426,7 @@ c. <code>BoxLayout</code><br />
 d. a and b</p>
 <p><b>Answer 2</b>: b. This type of same-size layout &mdash; whether in a row, a column, or a grid &mdash; is what <code>GridLayout</code> is best at.</p>
 <p><br /></p>
-<p><b>Question 3</b>. The container displays a number of components in a column, with any extra space going between the first two components.<br /></p>
+<p><b>问题 3</b>. The container displays a number of components in a column, with any extra space going between the first two components.<br /></p>
 <table width="450" border="0" cellspacing="2" cellpadding="0" summary="">
 <tr>
 <td width="50%"><img src="../../figures/uiswing/QandE/Layout3-1.png" width="123" height="138" align="bottom" alt="Layout3-1.png" /></td>
@@ -439,7 +439,7 @@ c. <code>GridLayout</code><br />
 d. <code>BorderLayout</code></p>
 <p><b>Answer 3</b>: b. <code>BoxLayout</code> lays out components in either a column or a row. You can specify extra space using an invisible component.</p>
 <p><br /></p>
-<p><b>Question 4</b>. The container can display three completely different components at different times, depending perhaps on user input or program state. Even if the components’ sizes differ, switching from one component to the next shouldn’t change the amount of space devoted to the component.</p>
+<p><b>问题 4</b>. The container can display three completely different components at different times, depending perhaps on user input or program state. Even if the components’ sizes differ, switching from one component to the next shouldn’t change the amount of space devoted to the component.</p>
 <p><img src="../../figures/uiswing/QandE/Layout4-1.png" width="347" height="132" align="bottom" alt="Layout4-1.png" /></p>
 <p><img src="../../figures/uiswing/QandE/Layout4-2.png" width="347" height="132" align="bottom" alt="Layout4-2.png" /></p>
 <p>a. <code>SpringLayout</code><br />
@@ -447,8 +447,8 @@ b. <code>BoxLayout</code><br />
 c. <code>CardLayout</code><br />
 d. <code>GridBagLayout</code></p>
 <p><b>Answer 4</b>: c. <code>CardLayout</code> exists to allow components to share the same space. Although it&#39;s simpler to use a <code>JTabbedPane</code> component to control an area, <code>CardLayout</code> is the solution when you don&#39;t want tabs.</p>
-<h2>Exercises</h2>
-<p><b>Exercise 1</b>. Implement the layout described and shown in question 1.<br />
+<h2>练习</h2>
+<p><b>练习 1</b>. Implement the layout described and shown in question 1.<br />
 <b>Answer 1</b>: See <a target="source" href="../examples/QandE/Layout1Project/src/QandE/Layout1.java"><code>Layout1.java</code></a><a href="../examples/QandE/Layout1Project/src/QandE/Layout1.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
 <div class="codeblock"><pre>
 JPanel p = new JPanel(new BorderLayout());
@@ -457,7 +457,7 @@ p.add(createComponent("Component 1"),
 frame.setContentPane(p);
 </pre></div>
 <p><br /></p>
-<p><b>Exercise 2</b>. Implement the layout described and shown in question 2.<br />
+<p><b>练习 2</b>. Implement the layout described and shown in question 2.<br />
 <b>Answer 2</b>: See <a target="source" href="../examples/QandE/Layout2Project/src/QandE/Layout2.java"><code>Layout2.java</code></a><a href="../examples/QandE/Layout2Project/src/QandE/Layout2.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that implements the layout:</p>
 <div class="codeblock"><pre>
 JPanel p = new JPanel(new GridLayout(1,0));
@@ -504,7 +504,7 @@ public void actionPerformed(ActionEvent evt) {
 }
 </pre></div>
 <p><br /></p>
-<p><b>Exercise 5</b>. By adding a single line of code, make the program you wrote for Exercise 2 display the components from right-to-left, instead of from left-to-right.</p>
+<p><b>Exercise 5</b>. By adding a single line of code, make the program you wrote for 练习 2 display the components from right-to-left, instead of from left-to-right.</p>
 <p><img src="../../figures/uiswing/QandE/Layout2-3.png" width="348" height="60" align="bottom" alt="Layout2-3.png" /></p>
 <p><b>Answer 5</b>: You can change the horizontal orientation using the
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#setComponentOrientation-java.awt.ComponentOrientation-"><code>setComponentOrientation</code></a> method defined by the <code>Component</code> class. For example:</p>
@@ -536,7 +536,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> Questions and Exercises: Laying Out Components within a Container
+        <b>上一页：</b> 问题和练习：Laying Out Components within a Container
     </div>
 </body>
 </html> 

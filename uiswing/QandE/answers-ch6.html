@@ -402,10 +402,10 @@
         <div id="PageTitle"><h1>Answers: Performing Custom Painting</h1></div>
         <div id="PageContent">
 
-<h2>Questions</h2>
-<p><b>Question 1.</b> What method defined by <code>JComponent</code> paints the inside of a component?<br />
+<h2>问题</h2>
+<p><b>问题 1.</b> What method defined by <code>JComponent</code> paints the inside of a component?<br />
 <b>Answer 1:</b> The <code>paintComponent</code> method paints a component&#39;s innards (with the exception of any children it contains).<br /></p>
-<p><b>Question 2.</b> Which of the following code snippets paint a rectangle (filled or not) that is 100x100 pixels?</p>
+<p><b>问题 2.</b> Which of the following code snippets paint a rectangle (filled or not) that is 100x100 pixels?</p>
 <p>a. <code>g.fillRect(x, y, 100, 100)</code><br />
 b. <code>g.fillRect(x, y, 99, 99)</code><br />
 c. <code>g.drawRect(x, y, 100, 100)</code><br />
@@ -413,13 +413,13 @@ d. b and c<br />
 e. a and c</p>
 <p><b>Answer 2:</b> a. The <code>drawRect</code> methods paint lines just below the specified rectangle. So to get a 100x100 rectangle, you need to specify a width and height of 99, 99 to <code>drawRect</code>. For <code>fill<em>Xxx</em></code> methods, on the other hand, you specify exactly the desired width and height, so <code>g.fillRect(x, y, 100, 100)</code> results in a 100x100 rectangle.</p>
 <p><br /></p>
-<p><b>Question 3.</b> What code would you use to make a component perform the next painting operation using the background color at 50% transparency?<br />
+<p><b>问题 3.</b> What code would you use to make a component perform the next painting operation using the background color at 50% transparency?<br />
 <b>Answer 3:</b></p>
 <div class="codeblock"><pre>
 g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
 </pre></div>
-<h2>Exercises</h2>
-<p><b>Exercise 1.</b> Using a standard border and custom component painting, implement a component that has a preferred size of 250x100, is opaque by default, has a 5-pixel black border, and paints an “X” (using 5-pixel-thick lines) in the foreground color, as shown in the following figure. <img src="../../figures/uiswing/QandE/ComponentDisplayer-1.png" width="258" height="134" align="bottom" alt="ComponentDisplayer-1.png" /></p>
+<h2>练习</h2>
+<p><b>练习 1.</b> Using a standard border and custom component painting, implement a component that has a preferred size of 250x100, is opaque by default, has a 5-pixel black border, and paints an “X” (using 5-pixel-thick lines) in the foreground color, as shown in the following figure. <img src="../../figures/uiswing/QandE/ComponentDisplayer-1.png" width="258" height="134" align="bottom" alt="ComponentDisplayer-1.png" /></p>
 <p><b>Answer 1:</b> See <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/XMarksTheSpot.java">XMarksTheSpot.java</a></code>, which you can run using <code><a href="../examples/QandE/ComponentDisplayerProject/src/QandE/ComponentDisplayer.java">ComponentDisplayer.java</a></code>.</p>
 <p>Here&#39;s the code that sets the border of the <code>XMarksTheSpot</code> component:</p>
 <div class="codeblock"><pre>
@@ -440,7 +440,7 @@ g2.draw(new Line2D.Double(insets.left,
                           insets.top));
 </pre></div>
 <p><br /></p>
-<p><b>Exercise 2.</b> Implement an icon that’s 10x10 pixels and paints a solid rectangle that fills the 10x10 area. If the icon’s component is enabled, the rectangle should be red; if disabled, gray. Make a copy of <code>ButtonDemo.java</code> that uses your custom <code>Icon</code> for the middle button, instead of displaying <code>middle.gif</code>. The following pictures show what the icon should look like.</p>
+<p><b>练习 2.</b> Implement an icon that’s 10x10 pixels and paints a solid rectangle that fills the 10x10 area. If the icon’s component is enabled, the rectangle should be red; if disabled, gray. Make a copy of <code>ButtonDemo.java</code> that uses your custom <code>Icon</code> for the middle button, instead of displaying <code>middle.gif</code>. The following pictures show what the icon should look like.</p>
 <table width="450" border="0" cellspacing="2" cellpadding="0" summary="">
 <tr>
 <td width="50%"><img src="../../figures/uiswing/QandE/SquareIcon-1.png" width="111" height="44" align="bottom" alt="SquareIcon-1.png" /></td>
@@ -519,7 +519,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> Questions and Exercises: Performing Custom Painting
+        <b>上一页：</b> 问题和练习：Performing Custom Painting
     </div>
 </body>
 </html> 

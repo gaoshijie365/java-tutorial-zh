@@ -403,12 +403,12 @@
         <div id="PageContent">
 
 <p>Use this lesson’s tables, the <a href="../components/index.html">component how-to sections</a> and the <a href="../events/handling.html">event listeners how-to sections</a> to complete these questions and exercises.</p>
-<h2>Questions</h2>
-<p><b>Question 1:</b> What listener would you implement to be notified when a particular component has appeared on screen? What method tells you this information?<br />
+<h2>问题</h2>
+<p><b>问题 1:</b> What listener would you implement to be notified when a particular component has appeared on screen? What method tells you this information?<br />
 <b>Answer 1:</b> You would register a <code>ComponentListener</code> on the component. The <code>componentShown</code> method. This method is called when the window is first displayed or is deiconified.</p>
-<p><b>Question 2:</b> What listener would you implement to be notified when the user has finished editing a text field by pressing Enter? What listener would you implement to be notified as each character is typed into a text field? Note that you should not implement a general-purpose key listener, but a listener specific to text.<br />
+<p><b>问题 2:</b> What listener would you implement to be notified when the user has finished editing a text field by pressing Enter? What listener would you implement to be notified as each character is typed into a text field? Note that you should not implement a general-purpose key listener, but a listener specific to text.<br />
 <b>Answer 2:</b> To be notified when the user presses Enter, you would register an <code>ActionListener</code> on the text field; the <code>actionPerformed</code> method is called when the user types Enter. Note that the Enter character is not part of the resulting string. To be notified as each character is typed, you would register a <code>DocumentListener</code> on the text field&#39;s <code>Document</code>. The <code>insertUpdate</code> method is then called as each character is typed. Note that this is not the correct way to implement input validation. For that behavior you should check out the <a href="../misc/focus.html#inputverificationapi">Input Verification API</a> section in <a href="../misc/focus.html">How to Use the Focus Subsystem</a>.</p>
-<p><b>Question 3:</b> What listener would you implement to be notified when a spinner’s value has changed? How would you get the spinner’s new value?<br />
+<p><b>问题 3:</b> What listener would you implement to be notified when a spinner’s value has changed? How would you get the spinner’s new value?<br />
 <b>Answer 3:</b> To be notified when the value has changed, you would register a <code>ChangeListener</code> on the spinner. You would get the new value through the event&#39;s source in the <code>stateChanged</code> method. The following code snippet shows how this could be done:</p>
 <div class="codeblock"><pre>
 public void stateChanged(ChangeEvent e) {
@@ -418,12 +418,12 @@ public void stateChanged(ChangeEvent e) {
     ...
 }
 </pre></div>
-<p><b>Question 4:</b> The default behavior for the focus subsystem is to consume the focus traversal keys, such as Tab and Shift Tab. Say you want to prevent this behavior in one of your application’s components. How would you accomplish this?<br />
+<p><b>问题 4:</b> The default behavior for the focus subsystem is to consume the focus traversal keys, such as Tab and Shift Tab. Say you want to prevent this behavior in one of your application’s components. How would you accomplish this?<br />
 <b>Answer 4:</b> You call <code>setFocusTraversalKeysEnabled(false)</code> on that particular component. Note that you must then handle focus traversal manually. See <a href="../events/keylistener.html">How to Write a Key Listener</a> and <a href="../misc/focus.html">How to Use the Focus Subsystem</a> for more information.</p>
-<h2>Exercises</h2>
-<p><b>Exercise 1.</b> Take the <a target="source" href="../examples/events/BeeperProject/src/events/Beeper.java"><code>Beeper.java</code></a><a href="../examples/events/BeeperProject/src/events/Beeper.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a> example and add a text field. Implement it so that when the user has finishing entering data, the system beeps.<br />
+<h2>练习</h2>
+<p><b>练习 1.</b> Take the <a target="source" href="../examples/events/BeeperProject/src/events/Beeper.java"><code>Beeper.java</code></a><a href="../examples/events/BeeperProject/src/events/Beeper.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a> example and add a text field. Implement it so that when the user has finishing entering data, the system beeps.<br />
 <b>Answer 1:</b> See <a target="source" href="../examples/QandE/Beeper1Project/src/QandE/Beeper1.java"><code>Beeper1.java</code></a><a href="../examples/QandE/Beeper1Project/src/QandE/Beeper1.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a></p>
-<p><b>Exercise 2.</b> Take the <a target="source" href="../examples/events/BeeperProject/src/events/Beeper.java"><code>Beeper.java</code></a><a href="../examples/events/BeeperProject/src/events/Beeper.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a> example and add a selectable component that allows the user to enter a number from 1 to 10. For example, you can use a combo box, a set of radio buttons, or a spinner. Implement it so that when the user has selected the number, the system beeps that many times.<br />
+<p><b>练习 2.</b> Take the <a target="source" href="../examples/events/BeeperProject/src/events/Beeper.java"><code>Beeper.java</code></a><a href="../examples/events/BeeperProject/src/events/Beeper.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a> example and add a selectable component that allows the user to enter a number from 1 to 10. For example, you can use a combo box, a set of radio buttons, or a spinner. Implement it so that when the user has selected the number, the system beeps that many times.<br />
 <b>Answer 2:</b> See <a target="source" href="../examples/QandE/Beeper2Project/src/QandE/Beeper2.java"><code>Beeper2.java</code></a><a href="../examples/QandE/Beeper2Project/src/QandE/Beeper2.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a></p>
 
 
@@ -450,7 +450,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> Questions and Exercises: Writing Event Listeners
+        <b>上一页：</b> 问题和练习：Writing Event Listeners
     </div>
 </body>
 </html> 

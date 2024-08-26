@@ -404,8 +404,8 @@
 
 <p>Use the information in this lesson and the component
 <a class="TutorialLink" target="_top" href="../components/componentlist.html">how-to sections</a> to help you complete these questions and exercises.</p>
-<h2>Questions</h2>
-<p><b>Question 1:</b> Find the component that best fits each of the following needs. Write down both the component's common name (such as "frame") and find the component&#39;s how-to page online.</p>
+<h2>问题</h2>
+<p><b>问题 1:</b> Find the component that best fits each of the following needs. Write down both the component's common name (such as "frame") and find the component&#39;s how-to page online.</p>
 <p><b>Question 1a</b>: A component that lets the user pick a color.<br />
 <b>Answer 1a</b>: <a href="../../uiswing/components/colorchooser.html">color chooser</a><br />
 <br />
@@ -420,20 +420,20 @@
 <br />
 <b>Question 1e:</b> A container that lets the user determine how two components share a limited amount of space.<br />
 <b>Answer 1e</b>: <a href="../../uiswing/components/splitpane.html">split pane</a></p>
-<p><b>Question 2:</b> Which method do you use to add a menu bar to a top-level container such as a <code>JFrame</code>?<br />
+<p><b>问题 2:</b> Which method do you use to add a menu bar to a top-level container such as a <code>JFrame</code>?<br />
 <b>Answer 2</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setJMenuBar(javax.swing.JMenuBar)">setJMenuBar</a></code></p>
-<p><b>Question 3:</b> Which method do you use to specify the default button for a top-level container such as a <code>JFrame</code> or <code>JDialog</code>?<br />
+<p><b>问题 3:</b> Which method do you use to specify the default button for a top-level container such as a <code>JFrame</code> or <code>JDialog</code>?<br />
 <b>Answer 3</b>: <code>JRootPane</code>&#39;s <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JRootPane.html#setDefaultButton(javax.swing.JButton)">setDefaultButton</a></code> method. (You get the top-level container&#39;s root pane using the <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/RootPaneContainer.html#getRootPane()">getRootPane</a></code> method defined by the <code>RootPaneContainer</code> interface, which every top-level container implements.)</p>
-<p><b>Question 4:</b> Which method do you use to enable and disable components such as <code>JButton</code>s? What class is it defined in?<br />
+<p><b>问题 4:</b> Which method do you use to enable and disable components such as <code>JButton</code>s? What class is it defined in?<br />
 <b>Answer 4</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#setEnabled(boolean)">setEnabled</a></code>, which is defined in the <code>Component</code> class</p>
 <p><b>Question 5a:</b> Which Swing components use <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListSelectionModel.html">ListSelectionModel</a></code>? [<i>Hint:</i> The "Use" link at the top of the specification for each interface and class takes you to a page showing where in the API that interface or class is referenced.]<br />
 <b>Answer 5a</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html">JList</a></code> and <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html">JTable</a></code></p>
 <p><b>Question 5b:</b> Do those components use any other models to handle other aspects of the components' state? If so, list the other models' types.<br />
 <b>Answer 5b</b>: <code>JList</code> also uses a <code>ListModel</code>, which holds the list&#39;s data. <code>JTable</code> uses a <code>TableModel</code> to hold its data and a <code>TableColumnModel</code> to manage the table&#39;s columns.</p>
-<p><b>Question 6:</b> Which type of model holds a text component's content?<br />
+<p><b>问题 6:</b> Which type of model holds a text component's content?<br />
 <b>Answer 6</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html">Document</a></code><br /></p>
-<h2>Exercises</h2>
-<p><b>Exercise 1.</b> Implement a program with a GUI that looks like the one shown below. Put the main method in a class named <code>MyDemo1</code>.</p>
+<h2>练习</h2>
+<p><b>练习 1.</b> Implement a program with a GUI that looks like the one shown below. Put the main method in a class named <code>MyDemo1</code>.</p>
 <p><img src="../../figures/uiswing/QandE/MyDemo1.png" width="223" height="100" align="bottom" alt="MyDemo1.png" /></p>
 <p><b>Answer 1</b>: See <a target="source" href="../examples/QandE/MyDemo1Project/src/QandE/MyDemo1.java"><code>MyDemo1.java</code></a><a href="../examples/QandE/MyDemo1Project/src/QandE/MyDemo1.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. Here&#39;s the code that adds the bold, italicized text:</p>
 <div class="codeblock"><pre>
@@ -442,7 +442,7 @@ frame.getContentPane().add(BorderLayout.CENTER, label);
 label.setFont(label.getFont().deriveFont(Font.ITALIC | Font.BOLD));
 label.setHorizontalAlignment(JLabel.CENTER)
 </pre></div>
-<p><b>Exercise 2.</b> Make a copy of <code>MyDemo1.java</code> named <code>MyDemo2.java</code>. Add a menu bar to <code>MyDemo2</code>.<br />
+<p><b>练习 2.</b> Make a copy of <code>MyDemo1.java</code> named <code>MyDemo2.java</code>. Add a menu bar to <code>MyDemo2</code>.<br />
 <b>Answer 2</b>: See <a target="source" href="../examples/QandE/MyDemo2Project/src/QandE/MyDemo2.java"><code>MyDemo2.java</code></a><a href="../examples/QandE/MyDemo2Project/src/QandE/MyDemo2.java"><img src="../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" /></a>. The menu bar can be implemented with this code:</p>
 <div class="codeblock"><pre>
 JMenu menu = new JMenu("Menu");
@@ -482,7 +482,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> Questions and Exercises: Using Swing Components
+        <b>上一页：</b> 问题和练习：Using Swing Components
     </div>
 </body>
 </html> 
