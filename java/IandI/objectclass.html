@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Object as a Superclass (Java&trade; 教程 &gt;
-            学习 Java &gt; Interfaces and Inheritance)
+            学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,7 +475,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Interfaces and Inheritance</a></div>
+            <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
 <div class="linkAHEAD"><a href="createinterface.html">Interfaces</a></div>
 <div class="linkBHEAD"><a href="interfaceDef.html">Defining an Interface</a></div>
 <div class="linkBHEAD"><a href="usinginterface.html">Implementing an Interface</a></div>
@@ -500,7 +500,7 @@
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Interfaces and Inheritance
+        <br /><b>课程：</b> 接口和继承
         <br /><b>Section:</b> Inheritance
     </div>
             <div id="BreadCrumbs">
@@ -508,7 +508,7 @@
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Interfaces and Inheritance</a>
+                <a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="super.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="final.html">下一页&nbsp;&raquo;</a>
@@ -545,7 +545,7 @@ and won&#39;t be covered here. There are five of these methods:</p>
 <li><code>public final void wait(long timeout)</code></li>
 <li><code>public final void wait(long timeout, int nanos)</code></li>
 </ul>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;There are some subtle aspects to a number of these methods, especially the <code>clone</code> method.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;There are some subtle aspects to a number of these methods, especially the <code>clone</code> method.
 <hr /></div>
 <h2>The clone() Method</h2>
 <p>If a class, or one of its superclasses, implements the <code>Cloneable</code> interface, you can use the <code>clone()</code> method to create a copy from an existing object. To create a clone, you write:</p>
@@ -598,7 +598,7 @@ if (firstBook.equals(secondBook)) {
 </pre></div>
 <p>This program displays <code>objects are equal</code> even though <code>firstBook</code> and <code>secondBook</code> reference two distinct objects. They are considered equal because the objects compared contain the same ISBN number.</p>
 <p>You should always override the <code>equals()</code> method if the identity operator is not appropriate for your class.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;If you override <code>equals()</code>, you must override <code>hashCode()</code> as well.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;If you override <code>equals()</code>, you must override <code>hashCode()</code> as well.
 <hr /></div>
 <h2>The finalize() Method</h2>
 

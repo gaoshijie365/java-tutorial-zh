@@ -5,8 +5,8 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>What Is Inheritance? (Java&trade; 教程 &gt;
-            学习 Java &gt; Object-Oriented Programming Concepts)
+        <title>什么是继承？ (Java&trade; 教程 &gt;
+            学习 Java &gt; 面向对象编程概念)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,37 +475,40 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Object-Oriented Programming Concepts</a></div>
-<div class="linkAHEAD"><a href="object.html">What Is an Object?</a></div>
-<div class="linkAHEAD"><a href="class.html">What Is a Class?</a></div>
-<div class="nolinkAHEAD">What Is Inheritance?</div>
-<div class="linkAHEAD"><a href="interface.html">What Is an Interface?</a></div>
-<div class="linkAHEAD"><a href="package.html">What Is a Package?</a></div>
+            <div class="linkLESSON"><a href="index.html">面向对象编程概念</a></div>
+<div class="linkAHEAD"><a href="object.html">什么是对象？</a></div>
+<div class="linkAHEAD"><a href="class.html">什么是类？</a></div>
+<div class="nolinkAHEAD">什么是继承？</div>
+<div class="linkAHEAD"><a href="interface.html">什么是接口？</a></div>
+<div class="linkAHEAD"><a href="package.html">什么是包？</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Object-Oriented Programming Concepts
+        <br /><b>课程：</b> 面向对象编程概念
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Object-Oriented Programming Concepts</a>
+                <a href="index.html" target="_top">面向对象编程概念</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="class.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="interface.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>What Is Inheritance?</h1></div>
+            <div id="PageTitle"><h1>什么是继承？</h1></div>
             <div id="PageContent">
 
-<p>Different kinds of objects often have a certain amount in common with each other. Mountain bikes, road bikes, and tandem bikes, for example, all share the characteristics of bicycles (current speed, current pedal cadence, current gear). Yet each also defines additional features that make them different: tandem bicycles have two seats and two sets of handlebars; road bikes have drop handlebars; some mountain bikes have an additional chain ring, giving them a lower gear ratio.</p>
-<p>Object-oriented programming allows classes to <i>inherit</i> commonly used state and behavior from other classes. In this example, <code>Bicycle</code> now becomes the <i>superclass</i> of <code>MountainBike</code>, <code>RoadBike</code>, and <code>TandemBike</code>. In the Java programming language, each class is allowed to have one direct superclass, and each superclass has the potential for an unlimited number of <i>subclasses</i>:</p>
-<center><img src="../../figures/java/concepts-bikeHierarchy.gif" width="374" height="324" align="bottom" alt="A diagram of classes in a hierarchy." /></p><p class="FigureCaption">A hierarchy of bicycle classes.</p></center><p>The syntax for creating a subclass is simple. At the beginning of your class declaration, use the <code>extends</code> keyword, followed by the name of the class to inherit from:</p>
+<p>不同种类的对象通常都会有一些共性。比如，山地自行车、公路自行车、和双人自行车，共享自行车的一些特性 (当前速度，当前踏频，当前档位)。它们中的每一个
+也都包含了一些额外的特性，使其不同于其它的：双人自行车有两个座位和两个车把；公路自行车有赛车车把；一些山地自行车有额外的齿盘，使其有更低的齿轮比。</p>
+<p>面向对象编程允许类从其它类 <i>继承</i> 通用的状态和行为。在本例中，<code>Bicycle</code> 是 <code>MountainBike</code>，
+<code>RoadBike</code> 和 <code>TandemBike</code> 的 <i>超类</i>。在 Java 中，每一个类只能有一个直接超类，每个超类可以有无穷个 <i>子类</i>：</p>
+<center><img src="../../figures/java/concepts-bikeHierarchy.gif" width="374" height="324" align="bottom" alt="A diagram of classes in a hierarchy." /></p><p class="FigureCaption">自行车类的继承层次。</p></center>
+<p>创建子类的语法很简单。在类声明的开始，使用 <code>extends</code> 关键字，后跟要继承的类的名字：</p>
 <div class="codeblock"><pre>
 class MountainBike <strong>extends</strong> Bicycle {
 
@@ -514,7 +517,8 @@ class MountainBike <strong>extends</strong> Bicycle {
 
 }
 </pre></div>
-<p>This gives <code>MountainBike</code> all the same fields and methods as <code>Bicycle</code>, yet allows its code to focus exclusively on the features that make it unique. This makes code for your subclasses easy to read. However, you must take care to properly document the state and behavior that each superclass defines, since that code will not appear in the source file of each subclass.</p>
+<p>现在 <code>MountainBike</code> 拥有了和 <code>Bicycle</code> 相同的字段和方法，这使其代码可以专注于使其独特的特性。这使得子类代码更易读。
+然而，您必须注意正确记录每个超类定义的状态和行为，因为这些代码并不会出现在每个子类的源文件中：</p>
 
         </div>
         <div class="NavBit">
@@ -542,8 +546,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> What Is a Class?
-        <br /><b>下一页：</b> What Is an Interface?
+        <b>上一页：</b> 什么是类？
+        <br /><b>下一页：</b> 什么是接口？
     </div>
 </body>
 </html> 

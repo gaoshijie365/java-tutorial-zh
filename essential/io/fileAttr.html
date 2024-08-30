@@ -778,7 +778,7 @@ String value = Charset.defaultCharset().decode(buf).toString();
 </pre></div>
 <p>The 
 <a class="SourceLink" target="_blank" href="examples/Xdd.java" onclick="showCode('../../displayCode.html', 'examples/Xdd.java'); return false;"><code><code>Xdd</code></code></a> example shows how to get, set, and delete a user-defined attribute.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;In Linux, you might have to enable extended attributes for user-defined attributes to work. If you receive an <code>UnsupportedOperationException</code> when trying to access the user-defined attribute view, you need to remount the file system. The following command remounts the root partition with extended attributes for the ext3 file system. If this command does not work for your flavor of Linux, 查阅 documentation.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;In Linux, you might have to enable extended attributes for user-defined attributes to work. If you receive an <code>UnsupportedOperationException</code> when trying to access the user-defined attribute view, you need to remount the file system. The following command remounts the root partition with extended attributes for the ext3 file system. If this command does not work for your flavor of Linux, 查阅 documentation.
 <div class="codeblock"><pre>
 $ sudo mount -o remount,user_xattr /
 </pre></div>

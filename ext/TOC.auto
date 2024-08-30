@@ -13,7 +13,7 @@
 <li class="tocli"><a href="security/index.html">Making Extensions Secure</a>
 <ul>
 <li class="tocli"><a href="security/policy.html">Setting Privileges for Extensions</a></li>
-<li class="tocli"><a href="security/sealing.html">Sealing Packages in Extensions</a>
+<li class="tocli"><a href="security/sealing.html">Sealing 包 in Extensions</a>
 </li>
 </ul>
 </li>

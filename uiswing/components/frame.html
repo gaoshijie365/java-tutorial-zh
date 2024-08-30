@@ -600,7 +600,7 @@ frame.setLocationRelativeTo(null);
 </ol>
 <!-- commented out as per Shannon's notes. dsd
 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The <code>pack</code> and <code>setVisible</code> methods
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The <code>pack</code> and <code>setVisible</code> methods
 <em>realize</em> the frame and the components it contains.
 Once a component has been realized,
 any code that modifies or inspects it
@@ -683,7 +683,7 @@ Play with the various types of windows to see how the window decorations, window
 <dd>Exit the application, using <code>System.exit(0)</code>. This is recommended for applications only. If used within an applet, a <code>SecurityException</code> may be thrown.</dd>
 </dl>
 <p><a name="4030718"></a></p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p><code>DISPOSE_ON_CLOSE</code> can have results similar to <code>EXIT_ON_CLOSE</code> if only one window is onscreen. More precisely, when the last displayable window within the Java virtual machine (VM) is disposed of, the VM may terminate. See 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p><code>DISPOSE_ON_CLOSE</code> can have results similar to <code>EXIT_ON_CLOSE</code> if only one window is onscreen. More precisely, when the last displayable window within the Java virtual machine (VM) is disposed of, the VM may terminate. See
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/doc-files/AWTThreadIssues.html">AWT Threading Issues</a> for details.</p>
 <hr /></div>
 <p>The default close operation is executed after any window listeners handle the window-closing event. So, for example, assume that you specify that the default close operation is to dispose of a frame. You also implement a window listener that tests whether the frame is the last one visible and, if so, saves some data and exits the application. Under these conditions, when the user closes a frame, the window listener will be called first. If it does not exit the application, then the default close operation &#151; disposing of the frame &#151; will then be performed.</p>

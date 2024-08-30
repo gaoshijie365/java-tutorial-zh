@@ -5,8 +5,8 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>What Is an Interface? (Java&trade; 教程 &gt;
-            学习 Java &gt; Object-Oriented Programming Concepts)
+        <title>什么是接口？ (Java&trade; 教程 &gt;
+            学习 Java &gt; 面向对象编程概念)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,37 +475,37 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Object-Oriented Programming Concepts</a></div>
-<div class="linkAHEAD"><a href="object.html">What Is an Object?</a></div>
-<div class="linkAHEAD"><a href="class.html">What Is a Class?</a></div>
-<div class="linkAHEAD"><a href="inheritance.html">What Is Inheritance?</a></div>
-<div class="nolinkAHEAD">What Is an Interface?</div>
-<div class="linkAHEAD"><a href="package.html">What Is a Package?</a></div>
+            <div class="linkLESSON"><a href="index.html">面向对象编程概念</a></div>
+<div class="linkAHEAD"><a href="object.html">什么是对象？</a></div>
+<div class="linkAHEAD"><a href="class.html">什么是类？</a></div>
+<div class="linkAHEAD"><a href="inheritance.html">什么是继承？</a></div>
+<div class="nolinkAHEAD">什么是接口？</div>
+<div class="linkAHEAD"><a href="package.html">什么是包？</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Object-Oriented Programming Concepts
+        <br /><b>课程：</b> 面向对象编程概念
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Object-Oriented Programming Concepts</a>
+                <a href="index.html" target="_top">面向对象编程概念</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="inheritance.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="package.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>What Is an Interface?</h1></div>
+            <div id="PageTitle"><h1>什么是接口？</h1></div>
             <div id="PageContent">
 
 <!-- What is Inheritance? -->
-<p>As you&#39;ve already learned, objects define their interaction with the outside world through the methods that they expose. Methods form the object&#39;s <i>interface</i> with the outside world; the buttons on the front of your television set, for example, are the interface between you and the electrical wiring on the other side of its plastic casing. You press the &quot;power&quot; button to turn the television on and off.</p>
-<p>In its most common form, an interface is a group of related methods with empty bodies. A bicycle&#39;s behavior, if specified as an interface, might appear as follows:</p>
+<p>我们已经学习过，对象通过它们暴漏的方法与外部世界交互。方法形成了对象与外部世界的 <i>接口</i>。比如，电视机前面的按钮，就是您和电视里面电器之间的接口。使您可以通过点击 &quot;电源&quot; 键打开关闭电视。</p>
+<p>最常见的形式是接口包含一组没有方法体的方法。自行车的行为，如果作为接口的话，可能如下：</p>
 <div class="codeblock"><pre>
 interface Bicycle {
 
@@ -519,7 +519,7 @@ interface Bicycle {
     void applyBrakes(int decrement);
 }
 </pre></div>
-<p>To implement this interface, the name of your class would change (to a particular brand of bicycle, for example, such as <code>ACMEBicycle</code>), and you&#39;d use the <code>implements</code> keyword in the class declaration:</p>
+<p>为实现这个接口，类的名称可能要改一下 (对于一个特定品牌的自行车，比如 <code>ACMEBicycle</code>)，您将在类声明中使用 <code>implements</code> 关键字：</p>
 <div class="codeblock"><pre>
 class ACMEBicycle <strong>implements</strong> Bicycle {
 
@@ -555,10 +555,10 @@ class ACMEBicycle <strong>implements</strong> Bicycle {
     }
 }
 </pre></div>
-<p>Implementing an interface allows a class to become more formal about the behavior it promises to provide. Interfaces form a contract between the class and the outside world, and this contract is enforced at build time by the compiler. If your class claims to implement an interface, all methods defined by that interface must appear in its source code before the class will successfully compile.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;To actually compile the <code>ACMEBicycle</code> class, you&#39;ll need to add the <code>public</code> keyword to the beginning of the implemented interface methods. You&#39;ll learn the reasons for this later in the lessons on 
-<a class="TutorialLink" target="_top" href="../javaOO/index.html">Classes and Objects</a> and 
-<a class="TutorialLink" target="_top" href="../IandI/index.html">Interfaces and Inheritance</a>.
+<p>实现接口，对类所提供的行为进行了保证。接口是类与外部世界之间的协议，这项协议由编译器在编译时保证。如果您的接口声称实现了一个接口，那类必须提供接口中定义的所有方法，否则类不可能成功编译。</p>
+<div class="note"><hr /><strong>注意：</strong>为编译 <code>ACMEBicycle</code>，您需要在实现的接口方法前添加 <code>public</code> 关键字。您将在课程
+<a class="TutorialLink" target="_top" href="../javaOO/index.html">类和对象</a> 和
+<a class="TutorialLink" target="_top" href="../IandI/index.html">接口和继承</a> 中了解其原因。
 <hr /></div>
 
         </div>
@@ -587,8 +587,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> What Is Inheritance?
-        <br /><b>下一页：</b> What Is a Package?
+        <b>上一页：</b> 什么是继承？
+        <br /><b>下一页：</b> 什么是包？
     </div>
 </body>
 </html> 

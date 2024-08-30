@@ -609,7 +609,7 @@ com.sun.java.swing.plaf.motif.MotifLookAndFeel
 com.sun.java.swing.plaf.windows.WindowsLookAndFeel
 </pre></div>
 <p>Note that the path includes <code>java</code>, and not <code>javax</code>.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The GTK+ L&amp;F will only run on UNIX or Linux systems with GTK+ 2.2 or later installed, while the Windows L&amp;F runs only on Windows systems. Like the Java (Metal) L&amp;F, the Motif L&amp;F will run on any platform.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The GTK+ L&amp;F will only run on UNIX or Linux systems with GTK+ 2.2 or later installed, while the Windows L&amp;F runs only on Windows systems. Like the Java (Metal) L&amp;F, the Motif L&amp;F will run on any platform.
 <hr /></div>
 <p>All of Sun&#39;s L&amp;Fs have a great deal of commonality. This commonality is defined in the <code>Basic</code> look and feel in the API (<code>javax.swing.plaf.basic</code>). The Motif and Windows L&amp;Fs are each built by extending the UI delegate classes in <code>javax.swing.plaf.basic</code> (a custom L&amp;F can be built by doing the same thing). The &quot;Basic&quot; L&amp;F is not used without being extended.</p>
 <p>In the API you will see four L&amp;F packages:</p>
@@ -636,7 +636,7 @@ java -classpath .;C:\java\lafdir\customlaf.jar YourSwingApplication
 </pre></div>
 <p>Once an external L&amp;F is in your program&#39;s class path, your program can use it just like any of the L&amp;Fs shipped with the Java platform.</p>
 <h2><a name="programmatic" id="programmatic">Programmatically Setting the Look and Feel</a></h2>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;If you are going to set the L&amp;F, you should do it as the very first step in your application. Otherwise you run the risk of initializing the Java L&amp;F regardless of what L&amp;F you&#39;ve requested. This can happen inadvertently when a static field references a Swing class, which causes the L&amp;F to be loaded. If no L&amp;F has yet been specified, the default L&amp;F for the JRE is loaded. For Sun&#39;s JRE the default is the Java L&amp;F, for Apple&#39;s JRE the Apple L&amp;F, and so forth.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;If you are going to set the L&amp;F, you should do it as the very first step in your application. Otherwise you run the risk of initializing the Java L&amp;F regardless of what L&amp;F you&#39;ve requested. This can happen inadvertently when a static field references a Swing class, which causes the L&amp;F to be loaded. If no L&amp;F has yet been specified, the default L&amp;F for the JRE is loaded. For Sun&#39;s JRE the default is the Java L&amp;F, for Apple&#39;s JRE the Apple L&amp;F, and so forth.
 <hr /></div>
 <p>The L&amp;F that Swing components use is specified by way of the <code>UIManager</code> class in the <code>javax.swing</code> package. Whenever a Swing component is created,the component asks the UI manager for the UI delegate that implements the component&#39;s L&amp;F. For example, each <code>JLabel</code> constructor queries the UI manager for the UI delegate object appropriate for the label. It then uses that UI delegate object to implement all of its drawing and event handling.</p>
 <p>To programmatically specify a L&amp;F, use the <code>UIManager.setLookAndFeel()</code> method with the fully qualified name of the appropriate subclass of <code>LookAndFeel</code> as its argument. For example, the bold code in the following snippet makes the program use the cross-platform Java L&amp;F:</p>

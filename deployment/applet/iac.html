@@ -572,7 +572,7 @@
     deployJava.runApplet(attributes, parameters, '1.6');
 //]]>
 </script><!-- code for applet -->
-<div class="note"><hr /><strong>Note:</strong> &nbsp;If you don't see the applet running, you need to install at least the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 6 update 10</a> release.<hr /></div><div class="note"><hr /><strong>Note:</strong> &nbsp;If you don't see the example running, you might need to enable the JavaScript interpreter in your browser so that the Deployment Toolkit script can function properly.<hr /></div>
+<div class="note"><hr /><strong>注意：</strong> &nbsp;If you don't see the applet running, you need to install at least the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 6 update 10</a> release.<hr /></div><div class="note"><hr /><strong>注意：</strong> &nbsp;If you don't see the example running, you might need to enable the JavaScript interpreter in your browser so that the Deployment Toolkit script can function properly.<hr /></div>
 <p>To enable communication with another applet, obtain a reference to an instance of the <code>netscape.javascript.JSObject</code> class. Use this instance to invoke JavaScript functions. The 
 <a class="SourceLink" target="_blank" href="examples/applet_SenderReceiver/src/Sender.java" onclick="showCode('../../displayCode.html', 'examples/applet_SenderReceiver/src/Sender.java'); return false;"><code>Sender</code></a> applet uses an instance of the <code>netscape.javascript.JSObject</code> class to invoke a JavaScript function called <code>sendMsgToIncrementCounter</code>.</p>
 <div class="codeblock"><pre>
@@ -583,7 +583,7 @@ try {
     // ...
 }
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;To compile Java code that has a reference to classes in the <code>netscape.javascript</code> package, include <code>&lt;your JDK path&gt;/jre/lib/plugin.jar</code> in your classpath. At runtime, the Java Plug-in software automatically makes these classes available to applets.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;To compile Java code that has a reference to classes in the <code>netscape.javascript</code> package, include <code>&lt;your JDK path&gt;/jre/lib/plugin.jar</code> in your classpath. At runtime, the Java Plug-in software automatically makes these classes available to applets.
 <hr /></div>
 <p>Write the JavaScript function that will receive requests from one applet and invoke methods of another applet on the web page. The <code>sendMsgToIncrementCounter</code> JavaScript function invokes the Receiver applet&#39;s <code>incrementCounter</code> method.</p>
 <div class="codeblock"><pre>

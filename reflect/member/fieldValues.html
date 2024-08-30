@@ -575,7 +575,7 @@ BEFORE:  characters   = [Alice, White Rabbit]
 BEFORE:  twin         = DEE
  AFTER:  twin         = DUM
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Setting a field&#39;s value via reflection has a certain amount of performance overhead because various operations must occur such as validating access permissions. From the runtime&#39;s point of view, the effects are the same, and the operation is as atomic as if the value was changed in the class code directly.<br /><br />
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Setting a field&#39;s value via reflection has a certain amount of performance overhead because various operations must occur such as validating access permissions. From the runtime&#39;s point of view, the effects are the same, and the operation is as atomic as if the value was changed in the class code directly.<br /><br />
 Use of reflection can cause some runtime optimizations to be lost. For example, the following code is highly likely be optimized by a Java virtual machine:
 <div class="codeblock"><pre>
 int x = 1;

@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Inheritance (Java&trade; 教程 &gt;
-            学习 Java &gt; Interfaces and Inheritance)
+            学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,7 +475,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Interfaces and Inheritance</a></div>
+            <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
 <div class="linkAHEAD"><a href="createinterface.html">Interfaces</a></div>
 <div class="linkBHEAD"><a href="interfaceDef.html">Defining an Interface</a></div>
 <div class="linkBHEAD"><a href="usinginterface.html">Implementing an Interface</a></div>
@@ -500,14 +500,14 @@
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Interfaces and Inheritance
+        <br /><b>课程：</b> 接口和继承
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Interfaces and Inheritance</a>
+                <a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="QandE/interfaces-questions.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="multipleinheritance.html">下一页&nbsp;&raquo;</a>
@@ -532,7 +532,7 @@ Classes can be derived from classes that are derived from classes that are deriv
 <center><img src="../../figures/java/classes-object.gif" width="560" height="241" align="bottom" alt="All Classes in the Java Platform are Descendants of Object" /></p><p class="FigureCaption">All Classes in the Java Platform are Descendants of Object</p></center><p>At the top of the hierarchy, <code>Object</code> is the most general of all classes. Classes near the bottom of the hierarchy provide more specialized behavior.</p>
 <h2>An Example of Inheritance</h2>
 <p>Here is the sample code for a possible implementation of a <code>Bicycle</code> class that was presented in 
-the Classes and Objects lesson: 
+the 类和对象 lesson:
 </p>
 <div class="codeblock"><pre>
 public class Bicycle {
@@ -631,7 +631,7 @@ MountainBike myBike = obj;
 MountainBike myBike = (MountainBike)obj;
 </pre></div>
 <p>This cast inserts a runtime check that <code>obj</code> is assigned a <code>MountainBike</code> so that the compiler can safely assume that <code>obj</code> is a <code>MountainBike</code>. If <code>obj</code> is not a <code>MountainBike</code> at runtime, an exception will be thrown.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;You can make a logical test as to the type of a particular object using the <code>instanceof</code> operator. This can save you from a runtime error owing to an improper cast. For example:
+<div class="note"><hr /><strong>注意：</strong>&nbsp;You can make a logical test as to the type of a particular object using the <code>instanceof</code> operator. This can save you from a runtime error owing to an improper cast. For example:
 <div class="codeblock"><pre>
 if (obj instanceof MountainBike) {
     MountainBike myBike = (MountainBike)obj;

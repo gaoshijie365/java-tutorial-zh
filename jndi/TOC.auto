@@ -10,8 +10,8 @@
 <li class="tocli"><a href="overview/index.html">Overview of JNDI</a>
 <ul>
 <li class="tocli"><a href="overview/naming.html">Naming Package</a></li>
-<li class="tocli"><a href="overview/dir.html">Directory and LDAP Packages</a></li>
-<li class="tocli"><a href="overview/event.html">Event and Service Provider Packages</a>
+<li class="tocli"><a href="overview/dir.html">Directory and LDAP 包</a></li>
+<li class="tocli"><a href="overview/event.html">Event and Service Provider 包</a>
 </li>
 </ul>
 </li>

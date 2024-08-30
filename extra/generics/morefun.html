@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>More Fun with Wildcards (Java&trade; 教程 &gt;
-            Bonus &gt; Generics)
+            Bonus &gt; 泛型)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This Java tutorial describes generics, full screen mode API, and Java certification related resources" />
@@ -475,31 +475,31 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Generics</a></div>
+            <div class="linkLESSON"><a href="index.html">泛型</a></div>
 <div class="linkAHEAD"><a href="intro.html">Introduction</a></div>
-<div class="linkAHEAD"><a href="simple.html">Defining Simple Generics</a></div>
-<div class="linkAHEAD"><a href="subtype.html">Generics and Subtyping</a></div>
+<div class="linkAHEAD"><a href="simple.html">Defining Simple 泛型</a></div>
+<div class="linkAHEAD"><a href="subtype.html">泛型 and Subtyping</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">Wildcards</a></div>
 <div class="linkAHEAD"><a href="methods.html">Generic Methods</a></div>
 <div class="linkAHEAD"><a href="legacy.html">Interoperating with Legacy Code</a></div>
 <div class="linkAHEAD"><a href="fineprint.html">The Fine Print</a></div>
 <div class="linkAHEAD"><a href="literals.html">Class Literals as Runtime-Type Tokens</a></div>
 <div class="nolinkAHEAD">More Fun with Wildcards</div>
-<div class="linkAHEAD"><a href="convert.html">Converting Legacy Code to Use Generics</a></div>
+<div class="linkAHEAD"><a href="convert.html">Converting Legacy Code to Use 泛型</a></div>
 <div class="linkAHEAD"><a href="acknowledgements.html">Acknowledgements</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> Bonus
-        <br /><b>课程：</b> Generics
+        <br /><b>课程：</b> 泛型
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">Bonus</a>
                 &gt;
-                <a href="index.html" target="_top">Generics</a>
+                <a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="literals.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="convert.html">下一页&nbsp;&raquo;</a>
@@ -583,7 +583,7 @@ Collections.max(cf); // <i>Should work.</i>
         T max(Collection&lt;T&gt; coll)
 </pre></div>
 <p>Note that the actual signature of <code>Collections.max()</code> is more involved. We return to it in the next section, 
-<a class="TutorialLink" target="_top" href="convert.html">Converting Legacy Code to Use Generics</a>. This reasoning applies to almost any usage of <code>Comparable</code> that is intended to work for arbitrary types: You always want to use <code>Comparable&lt;? <b>super</b> T&gt;</code>.</p>
+<a class="TutorialLink" target="_top" href="convert.html">Converting Legacy Code to Use 泛型</a>. This reasoning applies to almost any usage of <code>Comparable</code> that is intended to work for arbitrary types: You always want to use <code>Comparable&lt;? <b>super</b> T&gt;</code>.</p>
 <p>In general, if you have an API that only uses a type parameter <code>T</code> as an argument, its uses should take advantage of lower bounded wildcards (<code>? <b>super</b> T</code>). Conversely, if the API only returns <code>T</code>, you&#39;ll give your clients more flexibility by using upper bounded wildcards (<code>? <b>extends</b> T</code>).</p>
 <h2>Wildcard Capture</h2>
 <p>It should be pretty clear by now that given:</p>
@@ -642,7 +642,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> Class Literals as Runtime-Type Tokens
-        <br /><b>下一页：</b> Converting Legacy Code to Use Generics
+        <br /><b>下一页：</b> Converting Legacy Code to Use 泛型
     </div>
 </body>
 </html> 

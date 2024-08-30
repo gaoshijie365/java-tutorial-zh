@@ -112,8 +112,8 @@ class LineBreakPanel extends JPanel {
 
             // Compute pen x position. If the paragraph is right-to-left we
             // will align the TextLayouts to the right edge of the panel.
-            // Note: this won't occur for the English text in this sample.
-            // Note: drawPosX is always where the LEFT of the text is placed.
+            // 注意： this won't occur for the English text in this sample.
+            // 注意： drawPosX is always where the LEFT of the text is placed.
             float drawPosX = layout.isLeftToRight()
                 ? 0 : breakWidth - layout.getAdvance();
 

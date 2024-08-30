@@ -226,7 +226,7 @@ public class TablePrintDemo3 extends TablePrintDemo2 {
             }
 
             /*
-             * Note: Since this is just a demo, we assume that there's enough room
+             * 注意： Since this is just a demo, we assume that there's enough room
              * on the page to render the clipboard image and the table. A more robust
              * application should check first, and render only the table if there's
              * not enough room.

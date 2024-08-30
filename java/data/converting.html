@@ -5,8 +5,8 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Converting Between Numbers and Strings (Java&trade; 教程 &gt;
-            学习 Java &gt; Numbers and Strings)
+        <title>Converting Between 数字和字符串 (Java&trade; 教程 &gt;
+            学习 Java &gt; 数字和字符串)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,7 +475,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Numbers and Strings</a></div>
+            <div class="linkLESSON"><a href="index.html">数字和字符串</a></div>
 <div class="linkAHEAD"><a href="numbers.html">Numbers</a></div>
 <div class="linkBHEAD"><a href="numberclasses.html">The Numbers Classes</a></div>
 <div class="linkBHEAD"><a href="numberformat.html">Formatting Numeric Print Output</a></div>
@@ -484,7 +484,7 @@
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="characters.html">Characters</a></div>
 <div class="linkAHEAD"><a href="strings.html">Strings</a></div>
-<div class="nolinkBHEAD">Converting Between Numbers and Strings</div>
+<div class="nolinkBHEAD">Converting Between 数字和字符串</div>
 <div class="linkBHEAD"><a href="manipstrings.html">Manipulating Characters in a String</a></div>
 <div class="linkBHEAD"><a href="comparestrings.html">Comparing Strings and Portions of Strings</a></div>
 <div class="linkBHEAD"><a href="buffers.html">The StringBuilder Class</a></div>
@@ -496,7 +496,7 @@
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Numbers and Strings
+        <br /><b>课程：</b> 数字和字符串
         <br /><b>Section:</b> Strings
     </div>
             <div id="BreadCrumbs">
@@ -504,13 +504,13 @@
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Numbers and Strings</a>
+                <a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="strings.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="manipstrings.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Converting Between Numbers and Strings</h1></div>
+            <div id="PageTitle"><h1>Converting Between 数字和字符串</h1></div>
             <div id="PageContent">
 
 <!-- Converting Between Strings and Numbers-->
@@ -562,7 +562,7 @@ a * b = 392.4
 a / b = 0.0516055
 a % b = 4.5
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Each of the <code>Number</code> subclasses that wrap primitive numeric types also provides a <code>parseXXXX()</code> method (for example, <code>parseFloat()</code>) that can be used to convert strings to primitive numbers. Since a primitive type is returned instead of an object, the <code>parseFloat()</code> method is more direct than the <code>valueOf()</code> method. For example, in the <code>ValueOfDemo</code> program, we could use:
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Each of the <code>Number</code> subclasses that wrap primitive numeric types also provides a <code>parseXXXX()</code> method (for example, <code>parseFloat()</code>) that can be used to convert strings to primitive numbers. Since a primitive type is returned instead of an object, the <code>parseFloat()</code> method is more direct than the <code>valueOf()</code> method. For example, in the <code>ValueOfDemo</code> program, we could use:
 <div class="codeblock"><pre>
 float a = Float.parseFloat(args[0]);
 float b = Float.parseFloat(args[1]);

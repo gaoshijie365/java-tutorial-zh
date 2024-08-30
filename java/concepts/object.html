@@ -5,8 +5,8 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>What Is an Object? (Java&trade; 教程 &gt;
-            学习 Java &gt; Object-Oriented Programming Concepts)
+        <title>什么是对象？ (Java&trade; 教程 &gt;
+            学习 Java &gt; 面向对象编程概念)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,48 +475,51 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Object-Oriented Programming Concepts</a></div>
-<div class="nolinkAHEAD">What Is an Object?</div>
-<div class="linkAHEAD"><a href="class.html">What Is a Class?</a></div>
-<div class="linkAHEAD"><a href="inheritance.html">What Is Inheritance?</a></div>
-<div class="linkAHEAD"><a href="interface.html">What Is an Interface?</a></div>
-<div class="linkAHEAD"><a href="package.html">What Is a Package?</a></div>
+            <div class="linkLESSON"><a href="index.html">面向对象编程概念</a></div>
+<div class="nolinkAHEAD">什么是对象？</div>
+<div class="linkAHEAD"><a href="class.html">什么是类？</a></div>
+<div class="linkAHEAD"><a href="inheritance.html">什么是继承？</a></div>
+<div class="linkAHEAD"><a href="interface.html">什么是接口？</a></div>
+<div class="linkAHEAD"><a href="package.html">什么是包？</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Object-Oriented Programming Concepts
+        <br /><b>课程：</b> 面向对象编程概念
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Object-Oriented Programming Concepts</a>
+                <a href="index.html" target="_top">面向对象编程概念</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="index.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="class.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>What Is an Object?</h1></div>
+            <div id="PageTitle"><h1>什么是对象？</h1></div>
             <div id="PageContent">
 
-<p>Objects are key to understanding <i>object-oriented</i> technology. Look around right now and you&#39;ll find many examples of real-world objects: your dog, your desk, your television set, your bicycle.</p>
-<p>Real-world objects share two characteristics: They all have <i>state</i> and <i>behavior</i>. Dogs have state (name, color, breed, hungry) and behavior (barking, fetching, wagging tail). Bicycles also have state (current gear, current pedal cadence, current speed) and behavior (changing gear, changing pedal cadence, applying brakes). Identifying the state and behavior for real-world objects is a great way to begin thinking in terms of object-oriented programming.</p>
-<p>Take a minute right now to observe the real-world objects that are in your immediate area. For each object that you see, ask yourself two questions: &quot;What possible states can this object be in?&quot; and &quot;What possible behavior can this object perform?&quot;. Make sure to write down your observations. As you do, you&#39;ll notice that real-world objects vary in complexity; your desktop lamp may have only two possible states (on and off) and two possible behaviors (turn on, turn off), but your desktop radio might have additional states (on, off, current volume, current station) and behavior (turn on, turn off, increase volume, decrease volume, seek, scan, and tune). You may also notice that some objects, in turn, will also contain other objects. These real-world observations all translate into the world of object-oriented programming.</p>
-<center><img src="../../figures/java/concepts-object.gif" width="345" height="210" align="bottom" alt="A circle with an inner circle filled with items, surrounded by gray wedges representing methods that allow access to the inner circle." /></p><p class="FigureCaption">A software object.</p></center><br />
-<p>Software objects are conceptually similar to real-world objects: they too consist of state and related behavior. An object stores its state in <i>fields</i> (variables in some programming languages) and exposes its behavior through <i>methods</i> (functions in some programming languages). Methods operate on an object&#39;s internal state and serve as the primary mechanism for object-to-object communication. Hiding internal state and requiring all interaction to be performed through an object&#39;s methods is known as <i>data encapsulation</i> &#151; a fundamental principle of object-oriented programming.</p>
-<p>Consider a bicycle, for example:</p>
-<center><img src="../../figures/java/concepts-bicycleObject.gif" width="273" height="218" align="bottom" alt="A picture of an object, with bicycle methods and instance variables." /></p><p class="FigureCaption">A bicycle modeled as a software object.</p></center><br />
-<p>By attributing state (current speed, current pedal cadence, and current gear) and providing methods for changing that state, the object remains in control of how the outside world is allowed to use it. For example, if the bicycle only has 6 gears, a method to change gears could reject any value that is less than 1 or greater than 6.</p>
-<p>Bundling code into individual software objects provides a number of benefits, including:</p>
+<p>对象是理解 <i>面向对象</i> 技术的关键。看看周围，您将发现很多现实世界中对象的例子：狗，书桌，电视机，自行车。</p>
+<p>现实世界中的对象有两大特性：<i>状态</i> 和 <code>行为</code>。狗有状态 (名字，颜色，品种，是否饥饿) 和行为 (叫，取物，摇尾巴)。自行车有状态 (当前档位，当前踏板踏频，当前速度) 和行为 (换挡，改变踏频，刹车)。识别现实世界中对象的状态和行为，是开始思考面向对象编程的好方法。</p>
+<p>花一分钟时间观察现实世界中的对象。对每一个对象，问自己两个问题：&quot;这个对象中可能包含哪些状态？&quot; 和
+    &quot;这个对象可能执行哪些行为？&quot;。确保将您的观察所得写下来。您将会注意到，现实世界中的对象有着不同的复杂性；您的台灯可能仅有两种状态 (开和关) 和两种行为 (打开和关闭)，但是您的收音机可能有更多的状态
+    (开，关，当前音量，当前频道，当前电台) 和行为 (打开，关闭，调高音量，调低音量，搜索，扫描，调整)。您可能也注意到，一些对象会包含其它对象。这些现实世界中的观察结果都转入面向对象编程的世界中。</p>
+<center><img src="../../figures/java/concepts-object.gif" width="345" height="210" align="bottom" alt="A circle with an inner circle filled with items, surrounded by gray wedges representing methods that allow access to the inner circle." /></p><p class="FigureCaption">一个软件对象。</p></center><br />
+<p>软件对象在概念上与现实世界中对象类似：它们都含有状态和相关的行为。对象状态存储在 <i>字段</i> (在其它编程语言中叫做变量) 中，对象行为通过 <i>方法</i> (在其它编程语言中叫做函数) 暴漏出来。
+    方法操作对象内部的状态，同时也是对象间交流的机制。隐藏内部状态，所有交互都通过对象方法执行，这就叫做 <i>数据封装</i> &#151; 面向对象的一个基本原则。</p>
+<p>考虑一个自行车，比如：</p>
+<center><img src="../../figures/java/concepts-bicycleObject.gif" width="273" height="218" align="bottom" alt="A picture of an object, with bicycle methods and instance variables." /></p><p class="FigureCaption">自行车对应的软件对象。</p></center><br />
+<p>通过指定状态 (当前速度，当前踏板踏频，和当前档位) 并提供方法修改这些状态，对象控制者外部世界对它的使用。比如，如果自行车有 6 个档位，改变档位的方法可能拒绝小于 1 或者大于 6 的值。</p>
+<p>将代码拆分到单独的软件对象中有如下的好处：</p>
 <ol>
-<li>Modularity: The source code for an object can be written and maintained independently of the source code for other objects. Once created, an object can be easily passed around inside the system.</li>
-<li>Information-hiding: By interacting only with an object&#39;s methods, the details of its internal implementation remain hidden from the outside world.</li>
-<li>Code re-use: If an object already exists (perhaps written by another software developer), you can use that object in your program. This allows specialists to implement/test/debug complex, task-specific objects, which you can then trust to run in your own code.</li>
-<li>Pluggability and debugging ease: If a particular object turns out to be problematic, you can simply remove it from your application and plug in a different object as its replacement. This is analogous to fixing mechanical problems in the real world. If a bolt breaks, you replace <i>it</i>, not the entire machine.</li>
+<li>模块化：源代码可以独立地编写和维护。对象一旦创建，就可以轻松地在系统中传递。</li>
+<li>信息隐藏：进通过对象的方法进行交互，其内部实现细节对外部世界隐藏。</li>
+<li>代码重用：如果对象已经存在 (可能是由其他软件开发者编写)，便可以在您的程序中使用。由专家实现/测试/调试复杂的，特定任务的对象，您可以将其用在自己的代码中。</li>
+<li>可插拔且易于调试：如果一个对象是有问题的，您可以将它从您的应用中移除，并替换为另一个对象。这类似于现实世界中修复问题的机制。如果螺丝坏了，就将螺丝替换掉，而不是整个机器。</li>
 </ol>
 
         </div>
@@ -545,8 +548,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Object-Oriented Programming Concepts
-        <br /><b>下一页：</b> What Is a Class?
+        <b>上一页：</b> 面向对象编程概念
+        <br /><b>下一页：</b> 什么是类？
     </div>
 </body>
 </html> 

@@ -515,7 +515,7 @@
             <div id="PageContent">
 
 <p>The <code>finally</code> block <i>always</i> executes when the <code>try</code> block exits. This ensures that the <code>finally</code> block is executed even if an unexpected exception occurs. But <code>finally</code> is useful for more than just exception handling &#151; it allows the programmer to avoid having cleanup code accidentally bypassed by a <code>return</code>, <code>continue</code>, or <code>break</code>. Putting cleanup code in a <code>finally</code> block is always a good practice, even when no exceptions are anticipated.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The <code>finally</code> block may not execute if the JVM exits while the <code>try</code> or <code>catch</code> code is being executed. 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The <code>finally</code> block may not execute if the JVM exits while the <code>try</code> or <code>catch</code> code is being executed.
 <hr /></div>
 <p>The <code>try</code> block of the <code>writeList</code> method that you&#39;ve been working with here opens a <code>PrintWriter</code>. The program should close that stream before exiting the <code>writeList</code> method. This poses a somewhat complicated problem because <code>writeList</code>&#39;s <code>try</code> block can exit in one of three ways.</p>
 <ol>

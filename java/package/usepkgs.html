@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Using Package Members (Java&trade; 教程 &gt;
-            学习 Java &gt; Packages)
+            学习 Java &gt; 包)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,28 +475,28 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Packages</a></div>
-<div class="linkAHEAD"><a href="packages.html">Creating and Using Packages</a></div>
+            <div class="linkLESSON"><a href="index.html">包</a></div>
+<div class="linkAHEAD"><a href="packages.html">Creating and Using 包</a></div>
 <div class="linkBHEAD"><a href="createpkgs.html">Creating a Package</a></div>
 <div class="linkBHEAD"><a href="namingpkgs.html">Naming a Package</a></div>
 <div class="nolinkBHEAD">Using Package Members</div>
 <div class="linkBHEAD"><a href="managingfiles.html">Managing Source and Class Files</a></div>
-<div class="linkBHEAD"><a href="summary-package.html">Summary of Creating and Using Packages</a></div>
+<div class="linkBHEAD"><a href="summary-package.html">Summary of Creating and Using 包</a></div>
 <div class="linkQUESTIONS"><a href="QandE/packages-questions.html">问题和练习</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Packages
-        <br /><b>Section:</b> Creating and Using Packages
+        <br /><b>课程：</b> 包
+        <br /><b>Section:</b> Creating and Using 包
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Packages</a>
+                <a href="index.html" target="_top">包</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="namingpkgs.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="managingfiles.html">下一页&nbsp;&raquo;</a>
@@ -553,7 +553,7 @@ Rectangle myRectangle = new Rectangle();
 import graphics.A*;
 </pre></div>
 <p>Instead, it generates a compiler error. With the <code>import</code> statement, you generally import only a single package member or an entire package.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Another, less common form of <code>import</code> allows you to import the public nested classes of an enclosing class. For example, if the <code>graphics.Rectangle</code> class contained useful nested classes, such as <code>Rectangle.DoubleWide</code> and <code>Rectangle.Square</code>, you could import <code>Rectangle</code> and its nested classes by using the following <i>two</i> statements.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Another, less common form of <code>import</code> allows you to import the public nested classes of an enclosing class. For example, if the <code>graphics.Rectangle</code> class contained useful nested classes, such as <code>Rectangle.DoubleWide</code> and <code>Rectangle.Square</code>, you could import <code>Rectangle</code> and its nested classes by using the following <i>two</i> statements.
 <div class="codeblock"><pre>
 import graphics.Rectangle;
 import graphics.Rectangle.*;
@@ -562,7 +562,7 @@ Be aware that the second import statement will <i>not</i> import <code>Rectangle
 Another less common form of <code>import</code>, the <i>static import statement</i>, will be discussed at the end of this section.
 <hr /></div>
 <p>For convenience, the Java compiler automatically imports two entire packages for each source file: (1) the <code>java.lang</code> package and (2) the current package (the package for the current file).</p>
-<h2>Apparent Hierarchies of Packages</h2>
+<h2>Apparent Hierarchies of 包</h2>
 <p>At first, packages appear to be hierarchical, but they are not. For example, the Java API includes a <code>java.awt</code> package, a <code>java.awt.color</code> package, a <code>java.awt.font</code> package, and many others that begin with <code>java.awt</code>. However, the <code>java.awt.color</code> package, the <code>java.awt.font</code> package, and other <code>java.awt.xxxx</code> packages are <i>not included</i> in the <code>java.awt</code> package. The prefix <code>java.awt</code> (the Java Abstract Window Toolkit) is used for a number of related packages to make the relationship evident, but not to show inclusion.</p>
 <p>Importing <code>java.awt.*</code> imports all of the types in the <code>java.awt</code> package, but it <i>does not import</i> <code>java.awt.color</code>, <code>java.awt.font</code>, or any other <code>java.awt.xxxx</code> packages. If you plan to use the classes and other types in <code>java.awt.color</code> as well as those in <code>java.awt</code>, you must import both packages with all their files:</p>
 <div class="codeblock"><pre>
@@ -609,7 +609,7 @@ double r = cos(PI * theta);
 <div class="codeblock"><pre>
 import <b>static</b> mypackage.MyConstants.*;
 </pre></div> 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Use static import very sparingly. Overusing static import can result in code that is difficult to read and maintain, because readers of the code won&#39;t know which class defines a particular static object. Used properly, static import makes code more readable by removing class name repetition.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Use static import very sparingly. Overusing static import can result in code that is difficult to read and maintain, because readers of the code won&#39;t know which class defines a particular static object. Used properly, static import makes code more readable by removing class name repetition.
 <hr /></div>
 
 

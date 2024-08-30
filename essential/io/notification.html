@@ -710,8 +710,8 @@ Path filename = ev.context();
 </pre></div>
 <p>When you compile the <code>Email</code> example, it generates the following error:</p>
 <div class="codeblock"><pre>
-Note: Email.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
+注意： Email.java uses unchecked or unsafe operations.
+注意： Recompile with -Xlint:unchecked for details.
 </pre></div>
 <p>This error is a result of the line of code that casts the <code>WatchEvent&lt;T&gt;</code> to a <code>WatchEvent&lt;Path&gt;</code>. The 
 <a class="SourceLink" target="_blank" href="examples/WatchDir.java" onclick="showCode('../../displayCode.html', 'examples/WatchDir.java'); return false;"><code><code>WatchDir</code></code></a> example avoids this error by creating a utility <code>cast</code> method that suppresses the unchecked warning, as follows:</p>
@@ -722,7 +722,7 @@ static &lt;T&gt; WatchEvent&lt;T&gt; cast(WatchEvent&lt;?&gt; event) {
 }
 </pre></div>
 <p>If you are unfamiliar with the <code>@SuppressWarnings</code> syntax, see 
-<a class="TutorialLink" target="_top" href="../../java/annotations/index.html">Annotations</a>.</p>
+<a class="TutorialLink" target="_top" href="../../java/annotations/index.html">注解</a>.</p>
 <h2><a name="concerns" id="concerns">When to Use and Not Use This API</a></h2>
 <p>The Watch Service API is designed for applications that need to be notified about file change events. It is well suited for any application, like an editor or IDE, that potentially has many open files and needs to ensure that the files are synchronized with the file system. It is also well suited for an application server that watches a directory, perhaps waiting for <code>.jsp</code> or <code>.jar</code> files to drop, in order to deploy them.</p>
 <p>This API is <em>not</em> designed for indexing a hard drive. Most file system implementations have native support for file change notification. The Watch Service API takes advantage of this support where available. However, when a file system does not support this mechanism, the Watch Service will poll the file system, waiting for events. 

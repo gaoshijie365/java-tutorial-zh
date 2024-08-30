@@ -582,7 +582,7 @@ as shown. The second parameter in the <code>load()</code> method defines the pat
 indicating that they are 
 to be found with the same path as the <code>MyApp.class</code> file.
 <p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;It is also possible to load a Synth XML file from an arbitrary URL:
+<div class="note"><hr /><strong>注意：</strong>&nbsp;It is also possible to load a Synth XML file from an arbitrary URL:
 <div class="codeblock"><pre>
 SynthLookAndFeel laf = new SynthLookAndFeel();
 laf.load(new URL("file:///C:/java/synth/laf/synth_def.xml"));
@@ -804,7 +804,7 @@ FormattedTextField
 </pre></div>
 <p>As a result, the &quot;OK&quot; button is bound to <i>both</i> &quot;styleButton&quot; and &quot;styleOK,&quot; while the &quot;Cancel&quot; button is bound to <i>both</i> &quot;styleButton&quot; and &quot;styleCancel.&quot;</p>
 <p>When a component or region is bound to more than one style, the styles are merged</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>Just as a style can be bound to multiple regions or names, multiple styles can be bound to a region or name. These multiple styles are merged for the region or name. Precedence is given to styles defined later in the file.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>Just as a style can be bound to multiple regions or names, multiple styles can be bound to a region or name. These multiple styles are merged for the region or name. Precedence is given to styles defined later in the file.</p>
 <hr /></div>
 <h2>The &lt;state&gt; Element</h2>
 <p>The &lt;state&gt; element allows you to define a look for a region that depends on its &quot;state.&quot; For example, you will usually want a button that has been <code>PRESSED</code> to look different than the button in its <code>ENABLED</code> state. There are seven possible values for &lt;state&gt; that are defined in the Synth XML DTD. They are:</p>
@@ -921,7 +921,7 @@ FormattedTextField
 <p>the button will be made larger by 15 pixels above and below the caption and 20 pixels to the left and right of the caption.</p>
 <h2>Painting With Images</h2>
 <p>Synth&#39;s file format allows customizing the painting by way of images. Synth&#39;s image painter breaks an image into nine distinct areas: top, top right, right, bottom right, bottom, bottom left, left, top left, and center. Each of the these areas is painted into the destination. The top, left, bottom, and right edges are tiled or stretched, while the corner portions (<code>sourceInsets</code>) remain fixed.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>There is no relation between the &lt;insets&gt; element and the <code>sourceInsets</code> attribute. The &lt;insets&gt; element defines the space taken up by a region, while the <code>sourceInsets</code> attributes define how to paint an image. The &lt;insets&gt; and <code>sourceInsets</code> will often be similar, but they need not be.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>There is no relation between the &lt;insets&gt; element and the <code>sourceInsets</code> attribute. The &lt;insets&gt; element defines the space taken up by a region, while the <code>sourceInsets</code> attributes define how to paint an image. The &lt;insets&gt; and <code>sourceInsets</code> will often be similar, but they need not be.</p>
 <hr /></div>
 <p>You can specify whether the center area should be painted with the <code>paintCenter</code> attribute. The following image shows the nine areas:</p>
 <center><img src="../../figures/uiswing/lookandfeel/regions.gif" width="223" height="222" align="bottom" alt="Nine Image Areas." /></center><p>Let&#39;s create a button as an example. To do this we can use the following image (shown larger than its actual size):</p>
@@ -1030,7 +1030,7 @@ FormattedTextField
 &lt;/synth&gt;
 </pre></div>
 <p>We can load this XML file to use the Synth look and feel for a simple application called <code>SynthApplication.java</code>. The GUI for this application includes a button and a label. Every time the button is clicked, the label increments.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>The label is painted, even though <code>buttonSkin.xml</code> does not contain a style for it. This is because there is a general &quot;backingStyle&quot; that includes a font and colors.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>The label is painted, even though <code>buttonSkin.xml</code> does not contain a style for it. This is because there is a general &quot;backingStyle&quot; that includes a font and colors.</p>
 <hr /></div>
 <p>Here is the listing of the 
 <a class="SourceLink" target="_blank" href="../examples/lookandfeel/SynthApplicationProject/src/lookandfeel/SynthApplication.java" onclick="showCode('../../displayCode.html', '../examples/lookandfeel/SynthApplicationProject/src/lookandfeel/SynthApplication.java'); return false;"><code><code>SynthApplication.java</code></code></a>file.</p>

@@ -502,7 +502,7 @@
             <div id="PageContent">
 
 <p>The following examples show typical errors which may be encountered when reflecting on classes.</p>
-<h2>Compiler Warning: &quot;Note: ... uses unchecked or unsafe operations&quot;</h2>
+<h2>Compiler Warning: &quot;注意： ... uses unchecked or unsafe operations&quot;</h2>
 <p>When a method is invoked, the types of the argument values are checked and possibly converted. 
 <a class="SourceLink" target="_blank" href="example/ClassWarning.java" onclick="showCode('../../displayCode.html', 'example/ClassWarning.java'); return false;"><code><code>ClassWarning</code></code></a> invokes 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethod-java.lang.String-java.lang.Class...-"><code>getMethod()</code></a> to cause a typical unchecked conversion warning:</p>
@@ -525,8 +525,8 @@ public class ClassWarning {
 </pre></div>
 <div class="codeblock"><pre>
 &#36; <em>javac ClassWarning.java</em>
-Note: ClassWarning.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
+注意： ClassWarning.java uses unchecked or unsafe operations.
+注意： Recompile with -Xlint:unchecked for details.
 &#36; <em>javac -Xlint:unchecked ClassWarning.java</em>
 ClassWarning.java:6: warning: [unchecked] unchecked call to getMethod
   (String,Class&lt;?&gt;...) as a member of the raw type Class

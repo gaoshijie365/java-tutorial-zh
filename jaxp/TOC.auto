@@ -3,7 +3,7 @@
 
 <ul><li class="tocli"><a href="intro/index.html">Introduction to JAXP</a>
 <ul>
-<li class="tocli"><a href="intro/package.html">Overview of the Packages</a></li>
+<li class="tocli"><a href="intro/package.html">Overview of the 包</a></li>
 <li class="tocli"><a href="intro/simple.html">Simple API for XML APIs</a></li>
 <li class="tocli"><a href="intro/dom.html">Document Object Model APIs</a></li>
 <li class="tocli"><a href="intro/extensible.html">Extensible Stylesheet Language Transformations APIs</a></li>

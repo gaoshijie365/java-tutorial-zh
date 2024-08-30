@@ -529,7 +529,7 @@ public int print(Graphics g, PageFormat pf, int page)
     return PAGE_EXISTS;
 }
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The call to the <code>printAll</code> method is the only difference between this example and examples to print text or image. The <code>print(Graphics g)</code> method mirrors the <code>java.awt.Component.paint(Graphics g)</code> method used for on-screen rendering. Use the <code>print()</code> method rather than the <code>paint()</code> method as the <code>Components</code> class may have overridden the <code>print()</code> method to handle the printing case differently.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The call to the <code>printAll</code> method is the only difference between this example and examples to print text or image. The <code>print(Graphics g)</code> method mirrors the <code>java.awt.Component.paint(Graphics g)</code> method used for on-screen rendering. Use the <code>print()</code> method rather than the <code>paint()</code> method as the <code>Components</code> class may have overridden the <code>print()</code> method to handle the printing case differently.
 <hr /></div>
 <p>The <code>printAll(Graphics g)</code>method prints the component and all its subcomponents. This method is usually used to print object such as a complete window, rather than a single component.</p>
 

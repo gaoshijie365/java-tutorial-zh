@@ -536,7 +536,7 @@
 <p>Follow the instructions in the accompanying 
 <a class="SourceLink" target="_blank" href="config/README-SCHEMA.TXT" onclick="showCode('../../displayCode.html', 'config/README-SCHEMA.TXT'); return false;"><code>README file</code></a> to run these programs.</p>
 <hr />
-<p><strong>Note: Windows Active Directory.</strong> Active Directory manages its schema by using an internal format. To update the schema, you can use either the Active Directory Management Console snap-in, <tt>ADSIEdit</tt>, or the <tt>CreateJavaSchema</tt> utility, following the instructions for Active Directory.</p>
+<p><strong>注意： Windows Active Directory.</strong> Active Directory manages its schema by using an internal format. To update the schema, you can use either the Active Directory Management Console snap-in, <tt>ADSIEdit</tt>, or the <tt>CreateJavaSchema</tt> utility, following the instructions for Active Directory.</p>
 <hr />
 <h2>Step 4: Providing Directory Content for This Tutorial</h2>
 <p><a name="LDIF" id="LDIF"></a>In the examples of this trail, the results shown reflect how the LDAP directory has been set up using the configuration file (
@@ -551,12 +551,12 @@ ldapmodify -a -c -v -h hostname -p 389\
         -w passwd -f tutorial.ldif
 </pre></div>
 <hr />
-<p><strong>Installation Note: Access Control.</strong> Different directory servers handle access control differently. Some examples in this tutorial perform updates to the directory. Also, the part of the namespace where you have installed the tutorial might have read access restrictions. Therefore, you need to take server-specific actions to make the directory readable and/or updatable in order for those examples to work. For the 
+<p><strong>Installation 注意： Access Control.</strong> Different directory servers handle access control differently. Some examples in this tutorial perform updates to the directory. Also, the part of the namespace where you have installed the tutorial might have read access restrictions. Therefore, you need to take server-specific actions to make the directory readable and/or updatable in order for those examples to work. For the
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/testcontent/index-085178.html">Oracle Directory Server</a> add the <tt>aci</tt> entry suggested in the 
 
 <a class="SourceLink" target="_blank" href="config/sunds.aci.ldif" onclick="showCode('../../displayCode.html', 'config/sunds.aci.ldif'); return false;"><code><tt>sunds.aci.ldif</tt></code></a> file to the <tt>dn: o=JNDITutorial</tt> entry to make the entire directory readable and updatable. Alternatively, you may change the examples so that they authenticate to the directory. Details of how to do this are described in the 
 <a class="TutorialLink" target="_top" href="../ldap/security.html">Security</a> lesson.</p>
-<p><strong>Installation Note: Namespace Setup.</strong> The entries in the 
+<p><strong>Installation 注意： Namespace Setup.</strong> The entries in the
 <a class="SourceLink" target="_blank" href="config/tutorial.ldif" onclick="showCode('../../displayCode.html', 'config/tutorial.ldif'); return false;"><code>tutorial.ldif</code></a> file use the distinguished name (DN) &quot;o=JNDITutorial&quot; for the root naming context. If you have not configured your directory server to have &quot;o=JNDITutorial&quot; as a root naming context, then your attempt to import <tt>tutorial.ldif</tt> will fail. The easiest way to get around this problem is to add the DN of an existing root naming context to each &quot;dn:&quot; line in the <tt>tutorial.ldif</tt> file. For example, if your server already has the root naming context &quot;dc=imc,dc=org&quot;, then you should change the line</p>
 <div class="codeblock"><pre>
 dn: o=JNDITutorial
@@ -566,8 +566,8 @@ dn: o=JNDITutorial
 dn: o=JNDITutorial, dc=imc, dc=org
 </pre></div>
 <p>Make this change for each line that begins with &quot;dn:&quot; in the file. Then, in all of the examples in this tutorial, wherever it uses &quot;o=JNDITutorial&quot;, use &quot;o=JNDITutorial,dc=imc,dc=org&quot; instead.</p>
-<p><strong>Installation Note: File Format.</strong> Depending on the operating system platform that you are using, you might need to edit <tt>tutorial.ldif</tt> so that it contains the correct newline characters for that platform. For example, if you find that <tt>tutorial.ldif</tt> contains Windows-style newline characters (CRLF) and you are importing this file into a directory server that is running on a UNIX platform, then you need to edit the file and replace CRLF with LF. A symptom of this problem is that the directory server rejects all of the entries in <tt>tutorial.ldif</tt>.</p>
-<p><strong>Installation Note: Windows Active Directory.</strong></p>
+<p><strong>Installation 注意： File Format.</strong> Depending on the operating system platform that you are using, you might need to edit <tt>tutorial.ldif</tt> so that it contains the correct newline characters for that platform. For example, if you find that <tt>tutorial.ldif</tt> contains Windows-style newline characters (CRLF) and you are importing this file into a directory server that is running on a UNIX platform, then you need to edit the file and replace CRLF with LF. A symptom of this problem is that the directory server rejects all of the entries in <tt>tutorial.ldif</tt>.</p>
+<p><strong>Installation 注意： Windows Active Directory.</strong></p>
 <ol>
 <li>The root naming context is not going to be &quot;o=jnditutorial&quot;. It will be of the form &quot;dc=x,dc=y,dc=z&quot;. You need to follow the previous <strong>Namespace Setup</strong> note.</li>
 <li>Add the object classes and related attributes for the &quot;inetOrgPerson&quot; and &quot;groupOfUniqueNames&quot; object classes to the Active Directory schema by using the Active Directory Management Console snap-in, <tt>ADSIEdit</tt>. &quot;groupOfUniqueNames&quot; is defined in 

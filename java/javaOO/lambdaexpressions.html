@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Lambda Expressions (Java&trade; 教程 &gt;
-            学习 Java &gt; Classes and Objects)
+            学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,7 +475,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Classes and Objects</a></div>
+            <div class="linkLESSON"><a href="index.html">类和对象</a></div>
 <div class="linkAHEAD"><a href="classes.html">Classes</a></div>
 <div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
 <div class="linkBHEAD"><a href="variables.html">Declaring Member Variables</a></div>
@@ -491,7 +491,7 @@
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
 <div class="linkBHEAD"><a href="classvars.html">Understanding Class Members</a></div>
 <div class="linkBHEAD"><a href="initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using Classes and Objects</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
@@ -509,7 +509,7 @@
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Classes and Objects
+        <br /><b>课程：</b> 类和对象
         <br /><b>Section:</b> Nested Classes
     </div>
             <div id="BreadCrumbs">
@@ -517,7 +517,7 @@
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Classes and Objects</a>
+                <a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="anonymousclasses.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="methodreferences.html">下一页&nbsp;&raquo;</a>
@@ -547,7 +547,7 @@ single-method classes more compactly.</p>
       <li><a href="#approach5">Approach 5: Specify Search Criteria Code with a Lambda Expression</a></li>
       <li><a href="#approach6">Approach 6: Use Standard Functional Interfaces with Lambda Expressions</a></li>
       <li><a href="#approach7">Approach 7: Use Lambda Expressions Throughout Your Application</a></li>
-      <li><a href="#approach8">Approach 8: Use Generics More Extensively</a></li>
+      <li><a href="#approach8">Approach 8: Use 泛型 More Extensively</a></li>
       <li><a href="#approach9">Approach 9: Use Aggregate Operations That Accept Lambda Expressions as Parameters</a></li>
     </ul>
   </li>
@@ -814,7 +814,7 @@ test(T t)</code>:</p>
 }</pre>
 
 <p>The interface <code>Predicate&lt;T&gt;</code> is an example of a generic interface. (For more information about generics, see the
-<a class="TutorialLink" target="_top" href="../../java/generics/index.html">Generics (Updated)</a> lesson.) Generic types (such as generic interfaces) specify one or more type parameters within angle brackets (<code>&lt;&gt;</code>). This interface contains only one type parameter, <code>T</code>. When you declare or instantiate a generic type with actual type arguments, you have a parameterized type. For example, the parameterized type <code>Predicate&lt;Person&gt;</code> is the following:</p>
+<a class="TutorialLink" target="_top" href="../../java/generics/index.html">泛型 (Updated)</a> lesson.) Generic types (such as generic interfaces) specify one or more type parameters within angle brackets (<code>&lt;&gt;</code>). This interface contains only one type parameter, <code>T</code>. When you declare or instantiate a generic type with actual type arguments, you have a parameterized type. For example, the parameterized type <code>Predicate&lt;Person&gt;</code> is the following:</p>
 
 <pre class="codeblock">interface Predicate&lt;<code>Person</code>&gt; {
     boolean test(<code>Person</code> t);
@@ -931,7 +931,7 @@ then prints it:</p>
 );</pre>
 
 <!-- ********************************************************************** -->
-<h3><a name="approach8">Approach 8: Use Generics More Extensively</a></h3>
+<h3><a name="approach8">Approach 8: Use 泛型 More Extensively</a></h3>
 
 <p>Reconsider the method <code>processPersonsWithFunction</code>. The following is a generic version of it that accepts, as a parameter, a collection that contains elements of any data type:</p>
 

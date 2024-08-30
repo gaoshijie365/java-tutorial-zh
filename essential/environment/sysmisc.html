@@ -513,11 +513,11 @@
 <p>This section describes some of the methods in <code>System</code> that aren&#39;t covered in the previous sections.</p>
 <p>The <code>arrayCopy</code> method efficiently copies data between arrays. For more information, refer to 
 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/arrays.html">Arrays</a> in the 
-<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/index.html">Language Basics</a> lesson.</p>
+<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/index.html">语言基础</a> lesson.</p>
 <p>The 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#currentTimeMillis--"><code>currentTimeMillis</code></a> and 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#nanoTime--"><code>nanoTime</code></a> methods are useful for measuring time intervals during execution of an application. To measure a time interval in milliseconds, invoke <code>currentTimeMillis</code> twice, at the beginning and end of the interval, and subtract the first value returned from the second. Similarly, invoking <code>nanoTime</code> twice measures an interval in nanoseconds.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The accuracy of both <code>currentTimeMillis</code> and <code>nanoTime</code> is limited by the time services provided by the operating system. Do not assume that <code>currentTimeMillis</code> is accurate to the nearest millisecond or that <code>nanoTime</code> is accurate to the nearest nanosecond. Also, neither <code>currentTimeMillis</code> nor <code>nanoTime</code> should be used to determine the current time. Use a high-level method, such as 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The accuracy of both <code>currentTimeMillis</code> and <code>nanoTime</code> is limited by the time services provided by the operating system. Do not assume that <code>currentTimeMillis</code> is accurate to the nearest millisecond or that <code>nanoTime</code> is accurate to the nearest nanosecond. Also, neither <code>currentTimeMillis</code> nor <code>nanoTime</code> should be used to determine the current time. Use a high-level method, such as
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html#getInstance--"><code>java.util.Calendar.getInstance</code></a>.
 <hr /></div>
 <p>The 

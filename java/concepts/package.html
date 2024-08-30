@@ -5,8 +5,8 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>What Is a Package? (Java&trade; 教程 &gt;
-            学习 Java &gt; Object-Oriented Programming Concepts)
+        <title>什么是包？ (Java&trade; 教程 &gt;
+            学习 Java &gt; 面向对象编程概念)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,38 +475,41 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Object-Oriented Programming Concepts</a></div>
-<div class="linkAHEAD"><a href="object.html">What Is an Object?</a></div>
-<div class="linkAHEAD"><a href="class.html">What Is a Class?</a></div>
-<div class="linkAHEAD"><a href="inheritance.html">What Is Inheritance?</a></div>
-<div class="linkAHEAD"><a href="interface.html">What Is an Interface?</a></div>
-<div class="nolinkAHEAD">What Is a Package?</div>
+            <div class="linkLESSON"><a href="index.html">面向对象编程概念</a></div>
+<div class="linkAHEAD"><a href="object.html">什么是对象？</a></div>
+<div class="linkAHEAD"><a href="class.html">什么是类？</a></div>
+<div class="linkAHEAD"><a href="inheritance.html">什么是继承？</a></div>
+<div class="linkAHEAD"><a href="interface.html">什么是接口？</a></div>
+<div class="nolinkAHEAD">什么是包？</div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Object-Oriented Programming Concepts
+        <br /><b>课程：</b> 面向对象编程概念
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Object-Oriented Programming Concepts</a>
+                <a href="index.html" target="_top">面向对象编程概念</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="interface.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>What Is a Package?</h1></div>
+            <div id="PageTitle"><h1>什么是包？</h1></div>
             <div id="PageContent">
 
-<p>A package is a namespace that organizes a set of related classes and interfaces. Conceptually you can think of packages as being similar to different folders on your computer. You might keep HTML pages in one folder, images in another, and scripts or applications in yet another. Because software written in the Java programming language can be composed of hundreds or <i>thousands</i> of individual classes, it makes sense to keep things organized by placing related classes and interfaces into packages.</p>
-<p>The Java platform provides an enormous class library (a set of packages) suitable for use in your own applications. This library is known as the &quot;Application Programming Interface&quot;, or &quot;API&quot; for short. Its packages represent the tasks most commonly associated with general-purpose programming. For example, a <code>String</code> object contains state and behavior for character strings; a <code>File</code> object allows a programmer to easily create, delete, inspect, compare, or modify a file on the filesystem; a <code>Socket</code> object allows for the creation and use of network sockets; various GUI objects control buttons and check boxes and anything else related to graphical user interfaces. There are literally thousands of classes to choose from. This allows you, the programmer, to focus on the design of your particular application, rather than the infrastructure required to make it work.</p>
-<p>The 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/index.html">Java Platform API Specification</a> contains the complete listing for all packages, interfaces, classes, fields, and methods supplied by the Java SE platform. Load the page in your browser and bookmark it. As a programmer, it will become your single most important piece of reference documentation.</p>
+<p>包是组织类和接口的命名空间。概念上来讲，您可以认为包和文件夹很像。您可能将 HTML 放在一个文件夹中，图片放在另一个文件夹中，脚本或应用放在又一个文件夹中。
+因为 Java 写的软件由数百甚至数千个单独的类组成，所以将相关的类和接口放到包中是非常有必要的。</p>
+<p>Java 平台提供了数量庞大的类库。这些类库也叫做 &quot;应用程序编程接口&quot;，或 &quot;API&quot;。它将与通用编程相关的任务的代码打包在一起。比如，<code>String</code>
+    对象包含字符串的状态和行为；<code>File</code> 对象使创建、删除、检查、比较或修改文件变得简单，<code>Socket</code> 对象用来创建和使用网络套接字，还有大量的 GUI
+    对象控制按钮、复选框和任何与 GUI 相关的东西。这里有成千上万的类供选择。这就使您可以专注于设计应用的独有特性，而不是构建基础设施。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/index.html">Java 平台 API 规范</a>
+包含Java SE 平台提供的包、接口、类、字段和方法的完整列表。作为程序员，这将使您最重要的参考文档。</p>
 
         </div>
         <div class="NavBit">
@@ -534,8 +537,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> What Is an Interface?
-        <br /><b>下一页：</b> 问题和练习：Object-Oriented Programming Concepts
+        <b>上一页：</b> 什么是接口？
+        <br /><b>下一页：</b> 问题和练习：面向对象编程概念
     </div>
 </body>
 </html> 

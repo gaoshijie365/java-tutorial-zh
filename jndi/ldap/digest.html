@@ -562,7 +562,7 @@ DirContext ctx = new InitialDirContext(env);
 
 // ... do something useful with ctx
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/testcontent/index-085178.html">Oracle Directory Server, v5.2</a> supports the Digest-MD5 authentication mechanism for users that have clear-text passwords. You must set the password encryption mode <em>before</em> you create the user. If you have already created the user, delete it and recreate it. To set the password encryption mode using the Administration Console, select the Configuration tab and the Data node. In the Passwords pane, select the &quot;No encryption (CLEAR)&quot; option for &quot;Password encryption.&quot; The server accepts simple user names (that is, the value of the <tt>&quot;uid&quot;</tt> attribute for entries that have one) and the &quot;dn:&quot; format of user names. See the server&#39;s documentation for detailed information.
 <hr /></div>
 <h2>Specifying the Realm</h2>

@@ -533,7 +533,7 @@
 <p>Most applets that override the <code>start</code> should also override the <code>stop</code> method. The <code>stop</code> method should suspend the applet&#39;s execution, so that it doesn&#39;t take up system resources when the user isn&#39;t viewing the applet&#39;s page. For example, an applet that displays an animation should stop trying to draw the animation when the user isn&#39;t viewing it.</p>
 <h2><code>destroy</code> Method</h2>
 <p>Many applets don&#39;t need to override the <code>destroy</code> method because their <code>stop</code> method (which is called before <code>destroy</code>) will perform all tasks necessary to shut down the applet&#39;s execution. However, the <code>destroy</code> method is available for applets that need to release additional resources.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Keep implementations of the <code>destroy</code> method as short as possible, because there is no guarantee that this method will be completely executed. The Java Virtual Machine might exit before a long <code>destroy</code> method has completed.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Keep implementations of the <code>destroy</code> method as short as possible, because there is no guarantee that this method will be completely executed. The Java Virtual Machine might exit before a long <code>destroy</code> method has completed.
 <hr /></div>
 
         </div>

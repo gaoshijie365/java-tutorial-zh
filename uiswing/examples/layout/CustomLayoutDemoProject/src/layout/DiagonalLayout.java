@@ -130,7 +130,7 @@ public class DiagonalLayout implements LayoutManager {
     /*
      * This is called when the panel is first displayed,
      * and every time its size changes.
-     * Note: You CAN'T assume preferredLayoutSize or
+     * 注意： You CAN'T assume preferredLayoutSize or
      * minimumLayoutSize will be called -- in the case
      * of applets, at least, they probably won't be.
      */

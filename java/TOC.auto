@@ -1,18 +1,18 @@
 
 #define TOPOFTRAIL yesplease
 
-<ul><li class="tocli"><a href="concepts/index.html">Object-Oriented Programming Concepts</a>
+<ul><li class="tocli"><a href="concepts/index.html">面向对象编程概念</a>
 <ul>
-<li class="tocli"><a href="concepts/object.html">What Is an Object?</a></li>
-<li class="tocli"><a href="concepts/class.html">What Is a Class?</a></li>
-<li class="tocli"><a href="concepts/inheritance.html">What Is Inheritance?</a></li>
-<li class="tocli"><a href="concepts/interface.html">What Is an Interface?</a></li>
-<li class="tocli"><a href="concepts/package.html">What Is a Package?</a></li>
-<li class="tocli"><a href="concepts/QandE/questions.html">问题和练习：Object-Oriented Programming Concepts</a>
+<li class="tocli"><a href="concepts/object.html">什么是对象？</a></li>
+<li class="tocli"><a href="concepts/class.html">什么是类？</a></li>
+<li class="tocli"><a href="concepts/inheritance.html">什么是继承？</a></li>
+<li class="tocli"><a href="concepts/interface.html">什么是接口？</a></li>
+<li class="tocli"><a href="concepts/package.html">什么是包？</a></li>
+<li class="tocli"><a href="concepts/QandE/questions.html">问题和练习：面向对象编程概念</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="nutsandbolts/index.html">Language Basics</a>
+<li class="tocli"><a href="nutsandbolts/index.html">语言基础</a>
 <ul>
 <li class="tocli"><a href="nutsandbolts/variables.html">Variables</a>
 <ul>
@@ -50,7 +50,7 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="javaOO/index.html">Classes and Objects</a>
+<li class="tocli"><a href="javaOO/index.html">类和对象</a>
 <ul>
 <li class="tocli"><a href="javaOO/classes.html">Classes</a>
 <ul>
@@ -76,7 +76,7 @@
 <li class="tocli"><a href="javaOO/accesscontrol.html">Controlling Access to Members of a Class</a></li>
 <li class="tocli"><a href="javaOO/classvars.html">Understanding Class Members</a></li>
 <li class="tocli"><a href="javaOO/initial.html">Initializing Fields</a></li>
-<li class="tocli"><a href="javaOO/summaryclasses.html">Summary of Creating and Using Classes and Objects</a>
+<li class="tocli"><a href="javaOO/summaryclasses.html">Summary of Creating and Using 类和对象</a>
 </li>
 </ul>
 </li>
@@ -103,18 +103,18 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="annotations/index.html">Annotations</a>
+<li class="tocli"><a href="annotations/index.html">注解</a>
 <ul>
-<li class="tocli"><a href="annotations/basics.html">Annotations Basics</a></li>
+<li class="tocli"><a href="annotations/basics.html">注解 Basics</a></li>
 <li class="tocli"><a href="annotations/declaring.html">Declaring an Annotation Type</a></li>
 <li class="tocli"><a href="annotations/predefined.html">Predefined Annotation Types</a></li>
-<li class="tocli"><a href="annotations/type_annotations.html">Type Annotations and Pluggable Type Systems</a></li>
-<li class="tocli"><a href="annotations/repeating.html">Repeating Annotations</a></li>
-<li class="tocli"><a href="annotations/QandE/questions.html">问题和练习：Annotations</a>
+<li class="tocli"><a href="annotations/type_annotations.html">Type 注解 and Pluggable Type Systems</a></li>
+<li class="tocli"><a href="annotations/repeating.html">Repeating 注解</a></li>
+<li class="tocli"><a href="annotations/QandE/questions.html">问题和练习：注解</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="IandI/index.html">Interfaces and Inheritance</a>
+<li class="tocli"><a href="IandI/index.html">接口和继承</a>
 <ul>
 <li class="tocli"><a href="IandI/createinterface.html">Interfaces</a>
 <ul>
@@ -146,7 +146,7 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="data/index.html">Numbers and Strings</a>
+<li class="tocli"><a href="data/index.html">数字和字符串</a>
 <ul>
 <li class="tocli"><a href="data/numbers.html">Numbers</a>
 <ul>
@@ -161,7 +161,7 @@
 <li class="tocli"><a href="data/characters.html">Characters</a></li>
 <li class="tocli"><a href="data/strings.html">Strings</a>
 <ul>
-<li class="tocli"><a href="data/converting.html">Converting Between Numbers and Strings</a></li>
+<li class="tocli"><a href="data/converting.html">Converting Between 数字和字符串</a></li>
 <li class="tocli"><a href="data/manipstrings.html">Manipulating Characters in a String</a></li>
 <li class="tocli"><a href="data/comparestrings.html">Comparing Strings and Portions of Strings</a></li>
 <li class="tocli"><a href="data/buffers.html">The StringBuilder Class</a></li>
@@ -174,9 +174,9 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="generics/index.html">Generics (Updated)</a>
+<li class="tocli"><a href="generics/index.html">泛型 (Updated)</a>
 <ul>
-<li class="tocli"><a href="generics/why.html">Why Use Generics?</a></li>
+<li class="tocli"><a href="generics/why.html">Why Use 泛型?</a></li>
 <li class="tocli"><a href="generics/types.html">Generic Types</a>
 <ul>
 <li class="tocli"><a href="generics/rawTypes.html">Raw Types</a>
@@ -190,7 +190,7 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="generics/inheritance.html">Generics, Inheritance, and Subtypes</a></li>
+<li class="tocli"><a href="generics/inheritance.html">泛型, Inheritance, and Subtypes</a></li>
 <li class="tocli"><a href="generics/genTypeInference.html">Type Inference</a></li>
 <li class="tocli"><a href="generics/wildcards.html">Wildcards</a>
 <ul>
@@ -212,24 +212,24 @@
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="generics/restrictions.html">Restrictions on Generics</a></li>
-<li class="tocli"><a href="generics/QandE/generics-questions.html">问题和练习：Generics</a>
+<li class="tocli"><a href="generics/restrictions.html">Restrictions on 泛型</a></li>
+<li class="tocli"><a href="generics/QandE/generics-questions.html">问题和练习：泛型</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="package/index.html">Packages</a>
+<li class="tocli"><a href="package/index.html">包</a>
 <ul>
-<li class="tocli"><a href="package/packages.html">Creating and Using Packages</a>
+<li class="tocli"><a href="package/packages.html">Creating and Using 包</a>
 <ul>
 <li class="tocli"><a href="package/createpkgs.html">Creating a Package</a></li>
 <li class="tocli"><a href="package/namingpkgs.html">Naming a Package</a></li>
 <li class="tocli"><a href="package/usepkgs.html">Using Package Members</a></li>
 <li class="tocli"><a href="package/managingfiles.html">Managing Source and Class Files</a></li>
-<li class="tocli"><a href="package/summary-package.html">Summary of Creating and Using Packages</a>
+<li class="tocli"><a href="package/summary-package.html">Summary of Creating and Using 包</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="package/QandE/packages-questions.html">问题和练习：Creating and Using Packages</a>
+<li class="tocli"><a href="package/QandE/packages-questions.html">问题和练习：Creating and Using 包</a>
 </li>
 </ul>
 </li>

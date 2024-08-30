@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Sealing Packages within a JAR File (Java&trade; 教程 &gt;
+        <title>Sealing 包 within a JAR File (Java&trade; 教程 &gt;
             Deployment &gt; Packaging Programs in JAR Files)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -488,7 +488,7 @@
 <div class="linkBHEAD"><a href="appman.html">Setting an Application's Entry Point</a></div>
 <div class="linkBHEAD"><a href="downman.html">Adding Classes to the JAR File's Classpath</a></div>
 <div class="linkBHEAD"><a href="packageman.html">Setting Package Version Information</a></div>
-<div class="nolinkBHEAD">Sealing Packages within a JAR File</div>
+<div class="nolinkBHEAD">Sealing 包 within a JAR File</div>
 <div class="linkBHEAD"><a href="secman.html">Enhancing Security with Manifest Attributes</a></div>
 <div class="linkAHEAD"><a href="signindex.html">Signing and Verifying JAR Files</a></div>
 <div class="linkBHEAD"><a href="intro.html">Understanding Signing and Verification</a></div>
@@ -517,10 +517,10 @@
                 <a target="_top" href="packageman.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="secman.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Sealing Packages within a JAR File</h1></div>
+            <div id="PageTitle"><h1>Sealing 包 within a JAR File</h1></div>
             <div id="PageContent">
 
-<p>Packages within JAR files can be optionally sealed, which means that all classes defined in that package must be archived in the same JAR file. You might want to seal a package, for example, to ensure version consistency among the classes in your software.</p>
+<p>包 within JAR files can be optionally sealed, which means that all classes defined in that package must be archived in the same JAR file. You might want to seal a package, for example, to ensure version consistency among the classes in your software.</p>
 <p>You seal a package in a JAR file by adding the <tt>Sealed</tt> header in the manifest, which has the general form:</p>
 <div class="codeblock"><pre>
 Name: myCompany/myPackage/

@@ -519,7 +519,7 @@
 <div class="codeblock"><pre>
 Signature dsa = Signature.getInstance("SHA1withDSA", "SUN"); 
 </pre></div>
-<p>Note: When specifying the signature algorithm name, you should also include the name of the message digest algorithm used by the signature algorithm. SHA1withDSA is a way of specifying the DSA signature algorithm, using the SHA-1 message digest algorithm.</p>
+<p>注意： When specifying the signature algorithm name, you should also include the name of the message digest algorithm used by the signature algorithm. SHA1withDSA is a way of specifying the DSA signature algorithm, using the SHA-1 message digest algorithm.</p>
 <p style="font-weight: bold">Initialize the Signature Object</p>
 <p>Before a <code>Signature</code> object can be used for signing or verifying, it must be initialized. The initialization method for signing requires a private key. Use the private key placed into the <code>PrivateKey</code> object named <code>priv</code> in the previous step.</p>
 <div class="codeblock"><pre>

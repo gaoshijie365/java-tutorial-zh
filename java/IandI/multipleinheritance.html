@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Multiple Inheritance of State, Implementation, and Type (Java&trade; 教程 &gt;
-            学习 Java &gt; Interfaces and Inheritance)
+            学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,7 +475,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Interfaces and Inheritance</a></div>
+            <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
 <div class="linkAHEAD"><a href="createinterface.html">Interfaces</a></div>
 <div class="linkBHEAD"><a href="interfaceDef.html">Defining an Interface</a></div>
 <div class="linkBHEAD"><a href="usinginterface.html">Implementing an Interface</a></div>
@@ -500,7 +500,7 @@
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Interfaces and Inheritance
+        <br /><b>课程：</b> 接口和继承
         <br /><b>Section:</b> Inheritance
     </div>
             <div id="BreadCrumbs">
@@ -508,7 +508,7 @@
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Interfaces and Inheritance</a>
+                <a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="subclasses.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="override.html">下一页&nbsp;&raquo;</a>
@@ -518,7 +518,7 @@
             <div id="PageContent">
 
 <p>One significant difference between classes and interfaces is that classes can have fields whereas interfaces cannot. In addition, you can instantiate a class to create an object, which you cannot do with interfaces. As explained in the section
-<a class="TutorialLink" target="_top" href="../../java/concepts/object.html">What Is an Object?</a>, an object stores its state in fields, which are defined in classes. One reason why the Java programming language does not permit you to extend more than one class is to avoid the issues of <em>multiple inheritance of state</em>, which is the ability to inherit fields from multiple classes. For example, suppose that you are able to define a new class that extends multiple classes. When you create an object by instantiating that class, that object will inherit fields from all of the class's superclasses. What if methods or constructors from different superclasses instantiate the same field? Which method or constructor will take precedence? Because interfaces do not contain fields, you do not have to worry about problems that result from multiple inheritance of state.</p>
+<a class="TutorialLink" target="_top" href="../../java/concepts/object.html">什么是对象？</a>, an object stores its state in fields, which are defined in classes. One reason why the Java programming language does not permit you to extend more than one class is to avoid the issues of <em>multiple inheritance of state</em>, which is the ability to inherit fields from multiple classes. For example, suppose that you are able to define a new class that extends multiple classes. When you create an object by instantiating that class, that object will inherit fields from all of the class's superclasses. What if methods or constructors from different superclasses instantiate the same field? Which method or constructor will take precedence? Because interfaces do not contain fields, you do not have to worry about problems that result from multiple inheritance of state.</p>
 
 <p><em>Multiple inheritance of implementation</em> is the ability to inherit method definitions from multiple classes. Problems arise with this type of multiple inheritance, such as name conflicts and ambiguity. When compilers of programming languages that support this type of multiple inheritance encounter superclasses that contain methods with the same name, they sometimes cannot determine which member or method to access or invoke. In addition, a programmer can unwittingly introduce a name conflict by adding a new method to a superclass.
 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default methods</a> introduce one form of multiple inheritance of implementation. A class can implement more than one interface, which can contain default methods that have the same name. The Java compiler provides some rules to determine which default method a particular class uses.</p>

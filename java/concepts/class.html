@@ -5,8 +5,8 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>What Is a Class? (Java&trade; 教程 &gt;
-            学习 Java &gt; Object-Oriented Programming Concepts)
+        <title>什么是类？ (Java&trade; 教程 &gt;
+            学习 Java &gt; 面向对象编程概念)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,37 +475,39 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Object-Oriented Programming Concepts</a></div>
-<div class="linkAHEAD"><a href="object.html">What Is an Object?</a></div>
-<div class="nolinkAHEAD">What Is a Class?</div>
-<div class="linkAHEAD"><a href="inheritance.html">What Is Inheritance?</a></div>
-<div class="linkAHEAD"><a href="interface.html">What Is an Interface?</a></div>
-<div class="linkAHEAD"><a href="package.html">What Is a Package?</a></div>
+            <div class="linkLESSON"><a href="index.html">面向对象编程概念</a></div>
+<div class="linkAHEAD"><a href="object.html">什么是对象？</a></div>
+<div class="nolinkAHEAD">什么是类？</div>
+<div class="linkAHEAD"><a href="inheritance.html">什么是继承？</a></div>
+<div class="linkAHEAD"><a href="interface.html">什么是接口？</a></div>
+<div class="linkAHEAD"><a href="package.html">什么是包？</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Object-Oriented Programming Concepts
+        <br /><b>课程：</b> 面向对象编程概念
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Object-Oriented Programming Concepts</a>
+                <a href="index.html" target="_top">面向对象编程概念</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="object.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="inheritance.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>What Is a Class?</h1></div>
+            <div id="PageTitle"><h1>什么是类？</h1></div>
             <div id="PageContent">
 
-<p>In the real world, you&#39;ll often find many individual objects all of the same kind. There may be thousands of other bicycles in existence, all of the same make and model. Each bicycle was built from the same set of blueprints and therefore contains the same components. In object-oriented terms, we say that your bicycle is an <i>instance</i> of the <i>class of objects</i> known as bicycles. A <i>class</i> is the blueprint from which individual objects are created.</p>
-<p>The following 
-<a class="SourceLink" target="_blank" href="examples/Bicycle.java" onclick="showCode('../../displayCode.html', 'examples/Bicycle.java'); return false;"><code>Bicycle</code></a> class is one possible implementation of a bicycle:</p>
+<p>在现实世界中，您会发现有很多独立的对象具有相同的类型。可能有许多自行车，具有相同的品牌和型号。每一辆自行车都根据相同的蓝图制造，因此包含相同的组件。
+    在面向对象中，我们，我们称您的自行车为自行车 <i>类</i> 的一个 <i>实例</i>。<i>类</i> 是对象创建的蓝图。</p>
+<p>下面的 <a class="SourceLink" target="_blank" href="examples/Bicycle.java"
+   onclick="showCode('../../displayCode.html', 'examples/Bicycle.java'); return false;"><code>Bicycle</code></a>
+    类是自行车的一种可能的实现：</p>
 <div class="codeblock"><pre>
 
 class Bicycle {
@@ -537,10 +539,13 @@ class Bicycle {
     }
 }
 </pre></div>
-<p>The syntax of the Java programming language will look new to you, but the design of this class is based on the previous discussion of bicycle objects. The fields <code>cadence</code>, <code>speed</code>, and <code>gear</code> represent the object&#39;s state, and the methods (<code>changeCadence</code>, <code>changeGear</code>, <code>speedUp</code> etc.) define its interaction with the outside world.</p>
-<p>You may have noticed that the <code>Bicycle</code> class does not contain a <code>main</code> method. That&#39;s because it&#39;s not a complete application; it&#39;s just the blueprint for bicycles that might be <i>used</i> in an application. The responsibility of creating and using new <code>Bicycle</code> objects belongs to some other class in your application.</p>
-<p>Here&#39;s a 
-<a class="SourceLink" target="_blank" href="examples/BicycleDemo.java" onclick="showCode('../../displayCode.html', 'examples/BicycleDemo.java'); return false;"><code>BicycleDemo</code></a> class that creates two separate <code>Bicycle</code> objects and invokes their methods:</p>
+<p>虽然您还不熟悉 Java 编程语言的语法，但是这个类是基于之前对自行车对象的讨论设计的。字段 <code>cadence</code>，<code>speed</code>，和 <code>gear</code> 代表对象的状态，
+方法 (<code>changeCadence</code>，<code>changeGear</code>，<code>speedUp</code> 等。) 定义了与外部世界的交互。</p>
+<p>您可能已经注意到 <code>Bicycle</code> 类没有包含 <code>main</code> 方法。这是因为它不是一个完整的应用。它仅仅是可能在应用中使用的自行车对象的蓝图。
+应用中的其它类负责创建和使用新的 <code>Bicycle</code> 对象。</p>
+<p>这里的 <a class="SourceLink" target="_blank" href="examples/BicycleDemo.java"
+             onclick="showCode('../../displayCode.html', 'examples/BicycleDemo.java'); return false;"><code>BicycleDemo</code></a>
+类创建两个 <code>Bicycle</code> 对象并且调用它们的方法：</p>
 <div class="codeblock"><pre>
 
 class BicycleDemo {
@@ -569,7 +574,7 @@ class BicycleDemo {
 }
 
 </pre></div>
-<p>The output of this test prints the ending pedal cadence, speed, and gear for the two bicycles:</p>
+<p>输出打印两个自行车最终的踏板频率，速度，和档位：</p>
 <div class="codeblock"><pre>
 cadence:50 speed:10 gear:2
 cadence:40 speed:20 gear:3
@@ -602,8 +607,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> What Is an Object?
-        <br /><b>下一页：</b> What Is Inheritance?
+        <b>上一页：</b> 什么是对象？
+        <br /><b>下一页：</b> 什么是继承？
     </div>
 </body>
 </html> 

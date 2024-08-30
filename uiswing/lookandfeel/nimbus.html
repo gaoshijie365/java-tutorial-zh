@@ -527,7 +527,7 @@ try {
 }
 </pre></div>
 <p>The first line of code retrieves the list of all installed look and feel implementations for the platform and then iterates through the list to determine if Nimbus is available. If so, Nimbus is set as the look and feel.</p>
-<div class="note"><hr /><strong>Version Note:</strong>&nbsp;Do not set the Nimbus look and feel explicitly by invoking the <code>UIManager.setLookAndFeel</code> method because not all versions or implementations of Java SE 6 support Nimbus. Additionally, the location of the Nimbus package changed between the JDK 6 Update 10 and JDK 7 releases. Iterating through all installed look and feel implementations is a more robust approach because if Nimbus is not available, the default look and feel is used. For the JDK 6 Update 10 release, the Nimbus package is located at <code>com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel</code>.
+<div class="note"><hr /><strong>Version 注意：</strong>&nbsp;Do not set the Nimbus look and feel explicitly by invoking the <code>UIManager.setLookAndFeel</code> method because not all versions or implementations of Java SE 6 support Nimbus. Additionally, the location of the Nimbus package changed between the JDK 6 Update 10 and JDK 7 releases. Iterating through all installed look and feel implementations is a more robust approach because if Nimbus is not available, the default look and feel is used. For the JDK 6 Update 10 release, the Nimbus package is located at <code>com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel</code>.
 <hr /></div>
 </li>
 <li>Specify Nimbus as the default look and feel for a particular application at the command line, as follows:

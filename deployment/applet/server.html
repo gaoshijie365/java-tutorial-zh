@@ -524,7 +524,7 @@
             <div id="PageContent">
 
 <p>Java applets, like other Java programs, can use the API defined in the <code>java.net</code> package to communicate across the network. A Java applet can communicate with server applications that run on the same host as the applet. This communication does not require any special setup on the server.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Depending on the networking environment that an applet is loaded into, and depending on the browser that runs the applet, an applet might be unable to communicate with its originating host. For example, browsers running on hosts inside firewalls often cannot obtain much information about the world outside the firewall. As a result, some browsers might not allow applet communication to hosts outside the firewall.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Depending on the networking environment that an applet is loaded into, and depending on the browser that runs the applet, an applet might be unable to communicate with its originating host. For example, browsers running on hosts inside firewalls often cannot obtain much information about the world outside the firewall. As a result, some browsers might not allow applet communication to hosts outside the firewall.
 <hr /></div>
 <p>When the applet is deployed to a web server, use the <code>Applet</code> <code>getCodeBase</code> method and the <code>java.net.URL</code> <code>getHost</code> method to determine which host the applet came from, as follows:</p>
 <div class="codeblock"><pre>
@@ -534,7 +534,7 @@ String host = getCodeBase().getHost();
 <p>After you have the correct host name, you can use all the networking code that is documented in the 
 <a class="TutorialLink" target="_top" href="../../networking/index.html">Custom Networking</a> trail.</p>
 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Not all browsers support all networking code flawlessly. For example, one widely used browser compatible with Java technology doesn&#39;t support posting to a URL.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Not all browsers support all networking code flawlessly. For example, one widely used browser compatible with Java technology doesn&#39;t support posting to a URL.
 <hr /></div>
 <p>For an example of implementing an applet that is a network client, see 
 <a class="TutorialLink" target="_top" href="clientExample.html">Network Client Applet Example</a>.</p>

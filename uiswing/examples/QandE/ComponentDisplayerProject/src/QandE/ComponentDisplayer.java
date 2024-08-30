@@ -39,7 +39,7 @@ import java.awt.BorderLayout;
  * ComponentDisplayer.java requires the following files:
  *   XMarksTheSpot.java
  */
-//Note: This program doesn't create its GUI in invokeAndWait.  Since it does
+//注意： This program doesn't create its GUI in invokeAndWait.  Since it does
 //no event handling, that's almost certainly OK.
 public class ComponentDisplayer {
     public static void main(String[] args) {

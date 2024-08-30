@@ -527,7 +527,7 @@
 <p>The following program is the same as <code>StrokeandFill</code>, but also allows the user to choose a transformation to apply to the selected object when it is rendered.</p>
 
 <p style="text-align: center"><applet code="Transform" archive="examples/lib/TransformApplet.jar" width="550" height="400" alt="Transform applet"><param name="permissions" value="sandbox" /></applet></p>
-<div class="note"><hr /><strong>Note:</strong> &nbsp;If you don't see the applet running, you need to install at least the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 7</a> release.<hr /></div>
+<div class="note"><hr /><strong>注意：</strong> &nbsp;If you don't see the applet running, you need to install at least the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 7</a> release.<hr /></div>
 <p>
 <a class="SourceLink" target="_blank" href="examples/Transform.java" onclick="showCode('../../displayCode.html', 'examples/Transform.java'); return false;"><code><code>Transform.java</code></code></a> contains the complete code for this applet.</p>
 <p>When a transform is chosen from the Transform menu, the transform is concatenated onto the <code>AffineTransform</code> <code>at</code>:</p>
@@ -570,7 +570,7 @@ g2.transform(toCenterAt);
 <div class="codeblock"><pre>
 g2.setTransform(saveXform);
 </pre></div> 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Never use the <code>setTransform</code> method to concatenate a coordinate transform onto an existing transform. The <code>setTransform</code> method overwrites the <code>Graphics2D</code> object&#39;s current transform, which might be needed for other reasons, such as positioning Swing and lightweight components in a window. Use these steps to perform transformations:
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Never use the <code>setTransform</code> method to concatenate a coordinate transform onto an existing transform. The <code>setTransform</code> method overwrites the <code>Graphics2D</code> object&#39;s current transform, which might be needed for other reasons, such as positioning Swing and lightweight components in a window. Use these steps to perform transformations:
 <ol>
 <li>Use the <code>getTransform</code> method to get the current transform.</li>
 <li>Use <code>transform</code>, <code>translate</code>, <code>scale</code>, <code>shear</code>, or <code>rotate</code> to concatenate a transform.</li>

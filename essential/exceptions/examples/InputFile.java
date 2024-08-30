@@ -29,7 +29,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */ 
 
-// Note: This class won't compile by design!
+// 注意： This class won't compile by design!
 // See InputFileDeclared.java for a version of this
 // class that will compile.
 import java.io.*;

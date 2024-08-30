@@ -552,7 +552,7 @@ Path file = ...;
 boolean isRegularExecutableFile = Files.isRegularFile(file) &amp;
          Files.isReadable(file) &amp; Files.isExecutable(file);
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Once any of these methods completes, there is no guarantee that the file can be accessed. A common security flaw in many applications is to perform a check and then access the file. For more information, use your favorite search engine to look up <code>TOCTTOU</code> (pronounced <em>TOCK-too</em>).
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Once any of these methods completes, there is no guarantee that the file can be accessed. A common security flaw in many applications is to perform a check and then access the file. For more information, use your favorite search engine to look up <code>TOCTTOU</code> (pronounced <em>TOCK-too</em>).
 <hr /></div>
 <h2><a name="same" id="same">Checking Whether Two Paths Locate the Same File</a></h2>
 <p>When you have a file system that uses symbolic links, it is possible to have two different paths that locate the same file. The 

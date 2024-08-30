@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Wildcards (Java&trade; 教程 &gt;
-            Bonus &gt; Generics)
+            Bonus &gt; 泛型)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This Java tutorial describes generics, full screen mode API, and Java certification related resources" />
@@ -475,31 +475,31 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Generics</a></div>
+            <div class="linkLESSON"><a href="index.html">泛型</a></div>
 <div class="linkAHEAD"><a href="intro.html">Introduction</a></div>
-<div class="linkAHEAD"><a href="simple.html">Defining Simple Generics</a></div>
-<div class="linkAHEAD"><a href="subtype.html">Generics and Subtyping</a></div>
+<div class="linkAHEAD"><a href="simple.html">Defining Simple 泛型</a></div>
+<div class="linkAHEAD"><a href="subtype.html">泛型 and Subtyping</a></div>
 <div class="nolinkAHEAD">Wildcards</div>
 <div class="linkAHEAD"><a href="methods.html">Generic Methods</a></div>
 <div class="linkAHEAD"><a href="legacy.html">Interoperating with Legacy Code</a></div>
 <div class="linkAHEAD"><a href="fineprint.html">The Fine Print</a></div>
 <div class="linkAHEAD"><a href="literals.html">Class Literals as Runtime-Type Tokens</a></div>
 <div class="linkAHEAD"><a href="morefun.html">More Fun with Wildcards</a></div>
-<div class="linkAHEAD"><a href="convert.html">Converting Legacy Code to Use Generics</a></div>
+<div class="linkAHEAD"><a href="convert.html">Converting Legacy Code to Use 泛型</a></div>
 <div class="linkAHEAD"><a href="acknowledgements.html">Acknowledgements</a></div>
 </div>
     </div>
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> Bonus
-        <br /><b>课程：</b> Generics
+        <br /><b>课程：</b> 泛型
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">Bonus</a>
                 &gt;
-                <a href="index.html" target="_top">Generics</a>
+                <a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="subtype.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="methods.html">下一页&nbsp;&raquo;</a>
@@ -586,7 +586,7 @@ c.add(new Object()); // Compile time error
 }
 </pre></div>
 <p>There is a small but very important difference here: we have replaced the type <code>List&lt;Shape&gt;</code> with <code>List&lt;? <b>extends</b> Shape&gt;</code>. Now <code>drawAll()</code> will accept lists of any subclass of <code>Shape</code>, so we can now call it on a <code>List&lt;Circle&gt;</code> if we want.</p>
-<p><code>List&lt;? <b>extends</b> Shape&gt;</code> is an example of a <i>bounded wildcard</i>. The <code>?</code> stands for an unknown type, just like the wildcards we saw earlier. However, in this case, we know that this unknown type is in fact a subtype of <code>Shape</code>. (Note: It could be <code>Shape</code> itself, or some subclass; it need not literally extend <code>Shape</code>.) We say that <code>Shape</code> is the <i>upper bound</i> of the wildcard.</p>
+<p><code>List&lt;? <b>extends</b> Shape&gt;</code> is an example of a <i>bounded wildcard</i>. The <code>?</code> stands for an unknown type, just like the wildcards we saw earlier. However, in this case, we know that this unknown type is in fact a subtype of <code>Shape</code>. (注意： It could be <code>Shape</code> itself, or some subclass; it need not literally extend <code>Shape</code>.) We say that <code>Shape</code> is the <i>upper bound</i> of the wildcard.</p>
 <p>There is, as usual, a price to be paid for the flexibility of using wildcards. That price is that it is now illegal to write into <code>shapes</code> in the body of the method. For instance, this is not allowed:</p>
 <div class="codeblock"><pre>
 <b>public void</b> addRectangle(List&lt;? <b>extends</b> Shape&gt; shapes) {
@@ -634,7 +634,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Generics and Subtyping
+        <b>上一页：</b> 泛型 and Subtyping
         <br /><b>下一页：</b> Generic Methods
     </div>
 </body>

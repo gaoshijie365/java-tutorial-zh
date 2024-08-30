@@ -552,7 +552,7 @@ public synchronized void guardedJoy() {
     System.out.println("Joy and efficiency have been achieved!");
 }
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Always invoke <code>wait</code> inside a loop that tests for the condition being waited for. Don&#39;t assume that the interrupt was for the particular condition you were waiting for, or that the condition is still true.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Always invoke <code>wait</code> inside a loop that tests for the condition being waited for. Don&#39;t assume that the interrupt was for the particular condition you were waiting for, or that the condition is still true.
 <hr /></div>
 <p>Like many methods that suspend execution, <code>wait</code> can throw <code>InterruptedException</code>. In this example, we can just ignore that exception &#151; we only care about the value of <code>joy</code>.</p>
 <p>Why is this version of <code>guardedJoy</code> synchronized? Suppose <code>d</code> is the object we&#39;re using to invoke <code>wait</code>. When a thread invokes <code>d.wait</code>, it must own the intrinsic lock for <code>d</code> &#151; otherwise an error is thrown. Invoking <code>wait</code> inside a synchronized method is a simple way to acquire the intrinsic lock.</p>
@@ -565,7 +565,7 @@ public synchronized notifyJoy() {
 }
 </pre></div>
 <p>Some time after the second thread has released the lock, the first thread reacquires the lock and resumes by returning from the invocation of <code>wait</code>.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;There is a second notification method, <code>notify</code>, which wakes up a single thread. Because <code>notify</code> doesn&#39;t allow you to specify the thread that is woken up, it is useful only in massively parallel applications &#151; that is, programs with a large number of threads, all doing similar chores. In such an application, you don&#39;t care which thread gets woken up.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;There is a second notification method, <code>notify</code>, which wakes up a single thread. Because <code>notify</code> doesn&#39;t allow you to specify the thread that is woken up, it is useful only in massively parallel applications &#151; that is, programs with a large number of threads, all doing similar chores. In such an application, you don&#39;t care which thread gets woken up.
 <hr /></div>
 <p>Let&#39;s use guarded blocks to create a <i>Producer-Consumer</i> application. This kind of application shares data between two threads: the <i>producer</i>, that creates the data, and the <i>consumer</i>, that does something with it. The two threads communicate using a shared object. Coordination is essential: the consumer thread must not attempt to retrieve the data before the producer thread has delivered it, and the producer thread must not attempt to deliver new data if the consumer hasn&#39;t retrieved the old data.</p>
 <p>In this example, the data is a series of text messages, which are shared through an object of type 
@@ -688,7 +688,7 @@ public class ProducerConsumerExample {
     }
 }
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The <code>Drop</code> class was written in order to demonstrate guarded blocks. To avoid re-inventing the wheel, examine the existing data structures in the 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The <code>Drop</code> class was written in order to demonstrate guarded blocks. To avoid re-inventing the wheel, examine the existing data structures in the
 <a class="TutorialLink" target="_top" href="../../collections/index.html">Java Collections Framework</a> before trying to code your own data-sharing objects. For more information, refer to the <a href="QandE/questions.html">问题和练习</a> section.
 <hr /></div>
 

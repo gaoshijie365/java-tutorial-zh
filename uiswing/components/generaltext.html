@@ -670,7 +670,7 @@ protected class MyUndoableEditListener
 }  
 </pre></div>
 <p>Note that this method updates two objects: <code>undoAction</code> and <code>redoAction</code>. These are the action objects attached to the Undo and Redo menu items, respectively. The next step shows you how to create the menu items and how to implement the two actions. For general information about undoable edit listeners and undoable edit events, see <a href="../events/undoableeditlistener.html">How to Write an Undoable Edit Listener</a>.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>By default, each undoable edit undoes a single character entry. It is possible with some effort to group edits so that a series of key strokes is combined into one undoable edit. Grouping edits in this manner would require you to define a class that intercepts undoable edit events from the document, combining them if appropriate and forwarding the results to your undoable edit listener.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>By default, each undoable edit undoes a single character entry. It is possible with some effort to group edits so that a series of key strokes is combined into one undoable edit. Grouping edits in this manner would require you to define a class that intercepts undoable edit events from the document, combining them if appropriate and forwarding the results to your undoable edit listener.</p>
 <hr /></div>
 <p><a name="undoredoactions" id="undoredoactions"><strong>Part 2: Implementing the Undo and Redo Commands</strong></a><br />
 The first step in implementing undo and redo is to create the actions to put in the Edit menu.</p>
@@ -715,7 +715,7 @@ public void actionPerformed(ActionEvent e) {
 </pre></div>
 <p>This method is similar to undo, except that it calls the undo manager&#39;s <code>redo</code> method.</p>
 <p>Much of the code in the <code>UndoAction</code> and <code>RedoAction</code> classes is dedicated to enabling and disabling the actions as appropriate of the current state, and changing the names of the menu items to reflect the edit to be undone or redone.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>The implementation of undo and redo in the <code>TextComponentDemo</code> example was taken from the <code>NotePad</code> demo that comes with the JDK software. Many programmers will also be able to copy this implementation of undo/redo without modification.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>The implementation of undo and redo in the <code>TextComponentDemo</code> example was taken from the <code>NotePad</code> demo that comes with the JDK software. Many programmers will also be able to copy this implementation of undo/redo without modification.</p>
 <hr /></div>
 <h2><a name="document" id="document">Concepts: About Documents</a></h2>
 <p>Like other Swing components, a text component separates its data (known as the <em>model</em>) from its view of the data. If you are not yet familiar with the model-view split used by Swing components, refer to <a href="model.html">Using Models</a>.</p>

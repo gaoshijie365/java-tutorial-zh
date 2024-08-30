@@ -522,7 +522,7 @@
 <li>Launch the host system&#39;s default email client</li>
 <li>Launch applications to open, edit, or print files associated with those applications</li>
 </ul>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>The Desktop API uses the host operating system&#39;s file associations to launch applications associated with specific file types. For example, if OpenDocument text (.odt) file extensions are associated with the OpenOffice Writer application, a Java application could launch OpenOffice Writer to open, edit, or even print files with that association. Depending on the host system, different applications may be associated with different actions. For example, if a particular file cannot be printed, check first whether its extension has a printing association on the given operating system.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>The Desktop API uses the host operating system&#39;s file associations to launch applications associated with specific file types. For example, if OpenDocument text (.odt) file extensions are associated with the OpenOffice Writer application, a Java application could launch OpenOffice Writer to open, edit, or even print files with that association. Depending on the host system, different applications may be associated with different actions. For example, if a particular file cannot be printed, check first whether its extension has a printing association on the given operating system.</p>
 <hr /></div>
 <p>Use the 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/Desktop.html#isDesktopSupported--"><code>isDesktopSupported()</code></a> method to determine whether the Desktop API is available. On the Solaris Operating System and the Linux platform, this API is dependent on Gnome libraries. If those libraries are unavailable, this method will return false. After determining that the Desktop API is supported, that is, the <code>isDesktopSupported()</code> returns true, the application can retrieve a <code>Desktop</code> instance using the static method 
@@ -553,7 +553,7 @@
 <li>You can continue to compose a message or try to enter different combinations of the mail schema in the E-mail field.</li>
 <li>Switch back to the DesktopDemo dialog box and press the ellipsis button to choose any text file.</li>
 <li>Select either Open, Edit, or Print to set the type of operation, then press the Launch Application button.</li>
-<li>Be sure that operation completes correctly. Try other file formats, for example <code>.odt</code>, <code>.html</code>, <code>.pdf</code>. Note: If you try to edit <code>.pdf</code> file, the DesktopDemo returns the following message: <code>Cannot perform the given operation to the &lt;file name&gt; file</code></li>
+<li>Be sure that operation completes correctly. Try other file formats, for example <code>.odt</code>, <code>.html</code>, <code>.pdf</code>. 注意： If you try to edit <code>.pdf</code> file, the DesktopDemo returns the following message: <code>Cannot perform the given operation to the &lt;file name&gt; file</code></li>
 </ol>
 <p>The following code snippets provide more details on the DeskDemo application implementation. The DesktopDemo constructor disables the few components right after instantiating the UI and checks whether the Desktop API is available.</p>
 <div class="codeblock"><pre>

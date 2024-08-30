@@ -119,7 +119,7 @@ public class RosterTest {
         }
     }
     
-    // Approach 8: Use Generics More Extensively
+    // Approach 8: Use 泛型 More Extensively
 
     public static <X, Y> void processElements(
         Iterable<X> source,
@@ -251,7 +251,7 @@ public class RosterTest {
 
         System.out.println();
 
-        // Approach 8: Use Generics More Extensively
+        // Approach 8: Use 泛型 More Extensively
 
         System.out.println("Persons who are eligible for Selective Service " +
             "(generic version):");

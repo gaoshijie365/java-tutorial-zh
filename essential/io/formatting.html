@@ -533,7 +533,7 @@
 <p>Stream objects that implement formatting are instances of either 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html"><code>PrintWriter</code></a>, a character stream class, or
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html"><code>PrintStream</code></a>, a byte stream class.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The only <code>PrintStream</code> objects you are likely to need are 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The only <code>PrintStream</code> objects you are likely to need are
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#out"><code>System.out</code></a> and 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#err"><code>System.err</code></a>. (See <a href="cl.html">I/O from the Command Line</a> for more on these objects.) When you need to create a formatted output stream, instantiate <code>PrintWriter</code>, not <code>PrintStream</code>.
 <hr /></div>
@@ -602,7 +602,7 @@ The square root of 2 is 1.414214.
 <li><code>tB</code> formats an integer as a locale-specific month name.</li>
 </ul>
 <p>There are many other conversions.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>Except for <code>%%</code> and <code>%n</code>, all format specifiers must match an argument. If they don&#39;t, an exception is thrown.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>Except for <code>%%</code> and <code>%n</code>, all format specifiers must match an argument. If they don&#39;t, an exception is thrown.</p>
 <p>In the Java programming language, the <code>\n</code> escape always generates the linefeed character (<code>\u000A</code>). Don&#39;t use <code>\n</code> unless you specifically want a linefeed character. To get the correct line separator for the local platform, use <code>%n</code>.</p>
 <hr /></div>
 <p>In addition to the conversion, a format specifier can contain several additional elements that further customize the formatted output. Here&#39;s an example, 

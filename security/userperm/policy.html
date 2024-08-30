@@ -599,7 +599,7 @@ permission java.util.PropertyPermission
 permission java.io.FilePermission
     "${user.home}${/}.highscore", "read,write";
 </pre></div>
-<p>Note: The notation <code>${propName}</code> specifies the value of a property. Thus, <code>${user.home}</code> will be replaced by the value of the <code>&quot;user.home&quot;</code> property. The notation <code>${/}</code> is a platform-independent way of specifying a file separator.</p>
+<p>注意： The notation <code>${propName}</code> specifies the value of a property. Thus, <code>${user.home}</code> will be replaced by the value of the <code>&quot;user.home&quot;</code> property. The notation <code>${/}</code> is a platform-independent way of specifying a file separator.</p>
 <h3>3. All HighScorePermissions (that is, HighScorePermissions of any name).</h3>
 <p>This permission is needed so that the <code>HighScore</code> checks to ensure the calling game has been granted a <code>HighScorePermission</code> whose name is the game name will work. That is, the <code>HighScore</code> class must <i>also</i> be granted the permission, since a permission check requires that all code currently on the stack have the specified permission.</p>
 <p>Here is the required permission:</p>

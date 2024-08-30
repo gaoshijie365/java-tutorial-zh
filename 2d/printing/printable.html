@@ -593,7 +593,7 @@ public class HelloWorldPrinter
 <li>The <code>Printable.print()</code> method is called by the printing system, just as the <code>Component.paint()</code> method is called to paint a Component on the display. The printing system will call the <code>Printable.print()</code> method for page 0, 1,.. etc until the <code>print()</code> method returns <code>NO_SUCH_PAGE</code>.</li>
 <li>The <code>print()</code> method may be called with the same page index multiple times until the document is completed. This feature is applied when the user specifies attributes such as multiple copies with collate option.</li>
 <li>The PageFormat&#39;s imageable area determines the clip area. Imageable area is also important in calculating pagination, or how to span content across printed pages, since page breaks are determined by how much can fit on each page.
-<div class="note"><hr /><strong>Note:</strong>&nbsp;A call to the <code>print()</code> method may be skipped for certain page indices if the user has specified a different page range that does not involve a particular page index.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;A call to the <code>print()</code> method may be skipped for certain page indices if the user has specified a different page range that does not involve a particular page index.
 <hr /></div>
 </li>
 </ul>

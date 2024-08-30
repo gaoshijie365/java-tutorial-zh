@@ -488,7 +488,7 @@
 <div class="linkBHEAD"><a href="appman.html">Setting an Application's Entry Point</a></div>
 <div class="linkBHEAD"><a href="downman.html">Adding Classes to the JAR File's Classpath</a></div>
 <div class="linkBHEAD"><a href="packageman.html">Setting Package Version Information</a></div>
-<div class="linkBHEAD"><a href="sealman.html">Sealing Packages within a JAR File</a></div>
+<div class="linkBHEAD"><a href="sealman.html">Sealing 包 within a JAR File</a></div>
 <div class="linkBHEAD"><a href="secman.html">Enhancing Security with Manifest Attributes</a></div>
 <div class="linkAHEAD"><a href="signindex.html">Signing and Verifying JAR Files</a></div>
 <div class="linkBHEAD"><a href="intro.html">Understanding Signing and Verification</a></div>
@@ -534,7 +534,7 @@ jar cf <i>jar-file input-file(s)</i>
 <p>The <tt>c</tt> and <tt>f</tt> options can appear in either order, but there must not be any space between them.</p>
 <p>This command will generate a compressed JAR file and place it in the current directory. The command will also generate a 
 <a class="TutorialLink" target="_top" href="defman.html">default manifest file</a> for the JAR archive.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>The metadata in the JAR file, such as the entry names, comments, and contents of the manifest, must be encoded in UTF8.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>The metadata in the JAR file, such as the entry names, comments, and contents of the manifest, must be encoded in UTF8.</p>
 <hr /></div>
 <p>You can add any of these additional options to the <tt>cf</tt> options of the basic command:</p>
 <table border="1" cellpadding="3" summary="jar command options">
@@ -572,7 +572,7 @@ See
 <td headers="h2">To change directories during execution of the command. See below for an example.</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>When you create a JAR file, the time of creation is stored in the JAR file. Therefore, even if the contents of the JAR file do not change, when you create a JAR file multiple times, the resulting files are not exactly identical. You should be aware of this when you are using JAR files in a build environment. It is recommended that you use versioning information in the manifest file, rather than creation time, to control versions of a JAR file. See the 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>When you create a JAR file, the time of creation is stored in the JAR file. Therefore, even if the contents of the JAR file do not change, when you create a JAR file multiple times, the resulting files are not exactly identical. You should be aware of this when you are using JAR files in a build environment. It is recommended that you use versioning information in the manifest file, rather than creation time, to control versions of a JAR file. See the
 <a class="TutorialLink" target="_top" href="packageman.html">Setting Package Version Information</a> section.</p>
 <hr /></div>
 <p><a name="example" id="example"></a></p>

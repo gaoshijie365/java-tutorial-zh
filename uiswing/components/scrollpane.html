@@ -694,7 +694,7 @@ pictureScrollPane.setCorner(JScrollPane.UPPER_RIGHT_CORNER,
 <h2><a name="scrollable" id="scrollable">Implementing a Scrolling-Savvy Client</a></h2>
 <p>To customize the way that a client component interacts with its scroll pane, you can make the component implement the 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Scrollable.html"><code>Scrollable</code></a> interface. By implementing <code>Scrollable</code>, a client can specify both the size of the viewport used to view it and the amount to scroll for clicks on the different controls on a scroll bar. You can also specify if the view should track the size of the viewport. This is typically used when the viewport is bigger than the view, but the view should fill the available space.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;If you can&#39;t or don&#39;t want to implement a scrollable client, you can specify the unit and block increments using the <code>setUnitIncrement</code> and <code>setBlockIncrement</code> methods of 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;If you can&#39;t or don&#39;t want to implement a scrollable client, you can specify the unit and block increments using the <code>setUnitIncrement</code> and <code>setBlockIncrement</code> methods of
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollBar.html"><code>JScrollBar</code></a>. For example, the following code sets the unit increment for vertical scrolling to 10 pixels:
 <div class="codeblock"><pre>
 scrollPane.getVerticalScrollBar().setUnitIncrement(10);

@@ -660,7 +660,7 @@ Class:  class java.lang.annotation.RetentionPolicy
 </pre></div>
 <p>The output shows that declaration of 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html"><code>java.lang.annotation.RetentionPolicy</code></a> only contains the three enum constants. The enum constants are exposed as <code>public static final</code> fields. The field, constructor, and methods are compiler generated. The <code>&#36;VALUES</code> field is related to the implementation of the <code>values()</code> method.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;For various reasons, including support for evolution of the enum type, the declaration order of enum constants is important. 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;For various reasons, including support for evolution of the enum type, the declaration order of enum constants is important.
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--"><code>Class.getFields()</code></a> and 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--"><code>Class.getDeclaredFields()</code></a> do not make any guarantee that the order of the returned values matches the order in the declaring source code. If ordering is required by an application, use 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getEnumConstants--"><code>Class.getEnumConstants()</code></a>.

@@ -661,7 +661,7 @@ menu.getAccessibleContext().setAccessibleDescription(
 <b>frame.setJMenuBar(<em>theJMenuBar</em>);</b>
 </pre></div>
 <p>As the code shows, to set the menu bar for a <code>JFrame</code>, you use the <code>setJMenuBar</code> method. To add a <code>JMenu</code> to a <code>JMenuBar</code>, you use the <code>add(JMenu)</code> method. To add menu items and submenus to a <code>JMenu</code>, you use the <code>add(JMenuItem)</code> method.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>Menu items, like other components, can be in at most one container. If you try to add a menu item to a second menu, the menu item will be removed from the first menu before being added to the second. For a way of implementing multiple components that do the same thing, see 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>Menu items, like other components, can be in at most one container. If you try to add a menu item to a second menu, the menu item will be removed from the first menu before being added to the second. For a way of implementing multiple components that do the same thing, see
 <a class="TutorialLink" target="_top" href="../misc/action.html">How to Use Actions</a>.</p>
 <hr /></div>
 <p>Other methods in the preceding code include <code>setAccelerator</code> and <code>setMnemonic</code>, which are discussed a little later in <a href="#mnemonic">Enabling Keyboard Operation</a>. The <code>setAccessibleDescription</code> method is discussed in 
@@ -736,7 +736,7 @@ menuItem.setAccelerator(KeyStroke.getKeyStroke(
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/KeyEvent.html"><code>KeyEvent</code></a> constant corresponding to the key the user should press. To specify an accelerator you must use a 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html"><code>KeyStroke</code></a> object, which combines a key (specified by a <code>KeyEvent</code> constant) and a modifier-key mask (specified by an 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/ActionEvent.html"><code>ActionEvent</code></a> constant).</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>Because popup menus, unlike regular menus, aren&#39;t always contained by a component, accelerators in popup menu items don&#39;t work unless the popup menu is visible.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>Because popup menus, unlike regular menus, aren&#39;t always contained by a component, accelerators in popup menu items don&#39;t work unless the popup menu is visible.</p>
 <hr /></div>
 <h2><a name="popup" id="popup">Bringing Up a Popup Menu</a></h2>
 <p>To bring up a popup menu ( 

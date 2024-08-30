@@ -375,7 +375,7 @@ public class TableSorter extends AbstractTableModel {
             // c) we are not sorting on that column (getSortingStatus(column) == NOT_SORTED) and, 
             // d) a reverse lookup will not trigger a sort (modelToView != null)
             //
-            // Note: INSERT and DELETE events fail this test as they have column == ALL_COLUMNS.
+            // 注意： INSERT and DELETE events fail this test as they have column == ALL_COLUMNS.
             // 
             // The last check, for (modelToView != null) is to see if modelToView 
             // is already allocated. If we don't do this check; sorting can become 

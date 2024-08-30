@@ -553,7 +553,7 @@ These bindings are only effective when the component has focus.</dd>
 <ol>
 <li>The focused component&#39;s <code>WHEN_FOCUSED</code> input map.</li>
 <li>The focused component&#39;s <code>WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</code> input map.</li>
-<li>The <code>WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</code> input maps of the focused component&#39;s parent, and then its parent&#39;s parent, and so on, continuing up the containment hierarchy. Note: Input maps for disabled components are skipped.</li>
+<li>The <code>WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</code> input maps of the focused component&#39;s parent, and then its parent&#39;s parent, and so on, continuing up the containment hierarchy. 注意： Input maps for disabled components are skipped.</li>
 <li>The <code>WHEN_IN_FOCUSED_WINDOW</code> input maps of all the enabled components in the focused window are searched. Because the order of searching the components is unpredictable, <b>avoid duplicate <code>WHEN_IN_FOCUSED_WINDOW</code> bindings!</b></li>
 </ol>
 <p>Let&#39;s consider what happens in two typical key binding cases: a button reacting to the Space key, and a frame with a default button reacting to the Enter key.</p>
@@ -591,7 +591,7 @@ component.getActionMap().put("released",
 component.getInputMap().put(KeyStroke.getKeyStroke("F2"),
                             "none");
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>The preceding code doesn&#39;t prevent the relevant <code>WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</code> and <code>WHEN_IN_FOCUSED_WINDOW</code> input maps from being searched for an F2 key binding. To prevent this search, you must use a valid action instead of &quot;none&quot;. For example:</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>The preceding code doesn&#39;t prevent the relevant <code>WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</code> and <code>WHEN_IN_FOCUSED_WINDOW</code> input maps from being searched for an F2 key binding. To prevent this search, you must use a valid action instead of &quot;none&quot;. For example:</p>
 <div class="codeblock"><pre>
 Action doNothing = new AbstractAction() {
     public void actionPerformed(ActionEvent e) {

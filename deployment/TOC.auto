@@ -170,7 +170,7 @@
 <li class="tocli"><a href="jar/appman.html">Setting an Application's Entry Point</a></li>
 <li class="tocli"><a href="jar/downman.html">Adding Classes to the JAR File's Classpath</a></li>
 <li class="tocli"><a href="jar/packageman.html">Setting Package Version Information</a></li>
-<li class="tocli"><a href="jar/sealman.html">Sealing Packages within a JAR File</a></li>
+<li class="tocli"><a href="jar/sealman.html">Sealing 包 within a JAR File</a></li>
 <li class="tocli"><a href="jar/secman.html">Enhancing Security with Manifest Attributes</a>
 </li>
 </ul>

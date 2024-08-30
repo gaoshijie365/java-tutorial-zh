@@ -543,7 +543,7 @@
 <!-- PENDING:  When Scott finishes his rewrite of How Swing Components
 are Displayed" include a link to make it clear when the border is painted -->
 <p>Every <code>JComponent</code> can have one or more borders. Borders are incredibly useful objects that, while not themselves components, know how to draw the edges of Swing components. Borders are useful not only for drawing lines and fancy edges, but also for providing titles and empty space around components.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>
  Our examples set borders on <code>JPanel</code>s, <code>JLabel</code>s, and custom subclasses of <code>JComponent</code>. Although technically you can set the border on any object that inherits from <code>JComponent</code>, the look and feel implementation of many standard Swing components doesn&#39;t work well with user-set borders. In general, when you want to set a border on a standard Swing component other than <code>JPanel</code> or <code>JLabel</code>, we recommend that you put the component in a <code>JPanel</code> and set the border on the <code>JPanel</code>.</p>
 <hr /></div>
 <p>To put a border around a <code>JComponent</code>, you use its <code>setBorder</code> method. You can use the 

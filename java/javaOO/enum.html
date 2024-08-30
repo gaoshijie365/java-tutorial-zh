@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Enum Types (Java&trade; 教程 &gt;
-            学习 Java &gt; Classes and Objects)
+            学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,7 +475,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Classes and Objects</a></div>
+            <div class="linkLESSON"><a href="index.html">类和对象</a></div>
 <div class="linkAHEAD"><a href="classes.html">Classes</a></div>
 <div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
 <div class="linkBHEAD"><a href="variables.html">Declaring Member Variables</a></div>
@@ -491,7 +491,7 @@
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
 <div class="linkBHEAD"><a href="classvars.html">Understanding Class Members</a></div>
 <div class="linkBHEAD"><a href="initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using Classes and Objects</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
@@ -509,14 +509,14 @@
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Classes and Objects
+        <br /><b>课程：</b> 类和对象
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Classes and Objects</a>
+                <a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="QandE/nested-questions.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="QandE/enum-questions.html">下一页&nbsp;&raquo;</a>
@@ -595,13 +595,13 @@ for (Planet p : Planet.values()) {
                       p, p.surfaceWeight(mass));
 }
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<i>All</i> enums implicitly extend <code>java.lang.Enum</code>. Because a class can only extend one parent (see
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<i>All</i> enums implicitly extend <code>java.lang.Enum</code>. Because a class can only extend one parent (see
 <a class="TutorialLink" target="_top" href="classdecl.html">Declaring Classes</a>), the Java language does not support multiple inheritance of state (see 
 <a class="TutorialLink" target="_top" href="../IandI/multipleinheritance.html">Multiple Inheritance of State, Implementation, and Type</a>), and therefore an enum cannot extend anything else.
 <hr /></div>
 <p>In the following example, <code>Planet</code> is an enum type that represents the planets in the solar system. They are defined with constant mass and radius properties.</p>
 <p>Each enum constant is declared with values for the mass and radius parameters. These values are passed to the constructor when the constant is created. Java requires that the constants be defined first, prior to any fields or methods. Also, when there are fields and methods, the list of enum constants must end with a semicolon.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;The constructor for an enum type must be package-private or private access. It automatically creates the constants that are defined at the beginning of the enum body. You cannot invoke an enum constructor yourself.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;The constructor for an enum type must be package-private or private access. It automatically creates the constants that are defined at the beginning of the enum body. You cannot invoke an enum constructor yourself.
 <hr /></div>
 <p>In addition to its properties and constructor, <code>Planet</code> has methods that allow you to retrieve the surface gravity and weight of an object on each planet. Here is a sample program that takes your weight on earth (in any unit) and calculates and prints your weight on all of the planets (in the same unit):</p>
 <div class="codeblock"><pre>

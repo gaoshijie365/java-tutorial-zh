@@ -500,14 +500,14 @@
 <p>This lesson shows how to use <code>keytool</code>, <code>jarsigner</code>, <code>Policy Tool</code> and <code>jar</code> to place files into JAR (Java ARchive) files for subsequent signing by the <code>jarsigner</code> tool.</p>
 <p>This lesson has two parts. First, you will create and deploy an application. Second; you will act as the recipient of a signed application.</p>
 <p>Here are the steps to create and deploy an application:</p>
-<p><b>Note:</b>&nbsp;&nbsp;For convenience, you pretend to be a user/developer named Susan Jones. You need to define Susan Jones when you generate the keys.</p>
+<p><b>注意：</b>&nbsp;&nbsp;For convenience, you pretend to be a user/developer named Susan Jones. You need to define Susan Jones when you generate the keys.</p>
 <ul>
 <li>Put Java class files comprising your application into a JAR file</li>
 <li>Sign the JAR file</li>
 <li>Export the public key certificate corresponding to the private key used to sign the JAR file</li>
 </ul>
 <p>Here are the steps to grant permissions to an application</p>
-<p><b>Note:</b>&nbsp;&nbsp;For convenience, you pretend to be a user named Ray.</p>
+<p><b>注意：</b>&nbsp;&nbsp;For convenience, you pretend to be a user named Ray.</p>
 <ul>
 <li>You see how the signed application cannot normally read a file when it is run under a security manager.</li>
 <li>Use <code>keytool</code> to import a certificate into Ray&#39;s keystore in an entry aliased by <code>susan</code></li>

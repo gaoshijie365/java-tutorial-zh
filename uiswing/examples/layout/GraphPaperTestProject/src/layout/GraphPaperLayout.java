@@ -225,7 +225,7 @@ public class GraphPaperLayout implements LayoutManager2 {
                 } else {
                     componentSize = c.getMinimumSize();
                 }
-                // Note: rect dimensions are already asserted to be > 0 when the
+                // 注意： rect dimensions are already asserted to be > 0 when the
                 // component is added with constraints
                 maxCellSize.width = Math.max(maxCellSize.width,
                     componentSize.width / rect.width);

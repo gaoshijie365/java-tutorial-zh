@@ -508,7 +508,7 @@
 <li>Modifier restricting to one instance: <code>static</code></li>
 <li>Modifier prohibiting value modification: <code>final</code></li>
 <li>Modifier forcing strict floating point behavior: <code>strictfp</code></li>
-<li>Annotations</li>
+<li>注解</li>
 </ul>
 <p>Not all modifiers are allowed on all classes, for example an interface cannot be <code>final</code> and an enum cannot be <code>abstract</code>. 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Modifier.html"><code>java.lang.reflect.Modifier</code></a> contains declarations for all possible modifiers. It also contains methods which may be used to decode the set of modifiers returned by 
@@ -568,14 +568,14 @@ public class ClassDeclarationSpy {
 		out.format(&quot;  -- No Super Classes --%n%n&quot;);
 	    }
 
-	    out.format(&quot;Annotations:%n&quot;);
+	    out.format(&quot;注解:%n&quot;);
 	    Annotation[] ann = c.getAnnotations();
 	    if (ann.length != 0) {
 		for (Annotation a : ann)
 		    out.format(&quot;  %s%n&quot;, a.toString());
 		out.format(&quot;%n&quot;);
 	    } else {
-		out.format(&quot;  -- No Annotations --%n%n&quot;);
+		out.format(&quot;  -- No 注解 --%n%n&quot;);
 	    }
 
         // production code should handle this exception more gracefully
@@ -612,8 +612,8 @@ Implemented Interfaces:
 Inheritance Path:
   -- No Super Classes --
 
-Annotations:
-  -- No Annotations --
+注解:
+  -- No 注解 --
 </pre></div>
 <p>This is the actual declaration for 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentNavigableMap.html"><code>java.util.concurrent.ConcurrentNavigableMap</code></a> in the source code:</p>
@@ -641,8 +641,8 @@ Implemented Interfaces:
 Inheritance Path:
   java.lang.Object
 
-Annotations:
-  -- No Annotations --
+注解:
+  -- No 注解 --
 </pre></div>
 <p>Since arrays are runtime objects, all of the type information is defined by the Java virtual machine. In particular, arrays implement 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html"><code>Cloneable</code></a> and 
@@ -668,8 +668,8 @@ Inheritance Path:
   java.lang.Throwable
   java.lang.Object
 
-Annotations:
-  -- No Annotations --
+注解:
+  -- No 注解 --
 </pre></div>
 <p>From the inheritance path, it may be deduced that 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InterruptedIOException.html"><code>java.io.InterruptedIOException</code></a> is a checked exception because 
@@ -692,13 +692,13 @@ Implemented Interfaces:
 Inheritance Path:
   java.lang.Object
 
-Annotations:
+注解:
   @java.lang.Deprecated()
 </pre></div>
 <p>This output shows that 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/security/Identity.html"><code>java.security.Identity</code></a>, a deprecated API, possesses the annotation 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>java.lang.Deprecated</code></a>. This may be used by reflective code to detect deprecated APIs.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Not all annotations are available via reflection. Only those which have a 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Not all annotations are available via reflection. Only those which have a
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html"><code>java.lang.annotation.RetentionPolicy</code></a> of 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME"><code>RUNTIME</code></a> are accessible. Of the three annotations pre-defined in the language 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>@Deprecated</code></a>, 

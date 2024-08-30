@@ -6,7 +6,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Using the Keyword super (Java&trade; 教程 &gt;
-            学习 Java &gt; Interfaces and Inheritance)
+            学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,7 +475,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">Interfaces and Inheritance</a></div>
+            <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
 <div class="linkAHEAD"><a href="createinterface.html">Interfaces</a></div>
 <div class="linkBHEAD"><a href="interfaceDef.html">Defining an Interface</a></div>
 <div class="linkBHEAD"><a href="usinginterface.html">Implementing an Interface</a></div>
@@ -500,7 +500,7 @@
     <div id="MainFlow" class="MainFlow_indented">
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
-        <br /><b>课程：</b> Interfaces and Inheritance
+        <br /><b>课程：</b> 接口和继承
         <br /><b>Section:</b> Inheritance
     </div>
             <div id="BreadCrumbs">
@@ -508,7 +508,7 @@
                 &gt;
                 <a href="../index.html" target="_top">学习 Java</a>
                 &gt;
-                <a href="index.html" target="_top">Interfaces and Inheritance</a>
+                <a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
                 <a target="_top" href="hidevariables.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="objectclass.html">下一页&nbsp;&raquo;</a>
@@ -570,7 +570,7 @@ or:
 super(parameter list);
 </pre></div>
 <p>With <code>super()</code>, the superclass no-argument constructor is called. With <code>super(parameter list)</code>, the superclass constructor with a matching parameter list is called.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the super class does not have a no-argument constructor, you will get a compile-time error. <code>Object</code> <i>does</i> have such a constructor, so if <code>Object</code> is the only superclass, there is no problem.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the super class does not have a no-argument constructor, you will get a compile-time error. <code>Object</code> <i>does</i> have such a constructor, so if <code>Object</code> is the only superclass, there is no problem.
 <hr /></div>
 <p>If a subclass constructor invokes a constructor of its superclass, either explicitly or implicitly, you might think that there will be a whole chain of constructors called, all the way back to the constructor of <code>Object</code>. In fact, this is the case. It is called <i>constructor chaining</i>, and you need to be aware of it when there is a long line of class descent.</p>
 

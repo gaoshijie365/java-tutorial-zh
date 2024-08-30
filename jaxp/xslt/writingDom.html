@@ -508,7 +508,7 @@
 <p><a name="gghiy" id="gghiy"></a></p>
 <h2>Reading the XML</h2>
 <p>The first step is to create a DOM in memory by parsing an XML file. By now, you should be getting comfortable with the process.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<!--
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<!--
 <p>The code discussed in this section is in the file <tt>TransformationApp01.java</tt>. <a href="../examples/xslt_samples.zip">Download the XSLT examples</a> 
  and unzip them into the <i>install-dir</i><tt>/jaxp-1_4_2-</tt><i>release-date</i><tt>/samples</tt> directory.</p>
 -->
@@ -616,7 +616,7 @@ try {
 </pre></div>
 <p>Here, you create a transformer object, use the DOM to construct a source object, and use <tt>System.out</tt> to construct a result object. You then tell the transformer to operate on the source object and output to the result object.</p>
 <p>In this case, the &quot;transformer&quot; is not actually changing anything. In XSLT terminology, you are using the identity transform, which means that the &quot;transformation&quot; generates a copy of the source, unchanged.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>You can specify a variety of output properties for transformer objects, as defined in the W3C specification at 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>You can specify a variety of output properties for transformer objects, as defined in the W3C specification at
 <a class="OutsideLink" target="_blank" href="http://www.w3.org/TR/xslt#output">http://www.w3.org/TR/xslt#output</a>. For example, to get indented output, you can invoke the following method:</p>
 <div class="codeblock"><pre>
 % transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -721,7 +721,7 @@ Download the XSLT examples by clicking this link</a> and unzip them into the <i>
 <p><a name="gghkx" id="gghkx"></a></p>
 <h2>Writing Out a Subtree of the DOM</h2>
 <p>It is also possible to operate on a subtree of a DOM. In this section, you will experiment with that option.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<!--
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<!--
 <p>The code discussed in this section is in TranformationApp02.java. If you have not done so already, <a href="../examples/xslt_samples.zip">
 download the XSLT examples</a> and unzip them into the <i>install-dir</i><tt>/jaxp-1_4_2-</tt><i>release-date</i><tt>/samples</tt> directory.</p>
 -->

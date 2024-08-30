@@ -516,7 +516,7 @@
 <p>Unlike the examples in 
 <a class="TutorialLink" target="_top" href="basic.html">Basic JAXB Examples</a>, which focus on the Java code in the respective <tt>Main.java</tt> class files, the examples here focus on customizations made to the XML schema <b>before</b> generating the schema-derived Java binding classes.</p>
 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;JAXB binding customizations currently must be made by hand. One of the goals of the JAXB technology is to standardize the format of binding declarations, thereby making it possible to create customization tools and to provide a standard interchange format between JAXB implementations.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;JAXB binding customizations currently must be made by hand. One of the goals of the JAXB technology is to standardize the format of binding declarations, thereby making it possible to create customization tools and to provide a standard interchange format between JAXB implementations.
 <hr /></div>
 
 <p>This section introduces customizations that can be made to JAXB bindings and validation methods. For more information, see  
@@ -562,7 +562,7 @@ compiler are sufficient. There are cases, however, in which you might want to mo
 </ul>
 <p>For some, using inline customizations is easier because you can see your customizations in the context of the schema to which they apply. Conversely, using an external binding customization file enables you to customize JAXB bindings without modifying the source schema, and enables you to easily apply customizations to several schema files at once.</p>
 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;You can combine the two types of customizations. For example, you could include a reference to an external binding customizations file in an inline annotation. However, you cannot declare both an inline and external customization on the same schema element.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;You can combine the two types of customizations. For example, you could include a reference to an external binding customizations file in an inline annotation. However, you cannot declare both an inline and external customization on the same schema element.
 <hr /></div>
 
 <p>Each of these types of customization is described in more detail in the following sections:</p>
@@ -1096,7 +1096,7 @@ the file <i>jaxb-ri-install</i><tt>/samples/inline-customize/po.xsd</tt>. The cu
 	<li>The JAXB implementation does not support the
 	<tt>enableFailFastCheck</tt> attribute.
 	
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Using typesafe enum classes enables you to map schema enumeration values to Java constants, which makes it possible to do comparisons on Java constants rather than on string values.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Using typesafe enum classes enables you to map schema enumeration values to Java constants, which makes it possible to do comparisons on Java constants rather than on string values.
 <hr /></div>
 </li>
 </ul>
@@ -1163,7 +1163,7 @@ class will contain the description <tt>&quot;A
 &amp;lt;b&gt;Purchase Order&amp;lt;/b&gt; consists of addresses and
 items.&quot;</tt> The <tt>&amp;lt;</tt> is used to escape the opening bracket on the <tt>&lt;b&gt;</tt> HTML tags.</p>
 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;When a <tt>&lt;class&gt;</tt> customization is specified in the <tt>appinfo</tt> element of a <tt>complexType</tt> definition, as shown in the previous example, the <tt>complexType</tt> definition is bound to a Java content interface.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;When a <tt>&lt;class&gt;</tt> customization is specified in the <tt>appinfo</tt> element of a <tt>complexType</tt> definition, as shown in the previous example, the <tt>complexType</tt> definition is bound to a Java content interface.
 <hr /></div>
 
 <p>Later in <tt>po.xsd</tt>, another <tt>&lt;javadoc&gt;</tt>
@@ -1184,7 +1184,7 @@ string is escaped with <tt>CDATA</tt>:</p>
 &lt;/xsd:annotation&gt;
 </pre></div>
 
-<div class="note"><hr /><strong>Note:</strong>&nbsp;If you want to include HTML tags in a <tt>&lt;jaxb:javadoc&gt;</tt> customization, you must enclose the data within a <tt>CDATA</tt> section or
+<div class="note"><hr /><strong>注意：</strong>&nbsp;If you want to include HTML tags in a <tt>&lt;jaxb:javadoc&gt;</tt> customization, you must enclose the data within a <tt>CDATA</tt> section or
 escape all left angle brackets using <tt>&amp;lt;</tt>. See 
 <a class="OutsideLink" target="_blank" href="http://www.w3.org/TR/2000/REC-xml-20001006#sec-cdata-sect">XML 1.0 2nd Edition</a> for more information.
 <hr /></div>

@@ -78,14 +78,14 @@ public class ClassDeclarationSpy {
 		out.format("  -- No Super Classes --%n%n");
 	    }
 
-	    out.format("Annotations:%n");
+	    out.format("注解:%n");
 	    Annotation[] ann = c.getAnnotations();
 	    if (ann.length != 0) {
 		for (Annotation a : ann)
 		    out.format("  %s%n", a.toString());
 		out.format("%n");
 	    } else {
-		out.format("  -- No Annotations --%n%n");
+		out.format("  -- No 注解 --%n%n");
 	    }
 
         // production code should handle this exception more gracefully

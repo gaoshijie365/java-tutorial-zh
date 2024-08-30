@@ -534,7 +534,7 @@
 <center><img src="../../figures/essential/exceptions-hierarchy.gif" width="329" height="131" align="bottom" alt="A possible class hierarchy for the exceptions thrown by a linked list." /></p><p class="FigureCaption">Example exception class hierarchy.</p></center><h2>Choosing a Superclass</h2>
 <p>Any <code>Exception</code> subclass can be used as the parent class of <code>LinkedListException</code>. However, a quick perusal of those subclasses shows that they are inappropriate because they are either too specialized or completely unrelated to <code>LinkedListException</code>. Therefore, the parent class of <code>LinkedListException</code> should be <code>Exception</code>.</p>
 <p>Most applets and applications you write will throw objects that are <code>Exception</code>s. <code>Error</code>s are normally used for serious, hard errors in the system, such as those that prevent the JVM from running.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;For readable code, it&#39;s good practice to append the string <code>Exception</code> to the names of all classes that inherit (directly or indirectly) from the <code>Exception</code> class.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;For readable code, it&#39;s good practice to append the string <code>Exception</code> to the names of all classes that inherit (directly or indirectly) from the <code>Exception</code> class.
 <hr /></div>
 
 

@@ -521,7 +521,7 @@
 <b>susan</b>
 </pre></div>
 <p>Leave the <b>CodeBase</b> text box blank, to grant <i>all</i> code signed by <code>susan</code> the permission, no matter where it comes from.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;If you wanted to restrict the permission to just code signed by <code>susan</code> that comes from the <code>C:\Test\</code> directory, you would type the following URL into the <b>CodeBase</b> text box:
+<div class="note"><hr /><strong>注意：</strong>&nbsp;If you wanted to restrict the permission to just code signed by <code>susan</code> that comes from the <code>C:\Test\</code> directory, you would type the following URL into the <b>CodeBase</b> text box:
 <div class="codeblock"><pre>
 file:/C:/Test/*
 </pre></div>
@@ -539,7 +539,7 @@ file:/C:/Test/*
 </ol>
 <p>Now the Permissions dialog box looks like the following.</p>
 <center><img src="../../figures/security/WTaddFilePerm.gif" width="603" height="205" align="bottom" alt="the Permission dialog, with fields filled in" /></center><p>Choose the <b>OK</b> button. The new permission appears in a line in the Policy Entry dialog, as follows.</p>
-<center><img src="../../figures/security/WTaddEntry.gif" width="547" height="423" align="bottom" alt="the new Permission appears in the Policy Entry dialog" /></center><div class="note"><hr /><strong>Note:</strong>&nbsp;Each backslash in the file path you typed has been replaced with two backslashes, for your convenience. Strings in a policy file are processed by a tokenizer that allows \ to be used as an escape character (for example, <code>\n</code> to indicate a new line), so the policy file requires <i>two</i> backslashes to indicate a single backslash. If you use single backslashes as your directory separators, Policy Tool automatically converts them to double backslashes for you.
+<center><img src="../../figures/security/WTaddEntry.gif" width="547" height="423" align="bottom" alt="the new Permission appears in the Policy Entry dialog" /></center><div class="note"><hr /><strong>注意：</strong>&nbsp;Each backslash in the file path you typed has been replaced with two backslashes, for your convenience. Strings in a policy file are processed by a tokenizer that allows \ to be used as an escape character (for example, <code>\n</code> to indicate a new line), so the policy file requires <i>two</i> backslashes to indicate a single backslash. If you use single backslashes as your directory separators, Policy Tool automatically converts them to double backslashes for you.
 <hr /></div>
 <p>You are now done specifying this policy entry, so choose the <b>Done</b> button in the Policy Entry dialog. The Policy Tool window now contains a line representing the policy entry, showing the <b>SignedBy</b> value.</p>
 

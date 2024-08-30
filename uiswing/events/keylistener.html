@@ -529,7 +529,7 @@
 
 <p>Key events indicate when the user is typing at the keyboard. Specifically, key events are fired by the component with the keyboard focus when the user presses or releases keyboard keys. For detailed information about focus, see 
 <a class="TutorialLink" target="_top" href="../misc/focus.html">How to Use the Focus Subsystem</a>.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>To define special reactions to particular keys, use key bindings instead of a key listener. For further information, see 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>To define special reactions to particular keys, use key bindings instead of a key listener. For further information, see
 <a class="TutorialLink" target="_top" href="../misc/keybinding.html">How to Use Key Bindings</a>.</p>
 <hr /></div>
 <p>Notifications are sent about two basic kinds of key events:</p>
@@ -539,7 +539,7 @@
 </ul>
 <p>The first kind of event is called a <em>key-typed</em> event. The second kind is either a <em>key-pressed</em> or <em>key-released</em> event.</p>
 <p>In general, you react to only key-typed events unless you need to know when the user presses keys that do not correspond to characters. For example, to know when the user types a Unicode character — whether by pressing one key such as &#39;a&#39; or by pressing several keys in sequence — you handle key-typed events. On the other hand, to know when the user presses the F1 key, or whether the user pressed the &#39;3&#39; key on the number pad, you handle key-pressed events.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>To fire keyboard events, a component <em>must</em> have the keyboard focus.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>To fire keyboard events, a component <em>must</em> have the keyboard focus.</p>
 <hr /></div>
 <p>To make a component get the keyboard focus, follow these steps:</p>
 <ol>
@@ -556,7 +556,7 @@ component.setFocusTraversalKeysEnabled(false)
 <hr /></div>
 <p>You can obtain detailed information about a particular key-pressed event. For example, you can query a key-pressed event to determine if it was fired from an action key. Examples of action keys include Copy, Paste, Page Up, Undo, and the arrow and function keys. You can also query a key-pressed or key-released event to determine the location of the key that fired the event. Most key events are fired from the standard keyboard, but the events for some keys, such as Shift, have information on whether the user pressed the Shift key on the left or the right side of the keyboard. Likewise, the number &#39;2&#39; can be typed from either the standard keyboard or from the number pad.</p>
 <p>For key-typed events you can obtain the key character value as well as any modifiers used.</p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>You should not rely on the key character value returned from <code>getKeyChar</code> unless it is involved in a key-typed event.</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>You should not rely on the key character value returned from <code>getKeyChar</code> unless it is involved in a key-typed event.</p>
 <hr /></div>
 <p>The following example demonstrates key events. It consists of a text field that you can type into, followed by a text area that displays a message every time the text field fires a key event. A button at the bottom of the window lets you clear both the text field and text area.</p>
 <center><img src="../../figures/uiswing/events/KeyEventDemo.png" width="383" height="251" align="bottom" alt="KeyEventDemo.html" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>

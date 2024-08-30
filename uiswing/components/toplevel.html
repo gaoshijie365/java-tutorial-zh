@@ -547,7 +547,7 @@
 <li>You can optionally add a menu bar to a top-level container. The menu bar is by convention positioned within the top-level container, but outside the content pane. Some look and feels, such as the Mac OS look and feel, give you the option of placing the menu bar in another place more appropriate for the look and feel, such as at the top of the screen.</li>
 </ul>
 <p><a name="windownote" id="windownote"></a></p>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;Although <a href="internalframe.html"><code>JInternalFrame</code></a> mimics <code>JFrame</code>, internal frames aren&#39;t actually top-level containers.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;Although <a href="internalframe.html"><code>JInternalFrame</code></a> mimics <code>JFrame</code>, internal frames aren&#39;t actually top-level containers.
 <hr /></div>
 <p>Here&#39;s a picture of a frame created by an application. The frame contains a green menu bar (with no menus) and, in the frame&#39;s content pane, a large blank, yellow label.</p>
 <table summary="">
@@ -599,7 +599,7 @@ contentPane.add(<em>anotherComponent</em>, BorderLayout.PAGE_END);
 contentPane.setOpaque(true); -->
 <em>topLevelContainer</em>.setContentPane(contentPane);
 </pre></div>
-<div class="note"><hr /><strong>Note:</strong>&nbsp;<p>As a convenience, the <code>add</code> method and its variants, <code>remove</code> and <code>setLayout</code> have been overridden to forward to the <code>contentPane</code> as necessary. This means you can write</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<p>As a convenience, the <code>add</code> method and its variants, <code>remove</code> and <code>setLayout</code> have been overridden to forward to the <code>contentPane</code> as necessary. This means you can write</p>
 <div class="codeblock"><pre>
 frame.add(child);
 </pre></div>
