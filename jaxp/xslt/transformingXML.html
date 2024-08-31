@@ -1377,14 +1377,14 @@ cd xslt
 <dd>
 <p>Process an element multiple times, each time in a different &quot;mode.&quot; You add a mode attribute to templates and then specify <tt>&lt;apply-templates mode=&quot;...&quot;&gt;</tt> to apply only the templates with a matching mode. Combine with the <tt>&lt;apply-templates select=&quot;...&quot;&gt;</tt> attribute to apply mode-based processing to a subset of the input data.</p>
 </dd>
-<dt>Variables (section 11)</dt>
+<dt>变量 (section 11)</dt>
 <dd>
-<p>Variables are something like method parameters, in that they let you control a template&#39;s behavior. But they are not as valuable as you might think. The value of a variable is known only within the scope of the current template or <tt>&lt;xsl:if&gt;</tt> tag (for example) in which it is defined. You cannot pass a value from one template to another, or even from an enclosed part of a template to another part of the same template.</p>
+<p>变量 are something like method parameters, in that they let you control a template&#39;s behavior. But they are not as valuable as you might think. The value of a variable is known only within the scope of the current template or <tt>&lt;xsl:if&gt;</tt> tag (for example) in which it is defined. You cannot pass a value from one template to another, or even from an enclosed part of a template to another part of the same template.</p>
 <p>These statements are true even for a &quot;global&quot; variable. You can change its value in a template, but the change applies only to that template. And when the expression used to define the global variable is evaluated, that evaluation takes place in the context of the structure&#39;s root node. In other words, global variables are essentially runtime constants. Those constants can be useful for changing the behavior of a template, especially when coupled with include and import statements. But variables are not a general-purpose data-management mechanism.</p>
 </dd>
 </dl>
 <p><a name="ggyuy" id="ggyuy"></a></p>
-<h2>The Trouble with Variables</h2>
+<h2>The Trouble with 变量</h2>
 <p>It is tempting to create a single template and set a variable for the destination of the link, rather than go to the trouble of setting up a parameterized template and calling it two different ways. The idea is to set the variable to a default value (say, the text of the <tt>LINK</tt> tag) and then, if the target attribute exists, set the destination variable to the value of the target attribute.</p>
 <p>That would be a good idea-if it worked. But again, the issue is that variables are known only in the scope within which they are defined. So when you code an <tt>&lt;xsl:if&gt;</tt> tag to change the value of the variable, the value is known only within the context of the <tt>&lt;xsl:if&gt;</tt> tag. Once <tt>&lt;/xsl:if&gt;</tt> is encountered, any change to the variable&#39;s setting is lost.</p>
 <p>A similarly tempting idea is the possibility of replacing the <tt>text()|B|I|U|DEF|LINK</tt> specification with a variable (<tt></tt>). But because the value of the variable is determined by where it is defined, the value of a global inline variable consists of text nodes, <tt>&lt;B&gt;</tt> nodes, and so on, that happen to exist at the root level. In other words, the value of such a variable, in this case, is null.</p>

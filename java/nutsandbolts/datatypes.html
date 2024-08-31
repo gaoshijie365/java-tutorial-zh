@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Primitive Data Types (Java&trade; 教程 &gt;
+        <title>基本数据类型 (Java&trade; 教程 &gt;
             学习 Java &gt; 语言基础)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,10 +476,10 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">语言基础</a></div>
-<div class="linkAHEAD"><a href="variables.html">Variables</a></div>
-<div class="nolinkBHEAD">Primitive Data Types</div>
-<div class="linkBHEAD"><a href="arrays.html">Arrays</a></div>
-<div class="linkBHEAD"><a href="variablesummary.html">Summary of Variables</a></div>
+<div class="linkAHEAD"><a href="variables.html">变量</a></div>
+<div class="nolinkBHEAD">基本数据类型</div>
+<div class="linkBHEAD"><a href="arrays.html">数组</a></div>
+<div class="linkBHEAD"><a href="variablesummary.html">变量总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_variables.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="operators.html">Operators</a></div>
 <div class="linkBHEAD"><a href="op1.html">Assignment, Arithmetic, and Unary Operators</a></div>
@@ -503,7 +503,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 语言基础
-        <br /><b>Section:</b> Variables
+        <br /><b>Section:</b> 变量
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -516,57 +516,74 @@
                 <a target="_top" href="variables.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="arrays.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Primitive Data Types</h1></div>
+            <div id="PageTitle"><h1>基本数据类型</h1></div>
             <div id="PageContent">
 
-<p>The Java programming language is statically-typed, which means that all variables must first be declared before they can be used. This involves stating the variable&#39;s type and name, as you&#39;ve already seen:</p>
+<p>Java 是一门静态类型的编程语言，这也就意味着变量必须先声明后使用。变量的声明包括变量的类型和名称：</p>
 <div class="codeblock"><pre>
 int gear = 1;
 </pre></div>
-<p>Doing so tells your program that a field named &quot;gear&quot; exists, holds numerical data, and has an initial value of &quot;1&quot;. A variable&#39;s data type determines the values it may contain, plus the operations that may be performed on it. In addition to <code>int</code>, the Java programming language supports seven other <i>primitive data types</i>. A primitive type is predefined by the language and is named by a reserved keyword. Primitive values do not share state with other primitive values. The eight primitive data types supported by the Java programming language are:</p>
+<p>这表明有一个叫做 &quot;gear&quot; 的字段，持有整数数据，并且初始值为 &quot;1&quot;。变量的数据类型决定了它可以包含的值，以及可以对其执行的操作。
+除了 <code>int</code>，Java 还支持其它 7 种 <i>基本数据类型</i>。基本类型是语言预定义的，并且由保留字命名。基本类的值之间不共享状态。Java 支持的 8 种基本数据类型是：</p>
 <ul>
 <li>
-<p><strong>byte</strong>: The <code>byte</code> data type is an 8-bit signed two&#39;s complement integer. It has a minimum value of -128 and a maximum value of 127 (inclusive). The <code>byte</code> data type can be useful for saving memory in large 
-<a class="TutorialLink" target="_top" href="arrays.html">arrays</a>, where the memory savings actually matters. They can also be used in place of <code>int</code> where their limits help to clarify your code; the fact that a variable&#39;s range is limited can serve as a form of documentation.</p>
+<p><strong>byte</strong>: <code>byte</code> 数据类型是 8 位有符号的二进制补码表示的整数。最小值为 -128，最大值为 127 (包括)。
+    <code>byte</code> 数据类型用在大 <a class="TutorialLink" target="_top" href="arrays.html">数组</a> 中可以节省内存。
+    也可以用来替代 <code>int</code> 使代码更加清晰；事实上可以把一个变量的取值范围当做是一种形式的文档。</p>
 </li>
 <li>
-<p><strong>short</strong>: The <code>short</code> data type is a 16-bit signed two&#39;s complement integer. It has a minimum value of -32,768 and a maximum value of 32,767 (inclusive). As with <code>byte</code>, the same guidelines apply: you can use a <code>short</code> to save memory in large arrays, in situations where the memory savings actually matters.</p>
+<p><strong>short</strong>: <code>short</code> 数据类型是 16 位有符号的二进制补码表示的整数。最小值为 -32768，最大值为 32767 (包括)。
+    和 <code>byte</code> 一样：可以用在大数组用 <code>short</code> 来节省内存。</p>
 </li>
 <li>
-<p><strong>int</strong>: By default, the <code>int</code> data type is a 32-bit signed two's complement integer, which has a minimum value of -2<sup>31</sup> and a maximum value of 2<sup>31</sup>-1. In Java SE 8 and later, you can use the <code>int</code> data type to represent an unsigned 32-bit integer, which has a minimum value of 0 and a maximum value of 2<sup>32</sup>-1. Use the Integer class to use <code>int</code> data type as an unsigned integer. See the section The Number Classes for more information. Static methods like <code>compareUnsigned</code>, <code>divideUnsigned</code> etc have been added to the 
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a> class to support the arithmetic operations for unsigned integers.</p>
+<p><strong>int</strong>: 默认情况下，<code>int</code> 数据类型是 32 位有符号的二进制补码表示的整数，最小值为 -2<sup>31</sup>，最大值为 2<sup>31</sup>-1。从
+    Java SE 8 开始，您可以使用 <code>int</code> 数据类型表示一个无符号的 32 位整数，其最小值为 0，最大值位 2<sup>32</sup>-1。
+    使用 Integer 类将 <code>int</code> 数据类型当作无符号整数使用。查看 Number 类一节获取更多信息。
+<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a>
+    类中添加了静态方法，如 <code>compareUnsigned</code>，<code>divideUnsigned</code> 等以支持无符号整数的算术运算。</p>
 </li>
 <li>
-<p><strong>long</strong>: The <code>long</code> data type is a 64-bit two&#39;s complement integer. The signed long has a minimum value of -2<sup>63</sup> and a maximum value of 2<sup>63</sup>-1. In Java SE 8 and later, you can use the <code>long</code> data type to represent an unsigned 64-bit long, which has a minimum value of 0 and a maximum value of 2<sup>64</sup>-1. Use this data type when you need a range of values wider than those provided by <code>int</code>. The 
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html"><code>Long</code></a> class also contains methods like <code>compareUnsigned</code>, <code>divideUnsigned</code> etc to support arithmetic operations for unsigned long.</p>
+<p><strong>long</strong>: <code>long</code> 数据类型是 64 位二进制补码表示的整数。有符号的 long 的最小值为 -2<sup>63</sup>，最大值为 2<sup>63</sup>-1。
+    从 Java SE 8 开始，您可以使用 <code>long</code> 数据类型表示一个无符号的 64 位整数，其最小值为 0，最大值为 2<sup>64</sup>-1。
+    当您需要的值范围超过 <code>int</code> 所能表示的值时，使用 <code>long</code> 数据类型。
+<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html"><code>Long</code></a>
+    类包含了方法，如<code>compareunsigned</code>，<code>divideUnsigned</code> 等以支持无符号 long 类型的算术操作。</p>
 </li>
 <li>
-<p><strong>float</strong>: The <code>float</code> data type is a single-precision 32-bit IEEE 754 floating point. Its range of values is beyond the scope of this discussion, but is specified in the
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">Floating-Point Types, Formats, and Values</a> section of the Java Language Specification. As with the recommendations for <code>byte</code> and <code>short</code>, use a <code>float</code> (instead of <code>double</code>) if you need to save memory in large arrays of floating point numbers. This data type should never be used for precise values, such as currency. For that, you will need to use the 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">java.math.BigDecimal</a> class instead. 
-<a class="TutorialLink" target="_top" href="../data/index.html">数字和字符串</a> covers <code>BigDecimal</code> and other useful classes provided by the Java platform.</p>
+<p><strong>float</strong>: <code>float</code> 数据类型是单精度 32 位 IEEE 754 浮点数。其取值范围超出了本节的讨论范围，但在 Java 语言规范的
+<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">
+    浮点类型、格式和值</a> 一节对其进行了说明。在大数组中使用 <code>float</code> 类型 (代替 <code>double</code>) 也可以节省内存。
+    这个数据类型不应该用来保存精确的值，比如货币。要表示精确的值，您可以使用
+    <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">java.math.BigDecimal</a> 类。
+<a class="TutorialLink" target="_top" href="../data/index.html">数字和字符串</a> 一节讲解了 <code>BigDecimal</code> 和 Java
+    平台提供的其它非常有用的类。</p>
 </li>
 <li>
-<p><strong>double</strong>: The <code>double</code> data type is a double-precision 64-bit IEEE 754 floating point. Its range of values is beyond the scope of this discussion, but is specified in the
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">Floating-Point Types, Formats, and Values</a> section of the Java Language Specification. For decimal values, this data type is generally the default choice. As mentioned above, this data type should never be used for precise values, such as currency.</p>
+<p><strong>double</strong>: <code>double</code> 数据类型是双精度 64 位 IEEE 754 浮点数。它的取值范围也在 Java 语言规范的
+<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">
+    浮点类型、格式和值</a> 一节讨论。<code>double</code> 类型通常是表示小数的默认选择。和 <code>float</code> 一样，您不应该用它来表示精确的值，比如货币。</p>
 </li>
 <li>
-<p><strong>boolean</strong>: The <code>boolean</code> data type has only two possible values: <code>true</code> and <code>false</code>. Use this data type for simple flags that track true/false conditions. This data type represents one bit of information, but its &quot;size&quot; isn&#39;t something that&#39;s precisely defined.</p>
+<p><strong>boolean</strong>: <code>boolean</code> 数据类型有两个可能的值：<code>true</code> 和 <code>false
+</code>。这个数据类型用来做一些简单的标记，跟踪 true/false 条件。虽然这个数据类型只代表 1 位的信息，但其占用内存大小并没有精确地定义。</p>
 </li>
 <li>
-<p><strong>char</strong>: The <code>char</code> data type is a single 16-bit Unicode character. It has a minimum value of <code>&#39;\u0000&#39;</code> (or 0) and a maximum value of <code>&#39;\uffff&#39;</code> (or 65,535 inclusive).</p>
+<p><strong>char</strong>: <code>char</code> 数据类型表示一个 16 位的 Unicode 字符。其最小值为 <code>&#39;\u0000&#39;</code>
+ (或 0)，最大值为 <code>&#39;\uffff&#39;</code> (或 65535)。</p>
 </li>
 </ul>
-<p>In addition to the eight primitive data types listed above, the Java programming language also provides special support for character strings via the 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">java.lang.String</a> class. Enclosing your character string within double quotes will automatically create a new <code>String</code> object; for example, <code>String s = &quot;this is a string&quot;;</code>. <code>String</code> objects are <i>immutable</i>, which means that once created, their values cannot be changed. The <code>String</code> class is not technically a primitive data type, but considering the special support given to it by the language, you&#39;ll probably tend to think of it as such. You&#39;ll learn more about the <code>String</code> class in 
-<a class="TutorialLink" target="_top" href="../data/index.html">Simple Data Objects</a></p>
-<h2>Default Values</h2>
-<p>It&#39;s not always necessary to assign a value when a field is declared. Fields that are declared but not initialized will be set to a reasonable default by the compiler. Generally speaking, this default will be zero or <code>null</code>, depending on the data type. Relying on such default values, however, is generally considered bad programming style.</p>
-<p>The following chart summarizes the default values for the above data types.</p>
+<p>除了上面列出的 8 种基本数据类型，Java 也提供了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">java.lang.String</a>
+    类来支持字符串。将字符串放入双引号内将自动创建一个 <code>String</code> 对象，比如，<code>String s = &quot;this is a string&quot;;</code>，
+    字符串对象是不可变的，这也就意味着一旦创建，它们的值将不会改变。从技术上来讲 <code>String</code> 类不是基本数据类型，但是考虑到其特殊性，您可以将其认为是一种基本数据类型。
+    您将在 <a class="TutorialLink" target="_top" href="../data/index.html">简单数据对象</a> 一节学习 <code>String</code> 类。</p>
+<h2>默认值</h2>
+<p>在声明字段时也可以不赋值。声明时没有赋初值的变量将由编译期设置一个默认值。一般来说，默认值将是 0 或 <code>null</code>，这取决于其数据类型。
+    依赖默认值被视为一种不好的编程风格。</p>
+<p>下标总结了上述数据类型的默认值。</p>
 <table border="1" summary="Default values for primitive types">
 <tr>
-<th id="h1" align="left"><strong>Data Type</strong></th>
-<th id="h2" align="left"><strong>Default Value (for fields)</strong></th>
+<th id="h1" align="left"><strong>数据类型</strong></th>
+<th id="h2" align="left"><strong>默认值 (字段)</strong></th>
 </tr>
 <tr>
 <td headers="h1">byte</td>
@@ -597,7 +614,7 @@ int gear = 1;
 <td headers="h2">&#39;\u0000&#39;</td>
 </tr>
 <tr>
-<td headers="h1">String (or any object) &nbsp;</td>
+<td headers="h1">String (或任何对象) &nbsp;</td>
 <td headers="h2">null</td>
 </tr>
 <tr>
@@ -606,9 +623,10 @@ int gear = 1;
 </tr>
 </table>
 <br />
-<p>Local variables are slightly different; the compiler never assigns a default value to an uninitialized local variable. If you cannot initialize your local variable where it is declared, make sure to assign it a value before you attempt to use it. Accessing an uninitialized local variable will result in a compile-time error.</p>
-<h3>Literals</h3>
-<p>You may have noticed that the <code>new</code> keyword isn&#39;t used when initializing a variable of a primitive type. Primitive types are special data types built into the language; they are not objects created from a class. A <em>literal</em> is the source code representation of a fixed value; literals are represented directly in your code without requiring computation. As shown below, it&#39;s possible to assign a literal to a variable of a primitive type:</p>
+<p>局部变量稍有不同，编译器不会为未初始化的局部变量赋一个默认值。如果您不能在局部变量声明时赋初值，就一定要确保在使用之前对其进行赋值。访问未初始化的局部变量将会导致编译时错误。</p>
+<h3>字面值</h3>
+<p>您肯呢个已经注意到了，在初始化基本类型时没有使用 <code>new</code> 关键字。基本类型是语言内置的数据类型，它们不是由类创建的对象。一个 <em>字面值</em> 就是一个固定值的源码表示。
+    如下所示，可以给基本类型的变量赋一个字面值：</p>
 <div class="codeblock"><pre>
 boolean result = true;
 char capitalC = 'C';
@@ -616,15 +634,18 @@ byte b = 100;
 short s = 10000;
 int i = 100000;
 </pre></div>
-<h4>Integer Literals</h4>
-<p>An integer literal is of type <code>long</code> if it ends with the letter <code>L</code> or <code>l</code>; otherwise it is of type <code>int</code>. It is recommended that you use the upper case letter <code>L</code> because the lower case letter <code>l</code> is hard to distinguish from the digit <code>1</code>.</p>
-<p>Values of the integral types <code>byte</code>, <code>short</code>, <code>int</code>, and <code>long</code> can be created from <code>int</code> literals. Values of type <code>long</code> that exceed the range of <code>int</code> can be created from <code>long</code> literals. Integer literals can be expressed by these number systems:</p>
+<h4>整数字面值</h4>
+<p>整数字面值如果以字母 <code>L</code> 或 <code>l</code> 结尾，其类型为 <code>long</code>，否则其类型为 <code>int</code>。
+    建议您使用大写字母 <code>L</code>，因为小写字母 <code>l</code> 与数字 <code>1</code> 很难区分。</p>
+<p>整数类型 <code>byte</code>、<code>short</code>、<code>int</code> 和 <code>long</code> 的值可以由 <code>int</code> 字面值创建。
+    <code>long</code> 类型的值超出了 <code>int</code> 可以表示的范围，可以由 <code>long</code> 字面值创建。整数字面值可以由下面数字系统表示：</p>
 <ul>
-<li>Decimal: Base 10, whose digits consists of the numbers 0 through 9; this is the number system you use every day</li>
-<li>Hexadecimal: Base 16, whose digits consist of the numbers 0 through 9 and the letters A through F</li>
-<li>Binary: Base 2, whose digits consists of the numbers 0 and 1 (you can create binary literals in Java SE 7 and later)</li>
+<li>十进制：基数为 10，包含 0 到 9 的数字，这也是您每天都在用的数字系统。</li>
+<li>十六进制：基数为 16，包含 0 到 9 的数字和 A 到 F 的字母。</li>
+<li>二进制：基数为 2，包含数字 0 和 1 (从 Java SE 7 开始您可以创建二进制的字面值)。</li>
 </ul>
-<p>For general-purpose programming, the decimal system is likely to be the only number system you&#39;ll ever use. However, if you need to use another number system, the following example shows the correct syntax. The prefix <code>0x</code> indicates hexadecimal and <code>0b</code> indicates binary:</p>
+<p>一般来讲，十进制系统是您可能用到的唯一数字系统。然而，如果您需要使用别的数字系统，下面的例子展示了正确的语法。<code>0x</code> 前缀表示十六进制，
+    <code>0b</code> 前缀表示二进制：</p>
 <div class="codeblock"><pre>
 // The number 26, in decimal
 int decVal = 26;
@@ -633,24 +654,30 @@ int hexVal = 0x1a;
 // The number 26, in binary
 int binVal = 0b11010;
 </pre></div>
-<h4>Floating-Point Literals</h4>
-<p>A floating-point literal is of type <code>float</code> if it ends with the letter <code>F</code> or <code>f</code>; otherwise its type is <code>double</code> and it can optionally end with the letter <code>D</code> or <code>d</code>.</p>
-<p>The floating point types (<code>float</code> and <code>double</code>) can also be expressed using E or e (for scientific notation), F or f (32-bit float literal) and D or d (64-bit double literal; this is the default and by convention is omitted).</p>
+<h4>浮点字面值</h4>
+<p>浮点字面值如果以字母 <code>F</code> 或 <code>f</code> 结尾，其类型为 <code>float</code>；否则其类型为 <code>double</code>，可选地也可以加后缀 <code>D</code> 或 <code>d</code>。</p>
+<p>浮点类型 (<code>float</code> 和 <code>double</code>) 可以使用 E 或 e 表示 (科学计数法)，F 或 f (32 位 float 字面值) 和 D 或 d (64 位 double 字面值，这是默认值，习惯上会省略)。</p>
 <div class="codeblock"><pre>
 double d1 = 123.4;
 // same value as d1, but in scientific notation
 double d2 = 1.234e2;
 float f1  = 123.4f;
 </pre></div>
-<h4>Character and String Literals</h4>
-<p>Literals of types <code>char</code> and <code>String</code> may contain any Unicode (UTF-16) characters. If your editor and file system allow it, you can use such characters directly in your code. If not, you can use a &quot;Unicode escape&quot; such as <code>&#39;\u0108&#39;</code> (capital C with circumflex), or <code>&quot;S\u00ED Se\u00F1or&quot;</code> (S&#237; Se&ntilde;or in Spanish). Always use &#39;single quotes&#39; for <code>char</code> literals and &quot;double quotes&quot; for <code>String</code> literals. Unicode escape sequences may be used elsewhere in a program (such as in field names, for example), not just in <code>char</code> or <code>String</code> literals.</p>
-<p>The Java programming language also supports a few special escape sequences for <code>char</code> and <code>String</code> literals: <code>\b</code> (backspace), <code>\t</code> (tab), <code>\n</code> (line feed), <code>\f</code> (form feed), <code>\r</code> (carriage return), <code>\&quot;</code> (double quote), <code>\&#39;</code> (single quote), and <code>\\</code> (backslash).</p>
-<p>There&#39;s also a special <code>null</code> literal that can be used as a value for any reference type. <code>null</code> may be assigned to any variable, except variables of primitive types. There&#39;s little you can do with a <code>null</code> value beyond testing for its presence. Therefore, <code>null</code> is often used in programs as a marker to indicate that some object is unavailable.</p>
-<p>Finally, there&#39;s also a special kind of literal called a <em>class literal</em>, formed by taking a type name and appending &quot;<code>.class&quot;</code>; for example, <code>String.class</code>. This refers to the object (of type <code>Class</code>) that represents the type itself.</p>
-<h2>Using Underscore Characters in Numeric Literals</h2>
-<p>In Java SE 7 and later, any number of underscore characters (<code>_</code>) can appear anywhere between digits in a numerical literal. This feature enables you, for example. to separate groups of digits in numeric literals, which can improve the readability of your code.</p>
-<p>For instance, if your code contains numbers with many digits, you can use an underscore character to separate digits in groups of three, similar to how you would use a punctuation mark like a comma, or a space, as a separator.</p>
-<p>The following example shows other ways you can use the underscore in numeric literals:</p>
+<h4>字符和字符串字面值</h4>
+<p><code>char</code> 和 <code>String</code> 字面值可包含任意的 Unicode (UTF-16) 字符。如果您的编辑器和文件系统支持，那您可以直接在代码中使用这样的字符。
+    如果不支持，您可以使用 &quot;Unicode 转义&quot; 比如 <code>&#39;\u0108&#39;</code> (带音调符号的 C)，或 <code>&quot;S\u00ED Se\u00F1or&quot;</code> (S&#237; 西班牙语中的 Se&ntilde;or)。
+<code>char</code> 类型字面值用 &#39;单引号&#39; 括起来， <code>String</code> 字面值用 &quot;双引号&quot; 括起来。Unicode 转义序列可以用在程序的任何地方
+    (比如字段名)，而不仅仅是用在 <code>char</code> 或 <code>String</code> 字面值中。</p>
+<p>Java 也支持一些特殊的转义序列：
+     <code>\b</code> (退格)，<code>\t</code> (制表符)， <code>\n</code> (换行)， <code>\f</code> (换页)， <code>\r
+    </code> (回车)， <code>\&quot;</code> (双引号)， <code>\&#39;</code> (单引号)， and <code>\\</code>
+    (反斜杠)。</p>
+<p>还有一个 <code>null</code> 字面值，可以用作任何引用类型的值。<code>null</code> 可以赋值给任何非基本类型的变量。程序中经常使用 <code>null</code> 作为对象不可用的标记。</p>
+<p>最后，还有一种特殊的字面值叫 <em>类字面值</em>，形式是类型名称加上后缀 &quot;<code>.class&quot;</code>，比如 <code>String.class</code>。指向代表类型本身的对象 (<code>Class</code> 类型)。</p>
+<h2>在数字字面值中使用下划线</h2>
+<p>从 Java SE 7 开始，数字字面值的数字之间可以有任意数量的下划线 (<code>_</code>)。这项特性让您可以对数字字面值中的数字分组，以提升其可读性。</p>
+<p>比如，您的代码中有一个数字，包含很多位数，您可以使用下划线将其按照三个一组进行分割，就像您会使用逗号、空格作为分割符一样。</p>
+<p>下面的例子展示了下划线在数字字面值中的使用：</p>
 <div class="codeblock"><pre>
 long creditCardNumber = 1234_5678_9012_3456L;
 long socialSecurityNumber = 999_99_9999L;
@@ -661,14 +688,14 @@ long maxLong = 0x7fff_ffff_ffff_ffffL;
 byte nybbles = 0b0010_0101;
 long bytes = 0b11010010_01101001_10010100_10010010;
 </pre></div>
-<p>You can place underscores only between digits; you cannot place underscores in the following places:</p>
+<p>您只能将下划线放在数字之间，您不能将下划线放在下面的位置：</p>
 <ul>
-<li>At the beginning or end of a number</li>
-<li>Adjacent to a decimal point in a floating point literal</li>
-<li>Prior to an <code>F</code> or <code>L</code> suffix</li>
-<li>In positions where a string of digits is expected</li>
+<li>数字的开始或结尾</li>
+<li>浮点字面值中与小数点相邻的位置</li>
+<li><code>F</code> 或 <code>L</code> 后缀前面</li>
+<li>期望出现一串数字的位置</li>
 </ul>
-<p>The following examples demonstrate valid and invalid underscore placements (which are highlighted) in numeric literals:</p>
+<p>下面的例子说明了在数字字面值中，合法与不合法的下划线的使用：</p>
 <div class="codeblock"><pre>
 // <strong>Invalid: cannot put underscores</strong>
 // <strong>adjacent to a decimal point</strong>
@@ -727,7 +754,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Variables
+        <b>上一页：</b> 变量
         <br /><b>下一页：</b> Arrays
     </div>
 </body>

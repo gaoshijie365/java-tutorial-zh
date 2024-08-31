@@ -527,7 +527,7 @@ To use Java generics effectively, you must consider the following restrictions:<
 <li>
 <a class="TutorialLink" target="_top" href="#createObjects">Cannot Create Instances of Type Parameters</a></li>
 <li>
-<a class="TutorialLink" target="_top" href="#createStatic">Cannot Declare Static Fields Whose Types are Type Parameters</a></li>
+<a class="TutorialLink" target="_top" href="#createStatic">Cannot Declare 静态字段 Whose Types are Type Parameters</a></li>
 <li>
 <a class="TutorialLink" target="_top" href="#cannotCast">Cannot Use Casts or <tt>instanceof</tt> With Parameterized Types</a></li>
 <li>
@@ -599,7 +599,7 @@ append(ls, String.class);
 </pre></div>
 
 
-<h2><a name="createStatic">Cannot Declare Static Fields Whose Types are Type Parameters</a></h2>
+<h2><a name="createStatic">Cannot Declare 静态字段 Whose Types are Type Parameters</a></h2>
 <p>
 A class's static field is a class-level variable shared by all non-static objects of the class.  Hence, static fields of type parameters are not allowed. Consider the following class:</p>
 <div class="codeblock"><pre>

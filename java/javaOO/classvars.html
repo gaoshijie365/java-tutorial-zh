@@ -478,7 +478,7 @@
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
 <div class="linkAHEAD"><a href="classes.html">Classes</a></div>
 <div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member Variables</a></div>
+<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">Defining Methods</a></div>
 <div class="linkBHEAD"><a href="constructors.html">Providing Constructors for Your Classes</a></div>
 <div class="linkBHEAD"><a href="arguments.html">Passing Information to a Method or a Constructor</a></div>
@@ -528,7 +528,7 @@
 
 <!---Understanding Class Members=-->
 <p>In this section, we discuss the use of the <code>static</code> keyword to create fields and methods that belong to the class, rather than to an instance of the class.</p>
-<h2>Class Variables</h2>
+<h2>类变量</h2>
 <p>When a number of objects are created from the same class blueprint, they each have their own distinct copies of <i>instance variables</i>. In the case of the <code>Bicycle</code> class, the instance variables are <code>cadence</code>, <code>gear</code>, and <code>speed</code>. Each <code>Bicycle</code> object has its own values for these variables, stored in different memory locations.</p>
 <p>Sometimes, you want to have variables that are common to all objects. This is accomplished with the <code>static</code> modifier. Fields that have the <code>static</code> modifier in their declaration are called <i>static fields</i> or <i>class variables</i>. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.</p>
 <p>For example, suppose you want to create a number of <code>Bicycle</code> objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time, you need a field to keep track of how many <code>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this you need a class variable, <code>numberOfBicycles</code>, as follows:</p>

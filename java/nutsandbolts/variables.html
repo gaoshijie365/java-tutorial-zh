@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Variables (Java&trade; 教程 &gt;
+        <title>变量 (Java&trade; 教程 &gt;
             学习 Java &gt; 语言基础)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,10 +476,10 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">语言基础</a></div>
-<div class="nolinkAHEAD">Variables</div>
-<div class="linkBHEAD"><a href="datatypes.html">Primitive Data Types</a></div>
-<div class="linkBHEAD"><a href="arrays.html">Arrays</a></div>
-<div class="linkBHEAD"><a href="variablesummary.html">Summary of Variables</a></div>
+<div class="nolinkAHEAD">变量</div>
+<div class="linkBHEAD"><a href="datatypes.html">基本数据类型</a></div>
+<div class="linkBHEAD"><a href="arrays.html">数组</a></div>
+<div class="linkBHEAD"><a href="variablesummary.html">变量总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_variables.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="operators.html">Operators</a></div>
 <div class="linkBHEAD"><a href="op1.html">Assignment, Arithmetic, and Unary Operators</a></div>
@@ -515,32 +515,48 @@
                 <a target="_top" href="index.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="datatypes.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Variables</h1></div>
+            <div id="PageTitle"><h1>变量</h1></div>
             <div id="PageContent">
 
-<p>As you learned in the previous lesson, an object stores its state in <i>fields</i>.</p>
+<p>正如您在之前课程中所学，对象在其 <i>字段</i> 中存储状态。</p>
 <div class="codeblock"><pre>
 int <b>cadence</b> = 0;
 int <b>speed</b> = 0;
 int <b>gear</b> = 1;
 </pre></div>
-<p>The 
-<a class="TutorialLink" target="_top" href="../concepts/object.html">什么是对象？</a> discussion introduced you to fields, but you probably have still a few questions, such as: What are the rules and conventions for naming a field? Besides <code>int</code>, what other data types are there? Do fields have to be initialized when they are declared? Are fields assigned a default value if they are not explicitly initialized? We&#39;ll explore the answers to such questions in this lesson, but before we do, there are a few technical distinctions you must first become aware of. In the Java programming language, the terms &quot;field&quot; and &quot;variable&quot; are both used; this is a common source of confusion among new developers, since both often seem to refer to the same thing.</p>
-<p>The Java programming language defines the following kinds of variables:</p>
+<p>
+<a class="TutorialLink" target="_top" href="../concepts/object.html">什么是对象？</a>
+    向您介绍了字段，但您可能还有一些问题，比如：字段的命名有什么规则和习惯？除了 <code>int</code> 其它数据类型是什么？声明字段的时候是否必须初始化？如果字段没有显式初始化，是否会为其赋一个默认值？
+    我们将在本课程中揭晓这些问题的答案，但是在这么做之前，您必须意识到这里有一些技术上的区别。在 Java 中，同时使用了术语 “字段” 和 “变量”，初学者可能对它们感到疑惑，因为它们看起来指的是同一件事。</p>
+<p>Java 中定义了下面几种变量：</p>
 <ul>
-<li><strong>Instance Variables (Non-Static Fields)</strong> Technically speaking, objects store their individual states in &quot;non-static fields&quot;, that is, fields declared without the <code>static</code> keyword. Non-static fields are also known as <i>instance variables</i> because their values are unique to each <i>instance</i> of a class (to each object, in other words); the <code>currentSpeed</code> of one bicycle is independent from the <code>currentSpeed</code> of another.</li>
-<li><strong>Class Variables (Static Fields)</strong> A <i>class variable</i> is any field declared with the <code>static</code> modifier; this tells the compiler that there is exactly one copy of this variable in existence, regardless of how many times the class has been instantiated. A field defining the number of gears for a particular kind of bicycle could be marked as <code>static</code> since conceptually the same number of gears will apply to all instances. The code <code>static int numGears = 6;</code> would create such a static field. Additionally, the keyword <code>final</code> could be added to indicate that the number of gears will never change.</li>
-<li><strong>Local Variables</strong> Similar to how an object stores its state in fields, a method will often store its temporary state in <i>local variables</i>. The syntax for declaring a local variable is similar to declaring a field (for example, <code>int count = 0;</code>). There is no special keyword designating a variable as local; that determination comes entirely from the location in which the variable is declared &#151; which is between the opening and closing braces of a method. As such, local variables are only visible to the methods in which they are declared; they are not accessible from the rest of the class.</li>
-<li><strong>Parameters</strong> You&#39;ve already seen examples of parameters, both in the <code>Bicycle</code> class and in <code>main</code> 方法 of the &quot;Hello World!&quot; application. Recall that the signature for <code>main</code> 方法 is <code>public static void main(String[] args)</code>. Here, the <code>args</code> variable is the parameter to this method. The important thing to remember is that parameters are always classified as &quot;variables&quot; not &quot;fields&quot;. This applies to other parameter-accepting constructs as well (such as constructors and exception handlers) that you&#39;ll learn about later in the tutorial.</li>
+<li><strong>实例变量 (非静态字段)</strong> 从技术上来讲，对象在 “非静态字段” 中存储它们的状态，也就是说字段没有使用 <code>static</code> 关键字修饰。
+    非静态字段也叫做 <i>实例变量</i>，因为对于类的每个 <i>实例</i> 来说它们的值都是不同的；一个自行车的 <code>currentSpeed</code> 与另一个自行车的 <code>currentSpeed
+    </code> 是无关的。</li>
+<li><strong>类变量 (静态字段)</strong> <i>类变量</i> 是带有 <code>static</code> 修饰符的字段；不管类被实例化多少次，都只存在一份变量。
+    对一个特定种类的自行车来说，可以将档位字段标记为 <code>static</code>，因为从概念上来说，它的所有实例都会有相同数量的档位。代码
+    <code>static int numGears = 6;</code> 可以创建这样一个字段。此外，也可以添加关键字 <code>final</code>，表明档位数永远不会改变。</li>
+<li><strong>局部变量</strong> 对象在其字段中存储状态，类似地，方法经常在 <i>局部变量</i> 中存储其临时状态。声明局部变量的语法与声明字段类似 (比如，<code>int count = 0;</code>)。
+    没有给局部变量指派任何特殊的关键字；这是因为变量声明的位置在方法的开闭大括号之间，仅对声明它们的方法可见，在类的其余部分访问不到。</li>
+<li><strong>参数</strong> 您已经见过参数的例子，在 <code>Bicycle</code> 类，在 &quot;Hello World!&quot; 应用的 <code>main</code> 方法中。
+    <code>main</code> 方法的签名是 <code>public static void main(String[] args)</code>。在这里，<code>args</code> 变量就是方法的参数。
+    重要的是参数总是被归为 &quot;变量&quot; 而不是 &quot;字段&quot;。这同样适用于其它接收参数的构造器 (比如构造器和异常处理器)，这部分内容将在后续教程中学习。</li>
 </ul>
-<p>Having said that, the remainder of this tutorial uses the following general guidelines when discussing fields and variables. If we are talking about &quot;fields in general&quot; (excluding local variables and parameters), we may simply say &quot;fields&quot;. If the discussion applies to &quot;all of the above&quot;, we may simply say &quot;variables&quot;. If the context calls for a distinction, we will use specific terms (static field, local variables, etc.) as appropriate. You may also occasionally see the term &quot;member&quot; used as well. A type&#39;s fields, methods, and nested types are collectively called its <em>members</em>.</p>
-<h2><a name="naming" id="naming">Naming</a></h2>
-<p><a name="naming__1" id="naming__1">Every programming language has its own set of rules and conventions for the kinds of names that you&#39;re allowed to use, and the Java programming language is no different. The rules and conventions for naming your variables can be summarized as follows:</a></p>
+<p>话虽如此，教程的剩余部分在讨论字段和变量时将使用下述通用指南。如果我们讨论 &quot;一般的字段&quot; (除了局部变量和参数)，我们简单的说 &quot;字段&quot;。
+    如果讨论适用于 &quot;以上所有&quot;，我们简单地称其为 &quot;变量&quot;。
+    如果上下文要求对其进行区分，我们将使用特定的术语 (静态字段、局部变量，等)。偶尔也会看到术语 &quot;成员&quot;。
+    一个类型的字段、方法和嵌套类型统称为其 <em>成员</em>。</p>
+<h2><a name="naming" id="naming">命名</a></h2>
+<p><a name="naming__1" id="naming__1">对于名称，每种编程语言都有自己的规则和习惯，Java 也一样。变量的命名规则和习惯可以总结如下：</a></p>
 <ul>
-<li>Variable names are case-sensitive. A variable&#39;s name can be any legal identifier &#151; an unlimited-length sequence of Unicode letters and digits, beginning with a letter, the dollar sign &quot;<code>$</code>&quot;, or the underscore character &quot;<code>_</code>&quot;. The convention, however, is to always begin your variable names with a letter, not &quot;<code>$</code>&quot; or &quot;<code>_</code>&quot;. Additionally, the dollar sign character, by convention, is never used at all. You may find some situations where auto-generated names will contain the dollar sign, but your variable names should always avoid using it. A similar convention exists for the underscore character; while it&#39;s technically legal to begin your variable&#39;s name with &quot;<code>_</code>&quot;, this practice is discouraged. White space is not permitted.</li>
-<li>Subsequent characters may be letters, digits, dollar signs, or underscore characters. Conventions (and common sense) apply to this rule as well. When choosing a name for your variables, use full words instead of cryptic abbreviations. Doing so will make your code easier to read and understand. In many cases it will also make your code self-documenting; fields named <code>cadence</code>, <code>speed</code>, and <code>gear</code>, for example, are much more intuitive than abbreviated versions, such as <code>s</code>, <code>c</code>, and <code>g</code>. Also keep in mind that the name you choose must not be a 
-<a class="TutorialLink" target="_top" href="_keywords.html">keyword or reserved word</a>.</li>
-<li>If the name you choose consists of only one word, spell that word in all lowercase letters. If it consists of more than one word, capitalize the first letter of each subsequent word. The names <code>gearRatio</code> and <code>currentGear</code> are prime examples of this convention. If your variable stores a constant value, such as <code>static final int NUM_GEARS = 6</code>, the convention changes slightly, capitalizing every letter and separating subsequent words with the underscore character. By convention, the underscore character is never used elsewhere.</li>
+<li>变量名大小写敏感。变量名可以是任何合法的标识符 &#151; 不限长度的 Unicode 字母和数字序列，由字母、美元符 &quot;<code>$</code>&quot;、或下划线 &quot;<code>_</code>&quot; 开头。
+    习惯上，变量名以字母开头，而不是 &quot;<code>$</code>&quot; 或 &quot;<code>_</code>&quot;。此外，习惯上也从来不用美元符。您可能会在自动生成的名字中看到美元符，但是您不应该在自己的变量名中使用它。
+    相似的习惯也适用于下划线，技术上来说您的变量名可以以 &quot;<code>_</code>&quot; 开头，但不鼓励您这么做。不允许空白字符。</li>
+<li>后续的字符可以是字母、数字、美元符、或下划线。当为变量选择名字时，使用完整的单词而不是缩写。这么做可以使您的代码更易阅读和理解。大多数情况也也会使您的代码是自文档的，字段命名为
+    <code>cadence</code>、<code>speed</code> 和 <code>gear</code>，比缩写版，比如 <code>s</code>、<code>c</code> 和 <code>g</code> 更直白。
+    您选择的名字不能是 <a class="TutorialLink" target="_top" href="_keywords.html">关键字或保留字</a>。</li>
+<li>如果您选择的名字仅包含一个单词，那就全部小写。如果包含多个单词，后续每个单词的首字母大写。名称 <code>gearRatio</code> 和 <code>currentGear</code> 就是例子。
+    如果变量存储一个常量值，比如 <code>static final int NUM_GEARS = 6</code>，习惯上将所有字母大写，并使用下划线连接每个单词。习惯上，其它的地方不会用到下划线。</li>
 </ul>
 
         </div>
@@ -570,7 +586,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 语言基础
-        <br /><b>下一页：</b> Primitive Data Types
+        <br /><b>下一页：</b> 基本数据类型
     </div>
 </body>
 </html> 

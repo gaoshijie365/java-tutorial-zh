@@ -478,7 +478,7 @@
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
 <div class="linkAHEAD"><a href="classes.html">Classes</a></div>
 <div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member Variables</a></div>
+<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">Defining Methods</a></div>
 <div class="linkBHEAD"><a href="constructors.html">Providing Constructors for Your Classes</a></div>
 <div class="linkBHEAD"><a href="arguments.html">Passing Information to a Method or a Constructor</a></div>
@@ -548,12 +548,12 @@ single-method classes more compactly.</p>
       <li><a href="#approach6">Approach 6: Use Standard Functional Interfaces with Lambda Expressions</a></li>
       <li><a href="#approach7">Approach 7: Use Lambda Expressions Throughout Your Application</a></li>
       <li><a href="#approach8">Approach 8: Use 泛型 More Extensively</a></li>
-      <li><a href="#approach9">Approach 9: Use Aggregate Operations That Accept Lambda Expressions as Parameters</a></li>
+      <li><a href="#approach9">Approach 9: Use 聚合操作 That Accept Lambda Expressions as Parameters</a></li>
     </ul>
   </li>
   <li><a href="#lambda-expressions-in-gui-applications">Lambda Expressions in GUI Applications</a></li>
   <li><a href="#syntax">Syntax of Lambda Expressions</a></li>
-  <li><a href="#accessing-local-variables">Accessing Local Variables of the Enclosing Scope</a></li>
+  <li><a href="#accessing-local-variables">Accessing 局部变量 of the Enclosing Scope</a></li>
   <li><a href="#target-typing">Target Typing</a>
     <ul>
       <li><a href="#target-types-and-method-arguments">Target Types and Method Arguments</a></li>
@@ -975,7 +975,7 @@ then prints it:</p>
 <p>You can replace each of these actions with an aggregate operation.</p>
 
 <!-- ********************************************************************** -->
-<h3><a name="approach9">Approach 9: Use Aggregate Operations That Accept Lambda Expressions as Parameters</a></h3>
+<h3><a name="approach9">Approach 9: Use 聚合操作 That Accept Lambda Expressions as Parameters</a></h3>
 
 <p>The following example uses aggregate operations to print the e-mail addresses of those members contained in the collection <code>roster</code> who are eligible for Selective Service:</p>
 
@@ -1025,7 +1025,7 @@ then prints it:</p>
 <p>The operations <code>filter</code>, <code>map</code>, and <code>forEach</code> are <em>aggregate operations</em>. Aggregate operations process elements from a stream, not directly from a collection (which is the reason why the first method invoked in this example is <code>stream</code>). A <em>stream</em> is a sequence of elements. Unlike a collection, it is not a data structure that stores elements. Instead, a stream carries values from a source, such as collection, through a pipeline. A <em>pipeline</em> is a sequence of stream operations, which in this example is <code>filter</code>- <code>map</code>-<code>forEach</code>. In addition, aggregate operations typically accept lambda expressions as parameters, enabling you to customize how they behave.</p>
 
 <p>For a more thorough discussion of aggregate operations, see the
-<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> lesson.</p>
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">聚合操作</a> lesson.</p>
 
 
 <h2><a name="lambda-expressions-in-gui-applications">Lambda Expressions in GUI Applications</a></h2>
@@ -1151,7 +1151,7 @@ the following:</p>
 20 - 10 = 10</pre>
 
 
-<h2><a name="accessing-local-variables">Accessing Local Variables of the Enclosing Scope</a></h2>
+<h2><a name="accessing-local-variables">Accessing 局部变量 of the Enclosing Scope</a></h2>
 
 <p>Like local and anonymous classes, lambda expressions can
 <a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">capture variables</a>; they have the same access to local variables of the enclosing scope. However, unlike local and anonymous classes, lambda expressions do not have any shadowing issues (see

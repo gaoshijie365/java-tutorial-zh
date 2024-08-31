@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Arrays (Java&trade; 教程 &gt;
+        <title>数组 (Java&trade; 教程 &gt;
             学习 Java &gt; 语言基础)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,10 +476,10 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">语言基础</a></div>
-<div class="linkAHEAD"><a href="variables.html">Variables</a></div>
-<div class="linkBHEAD"><a href="datatypes.html">Primitive Data Types</a></div>
-<div class="nolinkBHEAD">Arrays</div>
-<div class="linkBHEAD"><a href="variablesummary.html">Summary of Variables</a></div>
+<div class="linkAHEAD"><a href="variables.html">变量</a></div>
+<div class="linkBHEAD"><a href="datatypes.html">基本数据类型</a></div>
+<div class="nolinkBHEAD">数组</div>
+<div class="linkBHEAD"><a href="variablesummary.html">变量总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_variables.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="operators.html">Operators</a></div>
 <div class="linkBHEAD"><a href="op1.html">Assignment, Arithmetic, and Unary Operators</a></div>
@@ -503,7 +503,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 语言基础
-        <br /><b>Section:</b> Variables
+        <br /><b>Section:</b> 变量
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -516,15 +516,18 @@
                 <a target="_top" href="datatypes.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="variablesummary.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Arrays</h1></div>
+            <div id="PageTitle"><h1>数组</h1></div>
             <div id="PageContent">
 
 
-<p>An <i>array</i> is a container object that holds a fixed number of values of a single type. The length of an array is established when the array is created. After creation, its length is fixed. You have seen an example of arrays already, in <code>main</code> 方法 of the &quot;Hello World!&quot; application. This section discusses arrays in greater detail.</p>
-<center><img src="../../figures/java/objects-tenElementArray.gif" width="335" height="124" align="bottom" alt="Illustration of an array as 10 boxes numbered 0 through 9; an index of 0 indicates the first element in the array" /></p><p class="FigureCaption">An array of 10 elements.</p></center><br />
-<p>Each item in an array is called an <i>element</i>, and each element is accessed by its numerical <i>index</i>. As shown in the preceding illustration, numbering begins with 0. The 9th element, for example, would therefore be accessed at index 8.</p>
-<p>The following program, 
-<a class="SourceLink" target="_blank" href="examples/ArrayDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayDemo.java'); return false;"><code>ArrayDemo</code></a>, creates an array of integers, puts some values in the array, and prints each value to standard output.</p>
+<p><i>数组</i> 是一个容器，包含同类型的固定数量的值。数组在创建时其长度就已确定。创建之后，其长度就固定下来了。您已经见过数组使用的例子了，
+    在 &quot;Hello World!&quot; 应用的 <code>main</code> 方法中。本节将更加详细地讨论数组。</p>
+<center><img src="../../figures/java/objects-tenElementArray.gif" width="335" height="124" align="bottom" alt="Illustration of an array as 10 boxes numbered 0 through 9; an index of 0 indicates the first element in the array" /></p><p class="FigureCaption">10 个元素的数组。</p></center><br />
+<p>数组中的每一项叫做 <i>元素</i>，每个元素通过其数字 <i>索引</i> 访问。就像上图所示，索引从 0 开始。第 9 个元素，索引为 8。</p>
+<p>下面的程序，
+<a class="SourceLink" target="_blank" href="examples/ArrayDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/ArrayDemo.java'); return false;"><code>ArrayDemo</code></a>，
+    创建了一个整型数组，往数组中放入一些值，并将每个值打印到标准输出。</p>
 <div class="codeblock"><pre>
 
 class ArrayDemo {
@@ -572,7 +575,7 @@ class ArrayDemo {
     }
 } 
 </pre></div>
-<p>The output from this program is:</p>
+<p>程序的输出是：</p>
 <div class="codeblock"><pre>
 Element at index 0: 100
 Element at index 1: 200
@@ -585,17 +588,19 @@ Element at index 7: 800
 Element at index 8: 900
 Element at index 9: 1000
 </pre></div>
-<p>In a real-world programming situation, you would probably use one of the supported <i>looping constructs</i> to iterate through each element of the array, rather than write each line individually as in the preceding example. However, the example clearly illustrates the array syntax. You will learn about the various looping constructs (<code>for</code>, <code>while</code>, and <code>do-while</code>) in the 
-<a class="TutorialLink" target="_top" href="flow.html">Control Flow</a> section.</p>
-<h2>Declaring a Variable to Refer to an Array</h2>
-<p>The preceding program declares an array (named <code>anArray</code>) with the following line of code:</p>
+<p>在真实的编程场景下，您大概会使用某种 <i>循环结构</i> 来迭代数组中的每个元素。然而，这个例子清晰地说明了数组的语法。您将在
+<a class="TutorialLink" target="_top" href="flow.html">控制流</a> 一节学习几种循环结构 (<code>for</code>、<code>while</code> 和
+    <code>do-while</code>)。</p>
+<h2>声明指向数组的变量</h2>
+<p>前一个程序使用下面一行代码声明了一个数组 (叫做 <code>anArray</code>)：</p>
 <div class="codeblock"><pre>
 // declares an array of integers
 int[] anArray;
 </pre></div>
-<p>Like declarations for variables of other types, an array declaration has two components: the array&#39;s type and the array&#39;s name. An array&#39;s type is written as <code><em>type</em>[]</code>, where <code><em>type</em></code> is the data type of the contained elements; the brackets are special symbols indicating that this variable holds an array. The size of the array is not part of its type (which is why the brackets are empty). An array&#39;s name can be anything you want, provided that it follows the rules and conventions as previously discussed in the 
-<a class="TutorialLink" target="_top" href="variables.html#naming">naming</a> section. As with variables of other types, the declaration does not actually create an array; it simply tells the compiler that this variable will hold an array of the specified type.</p>
-<p>Similarly, you can declare arrays of other types:</p>
+<p>和声明其它类型的变量一样，数组的声明也包含两部分：数组类型和数组名称。数组的类型写做 <code><em>type</em>[]</code>，其中
+    <code><em>type</em></code> 是其包含的元素的类型。中括号表明这个变量持有数组。数组的大小不是类型的一部分 (这也就是中括号是空的的原因)。
+    数组的名称可以是任意的，只要遵循之前的命名规则和习惯就行了。和其它类型的变量一样，声明并没有真的创建数组，它仅仅是告诉编译器这个变量持有特定类型的数组。</p>
+<p>类似地，您也可以声明其它类型的数组：</p>
 <div class="codeblock"><pre>
 byte[] anArrayOfBytes;
 short[] anArrayOfShorts;
@@ -606,35 +611,35 @@ boolean[] anArrayOfBooleans;
 char[] anArrayOfChars;
 String[] anArrayOfStrings;
 </pre></div>
-<p>You can also place the brackets after the array&#39;s name:</p>
+<p>您也可以将中括号放在数组名称后：</p>
 <div class="codeblock"><pre>
 // this form is discouraged
 float anArrayOfFloats[];
 </pre></div>
-<p>However, convention discourages this form; the brackets identify the array type and should appear with the type designation.</p>
-<h2>Creating, Initializing, and Accessing an Array</h2>
-<p>One way to create an array is with the <code>new</code> operator. The next statement in the <code>ArrayDemo</code> program allocates an array with enough memory for 10 integer elements and assigns the array to the <code>anArray</code> variable.</p>
+<p>然而，并不推荐这种写法，中括号表明是数组类型，应该和类型出现在一起。</p>
+<h2>创建、初始化和访问数组</h2>
+<p>一种创建数组的方式是使用 <code>new</code> 操作符。<code>ArrayDemo</code> 中的下一条语句分配了一个数组，有足够的内存容纳 10 个整型元素，并将其赋值给变量 <code>anArray</code>。</p>
 <div class="codeblock"><pre>
 // create an array of integers
 anArray = new int[10];
 </pre></div>
-<p>If this statement is missing, then the compiler prints an error like the following, and compilation fails:</p>
+<p>如果没有这条语句，编译器将报告如下的错误：</p>
 <div class="codeblock"><pre>
 ArrayDemo.java:4: Variable anArray may not have been initialized.
 </pre></div>
-<p>The next few lines assign values to each element of the array:</p>
+<p>下面几行给数组的每个元素赋值：</p>
 <div class="codeblock"><pre>
 anArray[0] = 100; // initialize first element
 anArray[1] = 200; // initialize second element
 anArray[2] = 300; // and so forth
 </pre></div>
-<p>Each array element is accessed by its numerical index:</p>
+<p>通过数字索引访问每一个元素：</p>
 <div class="codeblock"><pre>
 System.out.println("Element 1 at index 0: " + anArray[0]);
 System.out.println("Element 2 at index 1: " + anArray[1]);
 System.out.println("Element 3 at index 2: " + anArray[2]);
 </pre></div>
-<p>Alternatively, you can use the shortcut syntax to create and initialize an array:</p>
+<p>可选地，您也可以使用更简短的语法来创建和初始化数组：</p>
 <div class="codeblock"><pre>
 int[] anArray = { 
     100, 200, 300,
@@ -642,11 +647,12 @@ int[] anArray = {
     700, 800, 900, 1000
 };
 </pre></div>
-<p>Here the length of the array is determined by the number of values provided between braces and separated by commas.</p>
-<p>You can also declare an array of arrays (also known as a <em>multidimensional</em> array) by using two or more sets of brackets, such as <code>String[][] names</code>. Each element, therefore, must be accessed by a corresponding number of index values.</p>
+<p>数组的长度由大括号中值的数量决定。</p>
+<p>您也可以声明数组的数组 (也叫做 <em>多维</em> 数组)，通过使用多对中括号，比如 <code>String[][] names</code>。必须通过对应的索引访问每个元素。</p>
 
-<p>In the Java programming language, a multidimensional array is an array whose components are themselves arrays. This is unlike arrays in C or Fortran. A consequence of this is that the rows are allowed to vary in length, as shown in the following 
-<a class="SourceLink" target="_blank" href="examples/MultiDimArrayDemo.java" onclick="showCode('../../displayCode.html', 'examples/MultiDimArrayDemo.java'); return false;"><code>MultiDimArrayDemo</code></a> program:</p>
+<p>在 Java 中，多维数组是一个数组，其组件本身是数组。这和 C 或 Fortran 中的数组不同。这么做的后果是每一行的长度可以不同，如下面程序
+<a class="SourceLink" target="_blank" href="examples/MultiDimArrayDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/MultiDimArrayDemo.java'); return false;"><code>MultiDimArrayDemo</code></a> 所示：</p>
 
 <div class="codeblock"><pre>
 class MultiDimArrayDemo {
@@ -662,24 +668,26 @@ class MultiDimArrayDemo {
     }
 }
 </pre></div>
-<p>The output from this program is:</p>
+<p>程序的输出是：</p>
 <div class="codeblock"><pre>
 Mr. Smith
 Ms. Jones
 </pre></div>
-<p>Finally, you can use the built-in <code>length</code> property to determine the size of any array. The following code prints the array&#39;s size to standard output:</p>
+<p>最后，您可以使用内置的 <code>length</code> 属性获取数组的大小。下面的代码将数组大小打印到标准输出：</p>
 <div class="codeblock"><pre>
  System.out.println(anArray.length);
 </pre></div>
-<h2>Copying Arrays</h2>
-<p>The <code>System</code> class has an <code>arraycopy</code> method that you can use to efficiently copy data from one array into another:</p>
+<h2>复制数组</h2>
+<p><code>System</code> 类中有一个 <code>arraycopy</code> 方法，可以高效地将一个数组的数据复制到另一个数组中：</p>
 <div class="codeblock"><pre>
 public static void arraycopy(Object src, int srcPos,
                              Object dest, int destPos, int length)
 </pre></div>
-<p>The two <code>Object</code> arguments specify the array to copy <i>from</i> and the array to copy <i>to</i>. The three <code>int</code> arguments specify the starting position in the source array, the starting position in the destination array, and the number of array elements to copy.</p>
-<p>The following program, 
-<a class="SourceLink" target="_blank" href="examples/ArrayCopyDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyDemo.java'); return false;"><code>ArrayCopyDemo</code></a>, declares an array of <code>String</code> elements. It uses the <code>System.arraycopy</code> method to copy a subsequence of array components into a second array:</p>
+<p>两个 <code>Object</code> 参数分别代表拷贝的源和目的地。三个 <code>int</code> 参数分别代表源数组的起始位置和目标数组的起始位置和要拷贝的元素数量。</p>
+<p>下面的程序，
+<a class="SourceLink" target="_blank" href="examples/ArrayCopyDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/ArrayCopyDemo.java'); return false;"><code>ArrayCopyDemo</code></a>，
+    声明了一个元素类型为 <code>String</code> 的数组。它使用 <code>System.arraycopy</code> 方法复制了数组的一个子序列到第二个数组中：</p>
 <div class="codeblock"><pre>
  
 class ArrayCopyDemo {
@@ -696,16 +704,18 @@ class ArrayCopyDemo {
         }
     }
 }</pre></div>
-<p>The output from this program is:</p>
+<p>这个程序的输出是：</p>
 <div class="codeblock"><pre>
 Cappuccino Corretto Cortado Doppio Espresso Frappucino Freddo 
 </pre></div>
-<h2>Array Manipulations</h2>
-<p>Arrays are a powerful and useful concept used in programming. Java SE provides methods to perform some of the most common manipulations related to arrays. For instance, the
-<a class="SourceLink" target="_blank" href="examples/ArrayCopyDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyDemo.java'); return false;"><code>ArrayCopyDemo</code></a> example uses the <code>arraycopy</code> method of the <code>System</code> class instead of manually iterating through the elements of the source array and placing each one into the destination array. This is performed behind the scenes, enabling the developer to use just one line of code to call the method.</p>
-<p>For your convenience, Java SE provides several methods for performing array manipulations (common tasks, such as copying, sorting and searching arrays) in the
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> class. For instance, the previous example can be modified to use the <code>copyOfRange</code> method of the <code>java.util.Arrays</code> class, as you can see in the 
-<a class="SourceLink" target="_blank" href="examples/ArrayCopyOfDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyOfDemo.java'); return false;"><code>ArrayCopyOfDemo</code></a> example. The difference is that using the <code>copyOfRange</code> method does not require you to create the destination array before calling the method, because the destination array is returned by the method:</p>
+<h2>数组操作</h2>
+<p>数组是一项强大和有用的概念。Java SE 提供了方法来执行和数组相关的常见操作。比如，
+<a class="SourceLink" target="_blank" href="examples/ArrayCopyDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyDemo.java'); return false;"><code>ArrayCopyDemo</code></a>
+    使用 <code>System</code> 类的 <code>arraycopy</code> 方法，代替手工迭代源数组的每个元素并将其放入目标数组。这是在幕后执行的，使开发者仅用一行代码就可完成复制操作。</p>
+<p>为方便开发，Java SE 在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> 类中提供了一些方法执行数组操作 (常见的任务，比如复制、排序和搜索)。
+比如，上个例子可以使用 <code>java.util.Arrays</code> 类的 <code>copyOfRange</code> 进行改写，如
+<a class="SourceLink" target="_blank" href="examples/ArrayCopyOfDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyOfDemo.java'); return false;"><code>ArrayCopyOfDemo</code></a>
+所示。不同之处在于 <code>copyOfRange</code> 方法并不要求您在调用方法之前创建目标数组，因为目标数组由方法返回：</p>
 <div class="codeblock"><pre>
 
 class ArrayCopyOfDemo {
@@ -722,37 +732,29 @@ class ArrayCopyOfDemo {
     }
 }</pre></div>
 
-<p>As you can see, the output from this program is the same, although it requires fewer lines of code. Note that the second parameter of the <code>copyOfRange</code> method is the initial index of the range to be copied, inclusively, while the third parameter is the final index of the range to be copied, <em>exclusively</em>. In this example, the range to be copied does not include the array element at index 9 (which contains the string <code>Lungo</code>).</p>
+<p>正如您所看到的，程序的输出是相同的，但代码行数更少。<code>copyOfRange</code> 的第二个参数是要拷贝的第一个索引 (包含)，第三个参数是要拷贝的最后一个索引 (<em>不包含</em>)。
+在本例中，拷贝的范围不包括索引为 9 的元素 (包含字符串 <code>Lungo</code>)。</p>
 
-<p>Some other useful operations provided by methods in the <code>java.util.Arrays</code> class are:</p>
+<p><code>java.uti.Arrays</code> 类中提供的其它实用操作有：</p>
 <ul>
-<li><p>Searching an array for a specific value to get the index at which it is
-placed (the <code>binarySearch</code> method).</p></li>
-<li><p>Comparing two arrays to determine if they are equal or not (the
-<code>equals</code> method).</p></li>
-<li><p>Filling an array to place a specific value at each index (the
-<code>fill</code> method).</p></li>
-<li><p>Sorting an array into ascending order. This can be done either
-sequentially, using the <code>sort</code> method, or concurrently, using the
-<code>parallelSort</code> method introduced in Java SE 8. Parallel sorting of
-large arrays on multiprocessor systems is faster than sequential array sorting.</p></li>
-<li><p>Creating a stream that uses an array as its source (the <code>stream</code>
-method). For example, the following statement prints the contents of the
-<code>copyTo</code> array in the same way as in the previous example:</p>
+<li><p>给一个值，搜索其在数组中的索引 (<code>binarySearch</code> 方法)。</p></li>
+<li><p>比较数组是否相等 (<code>equals</code> 方法)。</p></li>
+<li><p>用同一个值填充数组 (<code>fill</code> 方法)。</p></li>
+<li><p>升序排序数组。可以使用 <code>sort</code> 方法顺序执行，也可以使用 <code>parallelSort</code> 方法 (Java SE 8 新增) 并行执行。
+在多处理器系统上对大数组进行排序比顺序排序快。</p></li>
+<li><p>使用数组作为源创建流 (<code>stream</code> 方法)。比如，下面语句打印 <code>copyTo</code> 数组的内容：</p>
 <div class="codeblock"><pre>
 java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);  
 </pre></div>
-<p>See
-<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> for more information about streams.</p>
+<p>查看
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">聚合操作</a> 获取关于流的更多信息。</p>
 </li>
-<li><p>Converting an array to a string. The <code>toString</code> method
-converts each element of the array to a string, separates them with commas, then
-surrounds them with brackets. For example, the following statement converts the
-<code>copyTo</code> array to a string and prints it:</p>
+<li><p>转换数组为字符串。<code>toString</code> 方法将数组中的每个元素转换为字符串，并由逗号分隔它们，然后使用中括号包括它们。
+比如，下面的语句将 <code>copyTo</code> 数组转换为数组并打印：</p>
 <div class="codeblock"><pre>
 System.out.println(java.util.Arrays.toString(copyTo)); 
 </pre></div>
-<p>This statement prints the following:</p>
+<p>这条语句打印如下：</p>
 <div class="codeblock"><pre>
 [Cappuccino, Corretto, Cortado, Doppio, Espresso, Frappucino, Freddo] 
 </pre></div>
@@ -784,8 +786,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Primitive Data Types
-        <br /><b>下一页：</b> Summary of Variables
+        <b>上一页：</b> 基本数据类型
+        <br /><b>下一页：</b> 变量总结
     </div>
 </body>
 </html> 

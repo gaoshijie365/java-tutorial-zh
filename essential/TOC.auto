@@ -132,7 +132,7 @@
 </ul>
 </li>
 <li class="tocli"><a href="concurrency/collections.html">Concurrent Collections</a></li>
-<li class="tocli"><a href="concurrency/atomicvars.html">Atomic Variables</a></li>
+<li class="tocli"><a href="concurrency/atomicvars.html">Atomic 变量</a></li>
 <li class="tocli"><a href="concurrency/threadlocalrandom.html">Concurrent Random Numbers</a>
 </li>
 </ul>
@@ -148,7 +148,7 @@
 <ul>
 <li class="tocli"><a href="environment/properties.html">Properties</a></li>
 <li class="tocli"><a href="environment/cmdLineArgs.html">Command-Line Arguments</a></li>
-<li class="tocli"><a href="environment/env.html">Environment Variables</a></li>
+<li class="tocli"><a href="environment/env.html">Environment 变量</a></li>
 <li class="tocli"><a href="environment/other.html">Other Configuration Utilities</a>
 </li>
 </ul>
@@ -171,7 +171,7 @@
 <ul>
 <li class="tocli"><a href="regex/intro.html">Introduction</a></li>
 <li class="tocli"><a href="regex/test_harness.html">Test Harness</a></li>
-<li class="tocli"><a href="regex/literals.html">String Literals</a></li>
+<li class="tocli"><a href="regex/literals.html">String 字面值</a></li>
 <li class="tocli"><a href="regex/char_classes.html">Character Classes</a></li>
 <li class="tocli"><a href="regex/pre_char_classes.html">Predefined Character Classes</a></li>
 <li class="tocli"><a href="regex/quant.html">Quantifiers</a></li>

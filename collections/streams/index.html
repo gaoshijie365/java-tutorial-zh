@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>课程：Aggregate Operations (Java&trade; 教程 &gt; Collections)</title>
+        <title>课程：聚合操作 (Java&trade; 教程 &gt; Collections)</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This collections Java tutorial describes interfaces, implementations, and algorithms in the Java Collections framework" />
      <meta name="keywords" content="java programming, learn java, java sample code, java collections, set, list, queue, map, array, arraylist, sortedset, sortedmap, deque" />
@@ -463,7 +463,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="nolinkLESSON">Aggregate Operations</div>
+            <div class="nolinkLESSON">聚合操作</div>
 <div class="linkAHEAD"><a href="reduction.html">Reduction</a></div>
 <div class="linkAHEAD"><a href="parallelism.html">Parallelism</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -482,7 +482,7 @@
                 <a target="_top" href="../interfaces/index.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="reduction.html">下一页&nbsp;&raquo;</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>课程：Aggregate Operations</h1></div>
+        <div id="PageTitle"><h1>课程：聚合操作</h1></div>
         <div id="PageContent">
  
 <p><strong>Note</strong>: To better understand the concepts in this section, review the sections
@@ -537,7 +537,7 @@
 
 <ul>
   <li><a href="#pipelines">Pipelines and Streams</a></li>
-  <li><a href="#differences">Differences Between Aggregate Operations and Iterators</a></li>
+  <li><a href="#differences">Differences Between 聚合操作 and Iterators</a></li>
 </ul>
 
 <p>Find the code excerpts described in this section in the example
@@ -589,7 +589,7 @@
 <p>The <code>average</code> operation calculates the average value of the elements contained in a stream of type <code>IntStream</code>. It returns an object of type <code>OptionalDouble</code>. If the stream contains no elements, then the <code>average</code> operation returns an empty instance of <code>OptionalDouble</code>, and invoking the method <code>getAsDouble</code> throws a <code>NoSuchElementException</code>. The JDK contains many terminal operations such as <code>average</code> that return one value by combining the contents of a stream. These operations are called <em>reduction operations</em>; see the section
 <a class="TutorialLink" target="_top" href="../../collections/streams/reduction.html">Reduction</a> for more information.</p>
 
-<h3><a name="differences">Differences Between Aggregate Operations and Iterators</a></h3>
+<h3><a name="differences">Differences Between 聚合操作 and Iterators</a></h3>
 
 <p>Aggregate operations, like <code>forEach</code>, appear to be like iterators. However, they have several fundamental differences:</p>
 

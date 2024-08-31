@@ -14,15 +14,15 @@
 </li>
 <li class="tocli"><a href="nutsandbolts/index.html">语言基础</a>
 <ul>
-<li class="tocli"><a href="nutsandbolts/variables.html">Variables</a>
+<li class="tocli"><a href="nutsandbolts/variables.html">变量</a>
 <ul>
-<li class="tocli"><a href="nutsandbolts/datatypes.html">Primitive Data Types</a></li>
+<li class="tocli"><a href="nutsandbolts/datatypes.html">基本数据类型</a></li>
 <li class="tocli"><a href="nutsandbolts/arrays.html">Arrays</a></li>
-<li class="tocli"><a href="nutsandbolts/variablesummary.html">Summary of Variables</a>
+<li class="tocli"><a href="nutsandbolts/variablesummary.html">变量总结</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="nutsandbolts/QandE/questions_variables.html">问题和练习：Variables</a></li>
+<li class="tocli"><a href="nutsandbolts/QandE/questions_variables.html">问题和练习：变量</a></li>
 <li class="tocli"><a href="nutsandbolts/operators.html">Operators</a>
 <ul>
 <li class="tocli"><a href="nutsandbolts/op1.html">Assignment, Arithmetic, and Unary Operators</a></li>
@@ -55,7 +55,7 @@
 <li class="tocli"><a href="javaOO/classes.html">Classes</a>
 <ul>
 <li class="tocli"><a href="javaOO/classdecl.html">Declaring Classes</a></li>
-<li class="tocli"><a href="javaOO/variables.html">Declaring Member Variables</a></li>
+<li class="tocli"><a href="javaOO/variables.html">Declaring Member 变量</a></li>
 <li class="tocli"><a href="javaOO/methods.html">Defining Methods</a></li>
 <li class="tocli"><a href="javaOO/constructors.html">Providing Constructors for Your Classes</a></li>
 <li class="tocli"><a href="javaOO/arguments.html">Passing Information to a Method or a Constructor</a>

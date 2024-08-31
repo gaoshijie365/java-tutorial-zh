@@ -10,7 +10,7 @@
 <li class="tocli"><a href="generics/methods.html">Generic Methods</a></li>
 <li class="tocli"><a href="generics/legacy.html">Interoperating with Legacy Code</a></li>
 <li class="tocli"><a href="generics/fineprint.html">The Fine Print</a></li>
-<li class="tocli"><a href="generics/literals.html">Class Literals as Runtime-Type Tokens</a></li>
+<li class="tocli"><a href="generics/literals.html">Class 字面值 as Runtime-Type Tokens</a></li>
 <li class="tocli"><a href="generics/morefun.html">More Fun with Wildcards</a></li>
 <li class="tocli"><a href="generics/convert.html">Converting Legacy Code to Use 泛型</a></li>
 <li class="tocli"><a href="generics/acknowledgements.html">Acknowledgements</a>
