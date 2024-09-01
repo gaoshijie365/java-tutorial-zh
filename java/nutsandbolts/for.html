@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>The for Statement (Java&trade; 教程 &gt;
+        <title>for 语句 (Java&trade; 教程 &gt;
             学习 Java &gt; 语言基础)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -490,12 +490,12 @@
 <div class="linkAHEAD"><a href="expressions.html">表达式、语句和块</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_expressions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="flow.html">控制流语句</a></div>
-<div class="linkBHEAD"><a href="if.html">The if-then and if-then-else Statements</a></div>
-<div class="linkBHEAD"><a href="switch.html">The switch Statement</a></div>
-<div class="linkBHEAD"><a href="while.html">The while and do-while Statements</a></div>
-<div class="nolinkBHEAD">The for Statement</div>
-<div class="linkBHEAD"><a href="branch.html">Branching Statements</a></div>
-<div class="linkBHEAD"><a href="flowsummary.html">Summary of 控制流语句</a></div>
+<div class="linkBHEAD"><a href="if.html">if-then 和 if-then-else 语句</a></div>
+<div class="linkBHEAD"><a href="switch.html">switch 语句</a></div>
+<div class="linkBHEAD"><a href="while.html">while 和 do-while 语句</a></div>
+<div class="nolinkBHEAD">for 语句</div>
+<div class="linkBHEAD"><a href="branch.html">分支语句</a></div>
+<div class="linkBHEAD"><a href="flowsummary.html">控制流语句总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_flow.html">问题和练习</a></div>
 </div>
     </div>
@@ -503,7 +503,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 语言基础
-        <br /><b>Section:</b> 控制流语句
+        <br /><b>节：</b> 控制流语句
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -516,24 +516,26 @@
                 <a target="_top" href="while.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="branch.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>The for Statement</h1></div>
+            <div id="PageTitle"><h1>for 语句</h1></div>
             <div id="PageContent">
 
-<p>The <code>for</code> statement provides a compact way to iterate over a range of values. Programmers often refer to it as the &quot;for loop&quot; because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the <code>for</code> statement can be expressed as follows:</p>
+<p><code>for</code> 语句提供了一种紧凑的方式来迭代一系列的值。程序员也称其为 &quot;for 循环&quot;，因为它会重复循环直到满足特定条件。
+    <code>for</code> 语句的通用格式可以表示为：</p>
 <div class="codeblock"><pre>
 for (<em>initialization</em>; <em>termination</em>;
      <em>increment</em>) {
     <em>statement(s)</em>
 }
 </pre></div>
-<p>When using this version of the <code>for</code> statement, keep in mind that:</p>
+<p>当使用此版本的 <code>for</code> 语句时，需要注意：</p>
 <ul>
-<li>The <em>initialization</em> expression initializes the loop; it&#39;s executed once, as the loop begins.</li>
-<li>When the <em>termination</em> expression evaluates to <code>false</code>, the loop terminates.</li>
-<li>The <em>increment</em> expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to increment <i>or</i> decrement a value.</li>
+<li><em>initialization</em> 表达式初始化循环，只会在循环开始时执行一次。</li>
+<li>当 <em>termination</em> 表达式值为 <code>false</code> 时循环结束。</li>
+<li><em>increment</em> 表达式在每次循环迭代后调用，可使用它来增加或减少一个值。</li>
 </ul>
-<p>The following program, 
-<a class="SourceLink" target="_blank" href="examples/ForDemo.java" onclick="showCode('../../displayCode.html', 'examples/ForDemo.java'); return false;"><code>ForDemo</code></a>, uses the general form of the <code>for</code> statement to print the numbers 1 through 10 to standard output:</p>
+<p>下面的程序 <a class="SourceLink" target="_blank" href="examples/ForDemo.java"
+                 onclick="showCode('../../displayCode.html', 'examples/ForDemo.java'); return false;"><code>ForDemo
+</code></a>，使用通用形式的 <code>for</code> 语句打印 1 到 10 的数字：</p>
 <div class="codeblock"><pre>
 
 class ForDemo {
@@ -544,7 +546,7 @@ class ForDemo {
     }
 }
 </pre></div>
-<p>The output of this program is:</p>
+<p>程序输出为：</p>
 <div class="codeblock"><pre>
 Count is: 1
 Count is: 2
@@ -557,8 +559,10 @@ Count is: 8
 Count is: 9
 Count is: 10
 </pre></div>
-<p>Notice how the code declares a variable within the initialization expression. The scope of this variable extends from its declaration to the end of the block governed by the <code>for</code> statement, so it can be used in the termination and increment expressions as well. If the variable that controls a <code>for</code> statement is not needed outside of the loop, it&#39;s best to declare the variable in the initialization expression. The names <code>i</code>, <code>j</code>, and <code>k</code> are often used to control <code>for</code> loops; declaring them within the initialization expression limits their life span and reduces errors.</p>
-<p>The three expressions of the <code>for</code> loop are optional; an infinite loop can be created as follows:</p>
+<p>注意是如何在初始化表达式中声明变量的。这个变量的作用域从声明到 <code>for</code> 语句块的结尾，所以它可以用在终止和自增表达式中。
+    如果控制 <code>for</code> 语句的变量不需要在循环外使用，最好在初始化表达式中声明变量。<code>i</code>、<code>j</code> 和
+    <code>k</code> 是常用的用来控制 <code>for</code> 循环的变量名称，在初始化表达式中声明变量限制了其生命周期并减少错误的发生。</p>
+<p><code>for</code> 循环的三个表达式都是可选的。一个无限循环如下：</p>
 <div class="codeblock"><pre>
 // infinite loop
 for ( ; ; ) {
@@ -566,14 +570,15 @@ for ( ; ; ) {
     // your code goes here
 }
 </pre></div>
-<p>The <code>for</code> statement also has another form designed for iteration through 
-<a class="TutorialLink" target="_top" href="../../collections/index.html">Collections</a> and 
-<a class="TutorialLink" target="_top" href="arrays.html">arrays</a> This form is sometimes referred to as the <i>enhanced for</i> statement, and can be used to make your loops more compact and easy to read. To demonstrate, consider the following array, which holds the numbers 1 through 10:</p>
+<p><code>for</code> 语句还有另外一种形式，它被设计用来迭代 <a class="TutorialLink" target="_top" href="../../collections/index.html">
+    集合</a> 和 <a class="TutorialLink" target="_top" href="arrays.html">数组</a>。
+    这种形式也叫做 <i>增强的 for</i> 语句，可以使您的循环更紧凑和易读。为了说明，考虑下面的包含数字 1 到 10 的数组：</p>
 <div class="codeblock"><pre>
 int[] numbers = {1,2,3,4,5,6,7,8,9,10};
 </pre></div>
-<p>The following program, 
-<a class="SourceLink" target="_blank" href="examples/EnhancedForDemo.java" onclick="showCode('../../displayCode.html', 'examples/EnhancedForDemo.java'); return false;"><code>EnhancedForDemo</code></a>, uses the enhanced <code>for</code> to loop through the array:</p>
+<p>下面的程序，<a class="SourceLink" target="_blank" href="examples/EnhancedForDemo.java"
+                 onclick="showCode('../../displayCode.html', 'examples/EnhancedForDemo.java'); return false;"><code>EnhancedForDemo</code></a>，
+    使用增强的 <code>for</code> 遍历数组：</p>
 <div class="codeblock"><pre>
 
 class EnhancedForDemo {
@@ -586,7 +591,7 @@ class EnhancedForDemo {
     }
 }
 </pre></div>
-<p>In this example, the variable <code>item</code> holds the current value from the numbers array. The output from this program is the same as before:</p>
+<p>本例中，变量 <code>item</code> 持有当前值。程序输出和上个程序一样：</p>
 <div class="codeblock"><pre>
 Count is: 1
 Count is: 2
@@ -599,7 +604,7 @@ Count is: 8
 Count is: 9
 Count is: 10
 </pre></div>
-<p>We recommend using this form of the <code>for</code> statement instead of the general form whenever possible.</p>
+<p>我们推荐使用这种形式的 <code>for</code> 语句。</p>
 
 
         </div>
@@ -628,8 +633,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> The while and do-while Statements
-        <br /><b>下一页：</b> Branching Statements
+        <b>上一页：</b> while 和 do-while 语句
+        <br /><b>下一页：</b> 分支语句
     </div>
 </body>
 </html> 

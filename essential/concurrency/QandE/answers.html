@@ -445,7 +445,7 @@ public class BadThreads {
 }
 </pre></div>
 <p>The application should print out &quot;Mares do eat oats.&quot; Is it guaranteed to always do this? If not, why not? Would it help to change the parameters of the two invocations of <code>Sleep</code>? How would you guarantee that all changes to <code>message</code> will be visible to the main thread?</p>
-<p><b>Solution:</b> The program will almost always print out &quot;Mares do eat oats.&quot; However, this result is not guaranteed, because there is no happens-before relationship between &quot;Key statement 1&quot; and &quot;Key statement 2&quot;. This is true even if &quot;Key statement 1&quot; actually executes before &quot;Key statement 2&quot; &#151; remember, a happens-before relationship is about visibility, not sequence.</p>
+<p><b>答案：</b> The program will almost always print out &quot;Mares do eat oats.&quot; However, this result is not guaranteed, because there is no happens-before relationship between &quot;Key statement 1&quot; and &quot;Key statement 2&quot;. This is true even if &quot;Key statement 1&quot; actually executes before &quot;Key statement 2&quot; &#151; remember, a happens-before relationship is about visibility, not sequence.</p>
 <p>There are two ways you can guarantee that all changes to <code>message</code> will be visible to the main thread:</p>
 <ul>
 <li>In the main thread, retain a reference to the <code>CorrectorThread</code> instance. Then invoke <code>join</code> on that instance before referring to <code>message</code></li>
@@ -456,7 +456,7 @@ public class BadThreads {
 <p>Changing the arguments of the two <code>sleep</code> invocations does not help either, since this does nothing to guarantee a happens-before relationship.</p>
 </li>
 <li><b>Exercise:</b> Modify the producer-consumer example in <a href="../guardmeth.html">Guarded Blocks</a> to use a standard library class instead of the <code>Drop</code> class.
-<p><b>Solution:</b> The 
+<p><b>答案：</b> The
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html"><code>java.util.concurrent.BlockingQueue</code></a> interface defines a <code>get</code> method that blocks if the queue is empty, and a <code>put</code> methods that blocks if the queue is full. These are effectively the same operations defined by <code>Drop</code> &#151; except that <code>Drop</code> is not a queue! However, there&#39;s another way of looking at Drop: it&#39;s a queue with a capacity of zero. Since there&#39;s no room in the queue for <i>any</i> elements, every <code>get</code> blocks until the corresponding <code>take</code> and every <code>take</code> blocks until the corresponding <code>get</code>. There is an implementation of <code>BlockingQueue</code> with precisely this behavior: 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/SynchronousQueue.html"><code>java.util.concurrent.SynchronousQueue</code></a>.</p>
 <p><code>BlockingQueue</code> is almost a drop-in replacement for <code>Drop</code>. The main problem in 

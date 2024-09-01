@@ -532,7 +532,7 @@
 <p><code>DataSource</code>: This interface is preferred over <code>DriverManager</code> because it allows details about the underlying data source to be transparent to your application. A <code>DataSource</code> object&#39;s properties are set so that it represents a particular data source. See <a href="sqldatasources.html">Connecting with DataSource Objects</a> for more information. For more information about developing applications with the <code>DataSource</code> class, see the latest <em><a href="https://javaee.github.io/tutorial/toc.html">The Java EE Tutorial</a></em>.</p>
 </li>
 </ul>
-<p><strong>Note</strong>: The samples in this tutorial use the <code>DriverManager</code> class instead of the <code>DataSource</code> class because it is easier to use and the samples do not require the features of the <code>DataSource</code> class.</p>
+<p><strong>注意</strong>：The samples in this tutorial use the <code>DriverManager</code> class instead of the <code>DataSource</code> class because it is easier to use and the samples do not require the features of the <code>DataSource</code> class.</p>
 <p>This page covers the following topics:</p>
 <ul>
 <li><a href="#drivermanager">Using the DriverManager Class</a></li>
@@ -574,7 +574,7 @@ public Connection getConnection() throws SQLException {
 </li>
 <li>
 <p>Java DB: <code>jdbc:derby:<em>testdb</em>;create=true</code>, where <code><em>testdb</em></code> is the name of the database to connect to, and <code>create=true</code> instructs the DBMS to create the database.</p>
-<p><strong>Note</strong>: This URL establishes a database connection with the Java DB Embedded Driver. Java DB also includes a Network Client Driver, which uses a different URL.</p>
+<p><strong>注意</strong>：This URL establishes a database connection with the Java DB Embedded Driver. Java DB also includes a Network Client Driver, which uses a different URL.</p>
 </li>
 </ol>
 <p>This method specifies the user name and password required to access the DBMS with a <code>Properties</code> object.</p>

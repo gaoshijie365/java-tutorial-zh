@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>The switch Statement (Java&trade; 教程 &gt;
+        <title>switch 语句 (Java&trade; 教程 &gt;
             学习 Java &gt; 语言基础)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -490,12 +490,12 @@
 <div class="linkAHEAD"><a href="expressions.html">表达式、语句和块</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_expressions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="flow.html">控制流语句</a></div>
-<div class="linkBHEAD"><a href="if.html">The if-then and if-then-else Statements</a></div>
-<div class="nolinkBHEAD">The switch Statement</div>
-<div class="linkBHEAD"><a href="while.html">The while and do-while Statements</a></div>
-<div class="linkBHEAD"><a href="for.html">The for Statement</a></div>
-<div class="linkBHEAD"><a href="branch.html">Branching Statements</a></div>
-<div class="linkBHEAD"><a href="flowsummary.html">Summary of 控制流语句</a></div>
+<div class="linkBHEAD"><a href="if.html">if-then 和 if-then-else 语句</a></div>
+<div class="nolinkBHEAD">switch 语句</div>
+<div class="linkBHEAD"><a href="while.html">while 和 do-while 语句</a></div>
+<div class="linkBHEAD"><a href="for.html">for 语句</a></div>
+<div class="linkBHEAD"><a href="branch.html">分支语句</a></div>
+<div class="linkBHEAD"><a href="flowsummary.html">控制流语句总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_flow.html">问题和练习</a></div>
 </div>
     </div>
@@ -503,7 +503,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 语言基础
-        <br /><b>Section:</b> 控制流语句
+        <br /><b>节：</b> 控制流语句
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -516,19 +516,22 @@
                 <a target="_top" href="if.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="while.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>The switch Statement</h1></div>
+            <div id="PageTitle"><h1>switch 语句</h1></div>
             <div id="PageContent">
 
-<p>Unlike <code>if-then</code> and <code>if-then-else</code> statements, the <code>switch</code> statement can have a number of possible execution paths. A <code>switch</code> works with the <code>byte</code>, <code>short</code>, <code>char</code>, and <code>int</code> primitive data types. It also works with <i>enumerated types</i> (discussed in 
-<a class="TutorialLink" target="_top" href="../javaOO/enum.html">Enum Types</a>), the 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a> class, and a few special classes that wrap certain primitive types: 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html"><code>Character</code></a>, 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Byte.html"><code>Byte</code></a>, 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html"><code>Short</code></a>, and 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a> (discussed in 
-<a class="TutorialLink" target="_top" href="../data/index.html">数字和字符串</a>).</p>
-<p>The following code example, 
-<a class="SourceLink" target="_blank" href="examples/SwitchDemo.java" onclick="showCode('../../displayCode.html', 'examples/SwitchDemo.java'); return false;"><code>SwitchDemo</code></a>, declares an <code>int</code> named <code>month</code> whose value represents a month. The code displays the name of the month, based on the value of <code>month</code>, using the <code>switch</code> statement.</p>
+<p>与 <code>if-then</code>、<code>if-then-else</code> 语句不同，<code>switch</code> 语句可以有多个可能的执行路径。
+    <code>switch</code> 可以和 <code>byte</code>、<code>short</code>、<code>char</code>、<code>int</code> 基本数据类型；
+    <i>枚举类型</i> (在 <a class="TutorialLink" target="_top" href="../javaOO/enum.html">枚举类型</a> 中讨论)；
+    <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a> 类；
+    和一些基本数据类型包装类
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html"><code>Character</code></a>、
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Byte.html"><code>Byte</code></a>、
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html"><code>Short</code></a>、
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a>
+(在 <a class="TutorialLink" target="_top" href="../data/index.html">数字和字符串</a> 中讨论) 配合使用。</p>
+<p>下面的代码示例，<a class="SourceLink" target="_blank" href="examples/SwitchDemo.java"
+                     onclick="showCode('../../displayCode.html', 'examples/SwitchDemo.java'); return false;"><code>SwitchDemo</code></a>，
+    声明了一个叫做 <code>month</code> 的 <code>int</code> 变量代表月份。使用 <code>switch</code> 语句，基于 <code>month</code> 的值显示月份的名称。</p>
 <div class="codeblock"><pre>
 
 public class SwitchDemo {
@@ -568,9 +571,10 @@ public class SwitchDemo {
     }
 }
 </pre></div>
-<p>In this case, <code>August</code> is printed to standard output.</p>
-<p>The body of a <code>switch</code> statement is known as a <i>switch block</i>. A statement in the <code>switch</code> block can be labeled with one or more <code>case</code> or <code>default</code> labels. The <code>switch</code> statement evaluates its expression, then executes all statements that follow the matching <code>case</code> label.</p>
-<p>You could also display the name of the month with <code>if-then-else</code> statements:</p>
+<p>本例中，打印 <code>August</code>。</p>
+<p><code>switch</code> 的语句体叫做 <i>switch 块</i>。<code>switch</code> 块中的语句可以有一个多多个 <code>case</code> 标签，或 <code>default</code> 标签。
+    <code>switch</code> 语句计算其表达式，然后执行匹配的 <code>case</code> 后的语句。</p>
+<p>您也可以使用 <code>if-then-else</code> 语句显示月份的名称：</p>
 <div class="codeblock"><pre>
 int month = 8;
 if (month == 1) {
@@ -580,9 +584,14 @@ if (month == 1) {
 }
 ...  // and so on
 </pre></div>
-<p>Deciding whether to use <code>if-then-else</code> statements or a <code>switch</code> statement is based on readability and the expression that the statement is testing. An <code>if-then-else</code> statement can test expressions based on ranges of values or conditions, whereas a <code>switch</code> statement tests expressions based only on a single integer, enumerated value, or <code>String</code> object.</p>
-<p>Another point of interest is the <code>break</code> statement. Each <code>break</code> statement terminates the enclosing <code>switch</code> statement. Control flow continues with the first statement following the <code>switch</code> block. The <code>break</code> statements are necessary because without them, statements in <code>switch</code> blocks <em>fall through</em>: All statements after the matching <code>case</code> label are executed in sequence, regardless of the expression of subsequent <code>case</code> labels, until a <code>break</code> statement is encountered. The program 
-<a class="SourceLink" target="_blank" href="examples/SwitchDemoFallThrough.java" onclick="showCode('../../displayCode.html', 'examples/SwitchDemoFallThrough.java'); return false;"><code>SwitchDemoFallThrough</code></a> shows statements in a <code>switch</code> block that fall through. The program displays the month corresponding to the integer <code>month</code> and the months that follow in the year:</p>
+<p>选择使用 <code>if-then-else</code> 还是 <code>switch</code>，基于其可读性和语句测试的表达式。
+<code>if-then-else</code> 语句可以测试基于范围值或条件的表达式，<code>switch</code> 语句只能测试基于单个整数、枚举或 <code>String</code> 对象的表达式。</p>
+<p>另一个引人注意的点是 <code>break</code> 语句。<code>break</code> 语句终止外围的 <code>switch</code> 语句，
+    控制流继续执行 <code>switch</code> 块后面的语句。<code>break</code> 语句是必须的，因为如果没有它们，<code>switch</code> 块中的语句会 <em>fall
+        through</em>：匹配的 <code>case</code> 标签后的所有语句将会按顺序执行，无论后续的 <code>case</code> 标签是否匹配，直到遇到 <code>break</code> 语句。
+    程序 <a class="SourceLink" target="_blank" href="examples/SwitchDemoFallThrough.java"
+            onclick="showCode('../../displayCode.html', 'examples/SwitchDemoFallThrough.java'); return false;"><code>SwitchDemoFallThrough</code></a>
+    展示了 <code>switch</code> 块中的 fall through 现象。程序显示对应 <code>month</code> 的月份，和后续的月份：</p>
 <div class="codeblock"><pre>
 
 public class SwitchDemoFallThrough {
@@ -620,7 +629,7 @@ public class SwitchDemoFallThrough {
     }
 }
 </pre></div>
-<p>This is the output from the code:</p>
+<p>代码输出为：</p>
 <div class="codeblock"><pre>
 August
 September
@@ -628,9 +637,11 @@ October
 November
 December
 </pre></div>
-<p>Technically, the final <code>break</code> is not required because flow falls out of the <code>switch</code> statement. Using a <code>break</code> is recommended so that modifying the code is easier and less error prone. The <code>default</code> section handles all values that are not explicitly handled by one of the <code>case</code> sections.</p>
-<p>The following code example, 
-<a class="SourceLink" target="_blank" href="examples/SwitchDemo2.java" onclick="showCode('../../displayCode.html', 'examples/SwitchDemo2.java'); return false;"><code>SwitchDemo2</code></a>, shows how a statement can have multiple <code>case</code> labels. The code example calculates the number of days in a particular month:</p>
+<p>技术上来讲，最后一个 <code>break</code> 可以省略，因为执行流会走到 <code>switch</code> 语句之外。推荐使用 <code>break</code>，
+    这样在修改代码时会更加容易且更不易出错。<code>default</code> 部分会在所有 <code>case</code> 不匹配时执行。</p>
+<p>下面的代码示例，<a class="SourceLink" target="_blank" href="examples/SwitchDemo2.java"
+   onclick="showCode('../../displayCode.html', 'examples/SwitchDemo2.java'); return false;"><code>SwitchDemo2</code></a>，
+    展示了拥有多个 <code>case</code> 标签的语句。代码示例计算特定月份的天数：</p>
 <div class="codeblock"><pre>
 
 class SwitchDemo2 {
@@ -667,13 +678,15 @@ class SwitchDemo2 {
     }
 }
 </pre></div>
-<p>This is the output from the code:</p>
+<p>代码输出为：</p>
 <div class="codeblock"><pre>
 Number of Days = 29
 </pre></div>
-<h2>Using Strings in switch Statements</h2>
-<p>In Java SE 7 and later, you can use a <code>String</code> object in the <code>switch</code> statement&#39;s expression. The following code example, 
-<a class="SourceLink" target="_blank" href="examples/StringSwitchDemo.java" onclick="showCode('../../displayCode.html', 'examples/StringSwitchDemo.java'); return false;"><code>StringSwitchDemo</code></a>, displays the number of the month based on the value of the <code>String</code> named <code>month</code>:</p>
+<h2>在 switch 语句中使用字符串</h2>
+<p>从 Java SE 7 开始，您可以在 <code>switch</code> 语句的表达式中使用 <code>String</code> 对象。下面的代码示例，
+<a class="SourceLink" target="_blank" href="examples/StringSwitchDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/StringSwitchDemo.java'); return false;"><code>StringSwitchDemo</code></a>，
+    基于 <code>String</code> 类型的 <code>month</code> 值显示对应的月份：</p>
 <div class="codeblock"><pre>
 
 public class StringSwitchDemo {
@@ -746,11 +759,16 @@ public class StringSwitchDemo {
     }
 }
 </pre></div>
-<p>The output from this code is <code>8</code>.</p>
-<p>The <code>String</code> in the <code>switch</code> expression is compared with the expressions associated with each <code>case</code> label as if the 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#equals-java.lang.Object-"><code>String.equals</code></a> method were being used. In order for the <code>StringSwitchDemo</code> example to accept any month regardless of case, <code>month</code> is converted to lowercase (with the 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toLowerCase--"><code>toLowerCase</code></a> method), and all the strings associated with the <code>case</code> labels are in lowercase.</p>
-<p><strong>Note</strong>: This example checks if the expression in the <code>switch</code> statement is <code>null</code>. Ensure that the expression in any <code>switch</code> statement is not null to prevent a <code>NullPointerException</code> from being thrown.</p>
+<p>代码输出 <code>8</code>。</p>
+<p><code>switch</code> 中的 <code>String</code> 会和每个 <code>case</code> 标签进行比较，就像使用
+<a class="APILink" target="_blank"
+   href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#equals-java.lang.Object-"><code>String
+    .equals</code></a> 方法一样。为了让 <code>StringSwitchDemo</code> 接受忽略大小写的月份，<code>month</code> 被转换成小写
+    (使用 <a class="APILink" target="_blank"
+             href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toLowerCase--"><code>toLowerCase
+    </code></a> 方法)。所有 <code>case</code> 标签也都是小写。</p>
+<p><strong>注意</strong>：这个例子中会检查 <code>switch</code> 语句中的表达式是是否为 <code>null</code>。
+    确保任何 <code>switch</code> 语句中的表达式都不为 null，以阻止 <code>NullPointerException</code> 的产生。</p>
 
         </div>
         <div class="NavBit">
@@ -778,8 +796,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> The if-then and if-then-else Statements
-        <br /><b>下一页：</b> The while and do-while Statements
+        <b>上一页：</b> if-then 和 if-then-else 语句
+        <br /><b>下一页：</b> while 和 do-while 语句
     </div>
 </body>
 </html> 

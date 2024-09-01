@@ -692,7 +692,7 @@ French_Roast_Decaf, 49, 9.99, 0, 0
 </table>
 <!-- *********************************** -->
 <h2><a name="creating_stored_procedures_java_db" id="creating_stored_procedures_java_db">Creating Stored Procedures in Java DB</a></h2>
-<p><strong>Note</strong>: See the section &quot;CREATE PROCEDURE statement&quot; in <a href="https://docs.oracle.com/javadb/index_jdk8.html"><em>Java DB Reference Manual</em></a> for more information about creating stored procedures in Java DB.</p>
+<p><strong>注意</strong>：See the section &quot;CREATE PROCEDURE statement&quot; in <a href="https://docs.oracle.com/javadb/index_jdk8.html"><em>Java DB Reference Manual</em></a> for more information about creating stored procedures in Java DB.</p>
 <p>Creating and using a stored procedure in Java DB involves the following steps:</p>
 <ol>
 <li><a href="#creating_public_static_java_method">Create a public static Java method in a Java class</a>: This method performs the required task of the stored procedure.</li>
@@ -789,7 +789,7 @@ public void createProcedures(Connection con)
 </li>
 <li><code>LANGUAGE JAVA</code>: Specifies the programming language of the stored procedure (currently, <code>JAVA</code> is the only option).</li>
 <li><code>DYNAMIC RESULT SETS 1</code>: Specifies the maximum number of result sets retrieved; in this case, it is <code>1</code>.</li>
-<li><code>EXTERNAL NAME &#39;com.oracle.tutorial.jdbc.StoredProcedureJavaDBSample.showSuppliers&#39;</code> specifies the fully qualified Java method that this stored procedure calls. <strong>Note</strong>: Java DB must be able to find the method specified here in your class path or in a JAR file directly added to the database. See the following step, <a href="#package_java_class_in_jar_file">Package Java Class in JAR File</a>.</li>
+<li><code>EXTERNAL NAME &#39;com.oracle.tutorial.jdbc.StoredProcedureJavaDBSample.showSuppliers&#39;</code> specifies the fully qualified Java method that this stored procedure calls. <strong>注意</strong>：Java DB must be able to find the method specified here in your class path or in a JAR file directly added to the database. See the following step, <a href="#package_java_class_in_jar_file">Package Java Class in JAR File</a>.</li>
 </ul>
 <p>The following statement (which is found in <code>StoredProcedureJavaDBSample.createProcedures</code>) creates a stored procedure named <code>GET_SUPPLIERS_OF_COFFEE</code> (line breaks have been added for clarity):</p>
 
@@ -842,7 +842,7 @@ while (rs.next()) {
 }
 </pre></div>
 
-<p><strong>Note</strong>: As with <code>Statement</code> objects, to call the stored procedure, you can call <code>execute</code>, <code>executeQuery</code>, or <code>executeUpdate</code> depending on how many <code>ResultSet</code> objects the procedure returns. However, if you are not sure how many <code>ResultSet</code> objects the procedure returns, call <code>execute</code>.</p>
+<p><strong>注意</strong>：As with <code>Statement</code> objects, to call the stored procedure, you can call <code>execute</code>, <code>executeQuery</code>, or <code>executeUpdate</code> depending on how many <code>ResultSet</code> objects the procedure returns. However, if you are not sure how many <code>ResultSet</code> objects the procedure returns, call <code>execute</code>.</p>
 
 <p>The following excerpt from the method <code>StoredProcedureJavaDBSample.runStoredProcedures</code> calls the stored procedure <code>GET_SUPPLIER_OF_COFFEE</code>:</p>
 
@@ -904,7 +904,7 @@ CALL syscs_util.syscs_set_database_property(
   'APP.JDBCTutorial')";
 </pre></div>
 
-<p><strong>Note</strong>: The method
+<p><strong>注意</strong>：The method
 <a class="SourceLink" target="_blank" href="examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/StoredProcedureJavaDBSample.java" onclick="showCode('../../displayCode.html', 'examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/StoredProcedureJavaDBSample.java'); return false;"><code>StoredProcedureJavaDBSample.registerJarFile</code></a> demonstrates how to call these system procedures. If you call this method, ensure that you have modified
 <a class="SourceLink" target="_blank" href="examples/JDBCTutorial/properties/javadb-sample-properties.xml" onclick="showCode('../../displayCode.html', 'examples/JDBCTutorial/properties/javadb-sample-properties.xml'); return false;"><code>javadb-sample-properties.xml</code></a> so that the value of the property <code>jar_file</code> is set to the full path name of <code>JDBCTutorial.jar</code>.</p>
 
@@ -1102,7 +1102,7 @@ ResultSet rs = cs.executeQuery();
       }
 </pre></div>
 
-<p><strong>Note</strong>: As with <code>Statement</code> objects, to call the stored procedure, you can call <code>execute</code>, <code>executeQuery</code>, or <code>executeUpdate</code> depending on how many <code>ResultSet</code> objects the procedure returns. However, if you are not sure how many <code>ResultSet</code> objects the procedure returns, call <code>execute</code>.</p>
+<p><strong>注意</strong>：As with <code>Statement</code> objects, to call the stored procedure, you can call <code>execute</code>, <code>executeQuery</code>, or <code>executeUpdate</code> depending on how many <code>ResultSet</code> objects the procedure returns. However, if you are not sure how many <code>ResultSet</code> objects the procedure returns, call <code>execute</code>.</p>
 
 <p>The following excerpt from the method <code>StoredProcedureMySQLSample.runStoredProcedures</code> calls the stored procedure <code>GET_SUPPLIER_OF_COFFEE</code>:</p>
 

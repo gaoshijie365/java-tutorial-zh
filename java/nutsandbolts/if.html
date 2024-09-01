@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>The if-then and if-then-else Statements (Java&trade; 教程 &gt;
+        <title>if-then 和 if-then-else 语句 (Java&trade; 教程 &gt;
             学习 Java &gt; 语言基础)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -490,12 +490,12 @@
 <div class="linkAHEAD"><a href="expressions.html">表达式、语句和块</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_expressions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="flow.html">控制流语句</a></div>
-<div class="nolinkBHEAD">The if-then and if-then-else Statements</div>
-<div class="linkBHEAD"><a href="switch.html">The switch Statement</a></div>
-<div class="linkBHEAD"><a href="while.html">The while and do-while Statements</a></div>
-<div class="linkBHEAD"><a href="for.html">The for Statement</a></div>
-<div class="linkBHEAD"><a href="branch.html">Branching Statements</a></div>
-<div class="linkBHEAD"><a href="flowsummary.html">Summary of 控制流语句</a></div>
+<div class="nolinkBHEAD">if-then 和 if-then-else 语句</div>
+<div class="linkBHEAD"><a href="switch.html">switch 语句</a></div>
+<div class="linkBHEAD"><a href="while.html">while 和 do-while 语句</a></div>
+<div class="linkBHEAD"><a href="for.html">for 语句</a></div>
+<div class="linkBHEAD"><a href="branch.html">分支语句</a></div>
+<div class="linkBHEAD"><a href="flowsummary.html">控制流语句总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_flow.html">问题和练习</a></div>
 </div>
     </div>
@@ -503,7 +503,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 语言基础
-        <br /><b>Section:</b> 控制流语句
+        <br /><b>节：</b> 控制流语句
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -516,11 +516,12 @@
                 <a target="_top" href="flow.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="switch.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>The if-then and if-then-else Statements</h1></div>
+            <div id="PageTitle"><h1>if-then 和 if-then-else 语句</h1></div>
             <div id="PageContent">
 
-<h2>The <code>if-then</code> Statement</h2>
-<p>The <code>if-then</code> statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code <i>only if</i> a particular test evaluates to <code>true</code>. For example, the <code>Bicycle</code> class could allow the brakes to decrease the bicycle&#39;s speed <i>only if</i> the bicycle is already in motion. One possible implementation of the <code>applyBrakes</code> method could be as follows:</p>
+<h2><code>if-then</code> 语句</h2>
+<p><code>if-then</code> 是最基础的控制流语句。只有当测试值为 <code>true</code> 时才执行特定的代码。比如，<code>Bicycle</code> 类可能仅在自行车处于运动状态时才允许刹车降低车速。
+    <code>applyBrakes</code> 的一种可能实现是：</p>
 <div class="codeblock"><pre>
 void applyBrakes() {
     // the "if" clause: bicycle must be moving
@@ -530,8 +531,8 @@ void applyBrakes() {
     }
 }
 </pre></div>
-<p>If this test evaluates to <code>false</code> (meaning that the bicycle is not in motion), control jumps to the end of the <code>if-then</code> statement.</p>
-<p>In addition, the opening and closing braces are optional, provided that the &quot;then&quot; clause contains only one statement:</p>
+<p>如果测试值为 <code>false</code> (意味着自行车不在运动中)，控制流跳转到 <code>if-then</code> 语句的末尾。</p>
+<p>此外，开闭大括号是可选的，如果 &quot;then&quot; 子句只有一条语句的话：</p>
 <div class="codeblock"><pre>
 void applyBrakes() {
     // same as above, but without braces 
@@ -539,9 +540,12 @@ void applyBrakes() {
         currentSpeed--;
 }
 </pre></div>
-<p>Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the &quot;then&quot; clause, a common mistake would be forgetting to add the newly required braces. The compiler cannot catch this sort of error; you&#39;ll just get the wrong results.</p>
-<h2>The <code>if-then-else</code> Statement</h2>
-<p>The <code>if-then-else</code> statement provides a secondary path of execution when an &quot;if&quot; clause evaluates to <code>false</code>. You could use an <code>if-then-else</code> statement in the <code>applyBrakes</code> method to take some action if the brakes are applied when the bicycle is not in motion. In this case, the action is to simply print an error message stating that the bicycle has already stopped.</p>
+<p>是否省略大括号是由个人决定。省略大括号会使代码更脆弱。如果后续在 &quot;then&quot; 子句中添加了第二条语句，就会因为忘记添加大括号而产生错误。
+    编译器捕捉不到这类错误，而您将得到一个错误的结果。</p>
+<h2><code>if-then-else</code> 语句</h2>
+<p>当 &quot;if&quot; 子句的值为 <code>false</code> 时，<code>if-then-else</code> 语句提供了第二条执行路径。
+    您可以在 <code>applyBrakes</code> 方法中使用 <code>if-then-else</code> 语句，在自行车未处于运动状态时执行一些操作。
+    在本例中，操作是打印一条错误消息，表明自行车已经停止了。</p>
 <div class="codeblock"><pre>
 void applyBrakes() {
     if (isMoving) {
@@ -551,8 +555,9 @@ void applyBrakes() {
     } 
 }
 </pre></div>
-<p>The following program, 
-<a class="SourceLink" target="_blank" href="examples/IfElseDemo.java" onclick="showCode('../../displayCode.html', 'examples/IfElseDemo.java'); return false;"><code>IfElseDemo</code></a>, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.</p>
+<p>下面的程序，<a class="SourceLink" target="_blank" href="examples/IfElseDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/IfElseDemo.java'); return false;"><code>IfElseDemo</code></a>，
+    基于分数给 grade 分一个等级：90 分以上得 A，80 分以上得 B，等。</p>
 <div class="codeblock"><pre>
 
 class IfElseDemo {
@@ -576,11 +581,12 @@ class IfElseDemo {
     }
 }
 </pre></div>
-<p>The output from the program is:</p>
+<p>程序的输出是：</p>
 <div class="codeblock"><pre>
     Grade = C
 </pre></div>
-<p>You may have noticed that the value of <code>testscore</code> can satisfy more than one expression in the compound statement: <code>76 &gt;= 70</code> and <code>76 &gt;= 60</code>. However, once a condition is satisfied, the appropriate statements are executed <code>(grade = &#39;C&#39;;)</code> and the remaining conditions are not evaluated.</p>
+<p>您可能已经注意到了，<code>testscore</code> 的值可以满足不止一个表达式：<code>76 &gt;= 70</code> 和 <code>76 &gt;= 60</code>。
+    然而，一旦满足条件，合适的语句将被执行 <code>(grade = &#39;C&#39;;)</code>，剩余的条件都不会执行。</p>
 
 
         </div>
@@ -610,7 +616,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 控制流语句
-        <br /><b>下一页：</b> The switch Statement
+        <br /><b>下一页：</b> switch 语句
     </div>
 </body>
 </html> 

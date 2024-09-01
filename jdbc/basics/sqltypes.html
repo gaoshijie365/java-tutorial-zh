@@ -688,7 +688,7 @@ AS NUMERIC(10,2) FINAL
 <td headers="h4"><code>updateURL</code></td>
 </tr>
 </table>
-<p><strong>Note</strong>: The <code>DISTINCT</code> data type behaves differently from other advanced SQL data types. Being a user-defined type that is based on an already existing built-in types, it has no interface as its mapping in the Java programming language. Consequently, you use the method that corresponds to the Java type on which the <code>DISTINCT</code> data type is based. See <a href="distinct.html">Using DISTINCT Data Type</a> for more information.</p>
+<p><strong>注意</strong>：The <code>DISTINCT</code> data type behaves differently from other advanced SQL data types. Being a user-defined type that is based on an already existing built-in types, it has no interface as its mapping in the Java programming language. Consequently, you use the method that corresponds to the Java type on which the <code>DISTINCT</code> data type is based. See <a href="distinct.html">Using DISTINCT Data Type</a> for more information.</p>
 <p>For example, the following code fragment retrieves a SQL <code>ARRAY</code> value. For this example, suppose that the column <code>SCORES</code> in the table <code>STUDENTS</code> contains values of type <code>ARRAY</code>. The variable <code><em>stmt</em></code> is a <code>Statement</code> object.</p>
 <div class="codeblock"><pre>
 ResultSet rs = stmt.executeQuery(

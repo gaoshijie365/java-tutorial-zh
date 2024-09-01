@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>The while and do-while Statements (Java&trade; 教程 &gt;
+        <title>while 和 do-while 语句 (Java&trade; 教程 &gt;
             学习 Java &gt; 语言基础)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -490,12 +490,12 @@
 <div class="linkAHEAD"><a href="expressions.html">表达式、语句和块</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_expressions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="flow.html">控制流语句</a></div>
-<div class="linkBHEAD"><a href="if.html">The if-then and if-then-else Statements</a></div>
-<div class="linkBHEAD"><a href="switch.html">The switch Statement</a></div>
-<div class="nolinkBHEAD">The while and do-while Statements</div>
-<div class="linkBHEAD"><a href="for.html">The for Statement</a></div>
-<div class="linkBHEAD"><a href="branch.html">Branching Statements</a></div>
-<div class="linkBHEAD"><a href="flowsummary.html">Summary of 控制流语句</a></div>
+<div class="linkBHEAD"><a href="if.html">if-then 和 if-then-else 语句</a></div>
+<div class="linkBHEAD"><a href="switch.html">switch 语句</a></div>
+<div class="nolinkBHEAD">while 和 do-while 语句</div>
+<div class="linkBHEAD"><a href="for.html">for 语句</a></div>
+<div class="linkBHEAD"><a href="branch.html">分支语句</a></div>
+<div class="linkBHEAD"><a href="flowsummary.html">控制流语句总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_flow.html">问题和练习</a></div>
 </div>
     </div>
@@ -503,7 +503,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 语言基础
-        <br /><b>Section:</b> 控制流语句
+        <br /><b>节：</b> 控制流语句
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -516,17 +516,22 @@
                 <a target="_top" href="switch.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="for.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>The while and do-while Statements</h1></div>
+            <div id="PageTitle"><h1>while 和 do-while 语句</h1></div>
             <div id="PageContent">
 
-<p>The <code>while</code> statement continually executes a block of statements while a particular condition is <code>true</code>. Its syntax can be expressed as:</p>
+<p><code>while</code> 语句会在条件为 <code>true</code> 时继续执行语句块。其语法可以表示为：</p>
 <div class="codeblock"><pre>
 while (expression) {
      statement(s)
 }
 </pre></div>
-<p>The <code>while</code> statement evaluates <i>expression</i>, which must return a <code>boolean</code> value. If the expression evaluates to <code>true</code>, the <code>while</code> statement executes the <em>statement</em>(s) in the <code>while</code> block. The <code>while</code> statement continues testing the expression and executing its block until the expression evaluates to <code>false</code>. Using the <code>while</code> statement to print the values from 1 through 10 can be accomplished as in the following 
-<a class="SourceLink" target="_blank" href="examples/WhileDemo.java" onclick="showCode('../../displayCode.html', 'examples/WhileDemo.java'); return false;"><code>WhileDemo</code></a> program:</p>
+<p><code>while</code> 语句计算 <i>expression</i>，其必须返回一个 <code>boolean</code> 值。
+    如果表达式值为 <code>true</code>，<code>while</code> 会执行 <code>while</code> 块中的 <em>语句</em>。
+    <code>while</code> 语句继续测试表达式并执行块中的语句直到表达式值为 <code>false</code>。
+    使用 <code>while</code> 语句打印从 1 到 10 的值可以通过下面的
+<a class="SourceLink" target="_blank" href="examples/WhileDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/WhileDemo.java'); return false;"><code>WhileDemo</code></a>
+    程序完成：</p>
 <div class="codeblock"><pre>
 
 class WhileDemo {
@@ -539,20 +544,22 @@ class WhileDemo {
     }
 }
 </pre></div>
-<p>You can implement an infinite loop using the <code>while</code> statement as follows:</p>
+<p>您可以使用如下的 <code>while</code> 语句实现无限循环：</p>
 <div class="codeblock"><pre>
 while (true){
     // your code goes here
 }
 </pre></div>
-<p>The Java programming language also provides a <code>do-while</code> statement, which can be expressed as follows:</p>
+<p>Java 同时也提供了 <code>do-while</code> 语句，可以表示为：</p>
 <div class="codeblock"><pre>
 do {
      statement(s)
 } while (expression);
 </pre></div>
-<p>The difference between <code>do-while</code> and <code>while</code> is that <code>do-while</code> evaluates its expression at the bottom of the loop instead of the top. Therefore, the statements within the <code>do</code> block are always executed at least once, as shown in the following 
-<a class="SourceLink" target="_blank" href="examples/DoWhileDemo.java" onclick="showCode('../../displayCode.html', 'examples/DoWhileDemo.java'); return false;"><code>DoWhileDemo</code></a> program:</p>
+<p><code>do-while</code> 和 <code>while</code> 的不同之处是，<code>do-while</code> 在底部计算表达式的值。
+    因此，<code>do</code> 块中的代码至少执行一次，如下面的
+<a class="SourceLink" target="_blank" href="examples/DoWhileDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/DoWhileDemo.java'); return false;"><code>DoWhileDemo</code></a> 程序所示：</p>
 <div class="codeblock"><pre>
 
 class DoWhileDemo {
@@ -592,8 +599,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> The switch Statement
-        <br /><b>下一页：</b> The for Statement
+        <b>上一页：</b> switch 语句
+        <br /><b>下一页：</b> for 语句
     </div>
 </body>
 </html> 

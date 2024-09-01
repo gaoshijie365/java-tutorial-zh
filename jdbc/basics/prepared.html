@@ -639,7 +639,7 @@ updateTotal.setString(2, e.getKey());
 con.commit();
 </pre></div>
 <p>No arguments are supplied to <code>executeUpdate</code> when they are used to execute <code>updateSales</code> and <code>updateTotals</code>; both <code>PreparedStatement</code> objects already contain the SQL statement to be executed.</p>
-<p><strong>Note</strong>: At the beginning of <code>CoffeesTable.updateCoffeeSales</code>, the auto-commit mode is set to false:</p>
+<p><strong>注意</strong>：At the beginning of <code>CoffeesTable.updateCoffeeSales</code>, the auto-commit mode is set to false:</p>
 <div class="codeblock"><pre>
 con.setAutoCommit(false);
 </pre></div>

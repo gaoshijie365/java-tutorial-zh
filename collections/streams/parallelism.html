@@ -584,7 +584,7 @@
   
 </ul>
 
-<p><strong>Note</strong>: This example returns an instance of
+<p><strong>注意</strong>：This example returns an instance of
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html"><code>ConcurrentMap</code></a> instead of <code>Map</code> and invokes the
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#groupingByConcurrent-java.util.function.Function-"><code>groupingByConcurrent</code></a>  operation instead of <code>groupingBy</code>. (See the section
 <a class="TutorialLink" target="_top" href="../../essential/concurrency/collections.html">Concurrent Collections</a> for more information about <code>ConcurrentMap</code>.) Unlike the operation <code>groupingByConcurrent</code>, the operation <code>groupingBy</code> performs poorly with parallel streams. (This is because it operates by merging two maps by key, which is computationally expensive.) Similarly, the operation
@@ -758,7 +758,7 @@ Parallel stream:
 
 <p>The operation <code>forEachOrdered</code> processes elements in the order specified by the stream, regardless of whether the stream is executed in serial or parallel. However, when a stream is executed in parallel, the <code>map</code> operation processes elements of the stream specified by the Java runtime and compiler. Consequently, the order in which the lambda expression <code>e -&gt; { parallelStorage.add(e); return e; }</code> adds elements to the <code>List</code> <code>parallelStorage</code> can vary every time the code is run. For deterministic and predictable results, ensure that lambda expression parameters in stream operations are not stateful.</p>
 
-<p><strong>Note</strong>: This example invokes the method
+<p><strong>注意</strong>：This example invokes the method
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList-java.util.List-"><code>synchronizedList</code></a> so that the <code>List</code> <code>parallelStorage</code> is thread-safe. Remember that collections are not thread-safe. This means that multiple threads should not access a particular collection at the same time. Suppose that you do not invoke the method <code>synchronizedList</code> when creating <code>parallelStorage</code>:</p> 
 
 <pre class="codeblock">List&lt;Integer&gt; parallelStorage = new ArrayList&lt;&gt;();</pre>

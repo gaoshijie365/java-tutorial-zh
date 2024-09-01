@@ -568,7 +568,7 @@
 <li><code>TYPE_SCROLL_SENSITIVE</code>: The result can be scrolled; its cursor can move both forward and backward relative to the current position, and it can move to an absolute position. The result set reflects changes made to the underlying data source while the result set remains open.</li>
 </ul>
 <p>The default <code>ResultSet</code> type is <code>TYPE_FORWARD_ONLY</code>.</p>
-<p><strong>Note</strong>: Not all databases and JDBC drivers support all <code>ResultSet</code> types. The method <code>DatabaseMetaData.supportsResultSetType</code> returns <code>true</code> if the specified <code>ResultSet</code> type is supported and <code>false</code> otherwise.</p>
+<p><strong>注意</strong>：Not all databases and JDBC drivers support all <code>ResultSet</code> types. The method <code>DatabaseMetaData.supportsResultSetType</code> returns <code>true</code> if the specified <code>ResultSet</code> type is supported and <code>false</code> otherwise.</p>
 <!-- ==================================== -->
 <h3>ResultSet Concurrency</h3>
 <p>The concurrency of a <code>ResultSet</code> object determines what level of update functionality is supported.</p>
@@ -578,7 +578,7 @@
 <li><code>CONCUR_UPDATABLE</code>: The <code>ResultSet</code> object can be updated using the <code>ResultSet</code> interface.</li>
 </ul>
 <p>The default <code>ResultSet</code> concurrency is <code>CONCUR_READ_ONLY</code>.</p>
-<p><strong>Note</strong>: Not all JDBC drivers and databases support concurrency. The method <code>DatabaseMetaData.supportsResultSetConcurrency</code> returns <code>true</code> if the specified concurrency level is supported by the driver and <code>false</code> otherwise.</p>
+<p><strong>注意</strong>：Not all JDBC drivers and databases support concurrency. The method <code>DatabaseMetaData.supportsResultSetConcurrency</code> returns <code>true</code> if the specified concurrency level is supported by the driver and <code>false</code> otherwise.</p>
 <p>The method 
 <a class="SourceLink" target="_blank" href="examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/CoffeesTable.java" onclick="showCode('../../displayCode.html', 'examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/CoffeesTable.java'); return false;"><code>CoffeesTable.modifyPrices</code></a> demonstrates how to use a <code>ResultSet</code> object whose concurrency level is <code>CONCUR_UPDATABLE</code>.</p>
 <!-- ==================================== -->
@@ -590,7 +590,7 @@
 <li><code>CLOSE_CURSORS_AT_COMMIT</code>: <code>ResultSet</code> objects (cursors) are closed when the <code>commit</code> method is called. Closing cursors when this method is called can result in better performance for some applications.</li>
 </ul>
 <p>The default cursor holdability varies depending on your DBMS.</p>
-<p><strong>Note</strong>: Not all JDBC drivers and databases support holdable and non-holdable cursors. The following method, <code>JDBCTutorialUtilities.cursorHoldabilitySupport</code>, outputs the default cursor holdability of <code>ResultSet</code> objects and whether <code>HOLD_CURSORS_OVER_COMMIT</code> and <code>CLOSE_CURSORS_AT_COMMIT</code> are supported:</p>
+<p><strong>注意</strong>：Not all JDBC drivers and databases support holdable and non-holdable cursors. The following method, <code>JDBCTutorialUtilities.cursorHoldabilitySupport</code>, outputs the default cursor holdability of <code>ResultSet</code> objects and whether <code>HOLD_CURSORS_OVER_COMMIT</code> and <code>CLOSE_CURSORS_AT_COMMIT</code> are supported:</p>
 <div class="codeblock"><pre>
 public static void cursorHoldabilitySupport(Connection conn)
     throws SQLException {
@@ -775,7 +775,7 @@ con.setAutoCommit(true);
 </pre></div>
 <!-- ********************************************* -->
 <h2><a name="rs_insert" id="rs_insert">Inserting Rows in ResultSet Objects</a></h2>
-<p><strong>Note</strong>: Not all JDBC drivers support inserting new rows with the <code>ResultSet</code> interface. If you attempt to insert a new row and your JDBC driver database does not support this feature, a <code>SQLFeatureNotSupportedException</code> exception is thrown.</p>
+<p><strong>注意</strong>：Not all JDBC drivers support inserting new rows with the <code>ResultSet</code> interface. If you attempt to insert a new row and your JDBC driver database does not support this feature, a <code>SQLFeatureNotSupportedException</code> exception is thrown.</p>
 <p>The following method,
 <a class="SourceLink" target="_blank" href="examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/CoffeesTable.java" onclick="showCode('../../displayCode.html', 'examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/CoffeesTable.java'); return false;"><code>CoffeesTable.insertRow</code></a>, inserts a row into the <code>COFFEES</code> through a <code>ResultSet</code> object:</p>
 <div class="codeblock"><pre>
@@ -805,7 +805,7 @@ con.setAutoCommit(true);
 <p>The same stipulations for using strings in getter methods also apply to updater methods.</p>
 <p>The method <code>ResultSet.moveToInsertRow</code> moves the cursor to the insert row. The insert row is a special row associated with an updatable result set. It is essentially a buffer where a new row can be constructed by calling the updater methods prior to inserting the row into the result set. For example, this method calls the method <code>ResultSet.updateString</code> to update the insert row&#39;s <code>COF_NAME</code> column to <code>Kona</code>.</p>
 <p>The method <code>ResultSet.insertRow</code> inserts the contents of the insert row into the <code>ResultSet</code> object and into the database.</p>
-<p><strong>Note</strong>: After inserting a row with the <code>ResultSet.insertRow</code>, you should move the cursor to a row other than the insert row. For example, this example moves it to before the first row in the result set with the method <code>ResultSet.beforeFirst</code>. Unexpected results can occur if another part of your application uses the same result set and the cursor is still pointing to the insert row.</p>
+<p><strong>注意</strong>：After inserting a row with the <code>ResultSet.insertRow</code>, you should move the cursor to a row other than the insert row. For example, this example moves it to before the first row in the result set with the method <code>ResultSet.beforeFirst</code>. Unexpected results can occur if another part of your application uses the same result set and the cursor is still pointing to the insert row.</p>
 <!-- ***************************************** -->
 
 

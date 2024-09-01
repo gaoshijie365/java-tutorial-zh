@@ -1005,7 +1005,7 @@ create table COFFEES
     FOREIGN KEY (SUP_ID)
         REFERENCES SUPPLIERS (SUP_ID));
 </pre></div>
-<p><strong>Note</strong>: The file <code>build.xml</code> contains another target named <code>drop-tables</code> that deletes the tables used by the tutorial. The <code>setup</code> target runs <code>drop-tables</code> before running the <code>build-tables</code> target.</p>
+<p><strong>注意</strong>：The file <code>build.xml</code> contains another target named <code>drop-tables</code> that deletes the tables used by the tutorial. The <code>setup</code> target runs <code>drop-tables</code> before running the <code>build-tables</code> target.</p>
 <h3>Creating Tables with JDBC API</h3>
 <p>The following method, 
 <a class="SourceLink" target="_blank" href="examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/SuppliersTable.java" onclick="showCode('../../displayCode.html', 'examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/SuppliersTable.java'); return false;"><code>SuppliersTable.createTable</code></a>, creates the <code>SUPPLIERS</code> table:</p>
@@ -1044,7 +1044,7 @@ create table COFFEES
 <p>In both methods, <code>con</code> is a <code>Connection</code> object and <code>dbName</code> is the name of the database in which you are creating the table.</p>
 <p>To execute the SQL query, such as those specified by the <code>String</code> <code>createString</code>, use a <code>Statement</code> object. To create a <code>Statement</code> object, call the method <code>Connection.createStatement</code> from an existing <code>Connection</code> object. To execute a SQL query, call the method <code>Statement.executeUpdate</code>.</p>
 <p>All <code>Statement</code> objects are closed when the connection that created them is closed. However, it is good coding practice to explicitly close <code>Statement</code> objects as soon as you are finished with them. This allows any external resources that the statement is using to be released immediately. Close a statement by calling the method <code>Statement.close</code>. Place this statement in a <code>finally</code> to ensure that it closes even if the normal program flow is interrupted because an exception (such as <code>SQLException</code>) is thrown.</p>
-<p><strong>Note</strong>: You must create the <code>SUPPLIERS</code> table before the <code>COFFEES</code> because <code>COFFEES</code> contains a foreign key, <code>SUP_ID</code> that references <code>SUPPLIERS</code>.</p>
+<p><strong>注意</strong>：You must create the <code>SUPPLIERS</code> table before the <code>COFFEES</code> because <code>COFFEES</code> contains a foreign key, <code>SUP_ID</code> that references <code>SUPPLIERS</code>.</p>
 <h2><a name="populate" id="populate">Populating Tables</a></h2>
 <p>Similarly, you can insert data into tables with Apache Ant or JDBC API.</p>
 <h3>Populating Tables with Apache Ant</h3>

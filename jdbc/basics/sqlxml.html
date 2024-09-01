@@ -673,7 +673,7 @@ insertRow.executeUpdate();
 <a class="SourceLink" target="_blank" href="examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/RSSFeedsTable.java" onclick="showCode('../../displayCode.html', 'examples/JDBCTutorial/src/com/oracle/tutorial/jdbc/RSSFeedsTable.java'); return false;"><code>RSSFeedsTable.viewTable</code></a> method retrieves the contents of <code>RSS_FEEDS</code>. For each row, the method creates an object of type <code>org.w3c.dom.Document</code> named <code>doc</code> in which to store the XML content in the column <code>RSS_FEED_XML</code>. The method retrieves the XML content and stores it in an object of type <code>SQLXML</code> named <code>rssFeedXML</code>. The contents of <code>rssFeedXML</code> are parsed and stored in the <code>doc</code> object.</p>
 <!-- ************************************************* -->
 <h3><a name="working-with-xml-data-in-java-db" id="working-with-xml-data-in-java-db">Working with XML Data in Java DB</a></h3>
-<p><strong>Note</strong>: See the section &quot;XML data types and operators&quot; in <a href="https://docs.oracle.com/javadb/index_jdk8.html"><em>Java DB Developer&#39;s Guide</em></a> for more information about working with XML data in Java DB.</p>
+<p><strong>注意</strong>：See the section &quot;XML data types and operators&quot; in <a href="https://docs.oracle.com/javadb/index_jdk8.html"><em>Java DB Developer&#39;s Guide</em></a> for more information about working with XML data in Java DB.</p>
 <p>The sample <code>RSSFeedsTable</code> stores RSS feeds in the table <code>RSS_FEEDS</code>, which is created with the following command:</p>
 <div class="codeblock"><pre>
 create table RSS_FEEDS

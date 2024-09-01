@@ -556,7 +556,7 @@
 <p>This tutorial has been tested for the following DBMS:</p>
 <ul>
 <li><p><a href="https://www.oracle.com/java/technologies/javadb.html">Java DB</a></p>
-<p><strong>Note</strong>: Java DB is no longer included in recent versions of the JDK. Java DB was a rebranding of Apache Derby. If you would like to use Java DB, then download the latest version from <a href="https://db.apache.org/derby/">The Apache DB Project</a>.</p>
+<p><strong>注意</strong>：Java DB is no longer included in recent versions of the JDK. Java DB was a rebranding of Apache Derby. If you would like to use Java DB, then download the latest version from <a href="https://db.apache.org/derby/">The Apache DB Project</a>.</p>
 </li>
 <li><p><a href="https://www.mysql.com/">MySQL</a></p></li>
 </ul>
@@ -572,7 +572,7 @@
 <ul>
 <li>
 <p><strong>Type 1</strong>: Drivers that implement the JDBC API as a mapping to another data access API, such as ODBC (Open Database Connectivity). Drivers of this type are generally dependent on a native library, which limits their portability. The JDBC-ODBC Bridge is an example of a Type 1 driver.</p>
-<p><strong>Note</strong>: The JDBC-ODBC Bridge should be considered a transitional solution. It is not supported by Oracle. Consider using this only if your DBMS does not offer a Java-only JDBC driver.</p>
+<p><strong>注意</strong>：The JDBC-ODBC Bridge should be considered a transitional solution. It is not supported by Oracle. Consider using this only if your DBMS does not offer a Java-only JDBC driver.</p>
 </li>
 <li>
 <p><strong>Type 2</strong>: Drivers that are written partly in the Java programming language and partly in native code. These drivers use a native client library specific to the data source to which they connect. Again, because of the native code, their portability is limited. Oracle&#39;s OCI (Oracle Call Interface) client-side driver is an example of a Type 2 driver.</p>
@@ -833,7 +833,7 @@
 <td headers="h102">The port number of the computer hosting your DBMS.</td>
 </tr>
 </table>
-<p><strong>Note</strong>: For simplicity in demonstrating the JDBC API, the JDBC tutorial sample code does not perform the password management techniques that a deployed system normally uses. In a production environment, you can follow the Oracle Database password management guidelines and disable any sample accounts. See the section <a href="https://docs.oracle.com/en/database/oracle/oracle-database/20/dbseg/managing-security-for-application-developers.html#GUID-DE90CA6F-F37B-4337-B331-4FA0F7C7599A">Securing Passwords in Application Design</a> in <em>Oracle Database Security Guide</em> for password management guidelines and other security recommendations.</p>
+<p><strong>注意</strong>：For simplicity in demonstrating the JDBC API, the JDBC tutorial sample code does not perform the password management techniques that a deployed system normally uses. In a production environment, you can follow the Oracle Database password management guidelines and disable any sample accounts. See the section <a href="https://docs.oracle.com/en/database/oracle/oracle-database/20/dbseg/managing-security-for-application-developers.html#GUID-DE90CA6F-F37B-4337-B331-4FA0F7C7599A">Securing Passwords in Application Design</a> in <em>Oracle Database Security Guide</em> for password management guidelines and other security recommendations.</p>
 
 <!-- ********************* -->
 <h2><a name="step9">Compile and package the samples</a></h2>
@@ -851,7 +851,7 @@ ant jar
 ant create-mysql-database
 </pre></div>
 
-<p><strong>Note</strong>: No corresponding Ant target exists in the <code>build.xml</code> file that creates a database for Java DB. The database URL for Java DB, which is used to establish a database connection, includes the option to create the database (if it does not already exist). See
+<p><strong>注意</strong>：No corresponding Ant target exists in the <code>build.xml</code> file that creates a database for Java DB. The database URL for Java DB, which is used to establish a database connection, includes the option to create the database (if it does not already exist). See
 <a class="TutorialLink" target="_top" href="connecting.html">Establishing a Connection</a> for more information.</p>
 
 <p>If you are using either Java DB or MySQL, then from the same directory, run the following command to delete existing sample database tables, recreate the tables, and populate them. For Java DB, this command also creates the database if it does not already exist:</p>
@@ -859,7 +859,7 @@ ant create-mysql-database
 ant setup
 </pre></div>
  
-<p><strong>Note</strong>: You should run the command <code>ant setup</code> every time before you run one of the Java classes in the sample. Many of these samples expect specific data in the contents of the sample&#39;s database tables.</p>
+<p><strong>注意</strong>：You should run the command <code>ant setup</code> every time before you run one of the Java classes in the sample. Many of these samples expect specific data in the contents of the sample&#39;s database tables.</p>
 
 <!-- ********************* -->
 <h2><a name="step11">Run the samples</a></h2>
