@@ -407,8 +407,8 @@
 
 <h2>问题</h2>
 <ol>
-<li><b>Question:</b> Can you pass a <code>Thread</code> object to <code>Executor.execute</code>? Would such an invocation make sense? Why or why not?
-<p><b>答案:</b> <code>Thread</code> implements the <code>Runnable</code> interface, so you can pass an instance of <code>Thread</code> to <code>Executor.execute</code>. However it doesn&#39;t make sense to use <code>Thread</code> objects this way. If the object is directly instantiated from <code>Thread</code>, its <code>run</code> method doesn&#39;t do anything. You can define a subclass of <code>Thread</code> with a useful <code>run</code> method &#151; but such a class would implement features that the executor would not use.</p>
+<li><b>问题：</b> Can you pass a <code>Thread</code> object to <code>Executor.execute</code>? Would such an invocation make sense? Why or why not?
+<p><b>答案：</b> <code>Thread</code> implements the <code>Runnable</code> interface, so you can pass an instance of <code>Thread</code> to <code>Executor.execute</code>. However it doesn&#39;t make sense to use <code>Thread</code> objects this way. If the object is directly instantiated from <code>Thread</code>, its <code>run</code> method doesn&#39;t do anything. You can define a subclass of <code>Thread</code> with a useful <code>run</code> method &#151; but such a class would implement features that the executor would not use.</p>
 </li>
 </ol>
 <h2>练习</h2>

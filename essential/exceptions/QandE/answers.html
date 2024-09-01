@@ -407,7 +407,7 @@
 
 <h2>问题</h2>
 <ol>
-<li><b>Question:</b> Is the following code legal?
+<li><b>问题：</b> Is the following code legal?
 <div class="codeblock"><pre>
 try {
     
@@ -415,17 +415,17 @@ try {
    
 }
 </pre></div>
-<b>答案:</b> Yes, it&#39;s legal &#151; and very useful A <code>try</code> statement does not have to have a <code>catch</code> block if it has a <code>finally</code> block. If the code in the <code>try</code> statement has multiple exit points and no associated <code>catch</code> clauses, the code in the <code>finally</code> block is executed no matter how the <code>try</code> block is exited. Thus it makes sense to provide a <code>finally</code> block whenever there is code that <i>must always</i> be executed. This include resource recovery code, such as the code to close I/O streams.</li>
-<li><b>Question:</b> What exception types can be caught by the following handler?
+<b>答案：</b> Yes, it&#39;s legal &#151; and very useful A <code>try</code> statement does not have to have a <code>catch</code> block if it has a <code>finally</code> block. If the code in the <code>try</code> statement has multiple exit points and no associated <code>catch</code> clauses, the code in the <code>finally</code> block is executed no matter how the <code>try</code> block is exited. Thus it makes sense to provide a <code>finally</code> block whenever there is code that <i>must always</i> be executed. This include resource recovery code, such as the code to close I/O streams.</li>
+<li><b>问题：</b> What exception types can be caught by the following handler?
 <div class="codeblock"><pre>
 catch (Exception e) {
      
 }
 </pre></div>
 What is wrong with using this type of exception handler?
-<p><b>答案:</b> This handler catches exceptions of type <code>Exception</code>; therefore, it catches any exception. This can be a poor implementation because you are losing valuable information about the type of exception being thrown and making your code less efficient. As a result, your program may be forced to determine the type of exception before it can decide on the best recovery strategy.</p>
+<p><b>答案：</b> This handler catches exceptions of type <code>Exception</code>; therefore, it catches any exception. This can be a poor implementation because you are losing valuable information about the type of exception being thrown and making your code less efficient. As a result, your program may be forced to determine the type of exception before it can decide on the best recovery strategy.</p>
 </li>
-<li><b>Question:</b> Is there anything wrong with this exception handler as written? Will this code compile?
+<li><b>问题：</b> Is there anything wrong with this exception handler as written? Will this code compile?
 <div class="codeblock"><pre>
 try {
 
@@ -435,8 +435,8 @@ try {
     
 }
 </pre></div>
-<b>答案:</b> This first handler catches exceptions of type <code>Exception</code>; therefore, it catches any exception, including <code>ArithmeticException</code>. The second handler could never be reached. This code will not compile.</li>
-<li><b>Question:</b> Match each situation in the first list with an item in the second list.
+<b>答案：</b> This first handler catches exceptions of type <code>Exception</code>; therefore, it catches any exception, including <code>ArithmeticException</code>. The second handler could never be reached. This code will not compile.</li>
+<li><b>问题：</b> Match each situation in the first list with an item in the second list.
 <ol type="a">
 <li><code>int[] A;<br />
 A[0] = 0;</code></li>
@@ -450,7 +450,7 @@ A[0] = 0;</code></li>
 <li>__compile error</li>
 <li>__no exception</li>
 </ol>
-<p style="font-weight: bold">答案:</p>
+<p style="font-weight: bold">答案：</p>
 <ol type="a">
 <li>3 (compile error). The array is not initialized and will not compile.</li>
 <li>1 (error).</li>
@@ -463,7 +463,7 @@ A[0] = 0;</code></li>
 <ol>
 <li><b>Exercise:</b> Add a <code>readList</code> method to 
 <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers.java'); return false;"><code><code>ListOfNumbers.java</code></code></a>. This method should read in <code>int</code> values from a file, print each value, and append them to the end of the vector. You should catch all appropriate errors. You will also need a text file containing numbers to read in.
-<p><b>答案:</b> See <code>
+<p><b>答案：</b> See <code>
 <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers2.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers2.java'); return false;"><code><code>ListOfNumbers2.java</code></code></a>.</code></p>
 </li>
 <li><b>Exercise:</b> Modify the following <code>cat</code> method so that it will compile:
@@ -485,7 +485,7 @@ public static void cat(File file) {
     }
 }
 </pre></div>
-<p><b>答案:</b> The code to catch exceptions is shown in bold:</p>
+<p><b>答案：</b> The code to catch exceptions is shown in bold:</p>
 <div class="codeblock"><pre>
 public static void cat(File file) {
     RandomAccessFile input = null;

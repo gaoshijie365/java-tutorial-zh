@@ -408,21 +408,21 @@
 <h2>问题</h2>
 
 <ol>
-<li>Question: At the beginning of this lesson, you learned that the core collection interfaces
+<li>问题： At the beginning of this lesson, you learned that the core collection interfaces
  are organized into two distinct
 inheritance trees. One interface in particular is not considered to be
 a true <code>Collection</code>, and therefore sits at the top of its own tree. What is the name
 of this interface? <br />
-答案: <code>Map</code><br /><br />
+答案： <code>Map</code><br /><br />
 </li>
 
 
 <li>
-Question: Each interface in the collections framework is declared
+问题： Each interface in the collections framework is declared
 with the <code>&lt;E&gt;</code> syntax, which tells you that it is
 generic. When you declare a <code>Collection</code> instance, what is
 the advantage of specifying the type of objects that it will contain? <br />
-答案:
+答案：
 Specifying the type allows the compiler to verify 
 (at compile time) that the type of object you put into the 
 collection is correct, thus reducing errors at runtime.
@@ -430,59 +430,59 @@ collection is correct, thus reducing errors at runtime.
 </li>
 
 <li>
-Question: What interface represents a collection that does not allow duplicate elements?
+问题： What interface represents a collection that does not allow duplicate elements?
 <br />
-答案: <code>Set</code>
+答案： <code>Set</code>
 <br /><br />
 </li>
 
 <li>
-Question: What interface forms the root of the collections hierarchy?
+问题： What interface forms the root of the collections hierarchy?
 <br />
-答案: <code>Collection</code>
+答案： <code>Collection</code>
 <br /><br />
 </li>
 
 <li>
-Question: What interface represents an ordered collection that may contain duplicate elements?
+问题： What interface represents an ordered collection that may contain duplicate elements?
 <br />
-答案: <code>List</code>
+答案： <code>List</code>
 <br /><br />
 </li>
 
 <li>
-Question: What interface represents a collection that holds elements prior to processing?
+问题： What interface represents a collection that holds elements prior to processing?
 <br />
-答案: <code>Queue</code>
+答案： <code>Queue</code>
 
 <br /><br />
 </li>
 
 <li>
-Question: What interface represents a type that maps keys to values?
+问题： What interface represents a type that maps keys to values?
 <br />
-答案: <code>Map</code>
+答案： <code>Map</code>
 <br /><br />
 </li>
 
 <li>
-Question: What interface represents a double-ended queue?
+问题： What interface represents a double-ended queue?
 
 <br />
-答案: <code>Deque</code>
+答案： <code>Deque</code>
 <br /><br />
 </li>
 
-<li>Question: Name three different ways to iterate over the elements of a <code>List</code>.
+<li>问题： Name three different ways to iterate over the elements of a <code>List</code>.
 <br />
-答案: You can iterate over a <code>List</code> using streams, the enhanced <code>for</code> statement, or iterators.
+答案： You can iterate over a <code>List</code> using streams, the enhanced <code>for</code> statement, or iterators.
 
 <br /><br />
 </li>
 
-<li>Question: True or False: Aggregate operations are mutative operations that modify the underlying collection.
+<li>问题： True or False: Aggregate operations are mutative operations that modify the underlying collection.
 <br />
-答案: False. Aggregate operations do not mutate the underlying collection. In fact, you
+答案： False. Aggregate operations do not mutate the underlying collection. In fact, you
 must be careful to never mutate a collection while invoking its aggregate operations.
 Doing so could lead to concurrency problems should the stream be changed to a parallel stream
 at some point in the future.
@@ -495,7 +495,7 @@ at some point in the future.
 <li>Exercise: Write a program that prints its arguments in random order. Do not make a copy of the argument array.
 Demonstrate how to print out the elements using both streams and the traditional enhanced for statement.
  <br />
-答案: <br />
+答案： <br />
 <div class="codeblock"><pre>
 
 import java.util.*;
@@ -525,7 +525,7 @@ public class Ran {
 <li>Exercise: Take the 
 <a class="SourceLink" target="_blank" href="../examples/FindDups.java" onclick="showCode('../../../displayCode.html', '../examples/FindDups.java'); return false;"><code>FindDups</code></a> example 
  and modify it to use a <code>SortedSet</code> instead of a <code>Set</code>. Specify a <code>Comparator</code> so that case is ignored when sorting and identifying set elements. <br />
-答案: <br />
+答案： <br />
 <div class="codeblock"><pre>
 import java.util.*;
 
@@ -552,7 +552,7 @@ public class FindDups {
 <li>Exercise: Write a method that takes a <code>List&lt;String&gt;</code> and applies 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#trim--"><code>String.trim</code></a> to each element. 
  <br />
- 答案: <br />
+ 答案： <br />
  The enhanced <code>for</code> statement does not allow you to modify the <code>List</code>. Using an instance of the <code>Iterator</code> class allows you to delete elements, but not replace an existing element or add a new one. That leaves <code>ListIterator</code>:
 <div class="codeblock"><pre>
 import java.util.*;

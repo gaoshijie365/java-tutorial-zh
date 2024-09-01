@@ -408,37 +408,37 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p>Question: Which classes can an applet extend?</p>
-<p>答案: An applet can extend the <code>java.applet.Applet</code> class or the <code>java.swing.JApplet</code> class.</p>
+<p>问题： Which classes can an applet extend?</p>
+<p>答案： An applet can extend the <code>java.applet.Applet</code> class or the <code>java.swing.JApplet</code> class.</p>
 <p>The <code>java.applet.Applet</code> class extends the <code>java.awt.Panel</code> class and enables you to use the GUI tools in the AWT package.</p>
 <p>The <code>java.swing.JApplet</code> class is a subclass of <code>java.applet.Applet</code> that also enables you to use the Swing GUI tools.</p>
 </li>
 <li>
-<p>Question: For what do you use the <code>start()</code> method?</p>
-<p>答案: You use the <code>start()</code> method when the applet must perform a task after it is initialized, before receiving user input. The <code>start()</code> method either performs the applet&#39;s work or (more likely) starts up one or more threads to perform the work.</p>
+<p>问题： For what do you use the <code>start()</code> method?</p>
+<p>答案： You use the <code>start()</code> method when the applet must perform a task after it is initialized, before receiving user input. The <code>start()</code> method either performs the applet&#39;s work or (more likely) starts up one or more threads to perform the work.</p>
 </li>
 <li>
-<p>Question: True or false: An applet can make network connections to any host on the Internet.</p>
-<p>答案: <strong>False</strong>: An applet can only connect to the host that it came from.</p>
+<p>问题： True or false: An applet can make network connections to any host on the Internet.</p>
+<p>答案： <strong>False</strong>: An applet can only connect to the host that it came from.</p>
 </li>
 <li>
-<p>Question: How do you get the value of a parameter specified in the JNLP file from within the applet&#39;s code?</p>
-<p>答案: You use the <code>getParameter(&quot;<em>Parameter name</em>&quot;)</code> method, which returns the String value of the parameter.</p>
+<p>问题： How do you get the value of a parameter specified in the JNLP file from within the applet&#39;s code?</p>
+<p>答案： You use the <code>getParameter(&quot;<em>Parameter name</em>&quot;)</code> method, which returns the String value of the parameter.</p>
 </li>
 <li>
-<p>Question: Which class enables applets to interact with JavaScript code in the applet&#39;s web page?</p>
-<p>答案: The <code>netscape.javascript.JSObject</code> class enables applets to interact with JavaScript code in the applet&#39;s web page.</p>
+<p>问题： Which class enables applets to interact with JavaScript code in the applet&#39;s web page?</p>
+<p>答案： The <code>netscape.javascript.JSObject</code> class enables applets to interact with JavaScript code in the applet&#39;s web page.</p>
 </li>
 <li>
-<p>Question: True or False: Applets can modify the contents of the parent web page.</p>
-<p>答案: <strong>True</strong>:Applets can modify the contents of the parent web page by using the <code>getDocument</code> method of the <code>com.sun.java.browser.plugin2.DOM</code> class and the Common DOM API.</p>
+<p>问题： True or False: Applets can modify the contents of the parent web page.</p>
+<p>答案： <strong>True</strong>:Applets can modify the contents of the parent web page by using the <code>getDocument</code> method of the <code>com.sun.java.browser.plugin2.DOM</code> class and the Common DOM API.</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
 <p>Exercise: The <code>Exercise</code> applet&#39;s parent web page has a JavaScript variable called <code>memberId</code>. Write the code to set the value of the <code>memberId</code> equal to &quot;123489&quot; in the applet&#39;s <code>start</code> method.</p>
-<p>答案:</p>
+<p>答案：</p>
 <div class="codeblock"><pre>
 import java.applet.Applet;
 import netscape.javascript.*; // add plugin.jar to

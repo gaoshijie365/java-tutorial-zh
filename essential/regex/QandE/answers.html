@@ -407,32 +407,32 @@
 
 <h2>问题</h2>
 <ol>
-<li>Question: What are the three public classes in the <code>java.util.regex</code> package? Describe the purpose of each.
-<p>答案:</p>
+<li>问题： What are the three public classes in the <code>java.util.regex</code> package? Describe the purpose of each.
+<p>答案：</p>
 <ul>
 <li><code>Pattern</code> instances are compiled representations of regular expressions.</li>
 <li><code>Matcher</code> instances are engines that interpret patterns and perform match operations against input strings.</li>
 <li><code>PatternSyntaxException</code> defines an unchecked exception indicating a syntax error in a regular expression.</li>
 </ul>
 </li>
-<li>Question: Consider the string literal <code>&quot;foo&quot;</code>. What is the start index? What is the end index? Explain what these numbers mean.
-<p>答案: Each character in the string resides in its own cell. Index positions point between cells. The string <code>&quot;foo&quot;</code> starts at index 0 and ends at index 3, even though the characters only occupy cells 0, 1, and 2.</p>
+<li>问题： Consider the string literal <code>&quot;foo&quot;</code>. What is the start index? What is the end index? Explain what these numbers mean.
+<p>答案： Each character in the string resides in its own cell. Index positions point between cells. The string <code>&quot;foo&quot;</code> starts at index 0 and ends at index 3, even though the characters only occupy cells 0, 1, and 2.</p>
 </li>
-<li>Question: What is the difference between an ordinary character and a metacharacter? Give an example of each.
-<p>答案: An ordinary character in a regular expression matches itself. A metacharacter is a special character that affects the way a pattern is matched. The letter <code>A</code> is an ordinary character. The punctuation mark <code>.</code> is a metacharacter that matches any single character.</p>
+<li>问题： What is the difference between an ordinary character and a metacharacter? Give an example of each.
+<p>答案： An ordinary character in a regular expression matches itself. A metacharacter is a special character that affects the way a pattern is matched. The letter <code>A</code> is an ordinary character. The punctuation mark <code>.</code> is a metacharacter that matches any single character.</p>
 </li>
-<li>Question: How do you force a metacharacter to act like an ordinary character?
-<p>答案: There are two ways:</p>
+<li>问题： How do you force a metacharacter to act like an ordinary character?
+<p>答案： There are two ways:</p>
 <ul>
 <li>Precede the metacharacter with a backslash (<code>\</code>);</li>
 <li>Enclose the metacharacter within the quote expressions, <code>\Q</code> (at the beginning) and <code>\E</code> (at the end).</li>
 </ul>
 </li>
-<li>Question: What do you call a set of characters enclosed in square brackets? What is it for?
-<p>答案: This is a character class. It matches any single character that is in the class of characters specified by the expression between the brackets.</p>
+<li>问题： What do you call a set of characters enclosed in square brackets? What is it for?
+<p>答案： This is a character class. It matches any single character that is in the class of characters specified by the expression between the brackets.</p>
 </li>
-<li>Question: Here are three predefined character classes: <code>\d</code>, <code>\s</code>, and <code>\w</code>. Describe each one, and rewrite it using square brackets.
-<p>答案:</p>
+<li>问题： Here are three predefined character classes: <code>\d</code>, <code>\s</code>, and <code>\w</code>. Describe each one, and rewrite it using square brackets.
+<p>答案：</p>
 <table cellspacing="10" summary="">
 <tr>
 <td><code>\d</code></td>
@@ -451,8 +451,8 @@
 </tr>
 </table>
 </li>
-<li>Question: For each of <code>\d</code>, <code>\s</code>, and <code>\w</code>, write <i>two</i> simple expressions that match the <i>opposite</i> set of characters.
-<p>答案:</p>
+<li>问题： For each of <code>\d</code>, <code>\s</code>, and <code>\w</code>, write <i>two</i> simple expressions that match the <i>opposite</i> set of characters.
+<p>答案：</p>
 <table cellspacing="10" summary="">
 <tr>
 <td><code>\d</code></td>
@@ -471,8 +471,8 @@
 </tr>
 </table>
 </li>
-<li>Question: Consider the regular expression <code>(dog){3}</code>. Identify the two subexpressions. What string does the expression match?
-<p>答案: The expression consists of a capturing group, <code>(dog)</code>, followed by a greedy quantifier <code>{3}</code>. It matches the string &quot;dogdogdog&quot;.</p>
+<li>问题： Consider the regular expression <code>(dog){3}</code>. Identify the two subexpressions. What string does the expression match?
+<p>答案： The expression consists of a capturing group, <code>(dog)</code>, followed by a greedy quantifier <code>{3}</code>. It matches the string &quot;dogdogdog&quot;.</p>
 <h2>练习</h2>
 <ol>
 <li>Exercise: Use a backreference to write an expression that will match a person&#39;s name only if that person&#39;s first name and last name are the same.

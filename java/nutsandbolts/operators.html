@@ -481,21 +481,21 @@
 <div class="linkBHEAD"><a href="arrays.html">数组</a></div>
 <div class="linkBHEAD"><a href="variablesummary.html">变量总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_variables.html">问题和练习</a></div>
-<div class="nolinkAHEAD">Operators</div>
-<div class="linkBHEAD"><a href="op1.html">Assignment, Arithmetic, and Unary Operators</a></div>
-<div class="linkBHEAD"><a href="op2.html">Equality, Relational, and Conditional Operators </a></div>
-<div class="linkBHEAD"><a href="op3.html">Bitwise and Bit Shift Operators</a></div>
-<div class="linkBHEAD"><a href="opsummary.html">Summary of Operators</a></div>
+<div class="nolinkAHEAD">操作符</div>
+<div class="linkBHEAD"><a href="op1.html">赋值、算术和一元操作符</a></div>
+<div class="linkBHEAD"><a href="op2.html">判等、关系和条件操作符 </a></div>
+<div class="linkBHEAD"><a href="op3.html">按位和移位操作符</a></div>
+<div class="linkBHEAD"><a href="opsummary.html">操作符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="expressions.html">Expressions, Statements, and Blocks</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_expressions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="flow.html">Control Flow Statements</a></div>
+<div class="linkAHEAD"><a href="flow.html">控制流语句</a></div>
 <div class="linkBHEAD"><a href="if.html">The if-then and if-then-else Statements</a></div>
 <div class="linkBHEAD"><a href="switch.html">The switch Statement</a></div>
 <div class="linkBHEAD"><a href="while.html">The while and do-while Statements</a></div>
 <div class="linkBHEAD"><a href="for.html">The for Statement</a></div>
 <div class="linkBHEAD"><a href="branch.html">Branching Statements</a></div>
-<div class="linkBHEAD"><a href="flowsummary.html">Summary of Control Flow Statements</a></div>
+<div class="linkBHEAD"><a href="flowsummary.html">Summary of 控制流语句</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_flow.html">问题和练习</a></div>
 </div>
     </div>
@@ -518,73 +518,75 @@
             <div id="PageTitle"><h1>Operators</h1></div>
             <div id="PageContent">
 
-<p>Now that you&#39;ve learned how to declare and initialize variables, you probably want to know how to <i>do something</i> with them. Learning the operators of the Java programming language is a good place to start. Operators are special symbols that perform specific operations on one, two, or three <i>operands</i>, and then return a result.</p>
-<p>As we explore the operators of the Java programming language, it may be helpful for you to know ahead of time which operators have the highest precedence. The operators in the following table are listed according to precedence order. The closer to the top of the table an operator appears, the higher its precedence. Operators with higher precedence are evaluated before operators with relatively lower precedence. Operators on the same line have equal precedence. When operators of equal precedence appear in the same expression, a rule must govern which is evaluated first. All binary operators except for the assignment operators are evaluated from left to right; assignment operators are evaluated right to left.</p>
+<p>您已经学习了如何声明和初始化变量，现在您可能想知道可以对它们 <i>做些什么</i>。从操作符学起是个不错的主意。操作符是特定的符号，在一个、两个、或三个 <i>操作数</i> 上执行特定的操作并返回一个结果。</p>
+<p>当我们探索 Java 中的操作符时，知道哪个操作符有最高的优先级将会非常有帮助。下标按照优先级列出了操作符。接近顶部的操作符优先级更高。高优先级的操作符先于低优先级的操作符进行计算。
+    同一行的操作符拥有相同的优先级。当优先级相同的操作符出现在同一个表达式中，必须给定一个规则决定谁先计算。除了赋值操作符，所有的二元操作符都从左向右计算；赋值操作符从右向左计算。</p>
 <table border="1" cellpadding="5" summary="This table lists operators according to precedence order">
-<caption id="nutsandbolts-precedence"><strong>Operator Precedence</strong></caption>
+<caption id="nutsandbolts-precedence"><strong>操作符优先级</strong></caption>
 <tr>
-<th id="h1">Operators</th>
-<th id="h2">Precedence</th>
+<th id="h1">操作符</th>
+<th id="h2">优先级</th>
 </tr>
 <tr>
-<td headers="h1">postfix</td>
+<td headers="h1">后缀</td>
 <td headers="h2"><code><em>expr</em>++ <em>expr</em>--</code></td>
 </tr>
 <tr>
-<td headers="h1">unary</td>
+<td headers="h1">一元</td>
 <td headers="h2"><code>++<em>expr</em> --<em>expr</em> +<em>expr</em> -<em>expr</em> ~ !</code></td>
 </tr>
 <tr>
-<td headers="h1">multiplicative</td>
+<td headers="h1">乘除</td>
 <td headers="h2"><code>* / %</code></td>
 </tr>
 <tr>
-<td headers="h1">additive</td>
+<td headers="h1">加减</td>
 <td headers="h2"><code>+ -</code></td>
 </tr>
 <tr>
-<td headers="h1">shift</td>
+<td headers="h1">移位</td>
 <td headers="h2"><code>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</code></td>
 </tr>
 <tr>
-<td headers="h1">relational</td>
+<td headers="h1">关系</td>
 <td headers="h2"><code>&lt; &gt; &lt;= &gt;= instanceof</code></td>
 </tr>
 <tr>
-<td headers="h1">equality</td>
+<td headers="h1">判等</td>
 <td headers="h2"><code>== !=</code></td>
 </tr>
 <tr>
-<td headers="h1">bitwise AND</td>
+<td headers="h1">位与</td>
 <td headers="h2"><code>&amp;</code></td>
 </tr>
 <tr>
-<td headers="h1">bitwise exclusive OR</td>
+<td headers="h1">位异或</td>
 <td headers="h2"><code>^</code></td>
 </tr>
 <tr>
-<td headers="h1">bitwise inclusive OR</td>
+<td headers="h1">位或</td>
 <td headers="h2"><code>|</code></td>
 </tr>
 <tr>
-<td headers="h1">logical AND</td>
+<td headers="h1">逻辑与</td>
 <td headers="h2"><code>&amp;&amp;</code></td>
 </tr>
 <tr>
-<td headers="h1">logical OR</td>
+<td headers="h1">逻辑或</td>
 <td headers="h2"><code>||</code></td>
 </tr>
 <tr>
-<td headers="h1">ternary</td>
+<td headers="h1">三元</td>
 <td headers="h2"><code>? :</code></td>
 </tr>
 <tr>
-<td headers="h1">assignment</td>
+<td headers="h1">赋值</td>
 <td headers="h2"><code>= += -= *= /= %= &amp;= ^= |= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</code></td>
 </tr>
 </table>
 <br />
-<p>In general-purpose programming, certain operators tend to appear more frequently than others; for example, the assignment operator &quot;<code>=</code>&quot; is far more common than the unsigned right shift operator &quot;<code>&gt;&gt;&gt;</code>&quot;. With that in mind, the following discussion focuses first on the operators that you&#39;re most likely to use on a regular basis, and ends focusing on those that are less common. Each discussion is accompanied by sample code that you can compile and run. Studying its output will help reinforce what you&#39;ve just learned.</p>
+<p>在编程中，一些操作符会比其它操作符使用的更频繁。比如，赋值操作符 &quot;<code>=</code>&quot; 远比 &quot;<code>&gt;&gt;&gt;</code>&quot; 无符号右移操作符更常见。
+有了这些，下面的讨论首先介绍您最常用的操作符，最后介绍不常用的操作符。每一部分都辅以可编译运行的示例代码。观察程序的输出可以加强您对学习到的内容的理解。</p>
 
 
         </div>
@@ -614,7 +616,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 问题和练习：变量
-        <br /><b>下一页：</b> Assignment, Arithmetic, and Unary Operators
+        <br /><b>下一页：</b> 赋值、算术和一元操作符
     </div>
 </body>
 </html> 

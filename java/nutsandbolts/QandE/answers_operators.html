@@ -407,37 +407,39 @@
 
 <h2>问题答案</h2>
 <ol>
-<li>Consider the following code snippet:
+<li>考虑下面的代码片段：
 <div class="codeblock"><pre>
 arrayOfInts[j] &gt; arrayOfInts[j+1]
 </pre></div>
-<strong>Question:</strong> What operators does the code contain?<br />
-<strong>答案:</strong> <code>&gt;</code>, <code>+</code><br />
+<strong>问题：</strong>包含哪些操作符？<br />
+<strong>答案：</strong> <code>&gt;</code>, <code>+</code><br />
 <br /></li>
-<li>Consider the following code snippet:
+<li>考虑下面代码片段：
 <div class="codeblock"><pre>
 int i = 10;
 int n = i++%5;
 </pre></div>
 <ol type="a">
-<li><strong>Question:</strong> What are the values of <code>i</code> and <code>n</code> after the code is executed?<br />
-<strong>答案:</strong> <code>i</code> is 11, and <code>n</code> is 0.<br />
+<li><strong>问题：</strong> 代码执行之后 <code>i</code> 和 <code>n</code> 的值是多少？<br />
+<strong>答案：</strong> <code>i</code> 是 11，<code>n</code> 是 0。<br />
 <br /></li>
-<li><strong>Question:</strong> What are the final values of <code>i</code> and <code>n</code> if instead of using the postfix increment operator (<code>i++</code>), you use the prefix version (<code>++i)</code>)?<br />
-<strong>答案:</strong> <code>i</code> is 11, and <code>n</code> is 1.<br />
+<li><strong>问题：</strong> 如果使用前缀自增操作符 (<code>++i</code>) 代替后缀自增操作符 (<code>i++</code>)，<code>i</code> 和 <code>n</code> 的最终值是多少？<br />
+<strong>答案：</strong> <code>i</code> 是 11，<code>n</code> 是 1。<br />
 <br /></li>
 </ol>
 </li>
-<li><strong>Question:</strong> To invert the value of a <code>boolean</code>, which operator would you use?<br />
-<strong>答案:</strong> The logical complement operator &quot;!&quot;.</li>
-<li><strong>Question</strong>: Which operator is used to compare two values, <code>=</code> or <code>==</code> ?<br />
-<strong>答案:</strong> The <code>==</code> operator is used for comparison, and <code>=</code> is used for assignment.</li>
-<li><strong>Question:</strong> Explain the following code sample: <code>result = someCondition ? value1 : value2;</code><br />
-<strong>答案:</strong> This code should be read as: &quot;If <code>someCondition</code> is <code>true</code>, assign the value of <code>value1</code> to <code>result</code>. Otherwise, assign the value of <code>value2</code> to <code>result</code>.&quot;</li>
+<li><strong>问题：</strong> 要反转 <code>boolean</code> 值，使用哪个操作符？<br />
+<strong>答案：</strong>逻辑非操作符 &quot;!&quot;。</li>
+<li><strong>Question</strong>: 比较两个值用哪个操作符，<code>=</code> 还是 <code>==</code> ？<br />
+<strong>答案：</strong><code>==</code> 操作符用来比较，<code>=</code> 操作符用于赋值。</li>
+<li><strong>问题：</strong> 解释代码：<code>result = someCondition ? value1 : value2;</code><br />
+<strong>答案：</strong>这段代码应该读作：
+    &quot;如果 <code>someCondition</code> 是 <code>true</code>，将 <code>value1</code> 的值赋给 <code>result</code>。
+    否则，将 <code>value2</code> 的值赋给 <code>result</code>。&quot;</li>
 </ol>
 <h2>练习</h2>
 <ol>
-<li>Change the following program to use compound assignments:
+<li>使用复合赋值操作修改下面的程序：
 <div class="codeblock"><pre>
 class ArithmeticDemo {
 
@@ -462,7 +464,7 @@ class ArithmeticDemo {
     }
 }
 </pre></div>
-<p>Here is one solution:</p>
+<p>一种解决方法：</p>
 <div class="codeblock"><pre>
 class ArithmeticDemo {
 
@@ -487,7 +489,7 @@ class ArithmeticDemo {
 }
 </pre></div>
 </li>
-<li>In the following program, explain why the value &quot;6&quot; is printed twice in a row:
+<li>下面的程序中，解释为什么 &quot;6&quot; 会打印两次：
 <div class="codeblock"><pre>
 class PrePostDemo {
     public static void main(String[] args){
@@ -502,7 +504,8 @@ class PrePostDemo {
     }
 }
 </pre></div>
-The code <code>System.out.println(++i);</code> evaluates to 6, because the prefix version of <code>++</code> evaluates to the incremented value. The next line, <code>System.out.println(i++);</code> evaluates to the current value (6), then increments by one. So &quot;7&quot; doesn&#39;t get printed until the next line.</li>
+代码 <code>System.out.println(++i);</code> 打印 6，因为前缀 <code>++</code> 返回增加后的值。下一行，
+    <code>System.out.println(i++);</code> 打印当前值 (6)，然后增加 1。所以直到下一行才会打印 &quot;7&quot;。</li>
 </ol>
 
 
@@ -529,7 +532,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> 问题和练习：Operators
+        <b>上一页：</b> 问题和练习：操作符
     </div>
 </body>
 </html> 
