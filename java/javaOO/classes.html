@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Classes (Java&trade; 教程 &gt;
+        <title>类 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,16 +476,16 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
-<div class="nolinkAHEAD">Classes</div>
-<div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
-<div class="linkBHEAD"><a href="methods.html">Defining Methods</a></div>
-<div class="linkBHEAD"><a href="constructors.html">Providing Constructors for Your Classes</a></div>
-<div class="linkBHEAD"><a href="arguments.html">Passing Information to a Method or a Constructor</a></div>
-<div class="linkAHEAD"><a href="objects.html">Objects</a></div>
+<div class="nolinkAHEAD">类</div>
+<div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造器</a></div>
+<div class="linkBHEAD"><a href="arguments.html">传递信息到方法或构造器</a></div>
+<div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
-<div class="linkBHEAD"><a href="usingobject.html">Using Objects</a></div>
-<div class="linkAHEAD"><a href="more.html">More on Classes</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
 <div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
 <div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
@@ -494,7 +494,7 @@
 <div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
 <div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
 <div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
@@ -522,14 +522,13 @@
                 <a target="_top" href="index.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="classdecl.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Classes</h1></div>
+            <div id="PageTitle"><h1>类</h1></div>
             <div id="PageContent">
 
 <!---Classes=-->
-<p>The introduction to object-oriented concepts in the lesson titled 
-<a class="TutorialLink" target="_top" href="../../java/concepts/index.html">Object-oriented Programming Concepts </a>used a bicycle class as an example, with racing bikes, mountain bikes, and tandem bikes as subclasses. Here is sample code for a possible implementation of a <code>Bicycle</code> class, to give you an overview of a class declaration. Subsequent sections of this 
-lesson 
- will back up and explain class declarations step by step. For the moment, don&#39;t concern yourself with the details.</p>
+<p>在 <a class="TutorialLink" target="_top" href="../../java/concepts/index.html">面向对象编程概念</a> 中介绍面向对象概念时，
+    使用了自行车类及其子类竞赛自行车、山地自行车、和双人自行车作为例子。这里有一份 <code>Bicycle</code> 类的可能实现，向您展示了类声明的概览。
+    后续课程中将回过头来一步一步地讲解类声明。现在，不用关系细节。</p>
 <div class="codeblock"><pre>
 public class Bicycle {
         
@@ -567,7 +566,7 @@ public class Bicycle {
         
 }
 </pre></div>
-<p>A class declaration for a <code>MountainBike</code> class that is a subclass of <code>Bicycle</code> might look like this:</p>
+<p><code>MountainBike</code> 类是 <code>Bicycle</code> 的子类，其声明可能如下：</p>
 <div class="codeblock"><pre>
 public class MountainBike extends Bicycle {
         
@@ -591,7 +590,8 @@ public class MountainBike extends Bicycle {
 
 }
 </pre></div>
-<p><code>MountainBike</code> inherits all the fields and methods of <code>Bicycle</code> and adds the field <code>seatHeight</code> and a method to set it (mountain bikes have seats that can be moved up and down as the terrain demands).</p>
+<p><code>MountainBike</code> 继承了 <code>Bicycle</code> 的所有字段和方法，并且添加了 <code>seatHeight</code> 字段和对其进行设置的方法
+    (山地自行车的坐椅可以根据地形上下调整)。</p>
 
         </div>
         <div class="NavBit">
@@ -620,7 +620,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 类和对象
-        <br /><b>下一页：</b> Declaring Classes
+        <br /><b>下一页：</b> 声明类
     </div>
 </body>
 </html> 

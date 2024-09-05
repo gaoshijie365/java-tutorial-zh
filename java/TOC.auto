@@ -52,24 +52,24 @@
 </li>
 <li class="tocli"><a href="javaOO/index.html">类和对象</a>
 <ul>
-<li class="tocli"><a href="javaOO/classes.html">Classes</a>
+<li class="tocli"><a href="javaOO/classes.html">类</a>
 <ul>
-<li class="tocli"><a href="javaOO/classdecl.html">Declaring Classes</a></li>
-<li class="tocli"><a href="javaOO/variables.html">Declaring Member 变量</a></li>
-<li class="tocli"><a href="javaOO/methods.html">Defining Methods</a></li>
-<li class="tocli"><a href="javaOO/constructors.html">Providing Constructors for Your Classes</a></li>
-<li class="tocli"><a href="javaOO/arguments.html">Passing Information to a Method or a Constructor</a>
+<li class="tocli"><a href="javaOO/classdecl.html">声明类</a></li>
+<li class="tocli"><a href="javaOO/variables.html">声明成员变量</a></li>
+<li class="tocli"><a href="javaOO/methods.html">定义方法</a></li>
+<li class="tocli"><a href="javaOO/constructors.html">为您的类提供构造器</a></li>
+<li class="tocli"><a href="javaOO/arguments.html">传递信息到方法或构造器</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="javaOO/objects.html">Objects</a>
+<li class="tocli"><a href="javaOO/objects.html">对象</a>
 <ul>
 <li class="tocli"><a href="javaOO/objectcreation.html">创建对象</a></li>
-<li class="tocli"><a href="javaOO/usingobject.html">Using Objects</a>
+<li class="tocli"><a href="javaOO/usingobject.html">使用对象</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="javaOO/more.html">More on Classes</a>
+<li class="tocli"><a href="javaOO/more.html">更多关于类的信息</a>
 <ul>
 <li class="tocli"><a href="javaOO/returnvalue.html">Returning a Value from a Method</a></li>
 <li class="tocli"><a href="javaOO/thiskey.html">Using the this Keyword</a></li>
@@ -82,7 +82,7 @@
 </li>
 <li class="tocli"><a href="javaOO/QandE/creating-questions.html">问题和练习：Classes</a></li>
 <li class="tocli"><a href="javaOO/QandE/objects-questions.html">问题和练习：Objects</a></li>
-<li class="tocli"><a href="javaOO/nested.html">Nested Classes</a>
+<li class="tocli"><a href="javaOO/nested.html">嵌套类</a>
 <ul>
 <li class="tocli"><a href="javaOO/innerclasses.html">Inner Class Example</a></li>
 <li class="tocli"><a href="javaOO/localclasses.html">Local Classes</a></li>

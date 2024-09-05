@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Declaring Classes (Java&trade; 教程 &gt;
+        <title>声明类 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,16 +476,16 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
-<div class="linkAHEAD"><a href="classes.html">Classes</a></div>
-<div class="nolinkBHEAD">Declaring Classes</div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
-<div class="linkBHEAD"><a href="methods.html">Defining Methods</a></div>
-<div class="linkBHEAD"><a href="constructors.html">Providing Constructors for Your Classes</a></div>
-<div class="linkBHEAD"><a href="arguments.html">Passing Information to a Method or a Constructor</a></div>
-<div class="linkAHEAD"><a href="objects.html">Objects</a></div>
+<div class="linkAHEAD"><a href="classes.html">类</a></div>
+<div class="nolinkBHEAD">声明类</div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造器</a></div>
+<div class="linkBHEAD"><a href="arguments.html">传递信息到方法或构造器</a></div>
+<div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
-<div class="linkBHEAD"><a href="usingobject.html">Using Objects</a></div>
-<div class="linkAHEAD"><a href="more.html">More on Classes</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
 <div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
 <div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
@@ -494,7 +494,7 @@
 <div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
 <div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
 <div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
@@ -510,7 +510,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 类和对象
-        <br /><b>节：</b> Classes
+        <br /><b>小节：</b> 类
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -523,39 +523,37 @@
                 <a target="_top" href="classes.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="variables.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Declaring Classes</h1></div>
+            <div id="PageTitle"><h1>声明类</h1></div>
             <div id="PageContent">
 
-<!-- Declaring Classes -->
-<p>You&#39;ve seen classes defined in the following way:</p>
+<!-- 声明类 -->
+<p>您已经见过用下述方式定义类了：</p>
 <div class="codeblock"><pre>
 class <i>MyClass</i> {
     // field, constructor, and 
     // method declarations
 }
 </pre></div>
-<p>This is a <i>class declaration</i>. The <em>class body</em> (the area between the braces) contains all the code that provides for the life cycle of the objects created from the class: constructors for initializing new objects, declarations for the fields that provide the state of the class and its objects, and methods to implement the behavior of the class and its objects.</p>
-<p>The preceding class declaration is a minimal one. It contains only those components of a class declaration that are required. You can provide more information about the class, such as the name of its superclass, whether it implements any interfaces, and so on, at the start of the class declaration. For example,</p>
+<p>这是一个 <i>类声明</i>。<em>类体</em> (大括号之间的区域) 包含所有代码：构造器用来初始化新对象，字段提供类和其对象的状态，方法实现类和其对象的行为。</p>
+<p>上一个类声明是最简单的。它仅包含声明类所必须的部分。您可以在类声明处提供关于类的更多信息，比如超类的名称，其实现的接口，等等。比如</p>
 <div class="codeblock"><pre>
 class <i>MyClass extends MySuperClass implements YourInterface</i> {
     // field, constructor, and
     // method declarations
 }
 </pre></div>
-<p>means that <code>MyClass</code> is a subclass of <code>MySuperClass</code> and that it implements the <code>YourInterface</code> interface.</p>
-<p>You can also add modifiers like <i>public</i> or <i>private</i> at the very beginning&#151;so you can see that the opening line of a class declaration can become quite complicated. The modifiers <i>public</i> and <i>private</i>, which determine what other classes can access <code>MyClass</code>, are discussed later in this 
-lesson.
- 
-The lesson 
- on interfaces and inheritance will explain how and why you would use the <i>extends</i> and <i>implements</i> keywords in a class declaration. For the moment you do not need to worry about these extra complications.</p>
-<p>In general, class declarations can include these components, in order:</p>
+<p>意思是 <code>MyClass</code> 是 <code>MySuperClass</code> 的子类，并实现了 <code>YourInterface</code> 接口。</p>
+<p>您也可以在最开始添加修饰符，如 <i>public</i> 或 <i>private</i> &#151; 所以类声明可以变得非常复杂。修饰符 <i>public</i> 和 <i>private</i>
+    决定其它类对 <code>MyClass</code> 的访问，将在本课程的后续进行讨论。
+    接口和继承课程中将解释如何以及为什么您可以在类声明中使用 <i>extends</i> 和 <i>implements</i> 关键字。
+    现在，您不需要考虑这些额外的复杂性。</p>
+<p>通常，类声明中可以包含这些组成部分，按顺序列出如下：</p>
 <ol>
-<li>Modifiers such as <i>public</i>, <i>private</i>, and a number of others that you will encounter later. (However, note that the <i>private</i> modifier can only be applied to 
-<a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html">Nested Classes</a>.)</li>
-<li>The class name, with the initial letter capitalized by convention.</li>
-<li>The name of the class&#39;s parent (superclass), if any, preceded by the keyword <i>extends</i>. A class can only <i>extend</i> (subclass) one parent.</li>
-<li>A comma-separated list of interfaces implemented by the class, if any, preceded by the keyword <i>implements</i>. A class can <i>implement</i> more than one interface.</li>
-<li>The class body, surrounded by braces, {}.</li>
+<li>修饰符，比如 <i>public</i>、<i>private</i> 和您将在后面遇到的其它修饰符。(然而，注意 <i>private</i> 修饰符只能用于 <a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html">嵌套类</a>。)</li>
+<li>类名，习惯上首字母大写。</li>
+<li>父类名，如果有的话跟在关键字 <i>extends</i> 后面。一个类只能 <i>扩展</i> 一个父类。</li>
+<li>类实现的接口列表，以逗号分隔。如果有的话跟在关键字 <i>implements</i> 之后。一个类可以 <i>实现</i> 多个接口。</li>
+<li>类体，由大括号包裹 {}。</li>
 </ol>
 
 
@@ -585,8 +583,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Classes
-        <br /><b>下一页：</b> Declaring Member 变量
+        <b>上一页：</b> 类
+        <br /><b>下一页：</b> 声明成员变量
     </div>
 </body>
 </html> 

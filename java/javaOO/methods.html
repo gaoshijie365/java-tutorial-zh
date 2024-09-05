@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Defining Methods (Java&trade; 教程 &gt;
+        <title>定义方法 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,16 +476,16 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
-<div class="linkAHEAD"><a href="classes.html">Classes</a></div>
-<div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
-<div class="nolinkBHEAD">Defining Methods</div>
-<div class="linkBHEAD"><a href="constructors.html">Providing Constructors for Your Classes</a></div>
-<div class="linkBHEAD"><a href="arguments.html">Passing Information to a Method or a Constructor</a></div>
-<div class="linkAHEAD"><a href="objects.html">Objects</a></div>
+<div class="linkAHEAD"><a href="classes.html">类</a></div>
+<div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="nolinkBHEAD">定义方法</div>
+<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造器</a></div>
+<div class="linkBHEAD"><a href="arguments.html">传递信息到方法或构造器</a></div>
+<div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
-<div class="linkBHEAD"><a href="usingobject.html">Using Objects</a></div>
-<div class="linkAHEAD"><a href="more.html">More on Classes</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
 <div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
 <div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
@@ -494,7 +494,7 @@
 <div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
 <div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
 <div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
@@ -510,7 +510,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 类和对象
-        <br /><b>节：</b> Classes
+        <br /><b>小节：</b> 类
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -523,40 +523,37 @@
                 <a target="_top" href="variables.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="constructors.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Defining Methods</h1></div>
+            <div id="PageTitle"><h1>定义方法</h1></div>
             <div id="PageContent">
 
-<!---Defining Methods=-->
-<p>Here is an example of a typical method declaration:</p>
+<!---定义方法=-->
+<p>这有一个典型的方法声明示例：</p>
 <div class="codeblock"><pre>
 public double calculateAnswer(double wingSpan, int numberOfEngines,
                               double length, double grossTons) {
     //do the calculation here
 }
 </pre></div>
-<p>The only required elements of a method declaration are the method&#39;s return type, name, a pair of parentheses, <code>()</code>, and a body between braces, <code>{}</code>.</p>
-<p>More generally, method declarations have six components, in order:</p>
+<p>方法声明必须包含的元素是方法的返回类型、名称、一对小括号 <code>()</code>、大括号 <code>{}</code> 间的方法体。</p>
+<p>更为一般地，方法声明有 6 个组成部分，依次是：</p>
 <ol>
-<li>Modifiers&#151;such as <code>public</code>, <code>private</code>, and others you will learn about later.</li>
-<li>The return type&#151;the data type of the value returned by the method, or <code>void</code> if the method does not return a value.</li>
-<li>The method name&#151;the rules for field names apply to method names as well, but the convention is a little different.</li>
-<li>The parameter list in parenthesis&#151;a comma-delimited list of input parameters, preceded by their data types, enclosed by parentheses, <code>()</code>. If there are no parameters, you must use empty parentheses.</li>
-<li>An exception list&#151;to be discussed later.</li>
-<li>The method body, enclosed between braces&#151;the method&#39;s code, including the declaration of local variables, goes here.</li>
+<li>修饰符&#151;比如 <code>public</code>、<code>private</code> 和其它稍后将要学习的修饰符。</li>
+<li>返回类型&#151;方法返回的值的数据类型，如果方法不返回任何值为 <code>void</code>。</li>
+<li>方法名&#151;方法名遵循的命名规则与字段名相同，但习惯上会有一点不同。</li>
+<li>小括号中的参数列表&#151;逗号分隔的输入参数列表。如果没有参数，必须使用空的小括号。</li>
+<li>异常列表&#151;稍后讨论。</li>
+<li>大括号包裹的方法体&#151;方法的代码，包括局部变量的声明。</li>
 </ol>
-<p>Modifiers, return types, and parameters will be discussed later in this 
-lesson.
- Exceptions are discussed in a later 
-lesson. 
-</p>
-<div class="note"><hr /><strong>Definition:</strong>&nbsp;Two of the components of a method declaration comprise the <i>method signature</i>&#151;the method&#39;s name and the parameter types.
+<p>修饰符、返回类型和参数在本课程后面讨论。异常在后面课程中讨论。</p>
+<div class="note"><hr /><strong>定义：</strong><i>方法签名</i> 由方法声明中的两部分构成&#151;方法的名字和参数类型。
 <hr /></div>
-<p>The signature of the method declared above is:</p>
+<p>上述方法声明的签名是：</p>
 <div class="codeblock"><pre>
 calculateAnswer(double, int, double, double)
 </pre></div>
-<h2>Naming a Method</h2>
-<p>Although a method name can be any legal identifier, code conventions restrict method names. By convention, method names should be a verb in lowercase or a multi-word name that begins with a verb in lowercase, followed by adjectives, nouns, etc. In multi-word names, the first letter of each of the second and following words should be capitalized. Here are some examples:</p>
+<h2>方法命名</h2>
+<p>尽管方法名可以是任何合法的标识符，但编码习惯会对方法名进行限制。习惯上，方法名应该是小写的动词，或是以小写动词打头的，后跟形容词、名词等的多单词名字。
+    在多单词名字中，第二个和后续的单词首字母大写。这里有一些例子：</p>
 <div class="codeblock"><pre>
 run
 runFast
@@ -566,12 +563,13 @@ compareTo
 setX
 isEmpty
 </pre></div>
-<p>Typically, a method has a unique name within its class. However, a method might have the same name as other methods due to <i>method overloading</i>.</p>
-<h2>Overloading Methods</h2>
-<p>The Java programming language supports <i>overloading</i> methods, and Java can distinguish between methods with different <i>method signatures</i>. This means that methods within a class can have the same name if they have different parameter lists (there are some qualifications to this that will be discussed in 
-the lesson titled 
-&quot;接口和继承&quot;).</p>
-<p>Suppose that you have a class that can use calligraphy to draw various types of data (strings, integers, and so on) and that contains a method for drawing each data type. It is cumbersome to use a new name for each method&#151;for example, <code>drawString</code>, <code>drawInteger</code>, <code>drawFloat</code>, and so on. In the Java programming language, you can use the same name for all the drawing methods but pass a different argument list to each method. Thus, the data drawing class might declare four methods named <code>draw</code>, each of which has a different parameter list.</p>
+<p>典型地，方法在类中有唯一的名字。然而，由于 <i>方法重载</i>，一个方法可能与其它方法有相同的名字。</p>
+<h2>方法重载</h2>
+<p>Java 支持 <i>重载</i> 方法，Java 可以区分不同 <i>方法签名</i> 的方法。这也就意味着，一个类中的方法可以有相同的名称，只要它们有不同的参数列表
+    (这里有一些限制，将在 &quot;接口和继承&quot; 课程中讨论)。</p>
+<p>假设有一个类，使用艺术字绘制不同类型的数据 (字符串、整数，等等)，并包含一个方法来绘制每一种数据类型。
+    如果对每个方法都使用不同的名字，比如，<code>drawString</code>、<code>drawInteger</code>、<code>drawFloat</code> 等等，看起来会很笨拙。
+    在 Java 中，您可以为所有的绘制方法起相同的名字，只要每个方法的参数列表不同就行。因此，数据绘制类可能声明四个叫做 <code>draw</code> 的方法，它们的参数列表都是不同的。</p>
 <div class="codeblock"><pre>
 public class DataArtist {
     ...
@@ -589,10 +587,10 @@ public class DataArtist {
     }
 }
 </pre></div>
-<p>Overloaded methods are differentiated by the number and the type of the arguments passed into the method. In the code sample, <code>draw(String s)</code> and <code>draw(int i)</code> are distinct and unique methods because they require different argument types.</p>
-<p>You cannot declare more than one method with the same name and the same number and type of arguments, because the compiler cannot tell them apart.</p>
-<p>The compiler does not consider return type when differentiating methods, so you cannot declare two methods with the same signature even if they have a different return type.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;Overloaded methods should be used sparingly, as they can make code much less readable.
+<p>重载的方法通过传递给方法的参数数量和类型进行区分。在示例中，<code>draw(String s)</code> 和 <code>draw(int i)</code> 是不同且唯一的，因为它们的参数类型不同。</p>
+<p>您不能声明多个具有相同名称，且参数数量和类型相同的方法，因为编译器无法区分它们。</p>
+<p>编译器在区分方法时不考虑返回值类型，所以您不能声明两个签名相同但返回值类型不同的方法。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;应该谨慎使用重载方法，因为它们会降低代码的可读性。
 <hr /></div>
 
         </div>
@@ -621,8 +619,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Declaring Member 变量
-        <br /><b>下一页：</b> Providing Constructors for Your Classes
+        <b>上一页：</b> 声明成员变量
+        <br /><b>下一页：</b> 为您的类提供构造器
     </div>
 </body>
 </html> 

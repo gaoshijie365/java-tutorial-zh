@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Providing Constructors for Your Classes (Java&trade; 教程 &gt;
+        <title>为您的类提供构造器 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,16 +476,16 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
-<div class="linkAHEAD"><a href="classes.html">Classes</a></div>
-<div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
-<div class="linkBHEAD"><a href="methods.html">Defining Methods</a></div>
-<div class="nolinkBHEAD">Providing Constructors for Your Classes</div>
-<div class="linkBHEAD"><a href="arguments.html">Passing Information to a Method or a Constructor</a></div>
-<div class="linkAHEAD"><a href="objects.html">Objects</a></div>
+<div class="linkAHEAD"><a href="classes.html">类</a></div>
+<div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
+<div class="nolinkBHEAD">为您的类提供构造器</div>
+<div class="linkBHEAD"><a href="arguments.html">传递信息到方法或构造器</a></div>
+<div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
-<div class="linkBHEAD"><a href="usingobject.html">Using Objects</a></div>
-<div class="linkAHEAD"><a href="more.html">More on Classes</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
 <div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
 <div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
@@ -494,7 +494,7 @@
 <div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
 <div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
 <div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
@@ -510,7 +510,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 类和对象
-        <br /><b>节：</b> Classes
+        <br /><b>小节：</b> 类
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -523,11 +523,11 @@
                 <a target="_top" href="methods.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="arguments.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Providing Constructors for Your Classes</h1></div>
+            <div id="PageTitle"><h1>为您的类提供构造器</h1></div>
             <div id="PageContent">
 
-<!-- Providing Constructors for Your Classes -->
-<p>A class contains constructors that are invoked to create objects from the class blueprint. Constructor declarations look like method declarations&#151;except that they use the name of the class and have no return type. For example, <code>Bicycle</code> has one constructor:</p>
+<!-- 为您的类提供构造器 -->
+<p>类包含构造器，通过调用它来创建类的对象。构造器声明和方法声明很像&#151;除了它们使用类的名字并且没有返回类型。比如，<code>Bicycle</code> 有一个构造器：</p>
 <div class="codeblock"><pre>
 public Bicycle(int startCadence, int startSpeed, int startGear) {
     gear = startGear;
@@ -535,12 +535,12 @@ public Bicycle(int startCadence, int startSpeed, int startGear) {
     speed = startSpeed;
 }
 </pre></div>
-<p>To create a new <code>Bicycle</code> object called <code>myBike</code>, a constructor is called by the <code>new</code> operator:</p>
+<p>为创建一个叫做 <code>myBike</code> 的 <code>Bicycle</code> 对象，使用 <code>new</code> 操作符调用构造方法：</p>
 <div class="codeblock"><pre>
 Bicycle myBike = new Bicycle(30, 0, 8);
 </pre></div>
-<p><code>new Bicycle(30, 0, 8)</code> creates space in memory for the object and initializes its fields.</p>
-<p>Although <code>Bicycle</code> only has one constructor, it could have others, including a no-argument constructor:</p>
+<p><code>new Bicycle(30, 0, 8)</code> 在内存中为对象开辟空间，并初始化它的字段。</p>
+<p>虽然 <code>Bicycle</code> 仅有一个构造器，但它可以包含一个无参构造器：</p>
 <div class="codeblock"><pre>
 public Bicycle() {
     gear = 1;
@@ -548,16 +548,15 @@ public Bicycle() {
     speed = 0;
 }
 </pre></div>
-<p><code>Bicycle yourBike = new Bicycle();</code> invokes the no-argument constructor to create a new <code>Bicycle</code> object called <code>yourBike</code>.</p>
-<p>Both constructors could have been declared in <code>Bicycle</code> because they have different argument lists. As with methods, the Java platform differentiates constructors on the basis of the number of arguments in the list and their types. You cannot write two constructors that have the same number and type of arguments for the same class, because the platform would not be able to tell them apart. Doing so causes a compile-time error.</p>
-<p>You don&#39;t have to provide any constructors for your class, but you must be careful when doing this. The compiler automatically provides a no-argument, default constructor for any class without constructors. This default constructor will call the no-argument constructor of the superclass. In this situation, the compiler will complain if the superclass doesn&#39;t have a no-argument constructor so you must verify that it does. If your class has no explicit superclass, then it has an implicit superclass of <code>Object</code>, which <i>does</i> have a no-argument constructor.</p>
-<p>You can use a superclass constructor yourself. The <code>MountainBike</code> class at the beginning of this 
-lesson 
-did just that. This will be discussed later, in the 
-lesson 
-on interfaces and inheritance.</p>
-<p>You can use access modifiers in a constructor&#39;s declaration to control which other classes can call the constructor.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;If another class cannot call a <code>MyClass</code> constructor, it cannot directly create <code>MyClass</code> objects.
+<p><code>Bicycle yourBike = new Bicycle();</code> 调用无参构造器创建名为 <code>yourBike</code> 的 <code>Bicycle</code> 对象。</p>
+<p>两个构造器都可以声明在 <code>Bicycle</code> 类中，因为它们有不同的参数列表。和方法一样，Java 平台基于参数列表中的参数数量和类型区分不同的构造器。
+    您不能为同一个类写两个具有相同数量和类型的参数列表的构造器，因为平台无法区分它们。这样做会导致编译时错误。</p>
+<p>您也可以不为您的类提供任何构造器，但是当您这么做时要慎重。编译器会为任何没有提供构造器的类自动生成一个无参的默认构造器。
+    这个无参构造器将会调用父类中的无参构造器。在这种情况下，如果超类没有一个无参构造器，编译器将会抱怨，所以您必须核实其包含无参构造器。
+    如果您的类没有显式的超类，那它就有一个隐式的超类 <code>Object</code>，它 <i>确实</i> 有一个无参构造器。</p>
+<p>您也可以自己调用超类超类构造器。课程开头的 <code>MountainBike</code> 类就是这么做的。这将在后续的 接口和继承 课程中讨论。</p>
+<p>您可以在构造器声明中使用访问修饰符，来控制其它类对构造器的调用。</p>
+<div class="note"><hr /><strong>注意：</strong>如果另一个类不能调用 <code>MyClass</code> 的构造器，那它就不能直接创建 <code>MyClass</code> 对象。
 <hr /></div>
 
 
@@ -587,8 +586,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Defining Methods
-        <br /><b>下一页：</b> Passing Information to a Method or a Constructor
+        <b>上一页：</b> 定义方法
+        <br /><b>下一页：</b> 传递信息到方法或构造器
     </div>
 </body>
 </html> 

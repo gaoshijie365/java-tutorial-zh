@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Passing Information to a Method or a Constructor (Java&trade; 教程 &gt;
+        <title>传递信息到方法或构造器 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,16 +476,16 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
-<div class="linkAHEAD"><a href="classes.html">Classes</a></div>
-<div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
-<div class="linkBHEAD"><a href="methods.html">Defining Methods</a></div>
-<div class="linkBHEAD"><a href="constructors.html">Providing Constructors for Your Classes</a></div>
-<div class="nolinkBHEAD">Passing Information to a Method or a Constructor</div>
-<div class="linkAHEAD"><a href="objects.html">Objects</a></div>
+<div class="linkAHEAD"><a href="classes.html">类</a></div>
+<div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造器</a></div>
+<div class="nolinkBHEAD">传递信息到方法或构造器</div>
+<div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
-<div class="linkBHEAD"><a href="usingobject.html">Using Objects</a></div>
-<div class="linkAHEAD"><a href="more.html">More on Classes</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
 <div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
 <div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
@@ -494,7 +494,7 @@
 <div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
 <div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
 <div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
@@ -510,7 +510,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 类和对象
-        <br /><b>节：</b> Classes
+        <br /><b>小节：</b> 类
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -523,11 +523,11 @@
                 <a target="_top" href="constructors.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="objects.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Passing Information to a Method or a Constructor</h1></div>
+            <div id="PageTitle"><h1>传递信息到方法或构造器</h1></div>
             <div id="PageContent">
 
-<!-- Passing Information to a Method or a Constructor -->
-<p>The declaration for a method or a constructor declares the number and the type of the arguments for that method or constructor. For example, the following is a method that computes the monthly payments for a home loan, based on the amount of the loan, the interest rate, the length of the loan (the number of periods), and the future value of the loan:</p>
+<!-- 传递信息到方法或构造器 -->
+<p>方法或构造器声明时，声明了其参数的数量和类型。比如，下面的方法根据贷款金额、税率、贷款时长 (分几期) 和贷款的未来价值，计算每个月份需要支付的房贷：</p>
 <div class="codeblock"><pre>
 public double computePayment(
                   double <b>loanAmt</b>,
@@ -543,24 +543,25 @@ public double computePayment(
     return answer;
 }
 </pre></div>
-<p>This method has four parameters: the loan amount, the interest rate, the future value and the number of periods. The first three are double-precision floating point numbers, and the fourth is an integer. The parameters are used in the method body and at runtime will take on the values of the arguments that are passed in.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;<i>Parameters</i> refers to the list of variables in a method declaration. <i>Arguments</i> are the actual values that are passed in when the method is invoked. When you invoke a method, the arguments used must match the declaration&#39;s parameters in type and order.
+<p>这个方法有四个参数：贷款金额、税率、未来价值和期数。前三个参数是双精度浮点数，第四个参数是整数。参数用在方法体中，在运行时会取传入的参数值。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<i>形参</i> 指的是方法声明中的变量列表。<i>实参</i> 调用方法时传入的实际值。当调用方法时，实参必须与声明的形参在类型和顺序上匹配。
 <hr /></div>
-<h2>Parameter Types</h2>
-<p>You can use any data type for a parameter of a method or a constructor. This includes primitive data types, such as doubles, floats, and integers, as you saw in the <code>computePayment</code> method, and reference data types, such as objects and arrays.</p>
-<p>Here&#39;s an example of a method that accepts an array as an argument. In this example, the method creates a new <code>Polygon</code> object and initializes it from an array of <code>Point</code> objects (assume that <code>Point</code> is a class that represents an x, y coordinate):</p>
+<h2>参数类型</h2>
+<p>方法或构造器的参数可以是任何类型的。这包括基本数据类型，比如 double、float 和 int 等，也可以是引用类型，比如对象和数组。</p>
+<p>这里有个方法，其接收数组作为参数。在本例中，方法创建了一个 <code>Polygon</code> 对象，并使用 <code>Point</code> 对象数组进行初始化 (假设 <code>Point</code> 是代表 x、y 坐标的类)：</p>
 <div class="codeblock"><pre>
 public Polygon polygonFrom(Point[] corners) {
     // method body goes here
 }
 </pre></div>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;If you want to pass a method into a method, then use a
-<a class="TutorialLink" target="_top" href="lambdaexpressions.html">lambda expression</a> or a 
-<a class="TutorialLink" target="_top" href="methodreferences.html">method reference</a>. 
+<div class="note"><hr /><strong>注意：</strong>&nbsp;如果您想将一个方法传入另一个方法，请使用
+<a class="TutorialLink" target="_top" href="lambdaexpressions.html">lambda 表达式</a> 或
+<a class="TutorialLink" target="_top" href="methodreferences.html">方法引用</a>。
 <hr /></div>
-<h2><a name="varargs" id="varargs">Arbitrary Number of Arguments</a></h2>
-<p>You can use a construct called <em>varargs</em> to pass an arbitrary number of values to a method. You use varargs when you don&#39;t know how many of a particular type of argument will be passed to the method. It&#39;s a shortcut to creating an array manually (the previous method could have used varargs rather than an array).</p>
-<p>To use varargs, you follow the type of the last parameter by an ellipsis (three dots, ...), then a space, and the parameter name. The method can then be called with any number of that parameter, including none.</p>
+<h2><a name="varargs" id="varargs">任意数量的参数</a></h2>
+<p>您可以使用一个叫做 <em>varargs</em> 的结构向方法传递任意数量的值。当您不知道要向方法传递多少特定类型的参数时，使用 varargs。
+    它是手动创建数组的简便方式写法 (上一个方法可以使用 varargs 而不是数组)。</p>
+<p>为使用 varargs，您需要在最后一个参数的类型后面跟着省略符号 (三个点，<code>...</code>)，然后是空格和参数名。然后就可以使用任意数量的参数调用该方法。</p>
 <div class="codeblock"><pre>
 public Polygon polygonFrom(Point... corners) {
     int numberOfSides = corners.length;
@@ -575,24 +576,25 @@ public Polygon polygonFrom(Point... corners) {
     // polygon connecting the Points
 }
 </pre></div>
-<p>You can see that, inside the method, <code>corners</code> is treated like an array. The method can be called either with an array or with a sequence of arguments. The code in the method body will treat the parameter as an array in either case.</p>
-<p>You will most commonly see varargs with the printing methods; for example, this <code>printf</code> method:</p>
+<p>正如您所见，在方法中，<code>corners</code> 是被当做数组使用的。可以使用数组或者一些列参数调用方法，在方法内部都会被当做数组对待。</p>
+<p>您将在常用的打印方法中看到 varargs。比如，这个 <code>printf</code> 方法：</p>
 <div class="codeblock"><pre>
 public PrintStream printf(String format, Object... args)
 </pre></div>
-<p>allows you to print an arbitrary number of objects. It can be called like this:</p>
+<p>它可以打印任意数量的对象。它可以这么调用：</p>
 <div class="codeblock"><pre>
 System.out.printf("%s: %d, %s%n", name, idnum, address);
 </pre></div>
-<p>or like this</p>
+<p>或这样</p>
 <div class="codeblock"><pre>
 System.out.printf("%s: %d, %s, %s, %s%n", name, idnum, address, phone, email);
 </pre></div>
-<p>or with yet a different number of arguments.</p>
-<h2>Parameter Names</h2>
-<p>When you declare a parameter to a method or a constructor, you provide a name for that parameter. This name is used within the method body to refer to the passed-in argument.</p>
-<p>The name of a parameter must be unique in its scope. It cannot be the same as the name of another parameter for the same method or constructor, and it cannot be the name of a local variable within the method or constructor.</p>
-<p>A parameter can have the same name as one of the class&#39;s fields. If this is the case, the parameter is said to <i>shadow</i> the field. Shadowing fields can make your code difficult to read and is conventionally used only within constructors and methods that set a particular field. For example, consider the following <code>Circle</code> class and its <code>setOrigin</code> method:</p>
+<p>或是使用不同数量的参数。</p>
+<h2>参数名</h2>
+<p>当您给方法或构造器声明参数时，您需要为这个参数提供一个名字。方法体中的这个名字指向传入的实参。</p>
+<p>参数名在其作用域内必须是唯一的。它不能与相同方法或构造器的另一个参数名称相同，也不能与方法或构造器中的局部变量名称相同。</p>
+<p>参数名称可以和类字段名称相同。在这种情况下，参数 <i>遮蔽</i> 了字段。遮蔽字段会使代码难以阅读，习惯上仅用在构造器和字段的设值方法中。
+    比如，下面的 <code>Circle</code> 类和其 <code>setOrigin</code> 方法：</p>
 <div class="codeblock"><pre>
 public class Circle {
     private int x, y, radius;
@@ -601,11 +603,12 @@ public class Circle {
     }
 }
 </pre></div>
-<p>The <code>Circle</code> class has three fields: <code>x</code>, <code>y</code>, and <code>radius</code>. The <code>setOrigin</code> method has two parameters, each of which has the same name as one of the fields. Each method parameter shadows the field that shares its name. So using the simple names <code>x</code> or <code>y</code> within the body of the method refers to the parameter, <i>not</i> to the field. To access the field, you must use a qualified name. This will be discussed later in this 
-lesson 
-in the section titled &quot;Using the <code>this</code> Keyword.&quot;</p>
-<h2>Passing Primitive Data Type Arguments</h2>
-<p>Primitive arguments, such as an <code>int</code> or a <code>double</code>, are passed into methods <i>by value</i>. This means that any changes to the values of the parameters exist only within the scope of the method. When the method returns, the parameters are gone and any changes to them are lost. Here is an example:</p>
+<p><code>Circle</code> 类有三个字段：<code>x</code>、<code>y</code> 和 <code>radius</code>。<code>setOrigin</code> 方法有两个参数，
+    其名称和字段名称相同。每个方法参数都遮蔽了同名的字段。所以在方法体中使用简单名 <code>x</code> 或 <code>y</code> 指的是参数，而不是字段。
+    为了访问字段，您必须使用限定名，这将在本课程的后续小节 &quot;使用 <code>this</code> 关键字。&quot; 中讨论。</p>
+<h2>传递基本数据类型参数</h2>
+<p>基本数据类型的参数，比如 <code>int</code> 或 <code>double</code>，是 <i>按值</i> 传入方法的。这也就意味着参数值的任何改变仅在方法的作用域内存在。
+    当方法返回后，参数就消失了，且任何改变都会丢失。这里有个例子：</p>
 <div class="codeblock"><pre>
 public class PassPrimitiveByValue {
 
@@ -629,13 +632,14 @@ public class PassPrimitiveByValue {
     }
 }
 </pre></div>
-<p>When you run this program, the output is:</p>
+<p>当运行这个程序时，输出：</p>
 <div class="codeblock"><pre>
 After invoking passMethod, x = 3
 </pre></div>
-<h2>Passing Reference Data Type Arguments</h2>
-<p>Reference data type parameters, such as objects, are also passed into methods <i>by value</i>. This means that when the method returns, the passed-in reference still references the same object as before. <i>However</i>, the values of the object&#39;s fields <i>can</i> be changed in the method, if they have the proper access level.</p>
-<p>For example, consider a method in an arbitrary class that moves <code>Circle</code> objects:</p>
+<h2>传递引用数据类型参数</h2>
+<p>引用数据类型参数，比如对象，也是 <i>按值</i> 传入方法的。这也就意味着当方法返回后，传入的引用依然引用之前引用的对象。
+    然而，对象的字段的值 <i>可能</i> 在方法中改变了，如果适当的访问级别的话。</p>
+<p>比如，考虑某个类中的一个方法，其移动 <code>Circle</code> 对象：</p>
 <div class="codeblock"><pre>
 public void moveCircle(Circle circle, int deltaX, int deltaY) {
     // code to move origin of circle to x+deltaX, y+deltaY
@@ -646,11 +650,14 @@ public void moveCircle(Circle circle, int deltaX, int deltaY) {
     circle = new Circle(0, 0);
 }
 </pre></div>
-<p>Let the method be invoked with these arguments:</p>
+<p>使用这些参数调用方法：</p>
 <div class="codeblock"><pre>
 moveCircle(myCircle, 23, 56)
 </pre></div>
-<p>Inside the method, <code>circle</code> initially refers to <code>myCircle</code>. The method changes the x and y coordinates of the object that <code>circle</code> references (that is, <code>myCircle</code>) by 23 and 56, respectively. These changes will persist when the method returns. Then <code>circle</code> is assigned a reference to a new <code>Circle</code> object with <code>x = y = 0</code>. This reassignment has no permanence, however, because the reference was passed in by value and cannot change. Within the method, the object pointed to by <code>circle</code> has changed, but, when the method returns, <code>myCircle</code> still references the same <code>Circle</code> object as before the method was called.</p>
+<p>在方法内部，<code>circle</code> 最初指向 <code>myCircle</code>。方法改变了 <code>circle</code> 引用的对象的 x 和 y 坐标
+    (也就是 <code>myCircle</code> 的 x 和 y 坐标)，分别加了 23 和 56。当方法退出时，这些改变将会保留下来。
+    然后 <code>circle</code> 被赋值为一个新 <code>Circle</code> (<code>x = y = 0</code>) 对象的引用。然而，这次重新赋值没有保留下来，因为引用是按值传入的，不能改变。
+        在方法内部，<code>circle</code> 指向的对象已经改变，但是，当方法返回，<code>myCircle</code> 仍然引用相同的 <code>Circle</code> 对象，就像方法调用前那样。</p>
 
         </div>
         <div class="NavBit">
@@ -678,8 +685,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Providing Constructors for Your Classes
-        <br /><b>下一页：</b> Objects
+        <b>上一页：</b> 为您的类提供构造器
+        <br /><b>下一页：</b> 对象
     </div>
 </body>
 </html> 

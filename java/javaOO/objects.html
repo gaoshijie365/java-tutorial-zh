@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Objects (Java&trade; 教程 &gt;
+        <title>对象 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,16 +476,16 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类和对象</a></div>
-<div class="linkAHEAD"><a href="classes.html">Classes</a></div>
-<div class="linkBHEAD"><a href="classdecl.html">Declaring Classes</a></div>
-<div class="linkBHEAD"><a href="variables.html">Declaring Member 变量</a></div>
-<div class="linkBHEAD"><a href="methods.html">Defining Methods</a></div>
-<div class="linkBHEAD"><a href="constructors.html">Providing Constructors for Your Classes</a></div>
-<div class="linkBHEAD"><a href="arguments.html">Passing Information to a Method or a Constructor</a></div>
-<div class="nolinkAHEAD">Objects</div>
+<div class="linkAHEAD"><a href="classes.html">类</a></div>
+<div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造器</a></div>
+<div class="linkBHEAD"><a href="arguments.html">传递信息到方法或构造器</a></div>
+<div class="nolinkAHEAD">对象</div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
-<div class="linkBHEAD"><a href="usingobject.html">Using Objects</a></div>
-<div class="linkAHEAD"><a href="more.html">More on Classes</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">Using 对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
 <div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
 <div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
 <div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
@@ -494,7 +494,7 @@
 <div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="nested.html">Nested Classes</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
 <div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
 <div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
@@ -522,15 +522,21 @@
                 <a target="_top" href="arguments.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="objectcreation.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Objects</h1></div>
+            <div id="PageTitle"><h1>对象</h1></div>
             <div id="PageContent">
 
-<!-- Objects -->
-<p>A typical Java program creates many objects, which as you know, interact by invoking methods. Through these object interactions, a program can carry out various tasks, such as implementing a GUI, running an animation, or sending and receiving information over a network. Once an object has completed the work for which it was created, its resources are recycled for use by other objects.</p>
-<p>Here&#39;s a small program, called 
-<a class="SourceLink" target="_blank" href="examples/CreateObjectDemo.java" onclick="showCode('../../displayCode.html', 'examples/CreateObjectDemo.java'); return false;"><code>CreateObjectDemo</code></a>, that creates three objects: one 
-<a class="SourceLink" target="_blank" href="examples/Point.java" onclick="showCode('../../displayCode.html', 'examples/Point.java'); return false;"><code>Point</code></a> object and two 
-<a class="SourceLink" target="_blank" href="examples/Rectangle.java" onclick="showCode('../../displayCode.html', 'examples/Rectangle.java'); return false;"><code>Rectangle</code></a> objects. You will need all three source files to compile this program.</p>
+<!-- 对象 -->
+<p>一个典型的 Java 程序会创建很多对象，它们之间通过调用方法交互。通过对象间的交互，程序可以完成很多任务，比如实现一个 GUI、运行一个动画或通过网络发送和接收信息。
+    一旦一个对象完成了工作，它的资源就会被回收供其它对象使用。</p>
+<p>这里有个小程序，叫做
+<a class="SourceLink" target="_blank" href="examples/CreateObjectDemo.java"
+   onclick="showCode('../../displayCode.html', 'examples/CreateObjectDemo.java'); return false;"><code>
+    CreateObjectDemo</code></a>，它创建了三个对象：一个
+<a class="SourceLink" target="_blank" href="examples/Point.java"
+   onclick="showCode('../../displayCode.html', 'examples/Point.java'); return false;"><code>Point</code></a> 对象和两个
+<a class="SourceLink" target="_blank" href="examples/Rectangle.java"
+   onclick="showCode('../../displayCode.html', 'examples/Rectangle.java'); return false;"><code>Rectangle</code></a>
+    对象。您需要这三个源文件才能编译这个程序。</p>
 <div class="codeblock"><pre>
 
 public class CreateObjectDemo {
@@ -561,7 +567,7 @@ public class CreateObjectDemo {
     }
 }
 </pre></div>
-<p>This program creates, manipulates, and displays information about various objects. Here&#39;s the output:</p>
+<p>这个程序创建、操作和显示这些对象的信息。输出为：</p>
 <div class="codeblock"><pre>
 Width of rectOne: 100
 Height of rectOne: 200
@@ -571,7 +577,7 @@ Y Position of rectTwo: 94
 X Position of rectTwo: 40
 Y Position of rectTwo: 72
 </pre></div>
-<p>The following three sections use the above example to describe the life cycle of an object within a program. From them, you will learn how to write code that creates and uses objects in your own programs. You will also learn how the system cleans up after an object when its life has ended.</p>
+<p>下面三节使用上述例子讨论程序中对象的生命周期。通过它们，您将学会如何在您的程序中编写代码来创建使用对象。您也将学到当对象生命期结束时系统是如何清理对象的。</p>
 
 
         </div>
@@ -600,8 +606,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Passing Information to a Method or a Constructor
-        <br /><b>下一页：</b> Creating Objects
+        <b>上一页：</b> 传递信息到方法或构造器
+        <br /><b>下一页：</b> 创建对象
     </div>
 </body>
 </html> 
