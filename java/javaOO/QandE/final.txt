@@ -4,7 +4,7 @@ Questions
    to make it compile?  Why?
    [.../tutorial/java/javaOO/QandE-1dot1/Problem.java]
 ANSWER: Add "final" in front of the declaration of the <code>timer</code>
-	variable.  As it says in "Other Facts about Nested Classes",
+	variable.  As it says in "Other Facts about 嵌套类",
 	"A nested class declared within a method...has access to any
 	final, local variables in scope."
 

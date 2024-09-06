@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>问题和练习：Objects (Java&trade; 教程 &gt;
+        <title>问题和练习：对象 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="../objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="../usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="../more.html">更多关于类的信息</a></div>
-<div class="linkBHEAD"><a href="../returnvalue.html">Returning a Value from a Method</a></div>
-<div class="linkBHEAD"><a href="../thiskey.html">Using the this Keyword</a></div>
-<div class="linkBHEAD"><a href="../accesscontrol.html">Controlling Access to Members of a Class</a></div>
-<div class="linkBHEAD"><a href="../classvars.html">Understanding Class Members</a></div>
-<div class="linkBHEAD"><a href="../initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="../summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
+<div class="linkBHEAD"><a href="../returnvalue.html">从方法返回值</a></div>
+<div class="linkBHEAD"><a href="../thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="../accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="../classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="../initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="../summaryclasses.html">创建和使用类和对象总结</a></div>
 <div class="linkQUESTIONS"><a href="../QandE/creating-questions.html">问题和练习</a></div>
 <div class="nolinkQUESTIONS">问题和练习</div>
 <div class="linkAHEAD"><a href="../nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="../anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="../lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="../methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="../whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="../whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="../QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="../enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="../QandE/enum-questions.html">问题和练习</a></div>
@@ -522,13 +522,13 @@
                 <a target="_top" href="../QandE/creating-questions.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="../nested.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>问题和练习：Objects</h1></div>
+            <div id="PageTitle"><h1>问题和练习：对象</h1></div>
             <div id="PageContent">
 
 <h2>问题</h2>
 <ol>
 <li>
-<p>What&#39;s wrong with the following program?</p>
+<p>下面程序中有什么错误？</p>
 <div class="codeblock"><pre>
 public class SomethingIsWrong {
     public static void main(String[] args) {
@@ -541,7 +541,7 @@ public class SomethingIsWrong {
 </pre></div>
 </li>
 <li>
-<p>The following code creates one array and one string object. How many references to those objects exist after the code executes? Is either object eligible for garbage collection?</p>
+<p>下面的代码创建了一个数组对象和一个字符串对象。代码执行后，有多少引用引用到了这些对象？哪个对象会被垃圾收集选中？</p>
 <div class="codeblock"><pre>
 ...
 String[] students = new String[10];
@@ -552,17 +552,18 @@ studentName = null;
 </pre></div>
 </li>
 <li>
-<p>How does a program destroy an object that it creates?</p>
+<p>程序是如何销毁它创建的对象的？</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
-<p>Fix the program called <code>SomethingIsWrong</code> shown in Question 1.</p>
+<p>修复问题 1 中的程序 <code>SomethingIsWrong</code>。</p>
 </li>
 <li>
-<p>Given the following class, called 
-<a class="SourceLink" target="_blank" href="NumberHolder.java" onclick="showCode('../../../displayCode.html', 'NumberHolder.java'); return false;"><code>NumberHolder</code></a>, write some code that creates an instance of the class, initializes its two member variables, and then displays the value of each member variable.</p>
+<p>下面有个类，叫做 <a class="SourceLink" target="_blank" href="NumberHolder.java"
+                      onclick="showCode('../../../displayCode.html', 'NumberHolder.java'); return false;"><code>NumberHolder</code></a>，
+    写代码创建该类的实例，初始化它的两个成员变量，然后显示每个成员变量的值。</p>
 <div class="codeblock"><pre>
 public class NumberHolder {
     public int anInt;
@@ -600,8 +601,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> 问题和练习：Classes
-        <br /><b>下一页：</b> Nested Classes
+        <b>上一页：</b> 问题和练习：类
+        <br /><b>下一页：</b> 嵌套类
     </div>
 </body>
 </html> 

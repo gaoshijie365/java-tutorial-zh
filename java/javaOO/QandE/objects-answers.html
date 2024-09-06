@@ -408,7 +408,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question</strong>: What&#39;s wrong with the following program?</p>
+<p><strong>问题</strong>：下面程序中有什么错误？</p>
 <div class="codeblock"><pre>
 public class SomethingIsWrong {
     public static void main(String[] args) {
@@ -419,11 +419,12 @@ public class SomethingIsWrong {
     }
 }
 </pre></div>
-<p><strong>答案</strong>: The code never creates a
-<a class="SourceLink" target="_blank" href="Rectangle.java" onclick="showCode('../../../displayCode.html', 'Rectangle.java'); return false;"><code>Rectangle</code></a> object. With this simple program, the compiler generates an error. However, in a more realistic situation, <code>myRect</code> might be initialized to <code>null</code> in one place, say in a constructor, and used later. In that case, the program will compile just fine, but will generate a <code>NullPointerException</code> at runtime.</p>
+<p><strong>答案</strong>：没有创建 <a class="SourceLink" target="_blank" href="Rectangle.java" onclick="showCode('../../../displayCode.html', 'Rectangle.java'); return false;"><code>Rectangle</code></a> 对象。
+    在这个简单的程序中，编译器产生一个错误。然而，在更真实的场景中，<code>myRect</code> 可能在一个地方初始化为 <code>null</code>，如构造器中，并在稍后使用。
+    这种情况下，程序编译没问题，但是会在运行时产生一个 <code>NullPointerException</code>。</p>
 </li>
 <li>
-<p><strong>Question</strong>: The following code creates one array and one string object. How many references to those objects exist after the code executes? Is either object eligible for garbage collection?</p>
+<p><strong>问题</strong>：下面的代码创建了一个数组对象和一个字符串对象。代码执行后，有多少引用引用到了这些对象？哪个对象会被垃圾收集选中？</p>
 <div class="codeblock"><pre>
 ...
 String[] students = new String[10];
@@ -432,18 +433,21 @@ students[0] = studentName;
 studentName = null;
 ...
 </pre></div>
-<p><strong>答案</strong>: There is one reference to the <code>students</code> array and that array has one reference to the string <code>Peter Smith</code>. Neither object is eligible for garbage collection. The array <code>students</code> is not eligible for garbage collection because it has one reference to the object <code>studentName</code> even though that object has been assigned the value <code>null</code>. The object <code>studentName</code> is not eligible either because <code>students[0]</code> still refers to it.</p>
+<p><strong>答案</strong>：有一个引用指向 <code>students</code> 数组，这个数组中包含一个引用指向字符串 <code>Peter Smith</code>。两个对象都不会被垃圾收集选中。
+    数组 <code>students</code> 不会被垃圾收集选中是因为它有一个到 <code>studentName</code> 的引用，尽管这个对象已经被赋值为 <code>null</code>。
+    <code>studentName</code> 不会被标记，因为 <code>students[0]</code> 还引用着它。</p>
+<!--    这里有个错误，students 不会被标记为垃圾，是因为还未超出其作用域。 -->
 </li>
 <li>
-<p><strong>Question</strong>: How does a program destroy an object that it creates?</p>
-<p><strong>答案</strong>: A program does not explicitly destroy objects. A program can set all references to an object to <code>null</code> so that it becomes eligible for garbage collection. But the program does not actually destroy objects.</p>
+<p><strong>问题</strong>：程序是如何销毁它创建的对象的？</p>
+<p><strong>答案</strong>：程序不会显式销毁对象。程序可以将所有引用置为 <code>null</code>，这样就会被垃圾收集器标记为垃圾。但是程序并没有真的销毁对象。</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>Exercise</strong>: Fix the program called <code>SomethingIsWrong</code> shown in Question 1.</p>
-<p><strong>答案</strong>: See
+<p><strong>练习</strong>：修复问题 1 中的程序 <code>SomethingIsWrong</code>。</p>
+<p><strong>答案</strong>：查看
 <a class="SourceLink" target="_blank" href="SomethingIsRight.java" onclick="showCode('../../../displayCode.html', 'SomethingIsRight.java'); return false;"><code>SomethingIsRight</code></a>:</p>
 <div class="codeblock"><pre>
 
@@ -458,8 +462,9 @@ public class SomethingIsRight {
 </pre></div>
 </li>
 <li>
-<p><strong>Exercise</strong>: Given the following class, called 
-<a class="SourceLink" target="_blank" href="NumberHolder.java" onclick="showCode('../../../displayCode.html', 'NumberHolder.java'); return false;"><code>NumberHolder</code></a>, write some code that creates an instance of the class, initializes its two member variables, and then displays the value of each member variable.</p>
+<p><strong>练习</strong>：下面有个类，叫做 <a class="SourceLink" target="_blank" href="NumberHolder.java"
+                                            onclick="showCode('../../../displayCode.html', 'NumberHolder.java'); return false;"><code>NumberHolder</code></a>，
+    写代码创建该类的实例，初始化它的两个成员变量，然后显示每个成员变量的值。</p>
 <div class="codeblock"><pre>
 
 public class NumberHolder {
@@ -467,7 +472,7 @@ public class NumberHolder {
     public float aFloat;
 }
 </pre></div>
-<p><strong>答案</strong>: See
+<p><strong>答案</strong>：查看
 <a class="SourceLink" target="_blank" href="NumberHolderDisplay.java" onclick="showCode('../../../displayCode.html', 'NumberHolderDisplay.java'); return false;"><code>NumberHolderDisplay</code></a>:</p>
 <div class="codeblock"><pre>
 
@@ -507,7 +512,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> 问题和练习：Objects
+        <b>上一页：</b> 问题和练习：对象
     </div>
 </body>
 </html> 

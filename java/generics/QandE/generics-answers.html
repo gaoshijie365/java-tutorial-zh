@@ -455,7 +455,7 @@ public final class Algorithm {
     }
 }
 </pre></div>
-<strong>答案</strong>: No. The greater than (<tt>&gt;</tt>) operator applies only to primitive numeric types.<br /><br />
+<strong>答案</strong>：No. The greater than (<tt>&gt;</tt>) operator applies only to primitive numeric types.<br /><br />
 </li>
 <li>Write a generic method to exchange the positions of two different elements in an array.<br /><br />
 <strong>答案</strong>:
@@ -470,7 +470,7 @@ public final class Algorithm {
 </pre></div>
 </li>
 <li>If the compiler erases all type parameters at compile time, why should you use generics?<br /><br />
-<strong>答案</strong>: You should use generics because:
+<strong>答案</strong>：You should use generics because:
 <ul>
 <li>The Java compiler enforces tighter type checks on generic code at compile time.</li>
 <li>泛型 support programming types as parameters.</li>
@@ -539,7 +539,7 @@ public static void print(List&lt;? extends Number&gt; list) {
     System.out.println();
 }
 </pre></div>
-<strong>答案</strong>: Yes.
+<strong>答案</strong>：Yes.
 <br /><br />
 </li>
 <li>Write a generic method to find the maximal element in the range <tt>[begin, end)</tt> of a list.<br /><br />
@@ -575,7 +575,7 @@ public class Singleton&lt;T&gt; {
     private static T instance = null;
 }
 </pre></div>
-<strong>答案</strong>: No.  You cannot create a static field of the type parameter <tt>T</tt>.
+<strong>答案</strong>：No.  You cannot create a static field of the type parameter <tt>T</tt>.
 <br /><br />
 </li>
 <li> Given the following classes:
@@ -591,7 +591,7 @@ Will the following code compile? If not, why?
 Node&lt;Circle&gt; nc = new Node&lt;&gt;();
 Node&lt;Shape&gt;  ns = nc;
 </pre></div>
-<strong>答案</strong>: No. Because <tt>Node&lt;Circle&gt;</tt> is not a subtype of <tt>Node&lt;Shape&gt;</tt>.
+<strong>答案</strong>：No. Because <tt>Node&lt;Circle&gt;</tt> is not a subtype of <tt>Node&lt;Shape&gt;</tt>.
 <br /><br />
 </li>
 <li>Consider this class:
@@ -606,7 +606,7 @@ Will the following code compile? If not, why?
 Node&lt;String&gt; node = new Node&lt;&gt;();
 Comparable&lt;String&gt; comp = node;
 </pre></div>
-<strong>答案</strong>: Yes.
+<strong>答案</strong>：Yes.
 </li>
 <li>How do you invoke the following method to find the first integer in a list that is relatively prime to a list of specified integers?
 <div class="codeblock"><pre>

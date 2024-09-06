@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Initializing Fields (Java&trade; 教程 &gt;
+        <title>初始化字段 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
-<div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
-<div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
-<div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
-<div class="linkBHEAD"><a href="classvars.html">Understanding Class Members</a></div>
-<div class="nolinkBHEAD">Initializing Fields</div>
-<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
+<div class="linkBHEAD"><a href="returnvalue.html">从方法返回值</a></div>
+<div class="linkBHEAD"><a href="thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="classvars.html">理解类成员</a></div>
+<div class="nolinkBHEAD">初始化字段</div>
+<div class="linkBHEAD"><a href="summaryclasses.html">创建和使用类和对象总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,11 +523,11 @@
                 <a target="_top" href="classvars.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="summaryclasses.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Initializing Fields</h1></div>
+            <div id="PageTitle"><h1>初始化字段</h1></div>
             <div id="PageContent">
 
-<!-- Initializing Fields -->
-<p>As you have seen, you can often provide an initial value for a field in its declaration:</p>
+<!-- 初始化字段 -->
+<p>如您所见，您可以在声明字段时为其提供初始值：</p>
 <div class="codeblock"><pre>
 public class BedAndBreakfast {
 
@@ -538,18 +538,21 @@ public class BedAndBreakfast {
     private boolean full = false;
 }
 </pre></div>
-<p>This works well when the initialization value is available and the initialization can be put on one line. However, this form of initialization has limitations because of its simplicity. If initialization requires some logic (for example, error handling or a <code>for</code> loop to fill a complex array), simple assignment is inadequate. Instance variables can be initialized in constructors, where error handling or other logic can be used. To provide the same capability for class variables, the Java programming language includes <i>static initialization blocks</i>.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;It is not necessary to declare fields at the beginning of the class definition, although this is the most common practice. It is only necessary that they be declared and initialized before they are used.
+<p>当初始值已知，初始化器可以放在一行时，这种写法可以良好工作。然而，这种形式的初始化由于其简单性，所以会有一些限制。
+    如果初始化需要一些逻辑 (比如，错误处理，或者使用 <code>for</code> 循环填充复杂数组)，简单赋值就不适用。
+    实例变量可以在构造器中初始化，在这里可以使用错误处理或其它的逻辑。为了给类变量提供相同的能力，Java 语言提供了 <i>静态初始化块</i>。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;没有必要在类定义的开头声明字段，尽管这是最常见的编程实践。
+    必须在它们被使用之前声明和初始化。
 <hr /></div>
-<h2>Static Initialization Blocks</h2>
-<p>A <i>static initialization block</i> is a normal block of code enclosed in braces, <code>{ }</code>, and preceded by the <code>static</code> keyword. Here is an example:</p>
+<h2>静态初始化块</h2>
+<p><i>静态初始化块</i> 是一个普通的代码块，包裹在花括号 <code>{ }</code> 中，并且前面加了 <code>static</code> 关键字。这儿有个例子：</p>
 <div class="codeblock"><pre>
 static {
     // whatever code is needed for initialization goes here
 }
 </pre></div>
-<p>A class can have any number of static initialization blocks, and they can appear anywhere in the class body. The runtime system guarantees that static initialization blocks are called in the order that they appear in the source code.</p>
-<p>There is an alternative to static blocks &#151; you can write a private static method:</p>
+<p>一个类可以有任意数量的静态初始化块，它们可以出现在类体的任何位置。运行时系统会保证它们按照在源码中的出现顺序被调用。</p>
+<p>这有一个静态块的替代方法 &#151; 您可以写一个私有静态方法：</p>
 <div class="codeblock"><pre>
 class Whatever {
     public static varType myVar = initializeClassVariable();
@@ -560,19 +563,17 @@ class Whatever {
     }
 }
 </pre></div>
-<p>The advantage of private static methods is that they can be reused later if you need to reinitialize the class variable.</p>
-<h2>Initializing Instance Members</h2>
-<p>Normally, you would put code to initialize an instance variable in a constructor. There are two alternatives to using a constructor to initialize instance variables: initializer blocks and final methods.</p>
-<p>Initializer blocks for instance variables look just like static initializer blocks, but without the <code>static</code> keyword:</p>
+<p>静态私有方法的好处是它们可以复用，比如当您想要重新初始化类变量时。</p>
+<h2>初始化实例成员</h2>
+<p>通常，您会将实例变量的初始化代码放到构造器中。这里有两种代替构造器的方法来初始化实例变量：初始化块和 final 方法。</p>
+<p>实例变量的初始化块和静态初始化块类似，但是没有加 <code>static</code> 关键字：</p>
 <div class="codeblock"><pre>
 {
     // whatever code is needed for initialization goes here
 }
 </pre></div>
-<p>The Java compiler copies initializer blocks into every constructor. Therefore, this approach can be used to share a block of code between multiple constructors.</p>
-<p>A <i>final method</i> cannot be overridden in a subclass. This is discussed in 
-the lesson on 
-interfaces and inheritance. Here is an example of using a final method for initializing an instance variable:</p>
+<p>Java 编译器将初始化块拷贝到每个构造器中。因此，这种方法可以用来在多个构造器间共享代码。</p>
+<p><i>final 方法</i> 不能被子类覆写。这在后续的 接口和继承 课程中讨论。这里是一个使用 final 方法初始化实例变量的例子：</p>
 <div class="codeblock"><pre>
 class Whatever {
     private varType myVar = initializeInstanceVariable();
@@ -584,7 +585,7 @@ class Whatever {
 }
 
 </pre></div>
-<p>This is especially useful if subclasses might want to reuse the initialization method. The method is final because calling non-final methods during instance initialization can cause problems.</p>
+<p>如果子类想要复用初始化方法时，这将会非常有用。方法是 final 的，因为在实例初始化期间调用非 final 方法会导致问题。</p>
 
 
         </div>
@@ -613,8 +614,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Understanding Class Members
-        <br /><b>下一页：</b> Summary of Creating and Using 类和对象
+        <b>上一页：</b> 理解类成员
+        <br /><b>下一页：</b> 创建和使用类和对象总结
     </div>
 </body>
 </html> 

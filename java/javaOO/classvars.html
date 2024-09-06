@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Understanding Class Members (Java&trade; 教程 &gt;
+        <title>理解类成员 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
-<div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
-<div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
-<div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
-<div class="nolinkBHEAD">Understanding Class Members</div>
-<div class="linkBHEAD"><a href="initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
+<div class="linkBHEAD"><a href="returnvalue.html">从方法返回值</a></div>
+<div class="linkBHEAD"><a href="thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="accesscontrol.html">控制对类成员的访问</a></div>
+<div class="nolinkBHEAD">理解类成员</div>
+<div class="linkBHEAD"><a href="initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">创建和使用类和对象总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,15 +523,19 @@
                 <a target="_top" href="accesscontrol.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="initial.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Understanding Class Members</h1></div>
+            <div id="PageTitle"><h1>理解类成员</h1></div>
             <div id="PageContent">
 
-<!---Understanding Class Members=-->
-<p>In this section, we discuss the use of the <code>static</code> keyword to create fields and methods that belong to the class, rather than to an instance of the class.</p>
+<!---理解类成员=-->
+<p>本节我们讨论 <code>static</code> 关键字的使用，它用来创建属于类的字段和方法。</p>
 <h2>类变量</h2>
-<p>When a number of objects are created from the same class blueprint, they each have their own distinct copies of <i>instance variables</i>. In the case of the <code>Bicycle</code> class, the instance variables are <code>cadence</code>, <code>gear</code>, and <code>speed</code>. Each <code>Bicycle</code> object has its own values for these variables, stored in different memory locations.</p>
-<p>Sometimes, you want to have variables that are common to all objects. This is accomplished with the <code>static</code> modifier. Fields that have the <code>static</code> modifier in their declaration are called <i>static fields</i> or <i>class variables</i>. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.</p>
-<p>For example, suppose you want to create a number of <code>Bicycle</code> objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time, you need a field to keep track of how many <code>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this you need a class variable, <code>numberOfBicycles</code>, as follows:</p>
+<p>当同从一个类蓝图创建多个对象时，它们每一个都拥有自己的一份 <i>实例变量</i> 的拷贝。在 <code>Bicycle</code> 类中，实例变量是 <code>cadence</code>、<code>gear
+</code> 和 <code>speed</code>。每一个 <code>Bicycle</code> 对象都有这些变量的属于自己的值，存储在不同的内存位置。</p>
+<p>有时候，您想要创建对所有对象都通用的变量。这通过 <code>static</code> 修饰符完成。<code>static</code> 修饰的字段叫做 <i>静态字段</i> 或 <i>类变量</i>。
+    它们和类相关，而不是对象。类的每个实例共享一个类变量，它在内存中有个固定的位置。任何对象都可以修改类变量的值，但是不创建类实例也可以操作类变量。</p>
+<p>比如，假设您想创建一些 <code>Bicycle</code> 对象并给它们赋一个从 1 开始的序列号。每个对象的 ID 都是不一样的，所以它是一个实例变量。
+    同时，您需要一个字段来跟踪创建了多少个 <code>Bicycle</code> 对象，以便于计算下一个实例的 ID。这样的字段是全局的，不喝任何对象关联。
+    因此您需要一个类变量，<code>numberOfBicycles</code>，如下：</p>
 <div class="codeblock"><pre>
 public class Bicycle {
         
@@ -548,18 +552,18 @@ public class Bicycle {
         ...
 }
 </pre></div>
-<p>Class variables are referenced by the class name itself, as in</p>
+<p>类变量通过类名引用，如</p>
 <div class="codeblock"><pre>
 Bicycle.numberOfBicycles
 </pre></div> 
-<p>This makes it clear that they are class variables.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;You can also refer to static fields with an object reference like
+<p>这使得很容易识别出来它们是类变量。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;您也可以使用对象引用静态字段
 <div class="codeblock"><pre>
 myBike.numberOfBicycles
 </pre></div> 
-but this is discouraged because it does not make it clear that they are class variables.
+但不鼓励这么做，因为它没有清晰地表明这是个类变量。
 <hr /></div>
-<p>You can use the <code>Bicycle</code> constructor to set the <code>id</code> instance variable and increment the <code>numberOfBicycles</code> class variable:</p>
+<p>您可以使用 <code>Bicycle</code> 的构造器设置 <code>id</code> 实例变量的值，并增加类变量 <code>numberOfBicycles</code> 的值：</p>
 <div class="codeblock"><pre>
 public class Bicycle {
         
@@ -586,41 +590,44 @@ public class Bicycle {
         ...
 }
 </pre></div>
-<h2>Class Methods</h2>
-<p>The Java programming language supports static methods as well as static variables. Static methods, which have the <code>static</code> modifier in their declarations, should be invoked with the class name, without the need for creating an instance of the class, as in</p>
+<h2>类方法</h2>
+<p>和静态变量一样，Java 也支持静态方法。静态方法是 <code>static</code> 修饰符修饰的方法，应该使用类名调用，如</p>
 <div class="codeblock"><pre>
 ClassName.methodName(args)
 </pre></div>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;You can also refer to static methods with an object reference like
+<div class="note"><hr /><strong>注意：</strong>&nbsp;您也可以使用对象引用调用静态方法
 <div class="codeblock"><pre>
 instanceName.methodName(args)
-</pre></div> 
-but this is discouraged because it does not make it clear that they are class methods.
+</pre></div>
+但是不鼓励这么做，因为它没有清晰地表明这是个类方法。
 <hr /></div>
-<p>A common use for static methods is to access static fields. For example, we could add a static method to the <code>Bicycle</code> class to access the <code>numberOfBicycles</code> static field:</p>
+<p>静态方法的常见用途是访问静态字段。比如，我们可以为 <code>Bicycle</code> 类添加一个静态方法来访问静态字段 <code>numberOfBicycles</code>：</p>
 <div class="codeblock"><pre>
 public <b>static</b> int getNumberOfBicycles() {
     return numberOfBicycles;
 }
 </pre></div>
-<p>Not all combinations of instance and class variables and methods are allowed:</p>
+<p>并不是所有的实例变量、实例方法、类变量、类方法的组合都被允许：</p>
 <ul>
-<li>Instance methods can access instance variables and instance methods directly.</li>
-<li>Instance methods can access class variables and class methods directly.</li>
-<li>Class methods can access class variables and class methods directly.</li>
-<li>Class methods <b style="font-style: italic">cannot</b> access instance variables or instance methods directly&#151;they must use an object reference. Also, class methods cannot use the <code>this</code> keyword as there is no instance for <code>this</code> to refer to.</li>
+<li>实例方法可以直接访问实例变量和实例方法。</li>
+<li>实例方法可以直接访问类变量和类方法。</li>
+<li>类方法可以直接访问类变量和类方法。</li>
+<li>类方法 <b style="font-style: italic">不能</b> 直接访问实例变量或实例方法&#151;必须使用对象引用。同样，类方法不能使用 <code>this</code> 关键字，因为并没有供
+    <code>this</code> 引用的实例。</li>
 </ul>
-<h2>Constants</h2>
-<p>The <code>static</code> modifier, in combination with the <code>final</code> modifier, is also used to define constants. The <code>final</code> modifier indicates that the value of this field cannot change.</p>
-<p>For example, the following variable declaration defines a constant named <code>PI</code>, whose value is an approximation of pi (the ratio of the circumference of a circle to its diameter):</p>
+<h2>常量</h2>
+<p><code>static</code> 修饰符，结合 <code>final</code> 修饰符，也用来定义常量。<code>final</code> 修饰符表明字段的值不能改变。</p>
+<p>比如，下面的变量声明定义了一个常量，叫做 <code>PI</code>，它的值接近 pi (圆的周长与直径比) 的值：</p>
 <div class="codeblock"><pre>
 static final double PI = 3.141592653589793;
 </pre></div>
-<p>Constants defined in this way cannot be reassigned, and it is a compile-time error if your program tries to do so. By convention, the names of constant values are spelled in uppercase letters. If the name is composed of more than one word, the words are separated by an underscore (_).</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;If a primitive type or a string is defined as a constant and the value is known at compile time, the compiler replaces the constant name everywhere in the code with its value. This is called a <i>compile-time constant</i>. If the value of the constant in the outside world changes (for example, if it is legislated that pi actually should be 3.975), you will need to recompile any classes that use this constant to get the current value.
+<p>以这种方式定义的常量不能被重新赋值，如果您的程序尝试对其进行重新赋值，将会导致编译时错误。
+    习惯上，常量名全部大写。如果名字由多个单词组成，单词之间用下划线 (_) 分割。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;如果一个基本类型或字符串定义为常量，并且其值编译时已知，编译器使用其值替换代码中的常量名。
+    这叫做 <i>编译时常量</i>。如果常量的值在外部世界中发生了变化 (比如，法律规定 pi 的实际值应该是 3.975)，您需要重新编译使用这个常量的类以获取当前值。
 <hr /></div>
-<h2>The <code>Bicycle</code> Class</h2>
-<p>After all the modifications made in this section, the <code>Bicycle</code> class is now:</p>
+<h2><code>Bicycle</code> 类</h2>
+<p>做完本节中的所有修改之后，<code>Bicycle</code> 现在如下：</p>
 <div class="codeblock"><pre>
 public class Bicycle {
         
@@ -707,8 +714,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Controlling Access to Members of a Class
-        <br /><b>下一页：</b> Initializing Fields
+        <b>上一页：</b> 控制对类成员的访问
+        <br /><b>下一页：</b> 初始化字段
     </div>
 </body>
 </html> 

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Using the this Keyword (Java&trade; 教程 &gt;
+        <title>使用 this 关键字 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
-<div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
-<div class="nolinkBHEAD">Using the this Keyword</div>
-<div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
-<div class="linkBHEAD"><a href="classvars.html">Understanding Class Members</a></div>
-<div class="linkBHEAD"><a href="initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
+<div class="linkBHEAD"><a href="returnvalue.html">从方法返回值</a></div>
+<div class="nolinkBHEAD">使用 this 关键字</div>
+<div class="linkBHEAD"><a href="accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">创建和使用类和对象总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,14 +523,14 @@
                 <a target="_top" href="returnvalue.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="accesscontrol.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Using the this Keyword</h1></div>
+            <div id="PageTitle"><h1>使用 this 关键字</h1></div>
             <div id="PageContent">
 
-<!-- Using the this Keyword -->
-<p>Within an instance method or a constructor, <code>this</code> is a reference to the <i>current object</i> &#151; the object whose method or constructor is being called. You can refer to any member of the current object from within an instance method or a constructor by using <code>this</code>.</p>
-<h2>Using <code>this</code> with a Field</h2>
-<p>The most common reason for using the <code>this</code> keyword is because a field is shadowed by a method or constructor parameter.</p>
-<p>For example, the <code>Point</code> class was written like this</p>
+<!-- 使用 this 关键字 -->
+<p>在实例方法或构造器中，<code>this</code> 是指向 <i>当前对象</i> (调用方法或构造器的对象) 的引用。 您可以在实例方法或构造器中使用 <code>this</code> 引用当前对象的任何成员。</p>
+<h2>使用 <code>this</code> 访问字段</h2>
+<p>使用 <code>this</code> 关键字最常见的原因是，字段被方法或构造器参数遮蔽。</p>
+<p>比如，<code>Point</code> 类是这样写的</p>
 <div class="codeblock"><pre>
 public class Point {
     public int x = 0;
@@ -543,7 +543,7 @@ public class Point {
     }</b>
 }
 </pre></div>
-<p>but it could have been written like this:</p>
+<p>但是可以把它写成这样：</p>
 <div class="codeblock"><pre>
 public class Point {
     public int x = 0;
@@ -556,10 +556,12 @@ public class Point {
     }</b>
 }
 </pre></div>
-<p>Each argument to the constructor shadows one of the object&#39;s fields &#151; inside the constructor <b><code>x</code></b> is a local copy of the constructor&#39;s first argument. To refer to the <code>Point</code> field <b><code>x</code></b>, the constructor must use <code style="font-weight: bold">this.x</code>.</p>
-<h2>Using <code>this</code> with a Constructor</h2>
-<p>From within a constructor, you can also use the <code>this</code> keyword to call another constructor in the same class. Doing so is called an <i>explicit constructor invocation</i>. Here&#39;s another <code>Rectangle</code> class, with a different implementation from the one in the 
-<a class="TutorialLink" target="_top" href="../javaOO/objects.html">对象</a> section.</p>
+<p>构造器的每个参数都遮蔽了对象的字段 &#151; 在构造器中 <b><code>x</code></b> 是构造器的首个实参的一个拷贝。
+    为了引用 <code>Point</code> 字段 <b><code>x</code></b>，必须使用 <code style="font-weight: bold">this.x</code>。</p>
+<h2>使用 <code>this</code> 调用构造器</h2>
+<p>在构造器中，您可以使用 <code>this</code> 关键字调用同类中的另一个构造器。这叫做 <i>显式构造器调用</i>。
+    这里是另一个 <code>Rectangle</code> 类，不同于 <a class="TutorialLink" target="_top" href="../javaOO/objects.html">对象</a>
+    一节中的实现。</p>
 <div class="codeblock"><pre>
 public class Rectangle {
     private int x, y;
@@ -580,8 +582,10 @@ public class Rectangle {
     ...
 }
 </pre></div>
-<p>This class contains a set of constructors. Each constructor initializes some or all of the rectangle&#39;s member variables. The constructors provide a default value for any member variable whose initial value is not provided by an argument. For example, the no-argument constructor creates a 1x1 <code>Rectangle</code> at coordinates 0,0. The two-argument constructor calls the four-argument constructor, passing in the width and height but always using the 0,0 coordinates. As before, the compiler determines which constructor to call, based on the number and the type of arguments.</p>
-<p>If present, the invocation of another constructor must be the first line in the constructor.</p>
+<p>这个类包含一系列的构造器。每一个构造器初始化矩形的部分或全部成员变量。构造器为所有未通过参数提供初始值的成员变量都提供了一个默认值。
+    比如，无参构造方法创建了一个坐标是 0,0 的 1x1 的 <code>Rectangle</code>。两个参数的构造器调用四个参数的构造器，传入宽和高，同时使用 0,0 坐标。
+    编译器基于参数的数量和类型决定调用哪个构造器。</p>
+<p>如果出现，调用另一个构造器的代码必须是构造器的第一行代码。</p>
 
 
         </div>
@@ -610,8 +614,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Returning a Value from a Method
-        <br /><b>下一页：</b> Controlling Access to Members of a Class
+        <b>上一页：</b> 从方法返回值
+        <br /><b>下一页：</b> 控制对类成员的访问
     </div>
 </body>
 </html> 

@@ -601,7 +601,7 @@ append(ls, String.class);
 
 <h2><a name="createStatic">Cannot Declare 静态字段 Whose Types are Type Parameters</a></h2>
 <p>
-A class's static field is a class-level variable shared by all non-static objects of the class.  Hence, static fields of type parameters are not allowed. Consider the following class:</p>
+A class's static field is a class-level variable shared by all non-static objects of the class.  Hence, static fields of type parameters are not allowed. 考虑下面的类：</p>
 <div class="codeblock"><pre>
 public class MobileDevice&lt;T&gt; {
     private static T os;

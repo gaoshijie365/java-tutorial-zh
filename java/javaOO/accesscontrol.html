@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Controlling Access to Members of a Class (Java&trade; 教程 &gt;
+        <title>控制对类成员的访问 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
-<div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
-<div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
-<div class="nolinkBHEAD">Controlling Access to Members of a Class</div>
-<div class="linkBHEAD"><a href="classvars.html">Understanding Class Members</a></div>
-<div class="linkBHEAD"><a href="initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
+<div class="linkBHEAD"><a href="returnvalue.html">从方法返回值</a></div>
+<div class="linkBHEAD"><a href="thiskey.html">使用 this 关键字</a></div>
+<div class="nolinkBHEAD">控制对类成员的访问</div>
+<div class="linkBHEAD"><a href="classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">创建和使用类和对象总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,20 +523,23 @@
                 <a target="_top" href="thiskey.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="classvars.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Controlling Access to Members of a Class</h1></div>
+            <div id="PageTitle"><h1>控制对类成员的访问</h1></div>
             <div id="PageContent">
 
-<!-- Controlling Access to Members of a Class -->
-<p>Access level modifiers determine whether other classes can use a particular field or invoke a particular method. There are two levels of access control:</p>
+<!-- 控制对类成员的访问 -->
+<p>访问级别修饰符决定其它类是否可以使用特定的字段或者调用特定的方法。有两级访问控制：</p>
 <ul>
-<li>At the top level&#151;<code>public</code>, or <i>package-private</i> (no explicit modifier).</li>
-<li>At the member level&#151;<code>public</code>, <code>private</code>, <code>protected</code>, or <i>package-private</i> (no explicit modifier).</li>
+<li>在顶级&#151;<code>public</code>，或 <i>package-private</i> (没有显式的修饰符)。</li>
+<li>在成员级&#151;<code>public</code>、<code>private</code>、<code>protected</code>、或 <i>package-private</i> (没有显式的修饰符)。</li>
 </ul>
-<p>A class may be declared with the modifier <code>public</code>, in which case that class is visible to all classes everywhere. If a class has no modifier (the default, also known as <i>package-private</i>), it is visible only within its own package (packages are named groups of related classes &#151; you will learn about them in a later 
-lesson.) 
+<p>一个类可以使用修饰符 <code>public</code> 声明，这种情况下，这个类对所有类都可见。如果一个类没有修饰符 (默认，也叫做 <i>包级私有</i>)，它仅在自己的包中可见 (
+    包是相关类的命名分组 &#151; 您将在稍后课程中学习)。
 </p>
-<p>At the member level, you can also use the <code>public</code> modifier or no modifier (<i>package-private</i>) just as with top-level classes, and with the same meaning. For members, there are two additional access modifiers: <code>private</code> and <code>protected</code>. The <code>private</code> modifier specifies that the member can only be accessed in its own class. The <code>protected</code> modifier specifies that the member can only be accessed within its own package (as with <i>package-private</i>) and, in addition, by a subclass of its class in another package.</p>
-<p>The following table shows the access to members permitted by each modifier.</p>
+<p>在成员级，您可以使用 <code>public</code> 修饰符或者没有修饰符 (<i>包级私有</i>)，就和顶级类一样具有相同的意思。
+    对于成员，这里有两个额外的访问修饰符：<code>private</code> 和 <code>protected</code>。
+    <code>private</code> 修饰符指定成员仅可以在自己类中访问。
+    <code>protected</code> 修饰符指定成员仅可以在自己的包中访问 (与 <i>包级私有</i> 一样)，此外，也可以被另一个包中的子类访问。</p>
+<p>下面的表格每个修饰符允许访问的成员。</p>
 <table border="1" summary="This table defines levels of access conferred by a modifier">
 <caption style="font-weight: bold" id="accesscontrol-levels">Access Levels</caption>
 <tr>
@@ -575,12 +578,13 @@ lesson.)
 <td headers="h5">N</td>
 </tr>
 </table>
-<p>The first data column indicates whether the class itself has access to the member defined by the access level. As you can see, a class always has access to its own members. The second column indicates whether classes in the same package as the class (regardless of their parentage) have access to the member. The third column indicates whether subclasses of the class declared outside this package have access to the member. The fourth column indicates whether all classes have access to the member.</p>
-<p>Access levels affect you in two ways. First, when you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use. Second, when you write a class, you need to decide what access level every member variable and every method in your class should have.</p>
-<p>Let&#39;s look at a collection of classes and see how access levels affect visibility. 
-<span id="figure:classes-access.gif">The following figure</span> shows the four classes in this example and how they are related.</p>
-<center><img src="../../figures/java/classes-access.gif" width="257" height="113" align="bottom" alt="Classes and 包 of the Example Used to Illustrate Access Levels" /></p><p class="FigureCaption">Classes and 包 of the Example Used to Illustrate Access Levels</p></center><p>
-<span id="table:accesscontrol-levels">The following table</span> shows where the members of the Alpha class are visible for each of the access modifiers that can be applied to them.</p>
+<p>第一个数据列指出类本身是否可以访问对应访问级别的成员。正如您所见，类总是可以访问自己的成员。第二列指出与类相同的包中的类可以访问的成员。第三列指出其它包中的子类是否可以访问对应级别的成员。第四列指出是否所有类都可以访问成员。</p>
+<p>访问级别以两种方式影响您。第一，当您使用其它来源的类时，比如 Java 平台的类，访问级别决定了您可以使用这些类中的哪些的成员。
+    第二，当您写一个类，您需要决定您自己类的成员变量和方法应该具有的访问级别。</p>
+<p>让我们来看一些类，并观察访问级别是如何影响可见性的。
+<span id="figure:classes-access.gif">下图</span> 展示了本例中的四个类以及它们之间的关系。</p>
+<center><img src="../../figures/java/classes-access.gif" width="257" height="113" align="bottom" alt="用来说明访问级别的类和包" /></p><p class="FigureCaption">用来说明访问级别的类和包</p></center><p>
+<span id="table:accesscontrol-levels">下表</span> 显示了 Alpha 类的成员使用不同访问修饰符时，可以访问到它们的地方。</p>
 <table border="1" summary="This table shows the visibility levels for each of the access modifiers">
 <caption style="font-weight: bold" id="visibility">Visibility</caption>
 <tr>
@@ -619,12 +623,11 @@ lesson.)
 <td headers="h105">N</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>Tips on Choosing an Access Level:</strong>&nbsp;<p>If other programmers use your class, you want to ensure that errors from misuse cannot happen. Access levels can help you do this.</p>
+<div class="note"><hr /><strong>访问级别选择技巧：</strong>&nbsp;<p>如果其他程序员使用您的类，您想要确保不会因为误用而产生错误。访问级别可以帮你做到。</p>
 <ul>
-<li>Use the most restrictive access level that makes sense for a particular member. Use <code>private</code> unless you have a good reason not to.</li>
-<li>Avoid <code>public</code> fields except for constants. (Many of the examples in the 
-tutorial 
-use public fields. This may help to illustrate some points concisely, but is not recommended for production code.) Public fields tend to link you to a particular implementation and limit your flexibility in changing your code.</li>
+<li>对特定成员使用最严格的访问级别是有意义的。使用 <code>private</code> 除非您有更好的理由不用它。</li>
+<li>避免 <code>public</code> 字段，常量除外。(本教程的示例中使用公有字段。这有助于简明地说明一些点，但是在生产代码中不推荐这么做。)
+    公有字段引导您到一个特定实现，并且会限制更改代码时的灵活性。</li>
 </ul>
 <hr /></div>
 
@@ -655,8 +658,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Using the this Keyword
-        <br /><b>下一页：</b> Understanding Class Members
+        <b>上一页：</b> 使用 this 关键字
+        <br /><b>下一页：</b> 理解类成员
     </div>
 </body>
 </html> 

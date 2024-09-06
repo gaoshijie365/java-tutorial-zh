@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Summary of Creating and Using 类和对象 (Java&trade; 教程 &gt;
+        <title>创建和使用类和对象总结 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
-<div class="linkBHEAD"><a href="returnvalue.html">Returning a Value from a Method</a></div>
-<div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
-<div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
-<div class="linkBHEAD"><a href="classvars.html">Understanding Class Members</a></div>
-<div class="linkBHEAD"><a href="initial.html">Initializing Fields</a></div>
-<div class="nolinkBHEAD">Summary of Creating and Using 类和对象</div>
+<div class="linkBHEAD"><a href="returnvalue.html">从方法返回值</a></div>
+<div class="linkBHEAD"><a href="thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="initial.html">初始化字段</a></div>
+<div class="nolinkBHEAD">创建和使用类和对象总结</div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,27 +523,29 @@
                 <a target="_top" href="initial.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="QandE/creating-questions.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Summary of Creating and Using 类和对象</h1></div>
+            <div id="PageTitle"><h1>创建和使用类和对象总结</h1></div>
             <div id="PageContent">
 
-<!-- Summary of Creating Classes -->
-<p>A class declaration names the class and encloses the class body between braces. The class name can be preceded by modifiers. The class body contains fields, methods, and constructors for the class. A class uses fields to contain state information and uses methods to implement behavior. Constructors that initialize a new instance of a class use the name of the class and look like methods without a return type.</p>
-<p>You control access to classes and members in the same way: by using an access modifier such as <code>public</code> in their declaration.</p>
-<p>You specify a class variable or a class method by using the <code>static</code> keyword in the member&#39;s declaration. A member that is not declared as <code>static</code> is implicitly an instance member. Class variables are shared by all instances of a class and can be accessed through the class name as well as an instance reference. Instances of a class get their own copy of each instance variable, which must be accessed through an instance reference.</p>
-<p>You create an object from a class by using the <code>new</code> operator and a constructor. The new operator returns a reference to the object that was created. You can assign the reference to a variable or use it directly.</p>
-<p>Instance variables and methods that are accessible to code outside of the class that they are declared in can be referred to by using a qualified name. The qualified name of an instance variable looks like this:</p>
+<!-- 创建类总结 -->
+<p>类声明了类的名称还有大括号中的类体。类名称签名可以加修饰符。类体包含字段、方法和构造器。类使用字段存储状态信息，使用方法实现行为。
+    构造器初始化类的一个新实例，其名称与类名相同，看起来像方法但是没有返回类型。</p>
+<p>使用同样的方式控制对类和成员的访问：使用访问修饰符，比如 <code>public</code></p>
+<p>在成员声明时使用 <code>static</code> 关键字，就声明了一个类变量或类方法。没有声明为 <code>static</code> 的成员是实例成员。
+    类变量是类的所有实例共享的变量，可以通过类名和实例引用访问。实例变量拥有自己的一份实例变量的拷贝，必须通过实例引用访问。</p>
+<p>使用 <code>new</code> 操作符和构造器创建类的一个对象。new 操作符返回被创建对象的引用。您可以将这个引用赋值给一个变量或直接使用。</p>
+<p>实例变量和实例方法在声明它们的类的外面是通过使用限定名访问的。带限定的实例变量名看起来是：</p>
 <div class="codeblock"><pre>
 <em>objectReference.variableName</em>
 </pre></div>
-<p>The qualified name of a method looks like this:</p>
+<p>方法的限定名称看起来是：</p>
 <div class="codeblock"><pre>
 <em>objectReference.methodName(argumentList)</em>
 </pre></div>
-<p>or:</p>
+<p>或者：</p>
 <div class="codeblock"><pre>
 <em>objectReference.methodName()</em>
 </pre></div>
-<p>The garbage collector automatically cleans up unused objects. An object is unused if the program holds no more references to it. You can explicitly drop a reference by setting the variable holding the reference to <code>null</code>.</p>
+<p>垃圾收集器自动清理不再使用的对象。如果程序不再持有一个对象的引用，那它就是无用的。您可以设置变量持有到 <code>null</code> 的引用来显式地丢弃它。</p>
 
 
         </div>
@@ -572,8 +574,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Initializing Fields
-        <br /><b>下一页：</b> 问题和练习：Classes
+        <b>上一页：</b> 初始化字段
+        <br /><b>下一页：</b> 问题和练习：类
     </div>
 </body>
 </html> 

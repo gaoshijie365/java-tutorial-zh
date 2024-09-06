@@ -409,7 +409,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p>Consider the following class:</p>
+<p>考虑下面的类：</p>
 <div class="codeblock"><pre>
 public class IdentifyMyParts {
     public static int x = 7;
@@ -418,15 +418,15 @@ public class IdentifyMyParts {
 </pre></div>
 <ol type="a">
 <li>
-<p><strong>Question</strong>: What are the class variables?</p>
-<p><strong>答案</strong>: x</p>
+<p><strong>问题</strong>：哪个是类变量？</p>
+<p><strong>答案</strong>：x</p>
 </li>
 <li>
-<p><strong>Question</strong>: What are the instance variables?</p>
-<p><strong>答案</strong>: y</p>
+<p><strong>问题</strong>：哪个是实例变量？</p>
+<p><strong>答案</strong>：y</p>
 </li>
 <li>
-<p><strong>Question</strong>: What is the output from the following code:</p>
+<p><strong>问题</strong>：下面代码输出什么？</p>
 <div class="codeblock"><pre>
 IdentifyMyParts a = new IdentifyMyParts(); 
 IdentifyMyParts b = new IdentifyMyParts(); 
@@ -440,7 +440,7 @@ System.out.println("a.x = " + a.x);
 System.out.println("b.x = " + b.x); 
 System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
 </pre></div>
-<p><strong>答案</strong>: Here is the output:</p>
+<p><strong>答案</strong>：这是输出：</p>
 <div class="codeblock"><pre>
  a.y = 5 
  b.y = 6 
@@ -448,8 +448,10 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
  b.x = 2
  IdentifyMyParts.x = 2
 </pre></div>
-<p>Because <code>x</code> is defined as a <code>public static int</code> in the class <code>IdentifyMyParts</code>, every reference to <code>x</code> will have the value that was last assigned because <code>x</code> is a static variable (and therefore a class variable) shared across all instances of the class. That is, there is only one <code>x</code>: when the value of <code>x</code> changes in any instance it affects the value of <code>x</code> for all instances of <code>IdentifyMyParts</code>.</p>
-<p>This is covered in the 类变量 section of <a href="../classvars.html">Understanding Instance and Class Members</a>.</p>
+<p>因为 <code>x</code> 在类 <code>IdentifyMyParts</code> 的定义是 <code>public static int</code>，每一次引用 <code>x</code>
+    都将获得最后一次赋给它的值，因为 <code>x</code> 是一个静态变量 (也叫类变量)，类的所有实例共享这个变量。
+    也就是说，只有一个 <code>x</code>：当 <code>x</code> 的值在任何实例中更改后，它会影响 <code>IdentifyMyParts</code> 所有实例的 <code>x</code> 值。</p>
+<p>这在 <a href="../classvars.html">理解实例和类成员</a> 的 类变量 一节讲解。</p>
 </li>
 </ol>
 </li>
@@ -457,23 +459,23 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>Exercise</strong>: Write a class whose instances represent a single playing card from a deck of cards. Playing cards have two distinguishing properties: rank and suit. Be sure to keep your solution as you will be asked to rewrite it in <a href="enum-questions.html">枚举类型</a>.</p>
+<p><strong>练习</strong>：写一个类，其实例代表一副牌中的一张。卡牌有两个属性：数字和花色。保留您的答案，稍后会在 <a href="enum-questions.html">枚举类型</a> 中重写。</p>
 
 <p><strong>答案</strong>:
 <a class="SourceLink" target="_blank" href="../examples/Card.java" onclick="showCode('../../../displayCode.html', '../examples/Card.java'); return false;"><code><code>Card.java</code></code></a><img src="../../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" />.</p>
 
 </li>
 <li>
-<p><strong>Exercise</strong>: Write a class whose instances represents a <b>full</b> deck of cards. You should also keep this solution.</p>
+<p><strong>练习</strong>：写一个类，其实例代表一整副牌。同样保留您的答案。</p>
 
-<p><strong>答案</strong>: See
+<p><strong>答案</strong>：查看
 <a class="SourceLink" target="_blank" href="../examples/Deck.java" onclick="showCode('../../../displayCode.html', '../examples/Deck.java'); return false;"><code><code>Deck.java</code></code></a><img src="../../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" />.</p>
 
 </li>
 <li>
-<p><strong>Exercise</strong>: Write a small program to test your deck and card classes. The program can be as simple as creating a deck of cards and displaying its cards.</p>
+<p><strong>练习</strong>：写一个简单的程序测试您的 Deck 和 Card 类。这个程序可以是仅仅创建一副牌并展示所有的牌。</p>
 
-<p><strong>答案</strong>: See
+<p><strong>答案</strong>：查看
 <a class="SourceLink" target="_blank" href="../examples/DisplayDeck.java" onclick="showCode('../../../displayCode.html', '../examples/DisplayDeck.java'); return false;"><code><code>DisplayDeck.java</code></code></a><img src="../../../images/sourceIcon.gif" width="11" height="11" border="0" align="middle" alt="(in a .java source file)" />.</p>
 
 </li>
@@ -502,7 +504,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> 问题和练习：Classes
+        <b>上一页：</b> 问题和练习：类
     </div>
 </body>
 </html> 

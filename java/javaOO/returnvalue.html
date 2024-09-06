@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Returning a Value from a Method (Java&trade; 教程 &gt;
+        <title>从方法返回值 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="more.html">更多关于类的信息</a></div>
-<div class="nolinkBHEAD">Returning a Value from a Method</div>
-<div class="linkBHEAD"><a href="thiskey.html">Using the this Keyword</a></div>
-<div class="linkBHEAD"><a href="accesscontrol.html">Controlling Access to Members of a Class</a></div>
-<div class="linkBHEAD"><a href="classvars.html">Understanding Class Members</a></div>
-<div class="linkBHEAD"><a href="initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
+<div class="nolinkBHEAD">从方法返回值</div>
+<div class="linkBHEAD"><a href="thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">创建和使用类和对象总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,38 +523,39 @@
                 <a target="_top" href="more.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="thiskey.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Returning a Value from a Method</h1></div>
+            <div id="PageTitle"><h1>从方法返回值</h1></div>
             <div id="PageContent">
 
-<!-- Returning a Value from a Method -->
-<p>A method returns to the code that invoked it when it</p>
+<!-- 从方法返回值 -->
+<p>一个方法返回到调用它的代码，当</p>
 <ul>
-<li>completes all the statements in the method,</li>
-<li>reaches a <code>return</code> statement, or</li>
-<li>throws an exception (covered later),</li>
+<li>完成了方法中的所有语句，</li>
+<li>遇到 <code>return</code> 语句，或者</li>
+<li>抛出一个异常 (后面讲解)，</li>
 </ul>
-<p>whichever occurs first.</p>
-<p>You declare a method&#39;s return type in its method declaration. Within the body of the method, you use the <code>return</code> statement to return the value.</p>
-<p>Any method declared <code>void</code> doesn&#39;t return a value. It does not need to contain a <code>return</code> statement, but it may do so. In such a case, a <code>return</code> statement can be used to branch out of a control flow block and exit the method and is simply used like this:</p>
+<p>无论哪个先发生。</p>
+<p>在方法声明中声明方法的返回类型。在方法体中，使用 <code>return</code> 语句返回值。</p>
+<p>任何声明 <code>void</code> 的方法都不会返回值。它不需要包含一个 <code>return</code> 语句，但是也可能包含。在这种情况下，
+    <code>return</code> 语句可以用作跳出控制流、退出方法，像这样使用：</p>
 <div class="codeblock"><pre>
 return;
 </pre></div>
-<p>If you try to return a value from a method that is declared <code>void</code>, you will get a compiler error.</p>
-<p>Any method that is not declared <code>void</code> must contain a <code>return</code> statement with a corresponding return value, like this:</p>
+<p>如果您视图从声明为 <code>void</code> 的方法中返回一个值，编译器将报错。</p>
+<p>任何没有声明 <code>void</code> 的方法必须包含一个带有对应返回值的 <code>return</code> 语句，就像这样：</p>
 <div class="codeblock"><pre>
 return returnValue;
 </pre></div>
-<p>The data type of the return value must match the method&#39;s declared return type; you can&#39;t return an integer value from a method declared to return a boolean.</p>
-<p>The <code>getArea()</code> method in the <code>Rectangle</code> 
-<a class="SourceLink" target="_blank" href="examples/Rectangle.java" onclick="showCode('../../displayCode.html', 'examples/Rectangle.java'); return false;"><code>Rectangle</code></a> class that was discussed in the sections on objects returns an integer:</p>
+<p>返回值的类型必须匹配方法声明的返回类型。您不能从一个声明返回布尔类型的方法中返回一个整数值。</p>
+<p>在对象一节中讨论的 <a class="SourceLink" target="_blank" href="examples/Rectangle.java"
+                         onclick="showCode('../../displayCode.html', 'examples/Rectangle.java'); return false;"><code>Rectangle</code></a> 类中的 <code>getArea()</code> 方法返回一个整数：</p>
 <div class="codeblock"><pre>
     // a method for computing the area of the rectangle
     public int getArea() {
         return width * height;
     }
 </pre></div>
-<p>This method returns the integer that the expression <code>width*height</code> evaluates to.</p>
-<p>The <code>getArea</code> method returns a primitive type. A method can also return a reference type. For example, in a program to manipulate <code>Bicycle</code> objects, we might have a method like this:</p>
+<p>这个方法返回表达式 <code>width * height</code> 计算得出的整数。</p>
+<p><code>getArea</code> 方法返回一个基本类型。方法也可以返回引用类型。比如，在操作 <code>Bicycle</code> 对象的程序中可能有这样一个方法：</p>
 <div class="codeblock"><pre>
 public Bicycle seeWhosFastest(Bicycle myBike, Bicycle yourBike,
                               Environment env) {
@@ -566,27 +567,29 @@ public Bicycle seeWhosFastest(Bicycle myBike, Bicycle yourBike,
     return fastest;
 }
 </pre></div>
-<h2>Returning a Class or Interface</h2>
-<p>If this section confuses you, skip it and return to it after you have finished the 
-lesson
- on interfaces and inheritance.</p>
-<p>When a method uses a class name as its return type, such as <code>whosFastest</code> does, the class of the type of the returned object must be either a subclass of, or the exact class of, the return type. Suppose that you have a class hierarchy in which <code>ImaginaryNumber</code> is a subclass of <code>java.lang.Number</code>, which is in turn a subclass of <code>Object</code>, as illustrated in 
-<span id="figure:classes-hierarchy.gif">the following figure</span>.</p>
-<center><img src="../../figures/java/classes-hierarchy.gif" width="130" height="136" align="bottom" alt="The class hierarchy for ImaginaryNumber" /></p><p class="FigureCaption">The class hierarchy for ImaginaryNumber</p></center><p>Now suppose that you have a method declared to return a <code>Number</code>:</p>
+<h2>返回一个类或接口</h2>
+<p>如果您对本节感到困惑，跳过它，在您学完接口和继承后再回过头来看。</p>
+<p>当一个方法使用类名作为它的返回类型，比如 <code>whosFastest</code> 中，返回的对象的类型必须是返回类型或其子类型。
+    假设您有一个类层次，其中 <code>ImaginaryNumber</code> 是 <code>java.lang.Number</code> 的子类，<code>java.lang.Number</code> 又是
+    <code>Object</code> 的子类，如<span id="figure:classes-hierarchy.gif">下图</span>所示。</p>
+<center><img src="../../figures/java/classes-hierarchy.gif" width="130" height="136" align="bottom" alt="ImaginaryNumber 的类层次" /></p><p class="FigureCaption">ImaginaryNumber 的类层次</p></center>
+<p>现在假设您有一个方法，声明返回 <code>Number</code> 类型：</p>
 <div class="codeblock"><pre>
 public Number returnANumber() {
     ...
 }
 </pre></div>
-<p>The <code>returnANumber</code> method can return an <code>ImaginaryNumber</code> but not an <code>Object</code>. <code>ImaginaryNumber</code> is a <code>Number</code> because it&#39;s a subclass of <code>Number</code>. However, an <code>Object</code> is not necessarily a <code>Number</code> &#151; it could be a <code>String</code> or another type.</p>
-<p>You can override a method and define it to return a subclass of the original method, like this:</p>
+<p><code>returnANumber</code> 方法可以返回 <code>ImaginaryNumber</code> 但不能是 <code>Object</code>。
+    <code>ImaginaryNumber</code> 是 <code>Number</code>，因为它是 <code>Number</code> 的子类。
+    然而，<code>Object</code> 未必是 <code>Number</code> &#151; 它可以是 <code>String</code> 或其它类型。</p>
+<p>您可以覆写这个方法，并且定义为返回原方法返回类型的子类型，就像这样：</p>
 <div class="codeblock"><pre>
 public ImaginaryNumber returnANumber() {
     ...
 }
 </pre></div>
-<p>This technique, called <em>covariant return type</em>, means that the return type is allowed to vary in the same direction as the subclass.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;You also can use interface names as return types. In this case, the object returned must implement the specified interface.
+<p>这项技术叫做 <em>协变返回类型</em>，意思是返回类型可以在子类这个方向变化。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;您也可以使用接口名作为返回类型。这种情况下，返回的对象必须实现这个接口。
 <hr /></div>
 
 
@@ -617,7 +620,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 更多关于类的信息
-        <br /><b>下一页：</b> Using the this Keyword
+        <br /><b>下一页：</b> 使用 this 关键字
     </div>
 </body>
 </html> 

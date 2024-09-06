@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>问题和练习：Classes (Java&trade; 教程 &gt;
+        <title>问题和练习：类 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,12 +486,12 @@
 <div class="linkBHEAD"><a href="../objectcreation.html">创建对象</a></div>
 <div class="linkBHEAD"><a href="../usingobject.html">使用对象</a></div>
 <div class="linkAHEAD"><a href="../more.html">更多关于类的信息</a></div>
-<div class="linkBHEAD"><a href="../returnvalue.html">Returning a Value from a Method</a></div>
-<div class="linkBHEAD"><a href="../thiskey.html">Using the this Keyword</a></div>
-<div class="linkBHEAD"><a href="../accesscontrol.html">Controlling Access to Members of a Class</a></div>
-<div class="linkBHEAD"><a href="../classvars.html">Understanding Class Members</a></div>
-<div class="linkBHEAD"><a href="../initial.html">Initializing Fields</a></div>
-<div class="linkBHEAD"><a href="../summaryclasses.html">Summary of Creating and Using 类和对象</a></div>
+<div class="linkBHEAD"><a href="../returnvalue.html">从方法返回值</a></div>
+<div class="linkBHEAD"><a href="../thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="../accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="../classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="../initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="../summaryclasses.html">创建和使用类和对象总结</a></div>
 <div class="nolinkQUESTIONS">问题和练习</div>
 <div class="linkQUESTIONS"><a href="../QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="../nested.html">嵌套类</a></div>
@@ -500,7 +500,7 @@
 <div class="linkBHEAD"><a href="../anonymousclasses.html">Anonymous Classes</a></div>
 <div class="linkBHEAD"><a href="../lambdaexpressions.html">Lambda Expressions</a></div>
 <div class="linkCHEAD"><a href="../methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="../whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="../whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
 <div class="linkQUESTIONS"><a href="../QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="../enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="../QandE/enum-questions.html">问题和练习</a></div>
@@ -522,14 +522,14 @@
                 <a target="_top" href="../summaryclasses.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="../QandE/objects-questions.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>问题和练习：Classes</h1></div>
+            <div id="PageTitle"><h1>问题和练习：类</h1></div>
             <div id="PageContent">
 
 <!-- 问题和练习：Creating Classes -->
 <h2>问题</h2>
 <ol>
 <li>
-<p>Consider the following class:</p>
+<p>考虑下面的类：</p>
 <div class="codeblock"><pre>
 public class IdentifyMyParts {
     public static int x = 7; 
@@ -538,13 +538,13 @@ public class IdentifyMyParts {
 </pre></div>
 <ol type="a">
 <li>
-<p>What are the class variables?</p>
+<p>哪个是类变量？</p>
 </li>
 <li>
-<p>What are the instance variables?</p>
+<p>哪个是实例变量？</p>
 </li>
 <li>
-<p>What is the output from the following code:</p>
+<p>下面代码输出什么？</p>
 <div class="codeblock"><pre>
 IdentifyMyParts a = new IdentifyMyParts();
 IdentifyMyParts b = new IdentifyMyParts();
@@ -565,27 +565,27 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
 <h2>练习</h2>
 <ol>
 <li>
-<p>Write a class whose instances represent a single playing card from a deck of cards. Playing cards have two distinguishing properties: rank and suit. Be sure to keep your solution as you will be asked to rewrite it in <a href="enum-questions.html">枚举类型</a>.</p>
-<div class="note"><hr /><strong>Hint:</strong>&nbsp;<p>You can use the <code>assert</code> statement to check your assignments. You write:</p>
+<p>写一个类，其实例代表一副牌中的一张。卡牌有两个属性：数字和花色。保留您的答案，稍后会在 <a href="enum-questions.html">枚举类型</a> 中重写。</p>
+<div class="note"><hr /><strong>提示：</strong>&nbsp;<p>您可以使用 <code>assert</code> 语句检查赋值。</p>
 <div class="codeblock"><pre>
 assert (boolean expression to test); 
 </pre></div>
-<p>If the boolean expression is false, you will get an error message. For example,</p>
+<p>如果布尔表达式是 false，您将得到一条错误信息。比如，</p>
 <div class="codeblock"><pre>
 assert toString(ACE) == "Ace";
 </pre></div>
-<p>should return <code>true</code>, so there will be no error message.</p>
-<p>If you use the <code>assert</code> statement, you must run your program with the <code>ea</code> flag:</p>
+<p>应该返回 <code>true</code>，所以这儿不会有错误信息。</p>
+<p>如果您使用 <code>assert</code> 语句，您必须使用 <code>ea</code> 标志运行您的程序：</p>
 <div class="codeblock"><pre>
 java -ea YourProgram.class
 </pre></div>
 <hr /></div>
 </li>
 <li>
-<p>Write a class whose instances represent a <b>full</b> deck of cards. You should also keep this solution.</p>
+<p>写一个类，其实例代表一整副牌。同样保留您的答案。</p>
 </li>
 <li>
-<p>3. Write a small program to test your deck and card classes. The program can be as simple as creating a deck of cards and displaying its cards.</p>
+<p>写一个简单的程序测试您的 Deck 和 Card 类。这个程序可以是仅仅创建一副牌并展示所有的牌。</p>
 </li>
 </ol>
 <p>
@@ -618,8 +618,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Summary of Creating and Using 类和对象
-        <br /><b>下一页：</b> 问题和练习：Objects
+        <b>上一页：</b> 创建和使用类和对象总结
+        <br /><b>下一页：</b> 问题和练习：对象
     </div>
 </body>
 </html> 

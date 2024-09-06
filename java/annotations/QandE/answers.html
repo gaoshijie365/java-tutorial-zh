@@ -408,7 +408,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question</strong>: What is wrong with the following interface:</p>
+<p><strong>问题</strong>：What is wrong with the following interface:</p>
 <div class="codeblock"><pre>
 public interface House {
     @Deprecated
@@ -434,7 +434,7 @@ public interface House {
 </pre></div>
 </li>
 <li>
-<p><strong>Question</strong>: Consider this implementation of the <code>House</code> interface, shown in Question 1.</p>
+<p><strong>问题</strong>：Consider this implementation of the <code>House</code> interface, shown in Question 1.</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House {
     public void open() {}
@@ -443,7 +443,7 @@ public class MyHouse implements House {
 }
 </pre></div>
 <p>If you compile this program, the compiler produces a warning because <code>open</code> was deprecated (in the interface). What can you do to get rid of that warning?</p>
-<p><strong>答案</strong>: You can deprecate the implementation of <code>open</code>:</p>
+<p><strong>答案</strong>：You can deprecate the implementation of <code>open</code>:</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House { 
     // The documentation is 
@@ -475,7 +475,7 @@ public @interface Meal { ... }
 @Meal("dinner", mainDish="salad")
 public void evaluateDiet() { ... }
 </pre></div>
-<p><strong>答案</strong>: The code fails to compile. Before JDK 8, repeatable annotations are not supported. As of JDK 8, the code fails to compile because the <code>Meal</code> annotation type was not defined to be repeatable. It can be fixed by adding the <code>@Repeatable</code> meta-annotation and defining a container annotation type:</p>
+<p><strong>答案</strong>：The code fails to compile. Before JDK 8, repeatable annotations are not supported. As of JDK 8, the code fails to compile because the <code>Meal</code> annotation type was not defined to be repeatable. It can be fixed by adding the <code>@Repeatable</code> meta-annotation and defining a container annotation type:</p>
 <div class="codeblock"><pre>
 public class AnnotationTest {
 
@@ -501,7 +501,7 @@ public class AnnotationTest {
 
 <h2>练习</h2>
 <ol>
-<li><strong>Exercise</strong>: Define an annotation type for an enhancement request with elements <code>id</code>, <code>synopsis</code>, <code>engineer</code>, and <code>date</code>. Specify the default value as <code>unassigned</code> for engineer and <code>unknown</code> for date.
+<li><strong>练习</strong>：Define an annotation type for an enhancement request with elements <code>id</code>, <code>synopsis</code>, <code>engineer</code>, and <code>date</code>. Specify the default value as <code>unassigned</code> for engineer and <code>unknown</code> for date.
 <p><strong>答案</strong>:</p>
 <div class="codeblock"><pre>
 /**

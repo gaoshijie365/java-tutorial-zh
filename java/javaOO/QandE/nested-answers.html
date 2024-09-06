@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>问题和练习的答案：Nested Classes (Java&trade; 教程 &gt; 学习 Java &gt;
+        <title>问题和练习的答案：嵌套类 (Java&trade; 教程 &gt; 学习 Java &gt;
             类和对象)</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style type="text/css">
@@ -402,15 +402,15 @@
             <a href="../QandE/nested-questions.html">上一页</a>&nbsp;&bull;&nbsp;<a href="../../TOC.html">目录</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-        <div id="PageTitle"><h1>问题和练习的答案：Nested Classes</h1></div>
+        <div id="PageTitle"><h1>问题和练习的答案：嵌套类</h1></div>
         <div id="PageContent">
 
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question</strong>: The program 
+<p><strong>问题</strong>：The program
 <a class="SourceLink" target="_blank" href="Problem.java" onclick="showCode('../../../displayCode.html', 'Problem.java'); return false;"><code>Problem.java</code></a> doesn&#39;t compile. What do you need to do to make it compile? Why?</p>
-<p><strong>答案</strong>: Delete <code>static</code> in front of the declaration of the <code>Inner</code> class. An static inner class does not have access to the instance fields of the outer class. See
+<p><strong>答案</strong>：Delete <code>static</code> in front of the declaration of the <code>Inner</code> class. An static inner class does not have access to the instance fields of the outer class. See
 <a class="SourceLink" target="_blank" href="ProblemSolved.java" onclick="showCode('../../../displayCode.html', 'ProblemSolved.java'); return false;"><code>ProblemSolved.java</code></a>.</p>
 </li>
 <li>
@@ -418,24 +418,24 @@
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Box.html"><code>Box</code></a> class (in the <code>javax.swing</code> package) to help you answer the following questions.</p>
 <ol type="a">
 <li>
-<p><strong>Question</strong>: What static nested class does <code>Box</code> define?</p>
-<p><strong>答案</strong>: <code>Box.Filler</code></p>
+<p><strong>问题</strong>：What static nested class does <code>Box</code> define?</p>
+<p><strong>答案</strong>：<code>Box.Filler</code></p>
 </li>
 <li>
-<p><strong>Question</strong>: What inner class does <code>Box</code> define?</p>
-<p><strong>答案</strong>: <code>Box.AccessibleBox</code></p>
+<p><strong>问题</strong>：What inner class does <code>Box</code> define?</p>
+<p><strong>答案</strong>：<code>Box.AccessibleBox</code></p>
 </li>
 <li>
-<p><strong>Question</strong>: What is the superclass of <code>Box</code>&#39;s inner class?</p>
-<p><strong>答案</strong>: <code>[java.awt.]Container.AccessibleAWTContainer</code></p>
+<p><strong>问题</strong>：What is the superclass of <code>Box</code>&#39;s inner class?</p>
+<p><strong>答案</strong>：<code>[java.awt.]Container.AccessibleAWTContainer</code></p>
 </li>
 <li>
-<p><strong>Question</strong>: Which of <code>Box</code>&#39;s nested classes can you use from any class?</p>
-<p><strong>答案</strong>: <code>Box.Filler</code></p>
+<p><strong>问题</strong>：Which of <code>Box</code>&#39;s nested classes can you use from any class?</p>
+<p><strong>答案</strong>：<code>Box.Filler</code></p>
 </li>
 <li>
-<p><strong>Question</strong>: How do you create an instance of <code>Box</code>&#39;s <code>Filler</code> class?</p>
-<p><strong>答案</strong>: <code>new Box.Filler(minDimension, prefDimension, maxDimension)</code></p>
+<p><strong>问题</strong>：How do you create an instance of <code>Box</code>&#39;s <code>Filler</code> class?</p>
+<p><strong>答案</strong>：<code>new Box.Filler(minDimension, prefDimension, maxDimension)</code></p>
 </li>
 </ol>
 </li>
@@ -443,12 +443,12 @@
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>Exercise</strong>: Get the file 
+<p><strong>练习</strong>：Get the file
 <a class="SourceLink" target="_blank" href="Class1.java" onclick="showCode('../../../displayCode.html', 'Class1.java'); return false;"><code>Class1.java</code></a>. Compile and run <code>Class1</code>. What is the output?</p>
-<p><strong>答案</strong>: <code>InnerClass1: getString invoked.<br />
+<p><strong>答案</strong>：<code>InnerClass1: getString invoked.<br />
 InnerClass1: getAnotherString invoked.</code></p>
 </li>
-<li><p><strong>Exercise</strong>: The following exercises involve modifying the class
+<li><p><strong>练习</strong>：The following exercises involve modifying the class
 <a class="SourceLink" target="_blank" href="../examples/DataStructure.java" onclick="showCode('../../../displayCode.html', '../examples/DataStructure.java'); return false;"><code>DataStructure.java</code></a>, which the section
 <a class="TutorialLink" target="_top" href="../../../java/javaOO/innerclasses.html">Inner Class Example</a> discusses.</p>
     <ol type="a">
@@ -492,7 +492,7 @@ ds.print(DataStructure::isOddIndex);</pre>
       
       </li>
     </ol>
-    <p><strong>答案</strong>: See the file
+    <p><strong>答案</strong>：See the file
 <a class="SourceLink" target="_blank" href="DataStructure.java" onclick="showCode('../../../displayCode.html', 'DataStructure.java'); return false;"><code>DataStructure.java</code></a>.</p>
   </li>
 </ol>
@@ -521,7 +521,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>
     <div class="PrintHeaders">
-        <b>上一页：</b> 问题和练习：Nested Classes
+        <b>上一页：</b> 问题和练习：嵌套类
     </div>
 </body>
 </html> 
