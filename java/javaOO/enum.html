@@ -525,9 +525,9 @@
             <div id="PageTitle"><h1>枚举类型</h1></div>
             <div id="PageContent">
 
-<p>An <i>enum type</i> is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values of NORTH, SOUTH, EAST, and WEST) and the days of the week.</p>
-<p>Because they are constants, the names of an enum type&#39;s fields are in uppercase letters.</p>
-<p>In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week enum type as:</p>
+<p><i>枚举类型</i> 是一种特殊的数据类型，它允许变量的值是一系列预定义的常量。变量的值必须是预定义值中的一个。常见的例子包括罗盘方向 (NORTH, SOUTH, EAST, 和 WEST)，星期。</p>
+<p>因为它们是常量，枚举类型的字段名全部大写。</p>
+<p>在 Java 中，使用 <code>enum</code> 关键字定义枚举类型。比如，您可能指定一个星期枚举类型：</p>
 <div class="codeblock"><pre>
 
 public enum Day {
@@ -535,8 +535,8 @@ public enum Day {
     THURSDAY, FRIDAY, SATURDAY 
 }
 </pre></div>
-<p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time&#151;for example, the choices on a menu, command line flags, and so on.</p>
-<p>Here is some code that shows you how to use the <code>Day</code> enum defined above:</p>
+<p>您应该在需要表示固定数量常量集时使用枚举。这包括常见的枚举类型，比如太阳系中的行星、在编译时已知的数据集&#151;比如，菜单中的选项、命令行标志等等。</p>
+<p>这有一些代码向您展示了如何使用上面定义的枚举 <code>Day</code>：</p>
 <div class="codeblock"><pre>
 
 public class EnumTest {
@@ -580,7 +580,7 @@ public class EnumTest {
     }
 }
 </pre></div>
-<p>The output is:</p>
+<p>输出是：</p>
 <div class="codeblock"><pre>
 Mondays are bad.
 Midweek days are so-so.
@@ -588,22 +588,26 @@ Fridays are better.
 Weekends are best.
 Weekends are best.
 </pre></div>
-<p>Java programming language enum types are much more powerful than their counterparts in other languages. The <code>enum</code> declaration defines a <i>class</i> (called an <i>enum type</i>). The enum class body can include methods and other fields. The compiler automatically adds some special methods when it creates an enum. For example, they have a static <code>values</code> method that returns an array containing all of the values of the enum in the order they are declared. This method is commonly used in combination with the for-each construct to iterate over the values of an enum type. For example, this code from the <code>Planet</code> class example below iterates over all the planets in the solar system.</p>
+<p>Java 中的枚举类型比其它语言中的更加强大。<code>enum</code> 声明定义了一个 <i>class</i> (叫做 <i>枚举类型</i>)。枚举类体可以包含方法和其它字段。
+    编译器在创建枚举时会自动添加一些特殊的方法。比如，静态 <ode>values</ode> 方法返回一个包含所有枚举值的数组 (按照声明顺序)。这个方法通常与 for-each
+    结构配合使用来迭代枚举类型的值。比如，下面来自 <code>Planet</code> 类中的代码示例迭代太阳系中的所有行星。</p>
 <div class="codeblock"><pre>
 for (Planet p : Planet.values()) {
     System.out.printf("Your weight on %s is %f%n",
                       p, p.surfaceWeight(mass));
 }
 </pre></div>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;<i>All</i> enums implicitly extend <code>java.lang.Enum</code>. Because a class can only extend one parent (see
-<a class="TutorialLink" target="_top" href="classdecl.html">声明类</a>), the Java language does not support multiple inheritance of state (see
-<a class="TutorialLink" target="_top" href="../IandI/multipleinheritance.html">Multiple Inheritance of State, Implementation, and Type</a>), and therefore an enum cannot extend anything else.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<i>所有</i> 枚举隐式扩展自 <code>java.lang.Enum</code>。因为一个类只能有一个父类 (查看
+<a class="TutorialLink" target="_top" href="classdecl.html">声明类</a>)，Java 编程语言不支持状态的多继承 (查看
+<a class="TutorialLink" target="_top" href="../IandI/multipleinheritance.html">状态、实现和类型的多重继承</a>)，因此枚举不能扩展其它任何类。
 <hr /></div>
-<p>In the following example, <code>Planet</code> is an enum type that represents the planets in the solar system. They are defined with constant mass and radius properties.</p>
-<p>Each enum constant is declared with values for the mass and radius parameters. These values are passed to the constructor when the constant is created. Java requires that the constants be defined first, prior to any fields or methods. Also, when there are fields and methods, the list of enum constants must end with a semicolon.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;The constructor for an enum type must be package-private or private access. It automatically creates the constants that are defined at the beginning of the enum body. You cannot invoke an enum constructor yourself.
+<p>下面的例子，<code>Planet</code> 是一个代表太阳系中行星的枚举类型。它们都定义了常量属性，质量和半径。</p>
+<p>每个枚举常量都使用质量和半径参数的值来定义。这些值会在常量创建时传递给构造器。Java 要求常量定义最开头，在字段或方法之前。
+    当然，当定义了字段和方法时，枚举常量的结尾必须使用分号。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;枚举类型的构造器必须是私有或包级私有的。枚举体开头定义的常量会自动的创建。您自己不能调用枚举构造器。
 <hr /></div>
-<p>In addition to its properties and constructor, <code>Planet</code> has methods that allow you to retrieve the surface gravity and weight of an object on each planet. Here is a sample program that takes your weight on earth (in any unit) and calculates and prints your weight on all of the planets (in the same unit):</p>
+<p>除了它的属性和构造器，<code>Planet</code> 还拥有一些方法，来获取每个行星的表面重力和物体的重量。这儿有一个样例程序，接收物体在地球上的重量 (任何单位)
+    并且计算和打印其在所有行星上的重量 (相同单位)：</p>
 <div class="codeblock"><pre>
 
 public enum Planet {
@@ -647,7 +651,7 @@ public enum Planet {
     }
 }
 </pre></div>
-<p>If you run <code>Planet.class</code> from the command line with an argument of 175, you get this output:</p>
+<p>如果您从命令行运行 <code>Planet.class</code> 并传递参数 175，您将得到这个输出：</p>
 <div class="codeblock"><pre>
 $ java Planet 175
 Your weight on MERCURY is 66.107583

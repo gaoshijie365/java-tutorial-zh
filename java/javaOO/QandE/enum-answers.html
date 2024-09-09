@@ -407,25 +407,25 @@
 
 <h2>问题</h2>
 <ol>
-<li><strong>问题</strong>：True or false: an <tt>Enum</tt> type can be a subclass of <tt>java.lang.String</tt>.
-<p><strong>答案</strong>：False. All enums implicitly extend <tt>java.lang.Enum</tt>. Because a class can only extend one parent, the Java language does not support multiple inheritance of state, and therefore an enum cannot extend anything else.</p>
+<li><strong>问题</strong>：对或错：<tt>Enum</tt> 类型可以是 <tt>java.lang.String</tt> 的子类。
+<p><strong>答案</strong>：错。所有枚举都隐式扩展自 <tt>java.lang.Enum</tt>。因为一个类只能扩展一个父类，Java 不支持状态的多继承，因此枚举不能扩展其它任何类。</p>
 </li>
 </ol>
 
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>练习</strong>：Rewrite the class <code>Card</code> from the exercise in
-<a class="TutorialLink" target="_top" href="creating-questions.html">问题和练习：类</a> so that it represents the rank and suit of a card with enum types.</p>
+<p><strong>练习</strong>：重写 <a class="TutorialLink" target="_top" href="creating-questions.html">问题和练习：类</a> 中的
+    <code>Card</code> 类，使用枚举表示数字和花色。</p>
 
-<p><strong>答案</strong>：See
+<p><strong>答案</strong>：查看
 <a class="SourceLink" target="_blank" href="../examples/Card3.java" onclick="showCode('../../../displayCode.html', '../examples/Card3.java'); return false;"><code>Card3.java</code></a>, 
-<a class="SourceLink" target="_blank" href="../examples/Suit.java" onclick="showCode('../../../displayCode.html', '../examples/Suit.java'); return false;"><code>Suit.java</code></a>, and 
+<a class="SourceLink" target="_blank" href="../examples/Suit.java" onclick="showCode('../../../displayCode.html', '../examples/Suit.java'); return false;"><code>Suit.java</code></a>, 和
 <a class="SourceLink" target="_blank" href="../examples/Rank.java" onclick="showCode('../../../displayCode.html', '../examples/Rank.java'); return false;"><code>Rank.java</code></a>.</p>
 </li>
 <li>
-<p><strong>练习</strong>：Rewrite the <code>Deck</code> class.</p>
-<p><strong>答案</strong>：See
+<p><strong>练习</strong>：重写 <code>Deck</code> 类。</p>
+<p><strong>答案</strong>：查看
 <a class="SourceLink" target="_blank" href="../examples/Deck3.java" onclick="showCode('../../../displayCode.html', '../examples/Deck3.java'); return false;"><code>Deck3.java</code></a>.</p>
 </li>
 </ol>

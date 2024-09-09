@@ -130,7 +130,7 @@
 <li class="tocli"><a href="IandI/QandE/interfaces-questions.html">问题和练习：Interfaces</a></li>
 <li class="tocli"><a href="IandI/subclasses.html">Inheritance</a>
 <ul>
-<li class="tocli"><a href="IandI/multipleinheritance.html">Multiple Inheritance of State, Implementation, and Type</a></li>
+<li class="tocli"><a href="IandI/multipleinheritance.html">状态、实现和类型的多重继承</a></li>
 <li class="tocli"><a href="IandI/override.html">Overriding and Hiding Methods</a></li>
 <li class="tocli"><a href="IandI/polymorphism.html">Polymorphism</a></li>
 <li class="tocli"><a href="IandI/hidevariables.html">Hiding Fields</a></li>
