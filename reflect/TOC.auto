@@ -24,7 +24,7 @@
 <li class="tocli"><a href="member/method.html">Methods</a>
 <ul>
 <li class="tocli"><a href="member/methodType.html">Obtaining Method Type Information</a></li>
-<li class="tocli"><a href="member/methodparameterreflection.html">Obtaining Names of Method Parameters</a></li>
+<li class="tocli"><a href="member/methodparameterreflection.html">获取方法参数名称</a></li>
 <li class="tocli"><a href="member/methodModifiers.html">Retrieving and Parsing Method Modifiers</a></li>
 <li class="tocli"><a href="member/methodInvocation.html">Invoking Methods</a></li>
 <li class="tocli"><a href="member/methodTrouble.html">Troubleshooting</a>

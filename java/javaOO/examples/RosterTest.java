@@ -56,7 +56,7 @@ public class RosterTest {
         }
     }
 
-    // Approach 2: Create More Generalized Search Methods
+    // Approach 2: 创建更加通用的搜索方法
 
     public static void printPersonsWithinAgeRange(
         List<Person> roster, int low, int high) {
@@ -67,9 +67,9 @@ public class RosterTest {
         }
     }
 
-    // Approach 3: Specify Search Criteria Code in a Local Class
-    // Approach 4: Specify Search Criteria Code in an Anonymous Class
-    // Approach 5: Specify Search Criteria Code with a Lambda Expression
+    // Approach 3: 在局部类中指定搜索条件代码
+    // Approach 4: 在匿名类中指定搜索条件代码
+    // Approach 5: 使用 Lambda 表达式指定搜索条件代码
 
     public static void printPersons(
         List<Person> roster, CheckPerson tester) {
@@ -80,7 +80,7 @@ public class RosterTest {
         }
     }
 
-    // Approach 6: Use Standard Functional Interfaces with Lambda Expressions
+    // Approach 6: 在 Lambda 表达式中使用标准的函数式接口
 
     public static void printPersonsWithPredicate(
         List<Person> roster, Predicate<Person> tester) {
@@ -91,7 +91,7 @@ public class RosterTest {
         }
     }
 
-    // Approach 7: Use Lambda Expressions Throughout Your Application
+    // Approach 7: 在应用中使用 Lambda 表达式
 
     public static void processPersons(
         List<Person> roster,
@@ -119,7 +119,7 @@ public class RosterTest {
         }
     }
     
-    // Approach 8: Use 泛型 More Extensively
+    // Approach 8: 使用泛型
 
     public static <X, Y> void processElements(
         Iterable<X> source,
@@ -149,13 +149,13 @@ public class RosterTest {
         printPersonsOlderThan(roster, 20);
         System.out.println();
 
-        // Approach 2: Create More Generalized Search Methods
+        // Approach 2: 创建更加通用的搜索方法
 
         System.out.println("Persons between the ages of 14 and 30:");
         printPersonsWithinAgeRange(roster, 14, 30);
         System.out.println();
 
-        // Approach 3: Specify Search Criteria Code in a Local Class
+        // Approach 3: 在局部类中指定搜索条件代码
 
         System.out.println("Persons who are eligible for Selective Service:");
 
@@ -173,7 +173,7 @@ public class RosterTest {
 
         System.out.println();
 
-        // Approach 4: Specify Search Criteria Code in an Anonymous Class
+        // Approach 4: 在匿名类中指定搜索条件代码
 
         System.out.println("Persons who are eligible for Selective Service " +
             "(anonymous class):");
@@ -191,7 +191,7 @@ public class RosterTest {
 
         System.out.println();
 
-        // Approach 5: Specify Search Criteria Code with a Lambda Expression
+        // Approach 5: 使用 Lambda 表达式指定搜索条件代码
 
         System.out.println("Persons who are eligible for Selective Service " +
             "(lambda expression):");
@@ -251,7 +251,7 @@ public class RosterTest {
 
         System.out.println();
 
-        // Approach 8: Use 泛型 More Extensively
+        // Approach 8: 使用泛型
 
         System.out.println("Persons who are eligible for Selective Service " +
             "(generic version):");
@@ -267,7 +267,7 @@ public class RosterTest {
 
         System.out.println();
 
-        // Approach 9: Use Bulk Data Operations That Accept Lambda Expressions
+        // Approach 9: Use Bulk Data Operations That Accept Lambda 表达式
         // as Parameters
 
         System.out.println("Persons who are eligible for Selective Service " +

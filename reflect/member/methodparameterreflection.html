@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Obtaining Names of Method Parameters (Java&trade; 教程 &gt;
+        <title>获取方法参数名称 (Java&trade; 教程 &gt;
             The Reflection API &gt; Members)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -483,7 +483,7 @@
 <div class="linkBHEAD"><a href="fieldTrouble.html">Troubleshooting</a></div>
 <div class="linkAHEAD"><a href="method.html">Methods</a></div>
 <div class="linkBHEAD"><a href="methodType.html">Obtaining Method Type Information</a></div>
-<div class="nolinkBHEAD">Obtaining Names of Method Parameters</div>
+<div class="nolinkBHEAD">获取方法参数名称</div>
 <div class="linkBHEAD"><a href="methodModifiers.html">Retrieving and Parsing Method Modifiers</a></div>
 <div class="linkBHEAD"><a href="methodInvocation.html">Invoking Methods</a></div>
 <div class="linkBHEAD"><a href="methodTrouble.html">Troubleshooting</a></div>
@@ -511,7 +511,7 @@
                 <a target="_top" href="methodType.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="methodModifiers.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Obtaining Names of Method Parameters</h1></div>
+            <div id="PageTitle"><h1>获取方法参数名称</h1></div>
             <div id="PageContent">
 
 
@@ -659,16 +659,16 @@ public &lt;T&gt; void ExampleMethods.genericMethod(T[],java.util.Collection&lt;T
   </li>  
         
   <li><p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isImplicit--"><code>isImplicit</code></a>: Returns <code>true</code> if this parameter is implicitly declared in source code. See the section <a href="#implcit_and_synthetic">Implicit and Synthetic Parameters</a> for more information.</p></li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isImplicit--"><code>isImplicit</code></a>: Returns <code>true</code> if this parameter is implicitly declared in source code. See the section <a href="#implcit_and_synthetic">隐式的和合成的参数</a> for more information.</p></li>
   
   <li><p>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isNamePresent--"><code>isNamePresent</code></a>: Returns <code>true</code> if the parameter has a name according to the <code>.class</code> file.</p></li>
   
   <li><p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isSynthetic--"><code>isSynthetic</code></a>: Returns <code>true</code> if this parameter is neither implicitly nor explicitly declared in source code. See the section <a href="#implcit_and_synthetic">Implicit and Synthetic Parameters</a> for more information.</p></li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isSynthetic--"><code>isSynthetic</code></a>: Returns <code>true</code> if this parameter is neither implicitly nor explicitly declared in source code. See the section <a href="#implcit_and_synthetic">隐式的和合成的参数</a> for more information.</p></li>
 </ul>
 
-<h2><a name="implcit_and_synthetic">Implicit and Synthetic Parameters</a></h2>  
+<h2><a name="implcit_and_synthetic">隐式的和合成的参数</a></h2>
 
 <p>Certain constructs are implicitly declared in the source code if they have not been written explicitly. For example, the
 <a class="SourceLink" target="_blank" href="example/ExampleMethods.java" onclick="showCode('../../displayCode.html', 'example/ExampleMethods.java'); return false;"><code><code>ExampleMethods</code></code></a> example does not contain a constructor. A default constructor is implicitly declared for it. The <code>MethodParameterSpy</code> example prints information about the implicitly declared constructor of <code>ExampleMethods</code>:</p>

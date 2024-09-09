@@ -408,33 +408,36 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>问题</strong>：The program
-<a class="SourceLink" target="_blank" href="Problem.java" onclick="showCode('../../../displayCode.html', 'Problem.java'); return false;"><code>Problem.java</code></a> doesn&#39;t compile. What do you need to do to make it compile? Why?</p>
-<p><strong>答案</strong>：Delete <code>static</code> in front of the declaration of the <code>Inner</code> class. An static inner class does not have access to the instance fields of the outer class. See
-<a class="SourceLink" target="_blank" href="ProblemSolved.java" onclick="showCode('../../../displayCode.html', 'ProblemSolved.java'); return false;"><code>ProblemSolved.java</code></a>.</p>
+<p><strong>问题</strong>：程序
+<a class="SourceLink" target="_blank" href="Problem.java"
+   onclick="showCode('../../../displayCode.html', 'Problem.java'); return false;"><code>Problem.java</code></a>
+    不能编译。怎么做才能使其可以编译？为什么这么做？</p>
+<p><strong>答案</strong>：删除 <code>Inner</code> 类声明前面的 <code>static</code>。 静态内部类不能访问外部类的实例字段。查看
+<a class="SourceLink" target="_blank" href="ProblemSolved.java"
+   onclick="showCode('../../../displayCode.html', 'ProblemSolved.java'); return false;"><code>ProblemSolved.java</code></a>。</p>
 </li>
 <li>
-<p>Use the Java API documentation for the 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Box.html"><code>Box</code></a> class (in the <code>javax.swing</code> package) to help you answer the following questions.</p>
+<p>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Box.html">
+    <code>Box</code></a> 类 (in the <code>javax.swing</code> package) 的 Java API 文档来帮助您回答下面的问题。</p>
 <ol type="a">
 <li>
-<p><strong>问题</strong>：What static nested class does <code>Box</code> define?</p>
+<p><strong>问题</strong>：<code>Box</code> 定义的静态嵌套类是？</p>
 <p><strong>答案</strong>：<code>Box.Filler</code></p>
 </li>
 <li>
-<p><strong>问题</strong>：What inner class does <code>Box</code> define?</p>
+<p><strong>问题</strong>：<code>Box</code> 定义的内部类是？</p>
 <p><strong>答案</strong>：<code>Box.AccessibleBox</code></p>
 </li>
 <li>
-<p><strong>问题</strong>：What is the superclass of <code>Box</code>&#39;s inner class?</p>
+<p><strong>问题</strong>：<code>Box</code> 的内部类的超类是？</p>
 <p><strong>答案</strong>：<code>[java.awt.]Container.AccessibleAWTContainer</code></p>
 </li>
 <li>
-<p><strong>问题</strong>：Which of <code>Box</code>&#39;s nested classes can you use from any class?</p>
+<p><strong>问题</strong>：<code>Box</code> 中的哪个嵌套类可以被任何类使用？</p>
 <p><strong>答案</strong>：<code>Box.Filler</code></p>
 </li>
 <li>
-<p><strong>问题</strong>：How do you create an instance of <code>Box</code>&#39;s <code>Filler</code> class?</p>
+<p><strong>问题</strong>：如何创建 <code>Box</code> 中的 <code>Filler</code> 类的实例？</p>
 <p><strong>答案</strong>：<code>new Box.Filler(minDimension, prefDimension, maxDimension)</code></p>
 </li>
 </ol>
@@ -443,56 +446,71 @@
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>练习</strong>：Get the file
-<a class="SourceLink" target="_blank" href="Class1.java" onclick="showCode('../../../displayCode.html', 'Class1.java'); return false;"><code>Class1.java</code></a>. Compile and run <code>Class1</code>. What is the output?</p>
+<p><strong>练习</strong>：获取文件
+    <a class="SourceLink" target="_blank" href="Class1.java"
+       onclick="showCode('../../../displayCode.html', 'Class1.java'); return false;"><code>Class1.java</code></a>。
+    编译并运行 <code>Class1</code>。输出什么？</p>
 <p><strong>答案</strong>：<code>InnerClass1: getString invoked.<br />
 InnerClass1: getAnotherString invoked.</code></p>
 </li>
-<li><p><strong>练习</strong>：The following exercises involve modifying the class
-<a class="SourceLink" target="_blank" href="../examples/DataStructure.java" onclick="showCode('../../../displayCode.html', '../examples/DataStructure.java'); return false;"><code>DataStructure.java</code></a>, which the section
-<a class="TutorialLink" target="_top" href="../../../java/javaOO/innerclasses.html">Inner Class Example</a> discusses.</p>
+<li><p><strong>练习</strong>：下面的练习需要对 <a class="TutorialLink" target="_top" href="../../../java/javaOO/innerclasses.html">内部类示例</a>
+    中讨论的 <a class="SourceLink" target="_blank" href="../examples/DataStructure.java"
+                onclick="showCode('../../../displayCode.html', '../examples/DataStructure.java'); return false;"><code>DataStructure.java</code></a>
+    类进行修改</p>
     <ol type="a">
     
-      <li><p>Define a method named <code>print(DataStructureIterator iterator)</code>. Invoke this method with an instance of the class <code>EvenIterator</code> so that it performs the same function as the method <code>printEven</code>.</p>
+      <li><p>定义一个叫做 <code>print(DataStructureIterator iterator)</code> 的方法。使用 <code>EvenIterator</code> 实例调用该方法，
+          使其与 <code>printEven</code> 方法执行相同的函数。</p>
       
-      <p><strong>Hint</strong>: These statements do not compile if you specify them in <code>main</code> 方法:</p>
+      <p><strong>提示</strong>：如果在 <code>main</code> 方法中使用这些语句将不会编译：</p>
       
       <pre class="codeblock">DataStructure ds = new DataStructure();
 ds.print(new EvenIterator());</pre>
 
-      <p>The compiler generates the error message, "non-static variable this cannot be referenced from a static context" when it encounters the expression <code>new EvenIterator()</code>. The class <code>EvenIterator</code> is an inner, non-static class. This means that you can create an instance of <code>EvenIterator</code> only inside an instance of the outer class, <code>DataStructure</code>.</p>
+      <p>当编译器遇到 <code>new EvenIterator()</code> 表达式时将产生错误消息 "non-static variable this cannot be referenced from a static context"。
+          <code>EvenIterator</code> 是一个非静态内部类。意思是您只能在外部类 <code>DataStructure</code> 的实例中创建  <code>EvenIterator</code>
+          实例。</p>
       
-      <p>You can define a method in <code>DataStructure</code> that creates and returns a new instance of <code>EvenIterator</code>.</p> 
+      <p>您可以在 <code>DataStructure</code> 中定一个方法，创建并返回 <code>EvenIterator</code> 的新实例。</p>
 
       </li>
       
-      <li><p>Invoke the method <code>print(DataStructureIterator iterator)</code> so that it prints elements that have an odd index value. Use an anonymous class as the method's argument instead of an instance of the interface <code>DataStructureIterator</code>.</p>
+      <li><p>调用方法 <code>print(DataStructureIterator iterator)</code> 使其打印具有奇数索引值的元素。使用匿名类作为方法的参数，而不是
+          <code>DataStructureIterator</code> 接口的实例。</p>
       
-      <p><strong>Hint</strong>: You cannot access the private members <code>SIZE</code> and <code>arrayOfInts</code> outside the class <code>DataStructure</code>, which means that you cannot access these private members from an anonymous class defined outside <code>DataStructure</code>.</p>
+      <p><strong>提示</strong>：在 <code>DataStructure</code> 类外不能访问私有成员 <code>SIZE</code> 和 <code>arrayOfInts</code>，
+          这也意味着在 <code>DataStructure</code> 类外定义的匿名类中不能访问这些私有成员。</p>
       
-      <p>You can define methods that access the private members <code>SIZE</code> and <code>arrayOfInts</code> and then use them in your anonymous class.</p>
-      
-      </li>
-      
-      <li><p>Define a method named <code>print(java.util.Function&lt;Integer, Boolean&gt; iterator)</code> that performs the same function as <code>print(DataStructureIterator iterator)</code>. Invoke this method with a lambda expression to print elements that have an even index value. Invoke this method again with a lambda expression to print elements that have an odd index value.</p>
-      
-      <p><strong>Hint</strong>: In this <code>print</code> method, you can step though the elements contained in the array <code>arrayOfInts</code> with a <code>for</code> expression. For each index value, invoke the method <code>function.apply</code>. If this method returns a true value for a particular index value, print the element contained in that index value.</p>
-      
-      <p>To invoke this <code>print</code> method to print elements that have an even index value, you can specify a lambda expression that implements the method <code>Boolean Function.apply(Integer t)</code>. This lambda expression takes one <code>Integer</code> argument (the index) and returns a <code>Boolean</code> value (<code>Boolean.TRUE</code> if the index value is even, <code>Boolean.FALSE</code> otherwise).</p>
+      <p>您可以定义访问私有成员 <code>SIZE</code> 和 <code>arrayOfInts</code> 的方法，然后在匿名类中使用它们。</p>
       
       </li>
       
-      <li><p>Define two methods so that these statements print elements that have an even index value and then elements that have an odd index value:</p>
+      <li><p>定义一个叫做 <code>print(java.util.function.Function&lt;Integer, Boolean&gt; iterator)</code> 的方法，执行与
+          <code>print(DataStructureIterator iterator)</code> 相同的函数。使用 lambda 表达式调用这个方法并打印具有偶数索引值的元素。
+          再次使用 lambda 表达式调用这个方法打印具有奇数索引值的元素。</p>
+      
+      <p><strong>提示</strong>：在这个 <code>print</code> 方法中，您可以使用 <code>for</code> 表达式遍历 <code>arrayOfInts</code>
+          数组中包含的元素。对每个索引值，调用 <code>function.apply</code> 方法。如果该方法对特定的索引值返回 true，打印包含在该索引处的元素。</p>
+      
+      <p>要调用这个 <code>print</code> 方法来打印偶数索引处的元素，您可以指定一个实现 <code>Boolean Function.apply(Integer t)</code> 的 lambda 表达式。
+          这个 lambda 表达式接收一个 <code>Integer</code> 参数 (索引) 并返回一个 <code>Boolean</code> 值 (如果索引值是偶数返回
+          <code>Boolean.TRUE</code>，否则返回 <code>Boolean.FALSE</code>)。</p>
+      
+      </li>
+      
+      <li><p>定义两个方法，使这些语句打印具有偶数索引值的元素，然后打印具有奇数索引值的元素：</p>
 <pre class="codeblock">DataStructure ds = new DataStructure()
 // ...
 ds.print(DataStructure::isEvenIndex);
 ds.print(DataStructure::isOddIndex);</pre>
 
-      <p><strong>Hint</strong>: Create two methods in the class <code>DataStructure</code> named <code>isEvenIndex</code> and <code>isOddIndex</code> that have the same parameter list and return type as the abstract method <code>Boolean Function&lt;Integer, Boolean&gt;.apply(Integer t)</code>. This means that the methods take one <code>Integer</code> argument (the index) and return a <code>Boolean</code> value.</p>  
+      <p><strong>提示</strong>：在 <code>DataStructure</code> 类中创建爱两个方法，叫做 <code>isEvenIndex</code> 和
+          <code>isOddIndex</code>，它们与抽象方法 <code>Boolean Function&lt;Integer, Boolean&gt;.apply(Integer t)</code>
+          有相同的参数列表和返回类型。这也就意味着方法接收一个 <code>Integer</code> 参数 (索引) 并返回一个 <code>Boolean</code> 值。</p>
       
       </li>
     </ol>
-    <p><strong>答案</strong>：See the file
+    <p><strong>答案</strong>：查看文件
 <a class="SourceLink" target="_blank" href="DataStructure.java" onclick="showCode('../../../displayCode.html', 'DataStructure.java'); return false;"><code>DataStructure.java</code></a>.</p>
   </li>
 </ol>

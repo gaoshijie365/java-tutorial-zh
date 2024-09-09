@@ -495,12 +495,12 @@
 <div class="linkQUESTIONS"><a href="../QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="../QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="../nested.html">嵌套类</a></div>
-<div class="linkBHEAD"><a href="../innerclasses.html">Inner Class Example</a></div>
-<div class="linkBHEAD"><a href="../localclasses.html">Local Classes</a></div>
-<div class="linkBHEAD"><a href="../anonymousclasses.html">Anonymous Classes</a></div>
-<div class="linkBHEAD"><a href="../lambdaexpressions.html">Lambda Expressions</a></div>
-<div class="linkCHEAD"><a href="../methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="../whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="../innerclasses.html">内部类示例</a></div>
+<div class="linkBHEAD"><a href="../localclasses.html">局部类</a></div>
+<div class="linkBHEAD"><a href="../anonymousclasses.html">匿名类</a></div>
+<div class="linkBHEAD"><a href="../lambdaexpressions.html">Lambda 表达式</a></div>
+<div class="linkCHEAD"><a href="../methodreferences.html">方法引用</a></div>
+<div class="linkBHEAD"><a href="../whentouse.html">何时使用嵌套类、局部类、匿名类和 lambda 表达式 </a></div>
 <div class="nolinkQUESTIONS">问题和练习</div>
 <div class="linkAHEAD"><a href="../enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="../QandE/enum-questions.html">问题和练习</a></div>
@@ -528,27 +528,27 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p>The program 
-<a class="SourceLink" target="_blank" href="Problem.java" onclick="showCode('../../../displayCode.html', 'Problem.java'); return false;"><code>Problem.java</code></a> doesn&#39;t compile. What do you need to do to make it compile? Why?</p>
+<p>程序
+<a class="SourceLink" target="_blank" href="Problem.java" onclick="showCode('../../../displayCode.html', 'Problem.java'); return false;"><code>Problem.java</code></a> 不能编译。怎么做才能使其可以编译？为什么这么做？</p>
 </li>
 <li>
-<p>Use the Java API documentation for the 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Box.html"><code>Box</code></a> class (in the <code>javax.swing</code> package) to help you answer the following questions.</p>
+<p>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Box.html">
+    <code>Box</code></a> 类 (in the <code>javax.swing</code> package) 的 Java API 文档来帮助您回答下面的问题。</p>
 <ol type="a">
 <li>
-<p>What static nested class does <code>Box</code> define?</p>
+<p><code>Box</code> 定义的静态嵌套类是？</p>
 </li>
 <li>
-<p>What inner class does <code>Box</code> define?</p>
+<p><code>Box</code> 定义的内部类是？</p>
 </li>
 <li>
-<p>What is the superclass of <code>Box</code>&#39;s inner class?</p>
+<p><code>Box</code> 的内部类的超类是？</p>
 </li>
 <li>
-<p>Which of <code>Box</code>&#39;s nested classes can you use from any class?</p>
+<p><code>Box</code> 中的哪个嵌套类可以被任何类使用？</p>
 </li>
 <li>
-<p>How do you create an instance of <code>Box</code>&#39;s <code>Filler</code> class?</p>
+<p>如何创建 <code>Box</code> 中的 <code>Filler</code> 类的实例？</p>
 </li>
 </ol>
 </li>
@@ -557,21 +557,28 @@
 
 <ol>
 <li>
-<p>Get the file 
-<a class="SourceLink" target="_blank" href="Class1.java" onclick="showCode('../../../displayCode.html', 'Class1.java'); return false;"><code>Class1.java</code></a>. Compile and run <code>Class1</code>. What is the output?</p>
+<p>获取文件
+<a class="SourceLink" target="_blank" href="Class1.java"
+   onclick="showCode('../../../displayCode.html', 'Class1.java'); return false;"><code>Class1.java</code></a>。
+    编译并运行 <code>Class1</code>。输出什么？</p>
 </li>
-<li><p>The following exercises involve modifying the class
-<a class="SourceLink" target="_blank" href="../examples/DataStructure.java" onclick="showCode('../../../displayCode.html', '../examples/DataStructure.java'); return false;"><code>DataStructure.java</code></a>, which the section
-<a class="TutorialLink" target="_top" href="../../../java/javaOO/innerclasses.html">Inner Class Example</a> discusses.</p>
+<li><p>下面的练习需要对 <a class="TutorialLink" target="_top" href="../../../java/javaOO/innerclasses.html">内部类示例</a>
+    中讨论的 <a class="SourceLink" target="_blank" href="../examples/DataStructure.java"
+                onclick="showCode('../../../displayCode.html', '../examples/DataStructure.java'); return false;"><code>DataStructure.java</code></a>
+    类进行修改</p>
     <ol type="a">
     
-      <li><p>Define a method named <code>print(DataStructureIterator iterator)</code>. Invoke this method with an instance of the class <code>EvenIterator</code> so that it performs the same function as the method <code>printEven</code>.</p></li>
+      <li><p>定义一个叫做 <code>print(DataStructureIterator iterator)</code> 的方法。使用 <code>EvenIterator</code> 实例调用该方法，
+          使其与 <code>printEven</code> 方法执行相同的函数。</p></li>
       
-      <li><p>Invoke the method <code>print(DataStructureIterator iterator)</code> so that it prints elements that have an odd index value. Use an anonymous class as the method's argument instead of an instance of the interface <code>DataStructureIterator</code>.</p></li>
+      <li><p>调用方法 <code>print(DataStructureIterator iterator)</code> 使其打印具有奇数索引值的元素。使用匿名类作为方法的参数，而不是
+          <code>DataStructureIterator</code> 接口的实例。</p></li>
       
-      <li><p>Define a method named <code>print(java.util.function.Function&lt;Integer, Boolean&gt; iterator)</code> that performs the same function as <code>print(DataStructureIterator iterator)</code>. Invoke this method with a lambda expression to print elements that have an even index value. Invoke this method again with a lambda expression to print elements that have an odd index value.</p></li>
+      <li><p>定义一个叫做 <code>print(java.util.function.Function&lt;Integer, Boolean&gt; iterator)</code> 的方法，执行与
+          <code>print(DataStructureIterator iterator)</code> 相同的函数。使用 lambda 表达式调用这个方法并打印具有偶数索引值的元素。
+          再次使用 lambda 表达式调用这个方法打印具有奇数索引值的元素。</p></li>
       
-      <li><p>Define two methods so that the following two statements print elements that have an even index value and elements that have an odd index value:</p>
+      <li><p>定义两个方法，使这些语句打印具有偶数索引值的元素，然后打印具有奇数索引值的元素：</p>
 <pre class="codeblock">DataStructure ds = new DataStructure()
 // ...
 ds.print(DataStructure::isEvenIndex);
@@ -610,7 +617,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions
+        <b>上一页：</b> 何时使用嵌套类、局部类、匿名类和 lambda 表达式
         <br /><b>下一页：</b> 枚举类型
     </div>
 </body>

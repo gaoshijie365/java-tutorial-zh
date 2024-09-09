@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions  (Java&trade; 教程 &gt;
+        <title>何时使用嵌套类、局部类、匿名类和 lambda 表达式  (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -495,12 +495,12 @@
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
-<div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
-<div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
-<div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
-<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
-<div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="nolinkBHEAD">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </div>
+<div class="linkBHEAD"><a href="innerclasses.html">内部类示例</a></div>
+<div class="linkBHEAD"><a href="localclasses.html">局部类</a></div>
+<div class="linkBHEAD"><a href="anonymousclasses.html">匿名类</a></div>
+<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda 表达式</a></div>
+<div class="linkCHEAD"><a href="methodreferences.html">方法引用</a></div>
+<div class="nolinkBHEAD">何时使用嵌套类、局部类、匿名类和 lambda 表达式</div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,42 +523,33 @@
                 <a target="_top" href="methodreferences.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="QandE/nested-questions.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </h1></div>
+            <div id="PageTitle"><h1>何时使用嵌套类、局部类、匿名类和 lambda 表达式 </h1></div>
             <div id="PageContent">
 
 
-<p>As mentioned in the section 
-<a class="TutorialLink" target="_top" href="nested.html">嵌套类</a>, nested classes enable you to logically group classes
-that are only used in one place, increase the use of
-encapsulation, and create more readable and maintainable code.
-Local classes, anonymous classes, and lambda expressions also
-impart these advantages; however, they are intended to be used
-for more specific situations:</p>
+<p>正如在
+<a class="TutorialLink" target="_top" href="nested.html">嵌套类</a> 一节中提到的那样，嵌套类允许您对仅在一处使用的类进行逻辑分组，以增强封装，并创建更加可读和更易维护的代码。
+    局部类、匿名类和 lambda 表达式同样具备这些优势，然而，它们倾向于在更特定的场景中使用：</p>
 
 
 
 <ul>
   <li><p>
-<a class="TutorialLink" target="_top" href="localclasses.html">Local class</a>: Use it if you need to create more than one
-instance of a class, access its constructor, or introduce a new, named
-type (because, for example, you need to invoke additional methods
-later).</p></li>
+<a class="TutorialLink" target="_top" href="localclasses.html">局部类</a>：在您想创建多个类的实例，访问它的构造器，或引入一个新的命名的类型
+      (因为，您需要在后面调用额外的方法) 时使用。</p></li>
   <li><p>
-<a class="TutorialLink" target="_top" href="anonymousclasses.html">Anonymous class</a>: Use it if you need to declare fields or additional methods.</p></li>
+<a class="TutorialLink" target="_top" href="anonymousclasses.html">匿名类</a>：在您需要声明字段或额外方法时使用。</p></li>
   <li><p>
-<a class="TutorialLink" target="_top" href="lambdaexpressions.html">Lambda expression</a>:</p>
+<a class="TutorialLink" target="_top" href="lambdaexpressions.html">Lambda 表达式</a>：</p>
     <ul>
-      <li><p>Use it if you are encapsulating a single unit of behavior that you want to pass to other code. For example, you would use a lambda expression if you want a certain action performed on each element of a collection, when a process is completed, or when a process encounters an error.</p></li>
-      <li><p>Use it if you need a simple instance of a functional interface and none of the preceding criteria apply (for example, you do not need a constructor, a named type, fields, or additional methods).</p></li>
+      <li><p>如果您想封装一个传递给其它代码的单一行为单元时使用。比如，使用 lambda 表达式在集合的每个元素上执行特定的操作，当处理结束时，或当处理遇到错误时。</p></li>
+      <li><p>如果您需要一个函数式接口的简单实例，并不需要应用任何的前置条件 (比如，您不需要构造器，命名类型，字段或额外的方法)。</p></li>
     </ul>
   </li>
   <li><p>
-<a class="TutorialLink" target="_top" href="nested.html">Nested class</a>: Use it if your requirements are similar to those
-of a local class, you want to make the type more widely
-available, and you don&#39;t require access to local variables or
-method parameters.</p>
+<a class="TutorialLink" target="_top" href="nested.html">嵌套类</a>：如果您的需求和局部类相似，想要让类型在更大范围内可用，并不要求访问局部变量或方法参数。</p>
     <ul>
-      <li><p>Use a non-static nested class (or inner class) if you require access to an enclosing instance's non-public fields and methods. Use a static nested class if you don&#39;t require this access.</p></li>
+      <li><p>使用非静态嵌套类 (或内部类)，如果您要访问外部类实例的非公有字段和方法。如果不需要访问就使用静态嵌套类。</p></li>
     </ul>
   </li>
 </ul>
@@ -590,7 +581,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Method References
+        <b>上一页：</b> 方法引用
         <br /><b>下一页：</b> 问题和练习：嵌套类
     </div>
 </body>

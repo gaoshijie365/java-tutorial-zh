@@ -495,12 +495,12 @@
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="nolinkAHEAD">嵌套类</div>
-<div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
-<div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
-<div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
-<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
-<div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="innerclasses.html">内部类示例</a></div>
+<div class="linkBHEAD"><a href="localclasses.html">局部类</a></div>
+<div class="linkBHEAD"><a href="anonymousclasses.html">匿名类</a></div>
+<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda 表达式</a></div>
+<div class="linkCHEAD"><a href="methodreferences.html">方法引用</a></div>
+<div class="linkBHEAD"><a href="whentouse.html">何时使用嵌套类、局部类、匿名类和 lambda 表达式 </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -525,7 +525,7 @@
             <div id="PageTitle"><h1>嵌套类</h1></div>
             <div id="PageContent">
 
-<p>The Java programming language allows you to define a class within another class. Such a class is called a <i>nested class</i> and is illustrated here:</p>
+<p>Java 允许您在另一个类内定义一个类。这样的类叫做 <i>嵌套类</i>，如下：</p>
 <div class="codeblock"><pre>
 class OuterClass {
     ...
@@ -534,7 +534,8 @@ class OuterClass {
     }
 }
 </pre></div>
-<div class="note"><hr /><strong>Terminology:</strong>&nbsp;Nested classes are divided into two categories: non-static and static. Non-static nested classes are called <i>inner classes</i>. Nested classes that are declared <code>static</code> are called <i>static nested classes</i>. 
+<div class="note"><hr /><strong>术语：</strong>&nbsp;嵌套类分为两类：非静态的和静态的。非静态的嵌套类叫做 <i>内部类</i>。声明为 <code>static</code>
+    的嵌套类叫做 <i>静态嵌套类</i>。
 <hr /></div>
 
 <div class="codeblock"><pre>
@@ -549,26 +550,29 @@ class OuterClass {
 }
 </pre></div>
 
-<p>A nested class is a member of its enclosing class. Non-static nested classes (inner classes) have access to other members of the enclosing class, even if they are declared private. Static nested classes do not have access to other members of the enclosing class. As a member of the <code>OuterClass</code>, a nested class can be declared <code>private</code>, <code>public</code>, <code>protected</code>, or <i>package private</i>. (Recall that outer classes can only be declared <code>public</code> or <i>package private</i>.)</p>
+<p>嵌套类是外部类的成员。非静态嵌套类 (内部类) 可以访问外部类的其它成员，即使它们是私有的。静态嵌套类不能访问外部类的其它成员。
+    作为 <code>OuterClass</code> 的成员，嵌套类可以声明为 <code>private</code>、<code>public</code>、<code>protected</code> 或
+    <i>包级私有</i>。(外部类仅能声明为 <code>public</code> 或 <i>包级私有</i>。)</p>
 
-<h2>Why Use 嵌套类?</h2>
+<h2>为何使用嵌套类？</h2>
 
-<p>Compelling reasons for using nested classes include the following:</p>
+<p>使用嵌套类的原因有：</p>
 
 <ul>
 
-<li><p><strong>It is a way of logically grouping classes that are only used in one place</strong>: If a class is useful to only one other class, then it is logical to embed it in that class and keep the two together. Nesting such &quot;helper classes&quot; makes their package more streamlined.</p></li>
+<li><p><strong>这是一种对类进行逻辑分组的方式，使其仅在一个地方使用</strong>: 如果一个类仅对一个其它类有用，从逻辑上来讲将其嵌入这个类，可以保持两者在一起。嵌套这样的 "帮助类" 可以使包更加简单。</p></li>
 
-<li><p><strong>It increases encapsulation</strong>: Consider two top-level classes, A and B, where B needs access to members of A that would otherwise be declared <code>private</code>. By hiding class B within class A, A&#39;s members can be declared private and B can access them. In addition, B itself can be hidden from the outside world.</p></li>
+<li><p><strong>增强了封装</strong>: 考虑两个顶层类，A 和 B，B 需要访问 A 的 <code>private</code> 成员。通过将 B 隐藏进 A 里，B 就可以访问 A 的私有成员。
+    此外，B 可以对外部世界隐藏。</p></li>
 
-<li><p><strong>It can lead to more readable and maintainable code</strong>: Nesting small classes within top-level classes places the code closer to where it is used.</p></li>
+<li><p><strong>产生更易读和已维护的代码</strong>: 将小类嵌套入顶层类中，使代码更接近使用它的地方。</p></li>
 </ul>
 
-<h2>Inner Classes</h2>
+<h2>内部类</h2>
 
-<p>As with instance methods and variables, an inner class is associated with an instance of its enclosing class and has direct access to that object&#39;s methods and fields. Also, because an inner class is associated with an instance, it cannot define any static members itself.</p>
+<p>和实例方法和实例变量一样，内部类是和外部类的实例相关联的，可以直接访问外部类对象的方法和字段。同时，因为内部类是和一个实例关联的，所以它不能定义任何静态成员。</p>
 
-<p>Objects that are instances of an inner class exist <i>within</i> an instance of the outer class. Consider the following classes:</p>
+<p>内部类的对象只能存在于外部类的实例中。考虑下面的类：</p>
 
 <div class="codeblock"><pre>
 class OuterClass {
@@ -579,37 +583,44 @@ class OuterClass {
 }
 </pre></div>
 
-<p>An instance of <code>InnerClass</code> can exist only within an instance of <code>OuterClass</code> and has direct access to the methods and fields of its enclosing instance.</p>
+<p><code>InnerClass</code> 的实例只能存在于 <code>OuterClass</code> 的实例中，可以直接访问外部类实例的方法和字段。</p>
 
-<p>To instantiate an inner class, you must first instantiate the outer class. Then, create the inner object within the outer object with this syntax:</p>
+<p>为了实例化一个内部类，必须首先实例化外部类。然后，使用下面的语法创建内部类的对象：</p>
 
 <div class="codeblock"><pre>
 OuterClass outerObject = new OuterClass();
 OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 </pre></div>
 
-<p>There are two special kinds of inner classes:
-<a class="TutorialLink" target="_top" href="localclasses.html">local classes</a> and
-<a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous classes</a>.</p>
+<p>有两种特殊类型的内部类：
+<a class="TutorialLink" target="_top" href="localclasses.html">局部类</a> 和
+<a class="TutorialLink" target="_top" href="anonymousclasses.html">匿名类</a>。</p>
 
-<h2>Static 嵌套类</h2>
+<h2>静态嵌套类</h2>
 
-<p>As with class methods and variables, a static nested class is associated with its outer class. And like static class methods, a static nested class cannot refer directly to instance variables or methods defined in its enclosing class: it can use them only through an object reference. <a href="#inner-class-and-nested-static-class-example">Inner Class and Nested Static Class Example</a> demonstrates this.</p>
+<p>与类方法和类变量一样，静态嵌套类是和外部类相关联的。就像静态类方法，静态嵌套类不能直接引用外部类中定义的实例变量和实例方法：只能通过对象引用使用。
+    <a href="#inner-class-and-nested-static-class-example">内部类和嵌套静态类示例</a> 中进行了演示。</p>
 
-<div class="note"><hr /><strong>注意：</strong>&nbsp;A static nested class interacts with the instance members of its outer class (and other classes) just like any other top-level class. In effect, a static nested class is behaviorally a top-level class that has been nested in another top-level class for packaging convenience. <a href="#inner-class-and-nested-static-class-example">Inner Class and Nested Static Class Example</a> also demonstrates this.
+<div class="note"><hr /><strong>注意：</strong>&nbsp;一个静态嵌套类与外部类 (和其它类) 的实例成员的交互，就像顶层类一样。
+    事实上，一个静态嵌套类行为上和一个顶层类一样，只不过为了方便嵌套进了另一个顶层类中。
+    <a href="#inner-class-and-nested-static-class-example">内部类和嵌套静态类示例</a> 中进行了演示。
 <hr /></div>
 
-<p>You instantiate a static nested class the same way as a top-level class:</p>
+<p>使用与顶层类相同的方式实例化静态嵌套类：</p>
 
 <div class="codeblock"><pre>
 StaticNestedClass staticNestedObject = new StaticNestedClass();
 </pre></div>
 
-<h2><a name="inner-class-and-nested-static-class-example">Inner Class and Nested Static Class Example</a></h2>
+<h2><a name="inner-class-and-nested-static-class-example">内部类和嵌套静态类示例</a></h2>
 
-<p>The following example,
-<a class="SourceLink" target="_blank" href="examples/OuterClass.java" onclick="showCode('../../displayCode.html', 'examples/OuterClass.java'); return false;"><code>OuterClass</code></a>, along with
-<a class="SourceLink" target="_blank" href="examples/TopLevelClass.java" onclick="showCode('../../displayCode.html', 'examples/TopLevelClass.java'); return false;"><code>TopLevelClass</code></a>, demonstrates which class members of <code>OuterClass</code> an inner class (<code>InnerClass</code>), a nested static class (<code>StaticNestedClass</code>), and a top-level class (<code>TopLevelClass</code>) can access:</p>
+<p>下面的例子，
+<a class="SourceLink" target="_blank" href="examples/OuterClass.java"
+   onclick="showCode('../../displayCode.html', 'examples/OuterClass.java'); return false;"><code>OuterClass</code></a>，和
+<a class="SourceLink" target="_blank" href="examples/TopLevelClass.java"
+   onclick="showCode('../../displayCode.html', 'examples/TopLevelClass.java'); return false;"><code>TopLevelClass</code></a>，
+    演示了内部类 (<code>InnerClass</code>)、嵌套静态类 (<code>StaticNestedClass</code>) 和 顶层类 (<code>TopLevelClass</code>) 可以访问
+        <code>OuterClass</code> 的哪些成员:</p>
 
 <h3>OuterClass.java</h3>
 <pre class="codeblock">
@@ -669,7 +680,7 @@ public class TopLevelClass {
     }  
 }</pre>
 
-<p>This example prints the following output:</p>
+<p>这个例子打印下面的输出：</p>
 <pre class="codeblock">Inner class:
 ------------
 Outer field
@@ -685,7 +696,8 @@ Top-level class:
 Outer field
 Static outer field</pre>
 
-<p>Note that a static nested class interacts with the instance members of its outer class just like any other top-level class. The static nested class <code>StaticNestedClass</code> can't directly access <code>outerField</code> because it's an instance variable of the enclosing class, <code>OuterClass</code>. The Java compiler generates an error at the highlighted statement:</p>
+<p>注意静态嵌套类与其外部类实例成员的交互与任何其它顶层类一样。静态嵌套类 <code>StaticNestedClass</code> 不能直接访问 <code>outerField</code>，
+    因为它是外部类 <code>OuterClass</code> 的实例变量。Java 编译器会在高亮的语句处产生一个错误：</p>
 
 <pre class="codeblock">static class StaticNestedClass {
     void accessMembers(OuterClass outer) {
@@ -696,11 +708,11 @@ Static outer field</pre>
 }
 </pre>
 
-<p>To fix this error, access <code>outerField</code> through an object reference:</p>
+<p>为了修复这个错误，通过一个对象引用访问 <code>outerField</code>：</p>
 
 <pre class="codeblock">System.out.println(outer.outerField);</pre>
 
-<p>Similarly, the top-level class <code>TopLevelClass</code> can't directly access <code>outerField</code> either.</p>
+<p>类似地，顶层类 <code>TopLevelClass</code> 也不能直接访问 <code>outerField</code>。</p>
 
 <!--
 
@@ -710,10 +722,13 @@ Static outer field</pre>
 
 -->
 
-<h2><a name="shadowing">Shadowing</a></h2>
+<h2><a name="shadowing">遮蔽</a></h2>
 
-<p>If a declaration of a type (such as a member variable or a parameter name) in a particular scope (such as an inner class or a method definition) has the same name as another declaration in the enclosing scope, then the declaration <em>shadows</em> the declaration of the enclosing scope. You cannot refer to a shadowed declaration by its name alone. The following example,
-<a class="SourceLink" target="_blank" href="examples/ShadowTest.java" onclick="showCode('../../displayCode.html', 'examples/ShadowTest.java'); return false;"><code>ShadowTest</code></a>, demonstrates this:</p>
+<p>如果一个作用域 (比如内部类或方法定义) 中一个类型 (比如成员变量或参数名) 的声明，与其外部作用域中的另一个名称具有相同的名称，那这个声明就 <em>遮蔽</em> 了外部作用域中的声明。
+    您不能只通过名字引用被遮蔽的声明。下面的例子，
+    You cannot refer to a shadowed declaration by its name alone. The following example,
+<a class="SourceLink" target="_blank" href="examples/ShadowTest.java"
+   onclick="showCode('../../displayCode.html', 'examples/ShadowTest.java'); return false;"><code>ShadowTest</code></a>，对这进行了演示：</p>
 
 <pre class="codeblock">
  
@@ -740,28 +755,37 @@ public class ShadowTest {
 }
 </pre>
 
-<p>The following is the output of this example:</p>
+<p>下面是本例的输出：</p>
 
 <pre class="codeblock">x = 23
 this.x = 1
 ShadowTest.this.x = 0</pre>
 
-<p>This example defines three variables named <code>x</code>: the member variable of the class <code>ShadowTest</code>, the member variable of the inner class <code>FirstLevel</code>, and the parameter in the method <code>methodInFirstLevel</code>. The variable <code>x</code> defined as a parameter of the method <code>methodInFirstLevel</code> shadows the variable of the inner class <code>FirstLevel</code>. Consequently, when you use the variable <code>x</code> in the method <code>methodInFirstLevel</code>, it refers to the method parameter. To refer to the member variable of the inner class <code>FirstLevel</code>, use the keyword <code>this</code> to represent the enclosing scope:</p>
+<p>这个例子中定义了三个名称为 <code>x</code> 的变量：<code>ShadowTest</code> 类的成员变量、内部类 <code>FirstLevel</code> 的成员变量、
+    方法 <code>methodInFirstLevel</code> 的参数。<code>methodInFirstLevel</code> 方法的参数中定义的变量 <code>x</code> 遮蔽了内部类
+    <code>FirstLevel</code> 中的同名变量。因此，当您在 <code>methodInFirstLevel</code> 方法中使用变量 <code>x</code> 时，指的是方法参数。
+    为了指向内部类 <code>FirstLevel</code> 的成员变量，使用 <code>this</code> 关键字来代表外部作用域：</p>
 
 <pre class="codeblock">System.out.println("this.x = " + this.x);</pre>
 
-<p>Refer to member variables that enclose larger scopes by the class name to which they belong. For example, the following statement accesses the member variable of the class <code>ShadowTest</code> from the method <code>methodInFirstLevel</code>:</p>
+<p>要指向更大作用域中的同名成员变量，使用带类名限定的 <code>this</code>。比如，下面的语句从 <code>methodInFirstLevel</code> 方法中访问 <code>ShadowTest
+</code> 类中的同名成员变量：</p>
 
 <pre class="codeblock">System.out.println("ShadowTest.this.x = " + ShadowTest.this.x);</pre>
 
-<h2><a name="serialization">Serialization</a></h2>
+<h2><a name="serialization">序列化</a></h2>
 
-<p>
-<a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">Serialization</a> of inner classes, including
-<a class="TutorialLink" target="_top" href="localclasses.html">local</a> and
-<a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous</a> classes, is strongly discouraged. When the Java compiler compiles certain constructs, such as inner classes, it creates <em>synthetic constructs</em>; these are classes, methods, fields, and other constructs that do not have a corresponding construct in the source code. Synthetic constructs enable Java compilers to implement new Java language features without changes to the JVM. However, synthetic constructs can vary among different Java compiler implementations, which means that <code>.class</code> files can vary among different implementations as well. Consequently, you may have compatibility issues if you serialize an inner class and then deserialize it with a different JRE implementation. See the section
-<a class="TutorialLink" target="_top" href="../../reflect/member/methodparameterreflection.html#implcit_and_synthetic">Implicit and Synthetic Parameters</a> in the section
-<a class="TutorialLink" target="_top" href="../../reflect/member/methodparameterreflection.html">Obtaining Names of Method Parameters</a> for more information about the synthetic constructs generated when an inner class is compiled.</p>
+<p>内部类的
+<a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">序列化</a>，包括
+<a class="TutorialLink" target="_top" href="localclasses.html">局部</a> 和
+<a class="TutorialLink" target="_top" href="anonymousclasses.html">匿名</a> 类，是强烈不推荐的。
+    当 Java 编译器编译特定结构，比如内部类，会创建 <em>合成的结构</em>，这些结构是类、方法、字段和其它结构，它们没有在源码中对应的结构。
+    合成的结构允许 Java 编译器在不修改 JVM 的情况下实现新的语言特性。然而，合成的结构在不同的 Java 编译器实现中可能是不同的，
+    这也就意味着在不同的实现中 <code>.class</code> 文件也是不同的。因此，如果您序列化一个内部类，稍后使用不同的 JRE 实现反序列化，可能会遇到兼容性问题。】
+    查看 <a class="TutorialLink" target="_top" href="../../reflect/member/methodparameterreflection.html">获取方法参数名称</a> 中的
+    <a class="TutorialLink" target="_top"
+       href="../../reflect/member/methodparameterreflection.html#implcit_and_synthetic">隐式的和合成的参数</a>
+    一节获取关于内部类编译时生成的合成的结构的更多信息。</p>
  
 
         </div>
@@ -791,7 +815,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 问题和练习：对象
-        <br /><b>下一页：</b> Inner Class Example
+        <br /><b>下一页：</b> 内部类示例
     </div>
 </body>
 </html> 

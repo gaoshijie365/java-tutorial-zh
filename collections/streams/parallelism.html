@@ -522,7 +522,7 @@
     <ul>
       <li><a href="#laziness">Laziness</a></li>
       <li><a href="#interference">Interference</a></li>
-      <li><a href="#stateful_lambda_expressions">Stateful Lambda Expressions</a></li>
+      <li><a href="#stateful_lambda_expressions">Stateful Lambda 表达式</a></li>
     </ul>
   </li>
 </ul>
@@ -709,7 +709,7 @@ With forEachOrdered:
 
 <!-- *********************************************************************** -->
 
-<h3><a name="stateful_lambda_expressions">Stateful Lambda Expressions</a></h3>
+<h3><a name="stateful_lambda_expressions">Stateful Lambda 表达式</a></h3>
 
 <p>Avoid using <em>stateful lambda expressions</em> as parameters in stream operations. A stateful lambda expression is one whose result depends on any state that might change during the execution of a pipeline. The following example adds elements from the <code>List</code> <code>listOfIntegers</code> to a new <code>List</code> instance with the <code>map</code> intermediate operation. It does this twice, first with a serial stream and then with a parallel stream:</p>
 

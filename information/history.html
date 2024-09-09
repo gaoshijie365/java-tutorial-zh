@@ -318,7 +318,7 @@ the <code>try</code>-with-resources statement in the
 
 <ul>
 
-  <li><p><a href="../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> enable you to treat functionality as a method argument, or code as data. Lambda expressions let you express instances of single-method interfaces (referred to as functional interfaces) more compactly.</p></li>
+  <li><p><a href="../java/javaOO/lambdaexpressions.html">Lambda 表达式</a> enable you to treat functionality as a method argument, or code as data. Lambda expressions let you express instances of single-method interfaces (referred to as functional interfaces) more compactly.</p></li>
 
   <li><p><a href="../java/IandI/defaultmethods.html">Default methods</a> are methods in an interface that have an implementation. They enable new functionality to be added to the interfaces of libraries and ensure binary compatibility with code written for older versions of those interfaces.</p></li>
 
@@ -344,7 +344,7 @@ the <code>try</code>-with-resources statement in the
 <ul>
 <li><p>When signing a JAR file, time stamping the signature is recommended. A warning is shown if the signature is not time stamped. See <a href="../deployment/jar/signing.html">Signing JAR Files</a> for information.</p></li>
 <li><p>The <a href="../java/generics/genTypeInference.html">Type Inference</a> section in the <a href="../java/generics/index.html">泛型</a> trail has been updated with the section Target Types, which describes how the Java compiler takes advantage of target typing to infer the type parameters of a generic method invocation in JDK 8.</p></li>
-<li><p>You can obtain the names of the formal parameters of any method or constructor in JDK 8 with the method <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html#getParameters--">java.lang.reflect.Executable.getParameters</a>. See the section <a href="../reflect/member/methodparameterreflection.html">Obtaining Names of Method Parameters</a>.</p></li>
+<li><p>You can obtain the names of the formal parameters of any method or constructor in JDK 8 with the method <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html#getParameters--">java.lang.reflect.Executable.getParameters</a>. See the section <a href="../reflect/member/methodparameterreflection.html">获取方法参数名称</a>.</p></li>
 <li><p>The <a href="../java/IandI/index.html">接口和继承</a> trail has been enhanced with information about <a href="../java/IandI/defaultmethods.html">Default Methods</a> in JDK 8, which are methods in an interface that have an implementation. In addition, you can define static methods in interfaces.</p></li>
 <li><p>The <a href="../collections/index.html">Collections</a> trail has been updated with new 问题和练习 for <a href="../collections/interfaces/QandE/questions.html">Interfaces</a> and <a href="../collections/streams/QandE/questions.html">聚合操作</a> in JDK 8. These updates help you focus on some important points when working with lambda expressions, streams, and aggregate operations.</p></li>
 </ul>
@@ -396,7 +396,7 @@ Additional tips for deploying RIAs have been added to <a href="../deployment/dep
 <p>
 The tutorials were updated to reflect the recommendation that all RIAs be run from signed JAR files. A new page has been added to the <a href="../deployment/index.html">Deployment</a> trail on <a href="../deployment/deploymentInDepth/userAcceptance.html" target="_blank">User Acceptance of RIAs</a>. You may also want to refer to the lesson on <a href="../deployment/jar/signindex.html" target="_blank">Signing and Verifying JAR Files</a>. Finally, all Java Web Start examples launched from within the tutorial are now signed and all applets run within the sandbox.</p>
 
-<li><p>As part of the ongoing Project Lambda work for Java SE 8, there is a new page on <a href="../java/javaOO/methodreferences.html" target="_blank">Method References</a> and includes a new <a href="../java/javaOO/examples/MethodReferencesTest.java" target="_blank">MethodReferencesTest.java</a> example.</p></li>
+<li><p>As part of the ongoing Project Lambda work for Java SE 8, there is a new page on <a href="../java/javaOO/methodreferences.html" target="_blank">方法引用</a> and includes a new <a href="../java/javaOO/examples/MethodReferencesTest.java" target="_blank">MethodReferencesTest.java</a> example.</p></li>
 
 <li><p>Another feature coming to Java SE 8 is the ability to invoke methods that use the fork/join framework to sort arrays in parallel. The <a href="../java/nutsandbolts/arrays.html">Arrays</a> and <a href="../essential/concurrency/forkjoin.html">Fork/Join</a> pages have been updated with information on manipulating arrays.</p></li>
 </ul>
@@ -407,7 +407,7 @@ The tutorials were updated to reflect the recommendation that all RIAs be run fr
 <p>This online-only release of the Java Tutorial includes early access information on several upcoming features in the JDK 8 release:</p>
 
 <ul>
-<li><p>Lambda expressions, a result of the work of <a href="http://openjdk.java.net/projects/lambda/" target="_blank">Project Lambda</a>, are a feature being added to the JDK 8 release of the Java platform. Lambda expressions support programming in a multicore environment by adding closures and related features to the Java language. An early access page on <a href="../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> is part of this tutorial release. As part of this work, the information on <a href="../java/javaOO/nested.html">嵌套类</a>, <a href="../java/javaOO/anonymousclasses.html">Anonymous Classes</a>, and <a href="../java/javaOO/localclasses.html">Local Classes</a> have been updated and a new page on <a href="../java/javaOO/whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions</a> has been added. All of this new material is available online only.</li>
+<li><p>Lambda expressions, a result of the work of <a href="http://openjdk.java.net/projects/lambda/" target="_blank">Project Lambda</a>, are a feature being added to the JDK 8 release of the Java platform. Lambda expressions support programming in a multicore environment by adding closures and related features to the Java language. An early access page on <a href="../java/javaOO/lambdaexpressions.html">Lambda 表达式</a> is part of this tutorial release. As part of this work, the information on <a href="../java/javaOO/nested.html">嵌套类</a>, <a href="../java/javaOO/anonymousclasses.html">匿名类</a>, and <a href="../java/javaOO/localclasses.html">局部类</a> have been updated and a new page on <a href="../java/javaOO/whentouse.html">何时使用嵌套类、局部类、匿名类和 lambda 表达式</a> has been added. All of this new material is available online only.</li>
 
 <li><p>The 注解 page has been moved and expanded to be a full <a href="../java/annotations/">注解 lesson</a>. The new lesson includes information on Java SE 8 features: <a href="../java/annotations/type_annotations.html">Type 注解</a>, which can be used in conjunction with pluggable type systems for improved type checking, and <a href="../java/annotations/repeating.html">Repeating 注解</a>. This early access lesson is available online only.</p></li>
 

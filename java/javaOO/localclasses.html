@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Local Classes (Java&trade; 教程 &gt;
+        <title>局部类 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -495,12 +495,12 @@
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
-<div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
-<div class="nolinkBHEAD">Local Classes</div>
-<div class="linkBHEAD"><a href="anonymousclasses.html">Anonymous Classes</a></div>
-<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
-<div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="innerclasses.html">内部类示例</a></div>
+<div class="nolinkBHEAD">局部类</div>
+<div class="linkBHEAD"><a href="anonymousclasses.html">匿名类</a></div>
+<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda 表达式</a></div>
+<div class="linkCHEAD"><a href="methodreferences.html">方法引用</a></div>
+<div class="linkBHEAD"><a href="whentouse.html">何时使用嵌套类、局部类、匿名类和 lambda 表达式 </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,38 +523,32 @@
                 <a target="_top" href="innerclasses.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="anonymousclasses.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Local Classes</h1></div>
+            <div id="PageTitle"><h1>局部类</h1></div>
             <div id="PageContent">
 
-<p>Local classes are classes that are defined in a <em>block</em>, which
-is a group of zero or more statements between balanced braces.
-You typically find local classes defined in the body of a
-method.</p>
+<p>局部类是定义在 <em>代码块</em> 中的类。通常会在方法体中找到局部类的定义。</p>
 
-<p>This section covers the following topics:</p>
+<p>本节包含下面的主题：</p>
 
 <ul>
-  <li><a href="#declaring-local-classes">Declaring Local Classes</a></li>
-  <li><a href="#accessing-members-of-an-enclosing-class">Accessing Members of an Enclosing Class</a>
+  <li><a href="#declaring-local-classes">声明局部类</a></li>
+  <li><a href="#accessing-members-of-an-enclosing-class">访问外部类的成员</a>
     <ul>
-      <li><a href="#shadowing-and-local-classes">Shadowing and Local Classes</a></li>
+      <li><a href="#shadowing-and-local-classes">遮蔽和局部类</a></li>
     </ul>
   </li>
-  <li><a href="#local-classes-are-similar-to-inner-classes">Local Classes Are Similar To Inner Classes</a></li>
+  <li><a href="#local-classes-are-similar-to-inner-classes">局部类和内部类很像</a></li>
 </ul>
 
-<h2><a name="declaring-local-classes">Declaring Local Classes</a></h2>
+<h2><a name="declaring-local-classes">声明局部类</a></h2>
 
-<p>You can define a local class inside any block (see
-<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/expressions.html">表达式、语句和块</a> for more information).
-For example, you can define a local class in a method body, a
-<code>for</code> loop, or an
-<code>if</code> clause.</p>
+<p>您可以在任何块 (查看 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/expressions.html">表达式、语句和块</a>) 中定义局部类。
+    比如，您可以在方法体中、在 <code>for</code> 循环或 <code>if</code> 子句中定义局部类。</p>
 
-<p>The following example,
-<a class="SourceLink" target="_blank" href="examples/LocalClassExample.java" onclick="showCode('../../displayCode.html', 'examples/LocalClassExample.java'); return false;"><code>LocalClassExample</code></a>, validates two phone numbers. It defines
-the local class <code>PhoneNumber</code> in the method
-<code>validatePhoneNumber</code>:</p>
+<p>下面的例子，
+<a class="SourceLink" target="_blank" href="examples/LocalClassExample.java"
+   onclick="showCode('../../displayCode.html', 'examples/LocalClassExample.java'); return false;"><code>LocalClassExample</code></a>，
+    验证手机号。在 <code>validatePhoneNumber</code> 方法中定义了局部类 <code>PhoneNumber</code>：</p>
 
 <pre class="codeblock">
  
@@ -622,24 +616,22 @@ public class LocalClassExample {
 
 </pre>
 
-<p>The example validates a phone number by
-first removing all characters from the phone number except the
-digits 0 through 9. After, it checks whether the phone number
-contains exactly ten digits (the length of a phone number in
-North America). This example prints the following:</p>
+<p>这个例子验证手机号，首先移除所有除数字 0 到 9 之外的字符，然后检查是否包含十个数字 (北美手机号码长度)。例子输出如下：</p>
 
 <pre class="codeblock">First number is 1234567890
 Second number is invalid</pre>
 
-<h2><a name="accessing-members-of-an-enclosing-class">Accessing Members of an Enclosing Class</a></h2>
+<h2><a name="accessing-members-of-an-enclosing-class">访问外部类的成员</a></h2>
 
-<p>A local class has access to the members of its enclosing
-class. In the previous example, the <code>PhoneNumber</code> constructor accesses the member <code>LocalClassExample.regularExpression</code>.</p>
+<p>局部类可以访问其外部类的成员。在前一个例子中，<code>PhoneNumber</code> 构造器访问了成员 <code>LocalClassExample.regularExpression</code>。</p>
 
-<p>In addition, a local class has access to local variables. However, a local class can only access local variables that are declared final. When a local class accesses a local variable or parameter of the enclosing block, it <em>captures</em> that variable or parameter. For example, the <code>PhoneNumber</code> constructor can access the local variable <code>numberLength</code> because it is declared final; <code>numberLength</code> is a <em>captured variable</em>.</p>
+<p>此外，局部类也可以访问局部变量。然而，局部类只能访问声明为 final 的局部变量。当局部类访问其外部块的局部变量或参数时，它 <em>捕获</em> 了变量或参数。
+    比如，<code>PhoneNumber</code> 构造器可以访问局部变量 <code>numberLength</code>，因为它声明为 final，<code>numberLength</code> 是一个
+    <em>捕获的变量</em>。</p>
 
-<p>However, starting in Java SE 8, a local class can access local variables and
-parameters of the enclosing block that are final or <em>effectively final</em>. A variable or parameter whose value is never changed after it is initialized is effectively final. For example, suppose that the variable <code>numberLength</code> is not declared final, and you add the highlighted assignment statement in the <code>PhoneNumber</code> constructor to change the length of a valid phone number to 7 digits:</p>
+<p>然而，从 Java SE 8 开始，局部变量可以访问外部块中的 final 或 <em>事实上 final</em> 的局部变量和参数。
+    变量或参数的值在初始化后不会改变的叫做事实上 final。比如，假设变量 <code>numberLength</code> 没有声明为 final，您在 <code>PhoneNumber</code>
+    构造器中添加了高亮的赋值语句来修改合法的手机号码长度为 7 个数字：</p>
 
 <pre class="codeblock">PhoneNumber(String phoneNumber) {
     <strong>numberLength = 7;</strong>
@@ -651,39 +643,35 @@ parameters of the enclosing block that are final or <em>effectively final</em>. 
         formattedPhoneNumber = null;
 }</pre>
 
-<p>Because of this assignment
-statement, the variable <code>numberLength</code> is not effectively final anymore. As a result, the Java compiler generates an error message similar to
-"local variables referenced from an inner class must be final or effectively final" where the inner class <code>PhoneNumber</code> tries to access the <code>numberLength</code> variable:</p>
+<p>因为这个赋值语句，<code>numberLength</code> 不再是事实上 final 的。结果是，Java 编译器在 <code>PhoneNumber</code> 试图访问
+    <code>numberLength</code>变量时产生一条错误信息，类似 "local variables referenced from an inner class must be final or effectively final"：</p>
 
 <pre class="codeblock">if (currentNumber.length() == numberLength)</pre>
 
-<p>Starting in Java SE 8, if you declare the local class in a method, it can access the method's parameters. For example, you can define the following method in the <code>PhoneNumber</code> local class:</p>
+<p>从 Java SE 8 开始，如果你在方法中声明局部类，它可以访问方法的参数。比如，您可以在局部类 <code>PhoneNumber</code> 中定义如下方法：</p>
 
 <pre class="codeblock">public void printOriginalNumbers() {
     System.out.println("Original numbers are " + phoneNumber1 +
         " and " + phoneNumber2);
 }</pre>
 
-<p>The method <code>printOriginalNumbers</code> accesses the parameters <code>phoneNumber1</code> and <code>phoneNumber2</code> of the method <code>validatePhoneNumber</code>.</p>
+<p><code>printOriginalNumbers</code> 方法访问 <code>validatePhoneNumber</code> 方法的参数 <code>phoneNumber1</code> 和 <code>phoneNumber2</code>。</p>
 
 
-<h3><a name="shadowing-and-local-classes">Shadowing and Local Classes</a></h3>
+<h3><a name="shadowing-and-local-classes">遮蔽和局部类</a></h3>
 
-<p>Declarations of a type (such as a variable) in a local class shadow declarations in the enclosing scope that have the same name. See
-<a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html#shadowing">Shadowing</a> for more information.</p>
+<p>在局部类中一个类型的声明会遮蔽外部作用域中的具有相同名称的声明。查看
+<a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html#shadowing">遮蔽</a> 获取更多信息。</p>
 
-<h2><a name="local-classes-are-similar-to-inner-classes">Local Classes Are Similar To Inner Classes</a></h2>
+<h2><a name="local-classes-are-similar-to-inner-classes">局部类和内部类很像</a></h2>
 
-<p>Local classes are similar to inner classes because they cannot define or declare any static members. Local classes in static methods, such as the class <code>PhoneNumber</code>, which is defined in the static method <code>validatePhoneNumber</code>, can only refer to static members of the enclosing class. For example, if you do not define the member variable <code>regularExpression</code> as static, then the Java compiler generates an error similar to "non-static variable <code>regularExpression</code> cannot be referenced from a static context."</p> 
+<p>局部类和内部类很像，因为它们都不能定义或声明任何静态成员。静态方法中的局部类，比如 <code>PhoneNumber</code> 类，它定义在静态方法 <code>validatePhoneNumber</code> 中，
+    只能访问外部类的静态成员。比如，如果您没有将 <code>regularExpression</code> 定义为静态，Java 编译器会产生一条错误，类似
+     "non-static variable <code>regularExpression</code> cannot be referenced from a static context."</p>
 
-<p>Local classes are non-static because they have access to
-instance members of the enclosing block. Consequently, they
-cannot contain most kinds of static declarations.</p>
+<p>局部类是非静态的，因为它们访问外部块中的实例成员。结果是它们不能包含大多数类型的静态声明。</p>
 
-<p>You cannot declare an interface inside a block; interfaces are
-inherently static. For example, the following code excerpt does
-not compile because the interface <code>HelloThere</code> is defined inside the
-body of the method <code>greetInEnglish</code>:</p>
+<p>您不能在块中声明一个接口，接口本质上是静态的。比如，下面的代码片段不会编译，因为 <code>HelloThere</code> 接口定义在 <code>greetInEnglish</code> 方法体中：</p>
 
 <pre class="codeblock">    public void greetInEnglish() {
         interface HelloThere {
@@ -698,13 +686,8 @@ body of the method <code>greetInEnglish</code>:</p>
         myGreeting.greet();
     }</pre>
 
-<p>You cannot declare static
-initializers or member interfaces in a local class. The following
-code excerpt does not compile because the method
-<code>EnglishGoodbye.sayGoodbye</code> is declared <code>static</code>. The compiler generates an error
-similar to "modifier 'static' is only allowed in constant
-variable declaration" when it encounters this method
-definition:</p>
+<p>您不能在局部类中声明静态初始化器或成员接口。下面的代码片段不会编译，因为 <code>EnglishGoodbye.sayGoodbye</code> 声明为 <code>static</code>。
+    当编译器遇到这个方法定义时，会产生一条类似于 "modifier 'static' is only allowed in constant variable declaration" 的错误：</p>
 
 <pre class="codeblock">    public void sayGoodbyeInEnglish() {
         class EnglishGoodbye {
@@ -715,12 +698,9 @@ definition:</p>
         EnglishGoodbye.sayGoodbye();
     }</pre>
 
-<p>A local class can have
-static members provided that they are constant variables. (A <em>constant variable</em> is a variable of primitive type or type <code>String</code> that is declared final and initialized with a compile-time constant expression. A compile-time constant expression is typically a string or an arithmetic expression that can be evaluated at compile time. See
-<a class="TutorialLink" target="_top" href="classvars.html">理解类成员</a> for more information.) The
-following code excerpt compiles because the static member
-<code>EnglishGoodbye.farewell</code> is a
-constant variable:</p>
+<p>局部类可以有静态成员，只要它们是常量变量。(<em>常量变量</em> 是基本类型或 <code>String</code> 类型的变量，声明为 final，并且使用编译时常量表达式初始化。
+    编译时常量表达式通常是一个字符串，或一个可以在编译时计算值的算术表达式。查看 <a class="TutorialLink" target="_top" href="classvars.html">理解类成员</a>
+    获取更多信息。) 下面的代码片段可以编译，因为静态成员 <code>EnglishGoodbye.farewell</code> 是一个常量变量：</p>
 
 <pre class="codeblock">    public void sayGoodbyeInEnglish() {
         class EnglishGoodbye {
@@ -760,8 +740,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Inner Class Example
-        <br /><b>下一页：</b> Anonymous Classes
+        <b>上一页：</b> 内部类示例
+        <br /><b>下一页：</b> 匿名类
     </div>
 </body>
 </html> 

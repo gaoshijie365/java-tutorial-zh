@@ -516,7 +516,7 @@
 <p>In the previous steps you created an entry in the <code>exampleraypolicy</code> policy file granting code signed by <code>susan</code> permission to read files from the <code>C:\TestData\</code> directory (or the <code>testdata</code> directory in your home directory if you&#39;re working on UNIX). Now you should be able to successfully execute the <code>Count</code> program to read and to count the characters in a file from the specified directory, even when you run the application with a security manager.</p>
 <p>As described at the end of the 
 <a class="TutorialLink" target="_top" href="../tour1/index.html">Creating a Policy File</a> lesson, there are two possible ways you can have the <code>exampleraypolicy</code> file be considered as part of the overall policy, in addition to the policy files specified in the security properties file. The first approach is to specify the additional policy file in a property passed to the runtime system. The second approach is to add a line in the security properties file specifying the additional policy file.</p>
-<h2><a name="Approach1" id="Approach1">Approach 1</a></h2>
+<h2><a name="Approach1" id="Approach1">方法 1</a></h2>
 <p>You can use a <code>-Djava.security.policy</code> command-line argument to specify a policy file that should be used in addition to or instead of the ones specified in the security properties file.</p>
 <p>To run the <code>Count</code> application and have the <code>exampleraypolicy</code> policy file included, type the following while in the directory containing the <code>sCount.jar</code> and <code>exampleraypolicy</code> files:</p>
 <div class="codeblock"><pre>
@@ -527,7 +527,7 @@
 <p>注意： Type the command on a single line, with a space before <code>-D</code> and <code>-cp</code>.</p>
 <p>The program should report the number of characters in the specified file.</p>
 <p>If it still reports an error, something is wrong in the policy file. Use the Policy Tool to check the permission you just created in the <a href="rstep3.html">previous step</a>, and change any typos or other errors.</p>
-<h2><a name="Approach2" id="Approach2">Approach 2</a></h2>
+<h2><a name="Approach2" id="Approach2">方法 2</a></h2>
 <p>You can specify a number of URLs -- including ones of the form &quot;http://&quot; -- in <code>policy.url.n</code> properties in the security properties file, and all the designated policy files will get loaded.</p>
 <p>So one way to have your <code>exampleraypolicy</code> file&#39;s policy entries considered by the interpreter is to add an entry indicating that file in the security properties file.</p>
 <div class="note"><hr /><strong>Important:</strong>&nbsp;If you are running your own copy of the JDK, you can easily edit your security properties file. If you are running a version shared with others, you may only be able to modify the system-wide security properties file if you have write access to it or if you ask your system administrator to modify the file when appropriate. However, it&#39;s probably not appropriate for you to make modifications to a system-wide policy file for this tutorial test; we suggest that you just read the following to see how it&#39;s done or that you install your own private version of the JDK to use for the tutorial lessons.

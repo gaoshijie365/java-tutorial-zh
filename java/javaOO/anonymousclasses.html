@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Anonymous Classes (Java&trade; 教程 &gt;
+        <title>匿名类 (Java&trade; 教程 &gt;
             学习 Java &gt; 类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -495,12 +495,12 @@
 <div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
 <div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
-<div class="linkBHEAD"><a href="innerclasses.html">Inner Class Example</a></div>
-<div class="linkBHEAD"><a href="localclasses.html">Local Classes</a></div>
-<div class="nolinkBHEAD">Anonymous Classes</div>
-<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda Expressions</a></div>
-<div class="linkCHEAD"><a href="methodreferences.html">Method References</a></div>
-<div class="linkBHEAD"><a href="whentouse.html">When to Use 嵌套类, Local Classes, Anonymous Classes, and Lambda Expressions </a></div>
+<div class="linkBHEAD"><a href="innerclasses.html">内部类示例</a></div>
+<div class="linkBHEAD"><a href="localclasses.html">局部类</a></div>
+<div class="nolinkBHEAD">匿名类</div>
+<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda 表达式</a></div>
+<div class="linkCHEAD"><a href="methodreferences.html">方法引用</a></div>
+<div class="linkBHEAD"><a href="whentouse.html">何时使用嵌套类、局部类、匿名类和 lambda 表达式 </a></div>
 <div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
 <div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
@@ -523,30 +523,25 @@
                 <a target="_top" href="localclasses.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="lambdaexpressions.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Anonymous Classes</h1></div>
+            <div id="PageTitle"><h1>匿名类</h1></div>
             <div id="PageContent">
    
-<p>Anonymous classes enable you to make your code more concise.
-They enable you to declare and instantiate a class at the same
-time. They are like local classes except that they do not have a
-name. Use them if you need to use a local class only once.</p>
-<p>This section covers the following topics:</p>
+<p>匿名类可以使您的代码更加简洁。它允许您在声明类的同时对其进行初始化。它们很像局部类但没有名字。当您仅需要使用局部类一次时，使用匿名类。</p>
+<p>本节包含以下主题：</p>
 
 <ul>
-  <li><a href="#declaring-anonymous-classes">Declaring Anonymous Classes</a></li>
-  <li><a href="#syntax-of-anonymous-classes">Syntax of Anonymous Classes</a></li>
-  <li><a href="#accessing">Accessing 局部变量 of the Enclosing Scope, and Declaring and Accessing Members of the Anonymous Class</a></li>
-  <li><a href="#examples-of-anonymous-classes">Examples of Anonymous Classes</a></li>
+  <li><a href="#declaring-anonymous-classes">声明匿名类</a></li>
+  <li><a href="#syntax-of-anonymous-classes">匿名类的语法</a></li>
+  <li><a href="#accessing">访问外部作用域的局部变量，声明和访问匿名类的成员</a></li>
+  <li><a href="#examples-of-anonymous-classes">匿名类示例</a></li>
 </ul>
 
-<h2><a name="declaring-anonymous-classes">Declaring Anonymous Classes</a></h2>
+<h2><a name="declaring-anonymous-classes">声明匿名类</a></h2>
 
-<p>While local classes are class declarations, anonymous classes
-are expressions, which means that you define the class in another
-expression. The following example,
-<a class="SourceLink" target="_blank" href="examples/HelloWorldAnonymousClasses.java" onclick="showCode('../../displayCode.html', 'examples/HelloWorldAnonymousClasses.java'); return false;"><code>HelloWorldAnonymousClasses</code></a>, uses anonymous classes in the initialization statements of the
-local variables <code>frenchGreeting</code> and <code>spanishGreeting</code>, but uses a local class for the
-initialization of the variable <code>englishGreeting</code><code>:</code></p>
+<p>局部类是类声明，匿名类是表达式，意思是您在其它表达式中定义类。下面的示例，
+<a class="SourceLink" target="_blank" href="examples/HelloWorldAnonymousClasses.java"
+   onclick="showCode('../../displayCode.html', 'examples/HelloWorldAnonymousClasses.java'); return false;"><code>HelloWorldAnonymousClasses</code></a>，
+    在局部变量 <code>frenchGreeting</code> 和 <code>spanishGreeting</code> 的初始化语句中使用匿名类，使用局部类初始化变量 <code>englishGreeting</code>：</p>
 
 <pre class="codeblock">
 
@@ -606,14 +601,11 @@ public class HelloWorldAnonymousClasses {
 }
 </pre>
 
-<h2><a name="syntax-of-anonymous-classes">Syntax of Anonymous Classes</a></h2>
+<h2><a name="syntax-of-anonymous-classes">匿名类的语法</a></h2>
 
-<p>As mentioned previously, an anonymous class is an expression.
-The syntax of an anonymous class expression is like the
-invocation of a constructor, except that there is a class definition
-contained in a block of code.</p>
+<p>匿名类是表达式。匿名类表达式的语法和构造器调用很像，但它具有包含在代码块中的类定义。</p>
 
-<p>Consider the instantiation of the <code>frenchGreeting</code> object:</p>
+<p>考虑 <code>frenchGreeting</code> 对象的实例化：</p>
 
 <pre>        HelloWorld frenchGreeting = new HelloWorld() {
             String name = "tout le monde";
@@ -626,83 +618,59 @@ contained in a block of code.</p>
             }
         };</pre>
         
-<p>The anonymous class expression consists of the following:</p>
+<p>匿名类表达式由以下部分组成：</p>
 
 <ul>
-  <li><p>The <code>new</code> operator</p></li>
-  <li><p>The name of an interface to
-implement or a class to extend. In this example, the anonymous
-class is implementing the interface <code>HelloWorld</code>.</p></li>
-  <li><p>Parentheses that contain the
-arguments to a constructor, just like a normal class instance
-creation expression. <strong>注意</strong>：When you implement an
-interface, there is no constructor, so you use an empty pair of
-parentheses, as in this example.</p></li>
-  <li><p>A body, which is a class
-declaration body. More specifically, in the body, method
-declarations are allowed but statements are not.</p></li>
+  <li><p><code>new</code> 操作符</p></li>
+  <li><p>要实现的接口名或要扩展的类名。在本例中，匿名类实现了接口 <code>HelloWorld</code>。</p></li>
+  <li><p>小括号，包含构造器的参数，就像普通类实例的创建表达式。<strong>注意</strong>：当实现一个接口时，是没有构造器的，所以使用一对空括号，就像例子中那样。</p></li>
+  <li><p>一个体，它是类声明体。更具体地，在体中，可以声明方法但不能有语句。</p></li>
 </ul>
 
-<p>Because an anonymous class
-definition is an expression, it must be part of a statement. In
-this example, the anonymous class expression is part of the
-statement that instantiates the <code>frenchGreeting</code> object. (This
-explains why there is a semicolon after the closing brace.)</p>
+<p>因为匿名类定义是表达式，它必须作为语句的一部分。本例中，匿名类表达式是 <code>frenchGreeting</code> 对象实例化语句的一部分。(这也就解释了为什么闭大括号后跟着一个分号。)</p>
 
-<h2><a name="accessing">Accessing 局部变量 of the Enclosing Scope, and Declaring and Accessing Members of the Anonymous Class</a></h2>
+<h2><a name="accessing">访问外部作用域的局部变量，声明和访问匿名类的成员</a></h2>
 
-<p>Like local classes, anonymous classes can
-<a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">capture variables</a>; they have the same access to local variables of
-the enclosing scope:</p>
+<p>就像局部类，匿名类也可以
+<a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">捕获变量</a>，
+    它们对封闭作用域的局部变量具有相同的访问权限：</p>
 
 <ul>
-  <li><p>An anonymous class has access to the members of its enclosing
-class.</p></li>
-  <li><p>An anonymous class cannot access local variables in its
-enclosing scope that are not declared as <code>final</code> or effectively final.</p></li>
-  <li><p>Like a nested class, a declaration of a type (such as a variable) in an anonymous class shadows any other declarations in the enclosing scope that have the same name. See
-<a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html#shadowing">Shadowing</a> for more information.</p></li>
+  <li><p>匿名类可以访问外部类的成员。</p></li>
+  <li><p>匿名类不能访问外部作用域的未声明为 final 或事实上 final 的局部变量。</p></li>
+  <li><p>和嵌套类一样，匿名类中的同类型的声明会遮蔽外部作用域中的同名声明。查看
+<a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html#shadowing">遮蔽</a> 获取更多信息。</p></li>
 
 </ul>
 
-<p>Anonymous classes also have the same restrictions as local
-classes with respect to their members:</p>
+<p>匿名类和局部类一样，对其成员有相同的限制：</p>
 
 <ul>
-  <li><p>You cannot declare static
-initializers or member interfaces in an anonymous
-class.</p></li>
-  <li><p>An anonymous class can
-have static members provided that they are constant
-variables.</p></li>
+  <li><p>在匿名类中，您不能声明静态初始化器或成员接口。</p></li>
+  <li><p>在匿名类中，可以拥有静态成员，只要它们是常量变量。</p></li>
 </ul>
 
-<p>Note that you can declare the following in anonymous classes:</p>
+<p>注意，您可以在匿名类中声明下述内容：</p>
 
 <ul>
-  <li><p>Fields</p></li>
-  <li><p>Extra methods (even if they do not implement any methods of the supertype)</p></li>
-  <li><p>Instance initializers</p></li>
-  <li><p>Local classes</p></li>
+  <li><p>字段</p></li>
+  <li><p>额外的方法 (即使它们没有实现任何超类的方法)</p></li>
+  <li><p>实例初始化器</p></li>
+  <li><p>局部类</p></li>
 </ul>
 
-<p>However, you cannot declare constructors in an anonymous class.</p>
+<p>然而，您不能在匿名类中声明构造器。</p>
 
-<h2><a name="examples-of-anonymous-classes">Examples of Anonymous Classes</a></h2>
+<h2><a name="examples-of-anonymous-classes">匿名类示例</a></h2>
 
-<p>Anonymous classes are often used in graphical user
-interface (GUI) applications.</p>
+<p>匿名类常用在 GUI 应用中。</p>
 
-<p>Consider the JavaFX example <a href=
+<p>考虑一个 JavaFX 的例子 <a href=
 "https://docs.oracle.com/javase/8/javafx/get-started-tutorial/hello_world.htm">
-<code>HelloWorld.java</code></a> (from the section <a href=
-"https://docs.oracle.com/javase/8/javafx/get-started-tutorial/hello_world.htm">
-Hello World, JavaFX Style</a> from <a href=
-"https://docs.oracle.com/javase/8/javafx/get-started-tutorial/javafx_get_started.htm">
-Getting Started with JavaFX</a>). This
-sample creates a frame that contains a <strong>Say 'Hello World'</strong>
-button. The anonymous class
-expression is highlighted:</p>
+<code>HelloWorld.java</code></a> (选自
+    <a href="https://docs.oracle.com/javase/8/javafx/get-started-tutorial/javafx_get_started.htm">Getting Started with JavaFX</a>
+    中的 <a href="https://docs.oracle.com/javase/8/javafx/get-started-tutorial/hello_world.htm">Hello World, JavaFX
+        Style</a> 一节)。 这个例子创建了一个框架，包含一个 <strong>Say 'Hello World'</strong> 按钮，匿名类表达式高亮显示：</p>
 
 <pre>import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -736,17 +704,19 @@ public class HelloWorld extends Application {
     }
 }</pre>
 
-<p>In this example, the method invocation <code>btn.setOnAction</code> specifies what happens when you select the <b>Say 'Hello World'</b> button. This method requires an object of type <code>EventHandler&lt;ActionEvent&gt;</code>. The <code>EventHandler&lt;ActionEvent&gt;</code> interface contains only one method, handle. Instead of implementing this method with a new class, the example uses an anonymous class expression. Notice that this expression is the argument passed to the <code>btn.setOnAction</code> method.</p>
+<p>在这个例子中，方法调用 <code>btn.setOnAction</code> 指定了选中 <b>Say 'Hello World'</b> 按钮时发生的动作。
+    这个方法需要一个 <code>EventHandler&lt;ActionEvent&gt;</code> 类型的对象。
+    <code>EventHandler&lt;ActionEvent&gt;</code> 接口只包含一个方法，处理器。
+    例子中使用匿名类表示。注意这个表达式作为参数传入 <code>btn.setOnAction</code> 方法。</p>
 
-<p>Because the
-<code>EventHandler&lt;ActionEvent&gt;</code>
-interface contains only one method, you can use a lambda
-expression instead of an anonymous class expression. See the
-section
-<a class="TutorialLink" target="_top" href="lambdaexpressions.html">Lambda Expressions</a> for more
-information.</p>
+<p>因为
+<code>EventHandler&lt;ActionEvent&gt;</code> 接口仅包含一个方法，您可以使用 lambda 表达式代替匿名类表达式。查看
+<a class="TutorialLink" target="_top" href="lambdaexpressions.html">Lambda 表达式</a> 获取更多信息。</p>
 
-<p>Anonymous classes are ideal for implementing an interface that contains two or more methods. The following JavaFX example is from the section <a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/custom.htm"> Customization of UI Controls</a>. The highlighted code creates a text field that only accepts numeric values. It redefines the default implementation of the <code>TextField</code> class with an anonymous class by overriding the <code>replaceText</code> and <code>replaceSelection</code> methods inherited from the <code>TextInputControl</code> class.</p>
+<p>匿名类是实现包含两个或更多方法接口的理想方式。下面的 JavaFX 例子节选自 <a
+        href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/custom.htm">自定义 UI 控制</a>。
+    高亮的代码创建了一个仅接受数字值的文本域。它通过使用继承自 <code>TextInputControl</code> 类的匿名类并重写了
+    <code>replaceText</code> 和 <code>replaceSelection</code> 方法，新定义了 <code>TextField</code> 类的默认实现。</p>
 
 <pre class="codeblock">import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -853,8 +823,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Local Classes
-        <br /><b>下一页：</b> Lambda Expressions
+        <b>上一页：</b> 局部类
+        <br /><b>下一页：</b> Lambda 表达式
     </div>
 </body>
 </html> 
