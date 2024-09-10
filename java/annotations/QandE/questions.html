@@ -476,11 +476,11 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="../index.html">注解</a></div>
-<div class="linkAHEAD"><a href="../basics.html">注解 Basics</a></div>
-<div class="linkAHEAD"><a href="../declaring.html">Declaring an Annotation Type</a></div>
-<div class="linkAHEAD"><a href="../predefined.html">Predefined Annotation Types</a></div>
-<div class="linkAHEAD"><a href="../type_annotations.html">Type 注解 and Pluggable Type Systems</a></div>
-<div class="linkAHEAD"><a href="../repeating.html">Repeating 注解</a></div>
+<div class="linkAHEAD"><a href="../basics.html">注解基础</a></div>
+<div class="linkAHEAD"><a href="../declaring.html">声明注解类型</a></div>
+<div class="linkAHEAD"><a href="../predefined.html">预定义注解类型</a></div>
+<div class="linkAHEAD"><a href="../type_annotations.html">类型注解和可插拔类型系统</a></div>
+<div class="linkAHEAD"><a href="../repeating.html">可重复注解</a></div>
 <div class="nolinkQUESTIONS">问题和练习</div>
 </div>
     </div>
@@ -507,7 +507,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p>What is wrong with the following interface?</p>
+<p>下面的接口有什么问题?</p>
 <div class="codeblock"><pre>
 public interface House {
     @Deprecated
@@ -518,7 +518,7 @@ public interface House {
 </pre></div>
 </li>
 <li>
-<p>Consider this implementation of the <code>House</code> interface, shown in Question 1.</p>
+<p>考虑这个对问题 1 中 <code>House</code> 接口的实现。</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House {
     public void open() {}
@@ -526,11 +526,11 @@ public class MyHouse implements House {
     public void openBackDoor() {}
 }
 </pre></div>
-<p>If you compile this program, the compiler produces a warning because <code>open</code> was deprecated (in the interface). What can you do to get rid of that warning?</p>
+<p>如果编译这个程序，编译器将产生一条警告，因为 <code>open</code> 已被废弃 (在接口中)。要摆脱这个警告，你该怎么做？</p>
 </li>
 
 <li>
-<p>Will the following code compile without error? Why or why not?</p>
+<p>下面的代码编译是否有错？为什么？</p>
 <div class="codeblock"><pre>
 public @interface Meal { ... }
 
@@ -544,7 +544,7 @@ public void evaluateDiet() { ... }
 
 <h2>练习</h2>
 <ol>
-<li>Define an annotation type for an enhancement request with elements <code>id</code>, <code>synopsis</code>, <code>engineer</code>, and <code>date</code>. Specify the default value as <code>unassigned</code> for engineer and <code>unknown</code> for date.</li>
+<li>为具备 <code>id</code>，<code>synopsis</code>，<code>engineer</code> 和 <code>date</code> 元素的增强请求定义注解类型。为 engineer 指定默认值 <code>unsigned</code>，为 date 指定默认值 <code>unknown</code>。</li>
 </ol>
 
 
@@ -579,7 +579,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Repeating 注解
+        <b>上一页：</b> 可重复注解
         <br /><b>下一页：</b> 接口和继承
     </div>
 </body>

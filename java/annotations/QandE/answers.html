@@ -408,7 +408,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>问题</strong>：What is wrong with the following interface:</p>
+<p><strong>问题</strong>：下面的接口有什么问题:</p>
 <div class="codeblock"><pre>
 public interface House {
     @Deprecated
@@ -417,7 +417,7 @@ public interface House {
     public void openBackDoor();
 }
 </pre></div>
-<p><strong>答案</strong> The documentation should reflect why <code>open</code> is deprecated and what to use instead. For example:</p>
+<p><strong>答案</strong> 文档应该显示 <code>open</code> 为什么被废弃，以及用什么代替它。比如：</p>
 <div class="codeblock"><pre>
 public interface House { 
     /**
@@ -434,7 +434,7 @@ public interface House {
 </pre></div>
 </li>
 <li>
-<p><strong>问题</strong>：Consider this implementation of the <code>House</code> interface, shown in Question 1.</p>
+<p><strong>问题</strong>：考虑这个对问题 1 中 <code>House</code> 接口的实现。</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House {
     public void open() {}
@@ -442,8 +442,8 @@ public class MyHouse implements House {
     public void openBackDoor() {}
 }
 </pre></div>
-<p>If you compile this program, the compiler produces a warning because <code>open</code> was deprecated (in the interface). What can you do to get rid of that warning?</p>
-<p><strong>答案</strong>：You can deprecate the implementation of <code>open</code>:</p>
+<p>如果编译这个程序，编译器将产生一条警告，因为 <code>open</code> 已被废弃 (在接口中)。要摆脱这个警告，你该怎么做？</p>
+<p><strong>答案</strong>：你可以废弃 <code>open</code> 的实现：</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House { 
     // The documentation is 
@@ -454,7 +454,7 @@ public class MyHouse implements House {
     public void openBackDoor() {}
 }
 </pre></div>
-<p>Alternatively, you can suppress the warning:</p>
+<p>可选地，你也可以抑制警告：</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House { 
     @SuppressWarnings("deprecation")
@@ -466,7 +466,7 @@ public class MyHouse implements House {
 </li>
 
 <li>
-<p>Will the following code compile without error? Why or why not?</p>
+<p>下面的代码编译是否有错？为什么？</p>
 <div class="codeblock"><pre>
 public @interface Meal { ... }
 
@@ -475,7 +475,8 @@ public @interface Meal { ... }
 @Meal("dinner", mainDish="salad")
 public void evaluateDiet() { ... }
 </pre></div>
-<p><strong>答案</strong>：The code fails to compile. Before JDK 8, repeatable annotations are not supported. As of JDK 8, the code fails to compile because the <code>Meal</code> annotation type was not defined to be repeatable. It can be fixed by adding the <code>@Repeatable</code> meta-annotation and defining a container annotation type:</p>
+<p><strong>答案</strong>：代码编译失败。在 JDK 8 之前，不支持可重复注解。 在 JDK 8 中，代码编译失败是因为 <code>Meal</code> 注解类型没有定义为可重复的。
+    可以通过添加 <code>@Repeatable</code> 元注解并定义容器注解类型来修复：</p>
 <div class="codeblock"><pre>
 public class AnnotationTest {
 
@@ -501,7 +502,7 @@ public class AnnotationTest {
 
 <h2>练习</h2>
 <ol>
-<li><strong>练习</strong>：Define an annotation type for an enhancement request with elements <code>id</code>, <code>synopsis</code>, <code>engineer</code>, and <code>date</code>. Specify the default value as <code>unassigned</code> for engineer and <code>unknown</code> for date.
+<li><strong>练习</strong>：为具备 <code>id</code>，<code>synopsis</code>，<code>engineer</code> 和 <code>date</code> 元素的增强请求定义注解类型。为 engineer 指定默认值 <code>unsigned</code>，为 date 指定默认值 <code>unknown</code>。
 <p><strong>答案</strong>:</p>
 <div class="codeblock"><pre>
 /**

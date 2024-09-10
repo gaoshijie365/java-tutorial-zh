@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Predefined Annotation Types (Java&trade; 教程 &gt;
+        <title>预定义注解类型 (Java&trade; 教程 &gt;
             学习 Java &gt; 注解)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,11 +476,11 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">注解</a></div>
-<div class="linkAHEAD"><a href="basics.html">注解 Basics</a></div>
-<div class="linkAHEAD"><a href="declaring.html">Declaring an Annotation Type</a></div>
-<div class="nolinkAHEAD">Predefined Annotation Types</div>
-<div class="linkAHEAD"><a href="type_annotations.html">Type 注解 and Pluggable Type Systems</a></div>
-<div class="linkAHEAD"><a href="repeating.html">Repeating 注解</a></div>
+<div class="linkAHEAD"><a href="basics.html">注解基础</a></div>
+<div class="linkAHEAD"><a href="declaring.html">声明注解类型</a></div>
+<div class="nolinkAHEAD">预定义注解类型</div>
+<div class="linkAHEAD"><a href="type_annotations.html">类型注解和可插拔类型系统</a></div>
+<div class="linkAHEAD"><a href="repeating.html">可重复注解</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -500,17 +500,19 @@
                 <a target="_top" href="declaring.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="type_annotations.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Predefined Annotation Types</h1></div>
+            <div id="PageTitle"><h1>预定义注解类型</h1></div>
             <div id="PageContent">
 
 
-<p>
-A set of annotation types are predefined in the Java SE API. Some annotation types are used by the Java compiler, and some apply to other annotations.</p>
+<p>Java SE API 中预定义了很多注解类型。一些注解类型是供 Java 编译器使用的，还有一些应用到其它注解上。</p>
 
-<h2>Annotation Types Used by the Java Language</h2>
-<p>The predefined annotation types defined in <code>java.lang</code> are <code>@Deprecated</code>, <code>@Override</code>, and <code>@SuppressWarnings</code>.</p>
+<h2>Java 语言使用的注解类型</h2>
+<p><code>java.lang</code> 中预定义的注解类型是 <code>@Deprecated</code>，<code>@Override</code> 和 <code>@SuppressWarnings</code>。</p>
 <p><b>@Deprecated</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>@Deprecated</code></a> annotation indicates that the marked element is <i>deprecated</i> and should no longer be used. The compiler generates a warning whenever a program uses a method, class, or field with the <code>@Deprecated</code> annotation. When an element is deprecated, it should also be documented using the Javadoc <code>@deprecated</code> tag, as shown in the following example. The use of the at sign (<code>@</code>) in both Javadoc comments and in annotations is not coincidental: they are related conceptually. Also, note that the Javadoc tag starts with a lowercase <em>d</em> and the annotation starts with an uppercase <em>D</em>.</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>@Deprecated</code></a>
+    注解表明被标注的元素是 <i>废弃的</i>，不应该再使用。当程序使用 <code>@Deprecated</code> 注解标注的方法、类或字段时，编译器会产生一个警告。当一个元素是废弃的，
+    应该使用 Javadoc <code>@deprecated</code> 标签文档化，如下面例子中所示。在 Javadoc 注释和注解中使用 at 符号 (<code>@</code>) 并不是巧合：它们在概念上是相关的。
+    同时，注意 Javadoc 标记以小写 <em>d</em> 打头，注解以大写 <em>D</em> 打头。</p>
 <div class="codeblock"><pre>
    // Javadoc comment follows
     /**
@@ -522,18 +524,19 @@ A set of annotation types are predefined in the Java SE API. Some annotation typ
 }
 </pre></div>
 <p><b>@Override</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html"><code>@Override</code></a> annotation informs the compiler that the element is meant to override an element declared in a superclass. Overriding methods will be discussed in
-<a class="TutorialLink" target="_top" href="../IandI/index.html">接口和继承</a>.</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html">
+    <code>@Override</code></a> 注解通知编译器元素有意覆写父类中声明的元素。覆写方法将在 <a class="TutorialLink" target="_top" href="../IandI/index.html">接口和继承</a> 中讨论。</p>
 <div class="codeblock"><pre>
    // <i>mark method as a superclass method</i>
    // <i>that has been overridden</i>
    <b>@Override</b> 
    int overriddenMethod() { }
 </pre></div>
-<p>While it is not required to use this annotation when overriding a method, it helps to prevent errors. If a method marked with <code>@Override</code> fails to correctly override a method in one of its superclasses, the compiler generates an error.</p>
+<p>尽管覆写方法时并不要求使用这个注解，但它可以帮助避免错误。如果 <code>@Override</code> 标记的方法没有正确地覆写父类中的方法，编译器将产生一个错误。</p>
 
 <p><b>@SuppressWarnings</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> annotation tells the compiler to suppress specific warnings that it would otherwise generate. In the following example, a deprecated method is used, and the compiler usually generates a warning. In this case, however, the annotation causes the warning to be suppressed.</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a>
+    注解告诉编译器抑制特定的警告。在下面的例子中，使用了一个已废弃的方法，编译器通常会产生一个警告。在这个例子中，注解的使用导致警告被抑制了。</p>
 <div class="codeblock"><pre>
    // <i>use a deprecated method and tell</i> 
    // <i>compiler not to generate a warning</i>
@@ -544,52 +547,63 @@ A set of annotation types are predefined in the Java SE API. Some annotation typ
         objectOne.deprecatedMethod();
     }
 </pre></div>
-<p>Every compiler warning belongs to a category. The Java Language Specification lists two categories: <code>deprecation</code> and <code>unchecked</code>. The <code>unchecked</code> warning can occur when interfacing with legacy code written before the advent of
-<a class="TutorialLink" target="_top" href="../generics/index.html">generics</a>. To suppress multiple categories of warnings, use the following syntax:</p>
+<p>每个编译器警告都属于一个种类。Java 语言规范列出了两个分类：<code>deprecation</code> 和 <code>unchecked</code>。<code>unchecked</code>
+    警告可能会在接口与引入 <a class="TutorialLink" target="_top" href="../generics/index.html">泛型</a>
+    前的代码一起使用时产生。为了抑制多个类别的警告，使用下面的语法：</p>
 <div class="codeblock"><pre>
 @SuppressWarnings({"unchecked", "deprecation"})
 </pre></div>
 
-<p><b>@SafeVarargs</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html"><code>@SafeVarargs</code></a> annotation, when applied to a method or constructor, asserts that the code does not perform potentially unsafe operations on its <code>varargs</code> parameter. When this annotation type is used, unchecked warnings relating to <code>varargs</code> usage are suppressed.</p>
+<p><b>@SafeVarargs</b>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html">
+    <code>@SafeVarargs</code></a> 注解，当应用到方法或构造器，断言代码没有在 <code>varargs</code> 参数上执行潜在不安全的操作。
+    当着个注解类型使用时，与 <code>varargs</code> 相关的未检查警告会被抑制。</p>
 
 <p><b>@FunctionalInterface</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html"><code>@FunctionalInterface</code></a> annotation, introduced in Java SE 8, indicates that the type declaration is intended to be a functional interface, as defined by the Java Language Specification.</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html">
+    <code>@FunctionalInterface</code></a> 注解，在 Java SE 8 中引入，表明类型声明有意成为一个函数式接口，就像 Java 语言规范中定义的那样。</p>
 
-<h2>注解 That Apply to Other 注解</h2>
-<p>注解 that apply to other annotations are called <em>meta-annotations</em>. There are several meta-annotation types defined in <code>java.lang.annotation</code>.</p>
+<h2>应用到其它注解上的注解</h2>
+<p>应用到其它注解上的注解叫做 <em>元注解</em>。<code>java.lang.annotation</code> 中定义了一些元注解类型。</p>
 
 <p><b>@Retention</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html"><code>@Retention</code></a> annotation specifies how the marked annotation is stored:</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html">
+    <code>@Retention</code></a> 注解指定被标记的注解是如何存储的：</p>
 <ul>
-<li><code>RetentionPolicy.SOURCE</code> &ndash; The marked annotation is retained only in the source level and is ignored by the compiler.</li>
-<li><code>RetentionPolicy.CLASS</code> &ndash; The marked annotation is retained by the compiler at compile time, but is ignored by the Java Virtual Machine (JVM).</li>
-<li><code>RetentionPolicy.RUNTIME</code> &ndash; The marked annotation is retained by the JVM so it can be used by the runtime environment.</li>
+<li><code>RetentionPolicy.SOURCE</code> &ndash; 标记的注解仅在源码级存在，编译器会忽略之。</li>
+<li><code>RetentionPolicy.CLASS</code> &ndash; 标记的注解在编译时被编译器保留，但是会被 JVM 忽略。</li>
+<li><code>RetentionPolicy.RUNTIME</code> &ndash; 标记的注解被 JVM 保留，所以可以被运行时环境使用。</li>
 </ul>
 
 <p><b>@Documented</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html"><code>@Documented</code></a> annotation indicates that whenever the specified annotation is used those elements should be documented using the Javadoc tool. (By default, annotations are not included in Javadoc.) For more information, see the
-<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html">Javadoc tools page</a>.</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html">
+    <code>@Documented</code></a> 注解表明每当指定的注解被使用时，这些元素应该被 Javadoc 工具文档化。(默认情况下，注解不会包含进 Javadoc。)
+    更多信息，查看 <a class="OutsideLink" target="_blank"
+                     href="https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html">Javadoc 工具</a>。</p>
 
 <p><b>@Target</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html"><code>@Target</code></a> annotation marks another annotation to restrict what kind of Java elements the annotation can be applied to. A target annotation specifies one of the following element types as its value:</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html">
+    <code>@Target</code></a> 注解标记另一个注解，来限制注解可以应用到哪种 Java 元素上。一个目标注解指定下面元素类型作为其值：</p>
 <ul>
-<li><code>ElementType.ANNOTATION_TYPE</code> can be applied to an annotation type.</li>
-<li><code>ElementType.CONSTRUCTOR</code> can be applied to a constructor.</li>
-<li><code>ElementType.FIELD</code> can be applied to a field or property.</li>
-<li><code>ElementType.LOCAL_VARIABLE</code> can be applied to a local variable.</li>
-<li><code>ElementType.METHOD</code> can be applied to a method-level annotation.</li>
-<li><code>ElementType.PACKAGE</code> can be applied to a package declaration.</li>
-<li><code>ElementType.PARAMETER</code> can be applied to the parameters of a method.</li>
-<li><code>ElementType.TYPE</code> can be applied to any element of a class.</li>
+<li><code>ElementType.ANNOTATION_TYPE</code> 可以应用到注解类型。</li>
+<li><code>ElementType.CONSTRUCTOR</code> 可以应用到构造器。</li>
+<li><code>ElementType.FIELD</code> 可以应用到字段或属性。</li>
+<li><code>ElementType.LOCAL_VARIABLE</code> 可以应用到局部变量。</li>
+<li><code>ElementType.METHOD</code> 可以用用到方法级注解。</li>
+<li><code>ElementType.PACKAGE</code> 可以应用到包声明</li>
+<li><code>ElementType.PARAMETER</code> 可以应用到方法的参数。</li>
+<li><code>ElementType.TYPE</code> 可以应用到类的任何元素。</li>
 </ul>
 
 <p><b>@Inherited</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Inherited.html"><code>@Inherited</code></a> annotation indicates that the annotation type can be inherited from the super class. (This is not true by default.) When the user queries the annotation type and the class has no annotation for this type, the class' superclass is queried for the annotation type. This annotation applies only to class declarations.</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Inherited.html">
+    <code>@Inherited</code></a> 注解表明注解类型可以从超类继承。(默认不可以继承。) 当用户查询注解类型并且类没有这种类型的注解时，那就会从类的超类查询这个注解类型。
+    这个注解只能用在类声明上。</p>
 
 <p><b>@Repeatable</b> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html"><code>@Repeatable</code></a> annotation, introduced in Java SE 8, indicates that the marked annotation can be applied more than once to the same declaration or type use. For more information, see
-<a class="TutorialLink" target="_top" href="repeating.html">Repeating 注解</a>.
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html">
+    <code>@Repeatable</code></a> 注解，Java SE 8 中引入，表明标记的注解可以在相同的声明或类型上使用多次。更多信息，查看
+<a class="TutorialLink" target="_top" href="repeating.html">可重复注解</a>。
 </p>
 
         </div>
@@ -618,8 +632,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Declaring an Annotation Type
-        <br /><b>下一页：</b> Type 注解 and Pluggable Type Systems
+        <b>上一页：</b> 声明注解类型
+        <br /><b>下一页：</b> 类型注解和可插拔类型系统
     </div>
 </body>
 </html> 

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Type 注解 and Pluggable Type Systems (Java&trade; 教程 &gt;
+        <title>类型注解和可插拔类型系统 (Java&trade; 教程 &gt;
             学习 Java &gt; 注解)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,11 +476,11 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">注解</a></div>
-<div class="linkAHEAD"><a href="basics.html">注解 Basics</a></div>
-<div class="linkAHEAD"><a href="declaring.html">Declaring an Annotation Type</a></div>
-<div class="linkAHEAD"><a href="predefined.html">Predefined Annotation Types</a></div>
-<div class="nolinkAHEAD">Type 注解 and Pluggable Type Systems</div>
-<div class="linkAHEAD"><a href="repeating.html">Repeating 注解</a></div>
+<div class="linkAHEAD"><a href="basics.html">注解基础</a></div>
+<div class="linkAHEAD"><a href="declaring.html">声明注解类型</a></div>
+<div class="linkAHEAD"><a href="predefined.html">预定义注解类型</a></div>
+<div class="nolinkAHEAD">类型注解和可插拔类型系统</div>
+<div class="linkAHEAD"><a href="repeating.html">可重复注解</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -500,28 +500,26 @@
                 <a target="_top" href="predefined.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="repeating.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Type 注解 and Pluggable Type Systems</h1></div>
+            <div id="PageTitle"><h1>类型注解和可插拔类型系统</h1></div>
             <div id="PageContent">
 
-<p>
-Before the Java SE 8 release, annotations could only be applied to declarations. As of the Java SE 8 release, annotations can also be applied to any <em>type use</em>. This means that annotations can be used anywhere you use a type. A few examples of where types are used are class instance creation expressions (<code>new</code>), casts, <code>implements</code> clauses, and <code>throws</code> clauses. This form of annotation is called a <em>type annotation</em> and several examples are provided in
-<a class="TutorialLink" target="_top" href="basics.html">注解 Basics</a>.</p>
-<p>
-Type annotations were created to support improved analysis of Java programs way of ensuring stronger type checking. The Java SE 8 release does not provide a type checking framework, but it allows you to write (or download) a type checking framework that is implemented as one or more pluggable modules that are used in conjunction with the Java compiler.</p>
-<p>
-For example, you want to ensure that a particular variable in your program is never assigned to null; you want to avoid triggering a <code>NullPointerException</code>. You can write a custom plug-in to check for this. You would then modify your code to annotate that particular variable, indicating that it is never assigned to null. The variable declaration might look like this:</p>
+<p>在 Java SE 8 发布之前，注解只能用在声明上。随着 Java SE 8 的发布，注解也可以应用到任何 <em>类型使用</em> 上。这也就意味着，注解可以应用到您使用类型的任何位置。
+一些类型使用位置的例子是类实例创建表达式 (<code>new</code>)，类型转换，<code>implements</code> 子句，和 <code>throws</code> 子句。
+这种类型的注解也叫做 <em>类型注解</em>，<a class="TutorialLink" target="_top" href="basics.html">注解基础</a> 中提供了一些例子。</p>
+<p>创建类型注解是为了支持增强 Java 程序的分析来确保更强的类型检查。Java SE 8 的发布并没有提供一个类型检查框架，但是它允许您写 (或下载) 一个类型检查框架，
+实现一个或多个可插拔的模块，用来结合 Java 编译器使用。</p>
+<p>比如，您想要确保程序中的特定变量永远不会赋值为 null，从而避免出发 <code>NullPointerException</code>。您可以写一个自定义的插件来检查。
+然后修改代码使用注解标记这个特殊的变量，表明其永远不会赋值为 null。变量声明看起来可能是：</p>
 <pre>
 <strong>@NonNull</strong> String str;
 </pre>
-<p>
-When you compile the code, including the <code>NonNull</code> module at the command line, the compiler prints a warning if it detects a potential problem, allowing you to modify the code to avoid the error. After you correct the code to remove all warnings, this particular error will not occur when the program runs.</p>
-<p>
-You can use multiple type-checking modules where each module checks for a different kind of error. In this way, you can build on top of the Java type system, adding specific checks when and where you want them.</p>
-<p>
-With the judicious use of type annotations and the presence of pluggable type checkers, you can write code that is stronger and less prone to error.</p>
-<p>
-In many cases, you do not have to write your own type checking modules. There are third parties who have done the work for you. For example, you might want to take advantage of the Checker Framework created by the University of Washington. This framework includes a <code>NonNull</code> module, as well as a regular expression module, and a mutex lock module. For more information, see the
-<a class="OutsideLink" target="_blank" href="http://types.cs.washington.edu/checker-framework/">Checker Framework</a>.</p>
+<p>当您编译代码时，在命令行中包含 <code>NonNull</code> 模块，如果检测到潜在的问题编译器会打印一条警告，这允许您对代码进行修改以避免错误。
+当你修正了代码并移除了所有警告，在程序运行时将不会发生这个特定的错误。</p>
+<p>您也可以使用多个类型检查模块，每个模块检查一种类型的错误。使用这种方式，您可以在 Java 类型系统之上构建，在您想要的时间和位置添加特定的检查。</p>
+<p>使用类型注解和可插拔类型检查，您可以编写更加健壮的代码。</p>
+<p>大多数情况下，您不必编写自己的类型检查模块。因为有很多现成的三方模块。比如，您可能想使用华盛顿大学创建的检查框架。这个框架包含 <code>NonNull</code> 模块，正则表达式模块，和一个互斥锁模块。
+更多信息，参见
+<a class="OutsideLink" target="_blank" href="http://types.cs.washington.edu/checker-framework/">Checker Framework</a>。</p>
 
         </div>
         <div class="NavBit">
@@ -549,8 +547,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Predefined Annotation Types
-        <br /><b>下一页：</b> Repeating 注解
+        <b>上一页：</b> 预定义注解类型
+        <br /><b>下一页：</b> 可重复注解
     </div>
 </body>
 </html> 

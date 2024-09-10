@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Declaring an Annotation Type (Java&trade; 教程 &gt;
+        <title>声明注解类型 (Java&trade; 教程 &gt;
             学习 Java &gt; 注解)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,11 +476,11 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">注解</a></div>
-<div class="linkAHEAD"><a href="basics.html">注解 Basics</a></div>
-<div class="nolinkAHEAD">Declaring an Annotation Type</div>
-<div class="linkAHEAD"><a href="predefined.html">Predefined Annotation Types</a></div>
-<div class="linkAHEAD"><a href="type_annotations.html">Type 注解 and Pluggable Type Systems</a></div>
-<div class="linkAHEAD"><a href="repeating.html">Repeating 注解</a></div>
+<div class="linkAHEAD"><a href="basics.html">注解基础</a></div>
+<div class="nolinkAHEAD">声明注解类型</div>
+<div class="linkAHEAD"><a href="predefined.html">预定义注解类型</a></div>
+<div class="linkAHEAD"><a href="type_annotations.html">类型注解和可插拔类型系统</a></div>
+<div class="linkAHEAD"><a href="repeating.html">可重复注解</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -500,11 +500,11 @@
                 <a target="_top" href="basics.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="predefined.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Declaring an Annotation Type</h1></div>
+            <div id="PageTitle"><h1>声明注解类型</h1></div>
             <div id="PageContent">
 
-<p>Many annotations replace comments in code.</p>
-<p>Suppose that a software group traditionally starts the body of every class with comments providing important information:</p>
+<p>很多注解都代替了代码中的注释。</p>
+<p>假设一个传统的软件开发小组会在每个类体开始处写一些注释，来提供重要信息：</p>
 <div class="codeblock"><pre>
 public class Generation3List extends Generation2List {
 
@@ -519,7 +519,7 @@ public class Generation3List extends Generation2List {
 
 }
 </pre></div>
-<p>To add this same metadata with an annotation, you must first define the <i>annotation type</i>. The syntax for doing this is:</p>
+<p>为使用注解添加相同的元数据，您必须首先定义 <i>注解类型</i>。其语法是：</p>
 <div class="codeblock"><pre>
 @interface ClassPreamble {
    String author();
@@ -531,9 +531,10 @@ public class Generation3List extends Generation2List {
    String[] reviewers();
 }
 </pre></div>
-<p>The annotation type definition looks similar to an interface definition where the keyword <code>interface</code> is preceded by the at sign (<code>@</code>) (@ = AT, as in annotation type). Annotation types are a form of <i>interface</i>, which will be covered in a later lesson. For the moment, you do not need to understand interfaces.</p>
-<p>The body of the previous annotation definition contains <i>annotation type element</i> declarations, which look a lot like methods. Note that they can define optional default values.</p>
-<p>After the annotation type is defined, you can use annotations of that type, with the values filled in, like this:</p>
+<p>注解类型的定义与接口的定义很像，只不过在 <code>interface</code> 关键字前面有个 at 符号 (<code>@</code>) (@ = AT)。注解类型是一种形式的
+    <i>接口</i>，接口在后面课程中介绍。此时，您不需要理解接口。</p>
+<p>上一个注解定义体包含 <i>注解类型元素</i> 声明，其与方法很像。注意，它们可以定义可选的默认值。</p>
+<p>当注解类型定义之后，您可以使用这种类型的注解，并填入值，如：</p>
 <div class="codeblock"><pre>
 @ClassPreamble (
    author = "John Doe",
@@ -550,7 +551,8 @@ public class Generation3List extends Generation2List {
 
 }
 </pre></div>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;To make the information in <code>@ClassPreamble</code> appear in Javadoc-generated documentation, you must annotate the <code>@ClassPreamble</code> definition with the <code>@Documented</code> annotation:
+<div class="note"><hr /><strong>注意：</strong>&nbsp;为了使 <code>@ClassPreamble</code> 中的信息出现在 Javadoc 文档中，您必须使用
+    <code>@Documented</code> 注解注释 <code>@ClassPreamble</code> 定义：
 <div class="codeblock"><pre>
 // import this to use <code>@Documented</code>
 import java.lang.annotation.*;
@@ -590,8 +592,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> 注解 Basics
-        <br /><b>下一页：</b> Predefined Annotation Types
+        <b>上一页：</b> 注解基础
+        <br /><b>下一页：</b> 预定义注解类型
     </div>
 </body>
 </html> 
