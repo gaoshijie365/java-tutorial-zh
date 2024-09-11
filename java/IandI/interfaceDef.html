@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Defining an Interface (Java&trade; 教程 &gt;
+        <title>定义接口 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,15 +476,15 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
-<div class="linkAHEAD"><a href="createinterface.html">Interfaces</a></div>
-<div class="nolinkBHEAD">Defining an Interface</div>
-<div class="linkBHEAD"><a href="usinginterface.html">Implementing an Interface</a></div>
-<div class="linkBHEAD"><a href="interfaceAsType.html">Using an Interface as a Type</a></div>
-<div class="linkBHEAD"><a href="nogrow.html">Evolving Interfaces</a></div>
-<div class="linkBHEAD"><a href="defaultmethods.html">Default Methods</a></div>
-<div class="linkBHEAD"><a href="summary-interface.html">Summary of Interfaces</a></div>
+<div class="linkAHEAD"><a href="createinterface.html">接口</a></div>
+<div class="nolinkBHEAD">定义接口</div>
+<div class="linkBHEAD"><a href="usinginterface.html">实现接口</a></div>
+<div class="linkBHEAD"><a href="interfaceAsType.html">接口作为类型使用</a></div>
+<div class="linkBHEAD"><a href="nogrow.html">接口演进</a></div>
+<div class="linkBHEAD"><a href="defaultmethods.html">默认方法</a></div>
+<div class="linkBHEAD"><a href="summary-interface.html">接口总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="subclasses.html">Inheritance</a></div>
+<div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
 <div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
 <div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
@@ -501,7 +501,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 接口和继承
-        <br /><b>小节：</b> Interfaces
+        <br /><b>小节：</b> 接口
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -514,11 +514,11 @@
                 <a target="_top" href="createinterface.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="usinginterface.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Defining an Interface</h1></div>
+            <div id="PageTitle"><h1>定义接口</h1></div>
             <div id="PageContent">
 
-<!--Defining an Interface-->
-<p>An interface declaration consists of modifiers, the keyword <code>interface</code>, the interface name, a comma-separated list of parent interfaces (if any), and the interface body. For example:</p>
+<!--定义接口-->
+<p>接口声明包括修饰符，关键字 <code>interface</code>，接口名，逗号分隔的父接口列表 (如果有的话)，接口体。例如：</p>
 <div class="codeblock"><pre>
 public interface GroupedInterface extends Interface1, Interface2, Interface3 {
 
@@ -532,17 +532,18 @@ public interface GroupedInterface extends Interface1, Interface2, Interface3 {
     int doSomethingElse(String s);
 }
 </pre></div>
-<p>The <code>public</code> access specifier indicates that the interface can be used by any class in any package. If you do not specify that the interface is public, then your interface is accessible only to classes defined in the same package as the interface.</p>
-<p>An interface can extend other interfaces, just as a class subclass or extend another class. However, whereas a class can extend only one other class, an interface can extend any number of interfaces. The interface declaration includes a comma-separated list of all the interfaces that it extends.</p>
+<p><code>public</code> 访问修饰符表明接口可以被任意包中的任意类使用。如果没有指定接口为 public，那接口的可访问性就是包级的。</p>
+<p>接口可以扩展其它接口，就像类可以扩展其它的类。然而，类只可以扩展一个类，接口却可以扩展任意数量的接口。接口声明包含它扩展的以逗号分隔的接口列表。</p>
 
-<h2>The Interface Body</h2>
+<h2>接口体</h2>
 
-<p>The interface body can contain
-<a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">abstract methods</a>,
-<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods</a>, and
-<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods</a>. An abstract method within an interface is followed by a semicolon, but no braces (an abstract method does not contain an implementation). Default methods are defined with the <code>default</code> modifier, and static methods with the <code>static</code> keyword. All abstract, default, and static methods in an interface are implicitly <code>public</code>, so you can omit the <code>public</code> modifier.</p>
+<p>接口体可以包含 <a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">抽象方法</a>，
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">默认方法</a> 和
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">静态方法</a>。
+接口中的抽象方法后跟分号，而不是大括号 (抽象方法不包含实现)。默认方法使用 <code>default</code> 修饰符顶级，静态方法使用 <code>static</code> 关键字定义。
+接口中的所有抽象、默认和静态方法都隐式地是 <code>public</code>，所以您可以省略 <code>public</code> 修饰符。</p>
 
-<p>In addition, an interface can contain constant declarations. All constant values defined in an interface are implicitly <code>public</code>, <code>static</code>, and <code>final</code>. Once again, you can omit these modifiers.</p> 
+<p>此外，接口可以包含常量定义。接口中定义的常量值默认是 <code>public</code>、<code>static</code> 和 <code>final</code>。您可以省略这些修饰符。</p>
  
 
         </div>
@@ -571,8 +572,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Interfaces
-        <br /><b>下一页：</b> Implementing an Interface
+        <b>上一页：</b> 接口
+        <br /><b>下一页：</b> 实现接口
     </div>
 </body>
 </html> 

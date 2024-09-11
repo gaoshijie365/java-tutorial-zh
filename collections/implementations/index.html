@@ -507,7 +507,7 @@
 <table summary="General-purpose-implementations" border="2">
 <caption id="General-purpose-implementations"><strong>General-purpose Implementations</strong></caption>
 <tr>
-<th id="h1" width="15%">Interfaces</th>
+<th id="h1" width="15%">接口</th>
 <th id="h2">Hash table Implementations</th>
 <th id="h3">Resizable array Implementations</th>
 <th id="h4">Tree Implementations</th>
@@ -573,7 +573,7 @@
 <p>If you need thread-safe collections, the synchronization wrappers, described in the 
 <a class="TutorialLink" target="_top" href="wrapper.html">Wrapper Implementations</a> section, allow <em>any</em> collection to be transformed into a synchronized collection. Thus, synchronization is optional for general-purpose implementations, whereas it is mandatory for legacy implementations. Moreover, the <code>java.util.concurrent</code> package provides concurrent implementations of the <code>BlockingQueue</code> interface, which extends <code>Queue</code>, and of the <code>ConcurrentMap</code> interface, which extends <code>Map</code>. These implementations offer much higher concurrency than mere synchronized implementations.</p>
 <p>As a rule, you should be thinking about the interfaces, <em>not</em> the implementations. That is why there are no programming examples in this section. For the most part, the choice of implementation affects only performance. The preferred style, as mentioned in the 
-<a class="TutorialLink" target="_top" href="../interfaces/index.html">Interfaces</a> section, is to choose an implementation when a <code>Collection</code> is created and to immediately assign the new collection to a variable of the corresponding interface type (or to pass the collection to a method expecting an argument of the interface type). In this way, the program does not become dependent on any added methods in a given implementation, leaving the programmer free to change implementations anytime that it is warranted by performance concerns or behavioral details.</p>
+<a class="TutorialLink" target="_top" href="../interfaces/index.html">接口</a> section, is to choose an implementation when a <code>Collection</code> is created and to immediately assign the new collection to a variable of the corresponding interface type (or to pass the collection to a method expecting an argument of the interface type). In this way, the program does not become dependent on any added methods in a given implementation, leaving the programmer free to change implementations anytime that it is warranted by performance concerns or behavioral details.</p>
 <p>The sections that follow briefly discuss the implementations. The performance of the implementations is described using words such as <em>constant-time</em>, <em>log</em>, <em>linear</em>, <em>n log(n)</em>, and <em>quadratic</em> to refer to the asymptotic upper-bound on the time complexity of performing the operation. All this is quite a mouthful, and it doesn&#39;t matter much if you don&#39;t know what it means. If you&#39;re interested in knowing more, refer to any good algorithms textbook. One thing to keep in mind is that this sort of performance metric has its limitations. Sometimes, the nominally slower implementation may be faster. When in doubt, measure the performance!</p>
 
 

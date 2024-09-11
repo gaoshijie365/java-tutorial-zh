@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Evolving Interfaces (Java&trade; 教程 &gt;
+        <title>接口演进 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,15 +476,15 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
-<div class="linkAHEAD"><a href="createinterface.html">Interfaces</a></div>
-<div class="linkBHEAD"><a href="interfaceDef.html">Defining an Interface</a></div>
-<div class="linkBHEAD"><a href="usinginterface.html">Implementing an Interface</a></div>
-<div class="linkBHEAD"><a href="interfaceAsType.html">Using an Interface as a Type</a></div>
-<div class="nolinkBHEAD">Evolving Interfaces</div>
-<div class="linkBHEAD"><a href="defaultmethods.html">Default Methods</a></div>
-<div class="linkBHEAD"><a href="summary-interface.html">Summary of Interfaces</a></div>
+<div class="linkAHEAD"><a href="createinterface.html">接口</a></div>
+<div class="linkBHEAD"><a href="interfaceDef.html">定义接口</a></div>
+<div class="linkBHEAD"><a href="usinginterface.html">实现接口</a></div>
+<div class="linkBHEAD"><a href="interfaceAsType.html">接口作为类型使用</a></div>
+<div class="nolinkBHEAD">接口演进</div>
+<div class="linkBHEAD"><a href="defaultmethods.html">默认方法</a></div>
+<div class="linkBHEAD"><a href="summary-interface.html">接口总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="subclasses.html">Inheritance</a></div>
+<div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
 <div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
 <div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
@@ -501,7 +501,7 @@
     <div class="PrintHeaders">
         <b>路径：</b> 学习 Java
         <br /><b>课程：</b> 接口和继承
-        <br /><b>小节：</b> Interfaces
+        <br /><b>小节：</b> 接口
     </div>
             <div id="BreadCrumbs">
                 <a href="../../index.html" target="_top">主页</a>
@@ -514,18 +514,18 @@
                 <a target="_top" href="interfaceAsType.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="defaultmethods.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Evolving Interfaces</h1></div>
+            <div id="PageTitle"><h1>接口演进</h1></div>
             <div id="PageContent">
 
 <!--- You Must Not Rewrite Interfaces =-->
-<p>Consider an interface that you have developed called <code>DoIt</code>:</p>
+<p>考虑 <code>DoIt</code> 接口：</p>
 <div class="codeblock"><pre>
 public interface DoIt {
    void doSomething(int i, double x);
    int doSomethingElse(String s);
 }
 </pre></div>
-<p>Suppose that, at a later time, you want to add a third method to <code>DoIt</code>, so that the interface now becomes:</p>
+<p>假设您需要添加第三个方法到 <code>DoIt</code>，接口就变成了：</p>
 <div class="codeblock"><pre>
 public interface DoIt {
 
@@ -536,9 +536,9 @@ public interface DoIt {
 }
 </pre></div>
 
-<p>If you make this change, then all classes that implement the old <code>DoIt</code> interface will break because they no longer implement the old  interface. Programmers relying on this interface will protest loudly.</p>
+<p>如果你这么做，所有实现旧版 <code>DoIt</code> 接口的类都被破坏了，因为它们不再实现旧的接口。依赖这个接口的程序员将会大声抱怨。</p>
 
-<p>Try to anticipate all uses for your interface and specify it completely from the beginning. If you want to add additional methods to an interface, you have several options. You could create a <code>DoItPlus</code> interface that extends <code>DoIt</code>:</p>
+<p>尝试预测所有用户对接口的需求，并在一开始就设计好。如果您想添加额外的方法到接口，有几个选项。您可以创建一个扩展了 <code>DoIt</code> 接口的 <code>DoItPlus</code> 接口：</p>
 <div class="codeblock"><pre>
 public interface DoItPlus extends DoIt {
 
@@ -547,10 +547,10 @@ public interface DoItPlus extends DoIt {
 }
 </pre></div>
 
-<p>Now users of your code can choose to continue to use the old interface or to upgrade to the new interface.</p>
+<p>现在，你代码的用户可以选择继续使用旧的接口或者升级到新的接口。</p>
 
-<p>Alternatively, you can define your new methods as
-<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods</a>. The following example defines a default method named <code>didItWork</code>:</p>
+<p>可选地，您也可以将新方法定义为 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">默认方法</a>。
+下面的例子定义了一个叫做 <code>didItWork</code> 的默认方法：</p>
 
 <div class="codeblock"><pre>
 public interface DoIt {
@@ -564,8 +564,9 @@ public interface DoIt {
 }
 </pre></div>
 
-<p>Note that you must provide an implementation for default methods. You could also define new
-<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods</a> to existing interfaces. Users who have classes that implement interfaces enhanced with new default or static methods do not have to modify or recompile them to accommodate the additional methods.</p>   
+<p>注意，您必须提供默认方法的实现。您也可以为现有接口定义新的 <a class="TutorialLink" target="_top"
+                                                               href="../../java/IandI/defaultmethods.html#static">静态方法</a>。
+实现接口的类已经增强了，不必修改或重新编译就可以使用使用新提供的默认或静态方法。</p>
 
 
         </div>
@@ -594,8 +595,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Using an Interface as a Type
-        <br /><b>下一页：</b> Default Methods
+        <b>上一页：</b> 接口作为类型使用
+        <br /><b>下一页：</b> 默认方法
     </div>
 </body>
 </html> 

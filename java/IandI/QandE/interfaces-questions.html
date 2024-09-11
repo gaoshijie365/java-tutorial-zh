@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>问题和练习：Interfaces (Java&trade; 教程 &gt;
+        <title>问题和练习：接口 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,15 +476,15 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="../index.html">接口和继承</a></div>
-<div class="linkAHEAD"><a href="../createinterface.html">Interfaces</a></div>
-<div class="linkBHEAD"><a href="../interfaceDef.html">Defining an Interface</a></div>
-<div class="linkBHEAD"><a href="../usinginterface.html">Implementing an Interface</a></div>
-<div class="linkBHEAD"><a href="../interfaceAsType.html">Using an Interface as a Type</a></div>
-<div class="linkBHEAD"><a href="../nogrow.html">Evolving Interfaces</a></div>
-<div class="linkBHEAD"><a href="../defaultmethods.html">Default Methods</a></div>
-<div class="linkBHEAD"><a href="../summary-interface.html">Summary of Interfaces</a></div>
+<div class="linkAHEAD"><a href="../createinterface.html">接口</a></div>
+<div class="linkBHEAD"><a href="../interfaceDef.html">定义接口</a></div>
+<div class="linkBHEAD"><a href="../usinginterface.html">实现接口</a></div>
+<div class="linkBHEAD"><a href="../interfaceAsType.html">接口作为类型使用</a></div>
+<div class="linkBHEAD"><a href="../nogrow.html">接口演进</a></div>
+<div class="linkBHEAD"><a href="../defaultmethods.html">默认方法</a></div>
+<div class="linkBHEAD"><a href="../summary-interface.html">接口总结</a></div>
 <div class="nolinkQUESTIONS">问题和练习</div>
-<div class="linkAHEAD"><a href="../subclasses.html">Inheritance</a></div>
+<div class="linkAHEAD"><a href="../subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="../multipleinheritance.html">状态、实现和类型的多重继承</a></div>
 <div class="linkBHEAD"><a href="../override.html">Overriding and Hiding Methods</a></div>
 <div class="linkBHEAD"><a href="../polymorphism.html">Polymorphism</a></div>
@@ -513,13 +513,13 @@
                 <a target="_top" href="../summary-interface.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="../subclasses.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>问题和练习：Interfaces</h1></div>
+            <div id="PageTitle"><h1>问题和练习：接口</h1></div>
             <div id="PageContent">
 
 <!-- 问题和练习：Creating and Using Interfaces -->
 <h2>问题</h2>
 <ol>
-<li>What methods would a class that implements the <code>java.lang.CharSequence</code> interface have to implement?</li>
+<li>实现 <code>java.lang.CharSequence</code> 接口的类必须实现什么方法？</li>
 <li>下面的接口有什么问题?
 <div class="codeblock"><pre>
 public interface SomethingIsWrong {
@@ -529,8 +529,8 @@ public interface SomethingIsWrong {
 }
 </pre></div>
 </li>
-<li>Fix the interface in question 2.</li>
-<li>Is the following interface valid?
+<li>修复问题 2 中的接口。</li>
+<li>下面的接口是否合法？
 <div class="codeblock"><pre>
 public interface Marker {
 }
@@ -539,8 +539,9 @@ public interface Marker {
 </ol>
 <h2>练习</h2>
 <ol>
-<li>Write a class that implements the <code>CharSequence</code> interface found in the <code>java.lang</code> package. Your implementation should return the string backwards. Select one of the sentences from this book to use as the data. Write a small <code>main</code> method to test your class; make sure to call all four methods.</li>
-<li>Suppose you have written a time server that periodically notifies its clients of the current date and time. Write an interface the server could use to enforce a particular protocol on its clients.</li>
+<li>编写一个类实现 <code>java.lang</code> 包中的 <code>CharSequence</code> 接口。您的实现应返回反向的字符串。从这本书中选择一句作为数据。
+    编写一个 <code>main</code> 方法测试您编写的类，确保可以调用四个方法。</li>
+<li>假设您写了个时间服务，它会周期性地通知客户端当前的日期和时间。编写一个接口以使服务器可以在它的客户端上实施一个特定的协议。</li>
 </ol>
 <p>
 <a class="TutorialLink" target="_top" href="interfaces-answers.html">核对答案。</a></p>
@@ -571,8 +572,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Summary of Interfaces
-        <br /><b>下一页：</b> Inheritance
+        <b>上一页：</b> 接口总结
+        <br /><b>下一页：</b> 继承
     </div>
 </body>
 </html> 

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Interfaces (Java&trade; 教程 &gt;
+        <title>接口 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -476,15 +476,15 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
-<div class="nolinkAHEAD">Interfaces</div>
-<div class="linkBHEAD"><a href="interfaceDef.html">Defining an Interface</a></div>
-<div class="linkBHEAD"><a href="usinginterface.html">Implementing an Interface</a></div>
-<div class="linkBHEAD"><a href="interfaceAsType.html">Using an Interface as a Type</a></div>
-<div class="linkBHEAD"><a href="nogrow.html">Evolving Interfaces</a></div>
-<div class="linkBHEAD"><a href="defaultmethods.html">Default Methods</a></div>
-<div class="linkBHEAD"><a href="summary-interface.html">Summary of Interfaces</a></div>
+<div class="nolinkAHEAD">接口</div>
+<div class="linkBHEAD"><a href="interfaceDef.html">定义接口</a></div>
+<div class="linkBHEAD"><a href="usinginterface.html">实现接口</a></div>
+<div class="linkBHEAD"><a href="interfaceAsType.html">接口作为类型使用</a></div>
+<div class="linkBHEAD"><a href="nogrow.html">接口演进</a></div>
+<div class="linkBHEAD"><a href="defaultmethods.html">默认方法</a></div>
+<div class="linkBHEAD"><a href="summary-interface.html">接口总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="subclasses.html">Inheritance</a></div>
+<div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
 <div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
 <div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
@@ -513,22 +513,23 @@
                 <a target="_top" href="index.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="interfaceDef.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Interfaces</h1></div>
+            <div id="PageTitle"><h1>接口</h1></div>
             <div id="PageContent">
 
 <!--Creating and Using an Interface-->
-<p>There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a &quot;contract&quot; that spells out how their software interacts. Each group should be able to write their code without any knowledge of how the other group&#39;s code is written. Generally speaking, <i>interfaces</i> are such contracts.</p>
+<p>在软件工程中，有许多场景需要不同小组的程序员遵循同一份契约，定义了它们的软件是如何交互的。每个小组都应只关注自己代码的编写，而不需要知道其他小组的代码。一般来讲，<i>接口</i> 就是这样的契约。</p>
 
-<p>For example, imagine a futuristic society where computer-controlled robotic cars transport passengers through city streets without a human operator. Automobile manufacturers write software (Java, of course) that operates the automobile&#151;stop, start, accelerate, turn left, and so forth. Another industrial group, electronic guidance instrument manufacturers, make computer systems that receive GPS (Global Positioning System) position data and wireless transmission of traffic conditions and use that information to drive the car.</p>
+<p>比如，想象在未来的，电脑控制的自动驾驶汽车通过城市道路运送乘客，而不需要人类操作。汽车制造商编写软件 (当然，是用 Java) 操作汽车&#151;停、启、左转等等。另一个工业组，导航制造商，
+使计算机系统可以接收 GPS (全球定位系统) 数据和通过无线传输交通状况，并使用这些信息来驾驶汽车。</p>
 
-<p>The auto manufacturers must publish an industry-standard interface that spells out in detail what methods can be invoked to make the car move (any car, from any manufacturer). The guidance manufacturers can then write software that invokes the methods described in the interface to command the car. Neither industrial group needs to know <i>how</i> the other group&#39;s software is implemented. In fact, each group considers its software highly proprietary and reserves the right to modify it at any time, as long as it continues to adhere to the published interface.</p>
+<p>汽车制造商必须公布一个工业标准接口，详细地定义调用哪些方法可以使汽车移动 (任何制造商的任何汽车)。然后，导航制造商可以调用接口中描述的方法来控制汽车。
+工业组不需要知道其他组的软件是如何实现的。事实上，每个组高度拥有自己的软件，并具有在任何时间修改的权力，只要它继续遵循公开的接口。</p>
 
-<h2>Interfaces in Java</h2>
+<h2>Java 中的接口</h2>
 
-<p>In the Java programming language, an <i>interface</i> is a reference type, similar to a class, that can contain <i>only</i> constants, method signatures, default methods, static methods, and nested types. Method bodies exist only for default methods and static methods. Interfaces cannot be instantiated&#151;they can only be <i>implemented</i> by classes or <i>extended</i> by other interfaces. Extension is discussed later in this 
-lesson.
-</p>
-<p>Defining an interface is similar to creating a new class:</p>
+<p>在 Java 中 <i>接口</i> 是一个引用类型，与类相似，<i>仅</i>可以包含常量、方法签名、默认方法、静态方法和嵌套类型。只有默认方法和静态方法有方法体。
+接口不能被实例化&#151;它们只能被类 <i>实现</i> 或被其它接口 <i>扩展</i>。扩展在本课程后面讨论。</p>
+<p>定义一个接口与创建一个类相似：</p>
 <div class="codeblock"><pre>
 public interface OperateCar {
 
@@ -554,8 +555,8 @@ public interface OperateCar {
    // more method signatures
 }
 </pre></div> 
-<p>Note that the method signatures have no braces and are terminated with a semicolon.</p>
-<p>To use an interface, you write a class that <i>implements</i> the interface. When an instantiable class implements an interface, it provides a method body for each of the methods declared in the interface. For example,</p>
+<p>注意方法签名没有大括号并且以分号结尾。</p>
+<p>为了使用一个接口，您需要编写一个类来 <i>实现</i> 该接口。当一个可实例化的类实现了接口，它为接口中声明的每一个方法提供了方法体。比如，</p>
 <div class="codeblock"><pre>
 public class OperateBMW760i implements OperateCar {
 
@@ -572,9 +573,12 @@ public class OperateBMW760i implements OperateCar {
     // visible to clients of the interface
 }
 </pre></div> 
-<p>In the robotic car example above, it is the automobile manufacturers who will implement the interface. Chevrolet&#39;s implementation will be substantially different from that of Toyota, of course, but both manufacturers will adhere to the same interface. The guidance manufacturers, who are the clients of the interface, will build systems that use GPS data on a car&#39;s location, digital street maps, and traffic data to drive the car. In so doing, the guidance systems will invoke the interface methods: turn, change lanes, brake, accelerate, and so forth.</p>
-<h2>Interfaces as APIs</h2>
-<p>The robotic car example shows an interface being used as an industry standard <i>Application Programming Interface (API)</i>. APIs are also common in commercial software products. Typically, a company sells a software package that contains complex methods that another company wants to use in its own software product. An example would be a package of digital image processing methods that are sold to companies making end-user graphics programs. The image processing company writes its classes to implement an interface, which it makes public to its customers. The graphics company then invokes the image processing methods using the signatures and return types defined in the interface. While the image processing company&#39;s API is made public (to its customers), its implementation of the API is kept as a closely guarded secret&#151;in fact, it may revise the implementation at a later date as long as it continues to implement the original interface that its customers have relied on.</p>
+<p>在上面的自动驾驶汽车例子中，汽车制造商将实现接口。雪佛兰的实现将与丰田的不同，当然，两家制造商都遵循相同的接口。导航制造商是接口的客户，
+将构建系统，使用汽车位置的 GPS 数据、数字街道地图和交通数据来驾驶汽车。导航系统将调用接口方法：turn、change lanes、brake、accelerate 等等。</p>
+<h2>作为 APIs 的接口</h2>
+<p>自动驾驶汽车例子，展示了接口作为一个工业标准 <i>应用程序编程接口 (API)</i>。APIs 在社交软件产品中也很常见。典型地，一家公司销售软件包，包含其他公司想要在自己的软件产品中使用的复杂方法。
+一个例子可能是，一个数字图片处理方法包，售卖给制作终端用户图形程序的公司。图形处理公司编写自己的类实现一个接口，该接口对客户公开。图形公司然后调用接口中定义的图像处理方法。
+尽管图形处理公司的 API 是公开的 (对他的客户)，其 API 的实现却是受保护的秘密&#151;事实上，可能会在后续改进接口，只要继续实现客户依赖的原始接口。</p>
         </div>
         <div class="NavBit">
             <a target="_top" href="index.html">上一页</a>
@@ -602,7 +606,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 接口和继承
-        <br /><b>下一页：</b> Defining an Interface
+        <br /><b>下一页：</b> 定义接口
     </div>
 </body>
 </html> 
