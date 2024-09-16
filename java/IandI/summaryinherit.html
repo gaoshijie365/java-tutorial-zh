@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Summary of Inheritance (Java&trade; 教程 &gt;
+        <title>继承总结 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
-<div class="linkBHEAD"><a href="hidevariables.html">Hiding Fields</a></div>
-<div class="linkBHEAD"><a href="super.html">Using the Keyword super</a></div>
-<div class="linkBHEAD"><a href="objectclass.html">Object as a Superclass</a></div>
-<div class="linkBHEAD"><a href="final.html">Writing Final Classes and Methods</a></div>
-<div class="linkBHEAD"><a href="abstract.html">Abstract Methods and Classes</a></div>
-<div class="nolinkBHEAD">Summary of Inheritance</div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">final 类和 final 方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和抽象类</a></div>
+<div class="nolinkBHEAD">继承总结</div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -514,15 +514,16 @@
                 <a target="_top" href="abstract.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="QandE/inherit-questions.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Summary of Inheritance</h1></div>
+            <div id="PageTitle"><h1>继承总结</h1></div>
             <div id="PageContent">
 
-<p>Except for the <code>Object</code> class, a class has exactly one direct superclass. A class inherits fields and methods from all its superclasses, whether direct or indirect. A subclass can override methods that it inherits, or it can hide fields or methods that it inherits. (Note that hiding fields is generally bad programming practice.)</p>
-<p>The table in 
-<a class="TutorialLink" target="_top" href="override.html">Overriding and Hiding Methods</a> section shows the effect of declaring a method with the same signature as a method in the superclass.</p>
-<p>The <code>Object</code> class is the top of the class hierarchy. All classes are descendants from this class and inherit methods from it. Useful methods inherited from <code>Object</code> include <code>toString()</code>, <code>equals()</code>, <code>clone()</code>, and <code>getClass()</code>.</p>
-<p>You can prevent a class from being subclassed by using the <code>final</code> keyword in the class&#39;s declaration. Similarly, you can prevent a method from being overridden by subclasses by declaring it as a final method.</p>
-<p>An abstract class can only be subclassed; it cannot be instantiated. An abstract class can contain abstract methods&#151;methods that are declared but not implemented. Subclasses then provide the implementations for the abstract methods.</p>
+<p>除了 <code>Object</code> 类，每个类都有一个直接超类。不管是直接或间接，类都从其超类继承字段和方法。子类可以继承它继承的方法，也可以隐藏它继承的字段或方法。
+    (注意字段通常是不好的编程习惯。)</p>
+<p><a class="TutorialLink" target="_top" href="override.html">覆写和隐藏方法</a> 一节中的表格显示声明一个与父类中具有相同签名的方法的影响。</p>
+<p><code>Object</code> 类是类层次的根。所有的类都由它派生，并继承了它的方法。从 <code>Object</code> 继承的方法包括 <code>toString()</code>，
+    <code>equals</code>，<code>hashCode()</code> 和 <code>getClass()</code>。</p>
+<p>您可以在类声明使用 <code>final</code> 关键字以阻止其被子类化。类似地，您可以将方法声明为 final 来阻止其在子类中被覆写。</p>
+<p>抽象类只能被子类化，不能实例化。抽象类可以包含抽象方法&#151;声明不带实现的方法。子类可以为抽象类提供实现。</p>
 
 
         </div>
@@ -551,8 +552,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Abstract Methods and Classes
-        <br /><b>下一页：</b> 问题和练习：Inheritance
+        <b>上一页：</b> 抽象方法和抽象类
+        <br /><b>下一页：</b> 问题和练习：继承
     </div>
 </body>
 </html> 

@@ -131,18 +131,18 @@
 <li class="tocli"><a href="IandI/subclasses.html">继承</a>
 <ul>
 <li class="tocli"><a href="IandI/multipleinheritance.html">状态、实现和类型的多重继承</a></li>
-<li class="tocli"><a href="IandI/override.html">Overriding and Hiding Methods</a></li>
-<li class="tocli"><a href="IandI/polymorphism.html">Polymorphism</a></li>
-<li class="tocli"><a href="IandI/hidevariables.html">Hiding Fields</a></li>
-<li class="tocli"><a href="IandI/super.html">Using the Keyword super</a></li>
-<li class="tocli"><a href="IandI/objectclass.html">Object as a Superclass</a></li>
-<li class="tocli"><a href="IandI/final.html">Writing Final Classes and Methods</a></li>
-<li class="tocli"><a href="IandI/abstract.html">Abstract Methods and Classes</a></li>
-<li class="tocli"><a href="IandI/summaryinherit.html">Summary of Inheritance</a>
+<li class="tocli"><a href="IandI/override.html">覆写和隐藏方法</a></li>
+<li class="tocli"><a href="IandI/polymorphism.html">多态</a></li>
+<li class="tocli"><a href="IandI/hidevariables.html">隐藏字段</a></li>
+<li class="tocli"><a href="IandI/super.html">使用 super 关键字</a></li>
+<li class="tocli"><a href="IandI/objectclass.html">Object 作为超类</a></li>
+<li class="tocli"><a href="IandI/final.html">final 类和 final 方法</a></li>
+<li class="tocli"><a href="IandI/abstract.html">抽象方法和抽象类</a></li>
+<li class="tocli"><a href="IandI/summaryinherit.html">继承总结</a>
 </li>
 </ul>
 </li>
-<li class="tocli"><a href="IandI/QandE/inherit-questions.html">问题和练习：Inheritance</a>
+<li class="tocli"><a href="IandI/QandE/inherit-questions.html">问题和练习：继承</a>
 </li>
 </ul>
 </li>

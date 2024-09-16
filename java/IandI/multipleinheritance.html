@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="nolinkBHEAD">状态、实现和类型的多重继承</div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
-<div class="linkBHEAD"><a href="hidevariables.html">Hiding Fields</a></div>
-<div class="linkBHEAD"><a href="super.html">Using the Keyword super</a></div>
-<div class="linkBHEAD"><a href="objectclass.html">Object as a Superclass</a></div>
-<div class="linkBHEAD"><a href="final.html">Writing Final Classes and Methods</a></div>
-<div class="linkBHEAD"><a href="abstract.html">Abstract Methods and Classes</a></div>
-<div class="linkBHEAD"><a href="summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">final 类和 final 方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和抽象类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -517,16 +517,20 @@
             <div id="PageTitle"><h1>状态、实现和类型的多重继承</h1></div>
             <div id="PageContent">
 
-<p>One significant difference between classes and interfaces is that classes can have fields whereas interfaces cannot. In addition, you can instantiate a class to create an object, which you cannot do with interfaces. As explained in the section
-<a class="TutorialLink" target="_top" href="../../java/concepts/object.html">什么是对象？</a>, an object stores its state in fields, which are defined in classes. One reason why the Java programming language does not permit you to extend more than one class is to avoid the issues of <em>multiple inheritance of state</em>, which is the ability to inherit fields from multiple classes. For example, suppose that you are able to define a new class that extends multiple classes. When you create an object by instantiating that class, that object will inherit fields from all of the class's superclasses. What if methods or constructors from different superclasses instantiate the same field? Which method or constructor will take precedence? Because interfaces do not contain fields, you do not have to worry about problems that result from multiple inheritance of state.</p>
+<p>类和接口之最显著的不同是，类可以拥有字段，而接口不能。此外，您可以实例化一个类来创建对象，接口不能。就如
+<a class="TutorialLink" target="_top" href="../../java/concepts/object.html">什么是对象？</a> 一节所讲，对象在类中定义的字段中存储状态。
+Java 语言不允许扩展多个类，是为了避免 <em>状态的多重继承</em> (从多个类中继承字段的能力) 带来的问题。比如，假设类可以扩展多个类。当您创建这个类的对象时，
+对象将会继承所有超类的字段。如果不同超类的方法或构造器实例化相同的字段会怎样？哪一个方法或构造器优先执行呢？因为接口不包含字段，您不用担心状态多重继承所产生的问题。</p>
 
-<p><em>Multiple inheritance of implementation</em> is the ability to inherit method definitions from multiple classes. Problems arise with this type of multiple inheritance, such as name conflicts and ambiguity. When compilers of programming languages that support this type of multiple inheritance encounter superclasses that contain methods with the same name, they sometimes cannot determine which member or method to access or invoke. In addition, a programmer can unwittingly introduce a name conflict by adding a new method to a superclass.
-<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default methods</a> introduce one form of multiple inheritance of implementation. A class can implement more than one interface, which can contain default methods that have the same name. The Java compiler provides some rules to determine which default method a particular class uses.</p>
+<p><em>实现的多重继承</em> 指的是从多个类继承方法定义的能力。问题随着这种多种继承而产生，比如命称冲突和歧义。当支持这种类型多重继承的编译器，遇到超类包含相同名称的方法，
+它们不知道该访问哪个成员或调用哪个方法。此外，程序员在向超类添加方法时可能会无意识地引入名称冲突。
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">默认方法</a> 引入了一种形式的实现多重继承。
+一个类可以实现多个接口，它们可以包含相同名称的默认方法。Java 编译器提供了一些规则，来决定一个特定的类使用哪个默认方法。</p>
 
-<p>The Java programming language supports <em>multiple inheritance of type</em>, which is the ability of a class to implement more than one interface. An object can have multiple types: the type of its own class and the types of all the interfaces that the class implements. This means that if a variable is declared to be the type of an interface, then its value can reference any object that is instantiated from any class that implements the interface. This is discussed in the section
-<a class="TutorialLink" target="_top" href="../../java/IandI/interfaceAsType.html">接口作为类型使用</a>.</p>
+<p>Java 语言支持 <em>类型的多重继承</em>，它指的是类可以实现多个接口的能力。一个对象可能有多个类型：自身类的类型和类实现的所有接口类型。
+这也就意味着，如果变量声明为接口类型，那它就可以引用任何实现接口的类实例。这在 <a class="TutorialLink" target="_top" href="../../java/IandI/interfaceAsType.html">接口作为类型使用</a> 一节讲述。</p>
 
-<p>As with multiple inheritance of implementation, a class can inherit different implementations of a method defined (as default or static) in the interfaces that it extends. In this case, the compiler or the user must decide which one to use.</p>
+<p>就像实现的多重继承，类可以继承接口中方法定义 (默认或静态) 的不同实现。在这种情况下，编译器或用户必须决定使用哪一个。</p>
 
         </div>
         <div class="NavBit">
@@ -555,7 +559,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
 </div>    
     <div class="PrintHeaders">
         <b>上一页：</b> 继承
-        <br /><b>下一页：</b> Overriding and Hiding Methods
+        <br /><b>下一页：</b> 覆写和隐藏方法
     </div>
 </body>
 </html> 

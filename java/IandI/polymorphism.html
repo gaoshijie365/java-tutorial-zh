@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Polymorphism (Java&trade; 教程 &gt;
+        <title>多态 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="nolinkBHEAD">Polymorphism</div>
-<div class="linkBHEAD"><a href="hidevariables.html">Hiding Fields</a></div>
-<div class="linkBHEAD"><a href="super.html">Using the Keyword super</a></div>
-<div class="linkBHEAD"><a href="objectclass.html">Object as a Superclass</a></div>
-<div class="linkBHEAD"><a href="final.html">Writing Final Classes and Methods</a></div>
-<div class="linkBHEAD"><a href="abstract.html">Abstract Methods and Classes</a></div>
-<div class="linkBHEAD"><a href="summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="nolinkBHEAD">多态</div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">final 类和 final 方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和抽象类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -514,12 +514,12 @@
                 <a target="_top" href="override.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="hidevariables.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Polymorphism</h1></div>
+            <div id="PageTitle"><h1>多态</h1></div>
             <div id="PageContent">
 
-<!-- Polymorphism -->
-<p>The dictionary definition of <em>polymorphism</em> refers to a principle in biology in which an organism or species can have many different forms or stages. This principle can also be applied to object-oriented programming and languages like the Java language. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class.</p>
-<p>Polymorphism can be demonstrated with a minor modification to the <code>Bicycle</code> class. For example, a <code>printDescription</code> method could be added to the class that displays all the data currently stored in an instance.</p>
+<!-- 多态 -->
+<p>字典中对 <em>多态</em> 的定义是，生物学中的生物体或物种具有多种不同形态或阶段。这个原则也可以应用到面向对象编程和语言，比如 Java。一个类的子类可以定义它们自己独特的行为，也可以共享父类的一些相同的功能。</p>
+<p>多态可以使用对 <code>Bicycle</code> 类的一点修改来说明。比如，类中可以添加一个 <code>printDescription</code> 方法，打印存储在当前实例中的所有数据。</p>
 <div class="codeblock"><pre>
 public void printDescription(){
     System.out.println("\nBike is " + "in gear " + this.gear
@@ -527,8 +527,9 @@ public void printDescription(){
         " and travelling at a speed of " + this.speed + ". ");
 }
 </pre></div>
-<p>To demonstrate polymorphic features in the Java language, extend the <code>Bicycle</code> class with a <code>MountainBike</code> and a <code>RoadBike</code> class. For <code>MountainBike</code>, add a field for <code>suspension</code>, which is a <code>String</code> value that indicates if the bike has a front shock absorber, <code>Front</code>. Or, the bike has a front and back shock absorber, <code>Dual</code>.</p>
-<p>Here is the updated class:</p>
+<p>为说明 Java 中的多态，让 <code>MountainBike</code> 和 <code>RoadBike</code> 类扩展 <code>Bicycle</code> 类。为
+<code>MountainBike</code> 添加 <code>suspension</code> 字段，表明是否有前减震器，<code>Front</code>。或者，有前后减震器，<code>Dual</code>。</p>
+<p>这是更新后的类：</p>
 <div class="codeblock"><pre>
 public class MountainBike extends Bicycle {
     private String suspension;
@@ -559,8 +560,8 @@ public class MountainBike extends Bicycle {
     }
 } 
 </pre></div>
-<p>Note the overridden <code>printDescription</code> method. In addition to the information provided before, additional data about the suspension is included to the output.</p>
-<p>Next, create the <code>RoadBike</code> class. Because road or racing bikes have skinny tires, add an attribute to track the tire width. Here is the <code>RoadBike</code> class:</p>
+<p>注意覆写的 <code>printDescription</code> 方法。除了之前提供的信息，输出中也包含 suspension 数据。</p>
+<p>接下来，创建 <code>RoadBike</code> 类。因为公路或竞赛自行车具有窄轮胎，添加一个属性记录轮胎宽度。这是 <code>RoadBike</code> 类：</p>
 <div class="codeblock"><pre>
 public class RoadBike extends Bicycle{
     // In millimeters (mm)
@@ -591,9 +592,10 @@ public class RoadBike extends Bicycle{
     }
 }
 </pre></div>
-<p>Note that once again, the <code>printDescription</code> method has been overridden. This time, information about the tire width is displayed.</p>
-<p>To summarize, there are three classes: <code>Bicycle</code>, <code>MountainBike</code>, and <code>RoadBike</code>. The two subclasses override the <code>printDescription</code> method and print unique information.</p>
-<p>Here is a test program that creates three <code>Bicycle</code> variables. Each variable is assigned to one of the three bicycle classes. Each variable is then printed.</p>
+<p>注意 <code>printDescription</code> 方法已经被覆写。这一次，显示了轮胎宽度信息。</p>
+<p>总结一下，这里有三个类：<code>Bicycle</code>, <code>MountainBike</code>, 和 <code>RoadBike</code>。两个子类覆写了
+    <code>printDescription</code> 方法并打印独特的信息。</p>
+<p>这是一个测试程序，创建了三个 <code>Bicycle</code> 变量。给每个变量赋值一个自行车类。然后打印。</p>
 <div class="codeblock"><pre>
 public class TestBikes {
   public static void main(String[] args){
@@ -609,7 +611,7 @@ public class TestBikes {
   }
 }
 </pre></div>
-<p>The following is the output from the test program:</p>
+<p>下面是测试程序的输出：</p>
 <div class="codeblock"><pre>
 Bike is in gear 1 with a cadence of 20 and travelling at a speed of 10. 
 
@@ -619,7 +621,7 @@ The MountainBike has a Dual suspension.
 Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20. 
 The RoadBike has 23 MM tires.
 </pre></div>
-<p>The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable&#39;s type. This behavior is referred to as <em>virtual method invocation</em> and demonstrates an aspect of the important polymorphism features in the Java language.</p>
+<p>Java 虚拟机调用每个变量中所引用对象的方法。它没有调用变量类型中定义的方法。这种行为叫做 <em>虚方法调用</em>，是 Java 中重要的多态特性的一方面。</p>
 
         </div>
         <div class="NavBit">
@@ -647,8 +649,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Overriding and Hiding Methods
-        <br /><b>下一页：</b> Hiding Fields
+        <b>上一页：</b> 覆写和隐藏方法
+        <br /><b>下一页：</b> 隐藏字段
     </div>
 </body>
 </html> 

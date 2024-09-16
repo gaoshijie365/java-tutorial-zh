@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Object as a Superclass (Java&trade; 教程 &gt;
+        <title>Object 作为超类 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
-<div class="linkBHEAD"><a href="hidevariables.html">Hiding Fields</a></div>
-<div class="linkBHEAD"><a href="super.html">Using the Keyword super</a></div>
-<div class="nolinkBHEAD">Object as a Superclass</div>
-<div class="linkBHEAD"><a href="final.html">Writing Final Classes and Methods</a></div>
-<div class="linkBHEAD"><a href="abstract.html">Abstract Methods and Classes</a></div>
-<div class="linkBHEAD"><a href="summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="nolinkBHEAD">Object 作为超类</div>
+<div class="linkBHEAD"><a href="final.html">final 类和 final 方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和抽象类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -514,30 +514,29 @@
                 <a target="_top" href="super.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="final.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Object as a Superclass</h1></div>
+            <div id="PageTitle"><h1>Object 作为超类</h1></div>
             <div id="PageContent">
 
 <!-- Being a Descendent of Object -->
-<p>The 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> class, in the <code>java.lang</code> package, sits at the top of the class hierarchy tree. Every class is a descendant, direct or indirect, of the <code>Object</code> class. Every class you use or write inherits the instance methods of <code>Object</code>. You need not use any of these methods, but, if you choose to do so, you may need to override them with code that is specific to your class. The methods inherited from <code>Object</code> that are discussed in this section are:</p>
+<p><code>java.lang</code> 包中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html">
+    <code>Object</code></a> 类，位于继承层次的最顶端。每个类都是 <code>Object</code> 类的直接或间接后代。你使用或编写的每个类都继承了 <code>Object</code> 的实例方法。
+    你不必使用这些方法，但是，如果你选择使用它们，就可能需要覆写它们并添加一些特定于你的类的代码。本节讨论的从 <code>Object</code> 中继承的方法是：</p>
 <ul>
 <li><code>protected Object clone() throws CloneNotSupportedException</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates and returns a copy of this object.</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 创建并返回这个对象的一份拷贝。</li>
 <li><code>public boolean equals(Object obj)</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indicates whether some other object is &quot;equal to&quot; this one.</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 表明其它对象是否与这个对象相等。</li>
 <li><code>protected void finalize() throws Throwable</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Called by the garbage collector on an object when garbage<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collection determines that there are no more references to the object</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当垃圾收集检测到没有引用指向对象时，由垃圾收集器调用。</li>
 <li><code>public final Class getClass()</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the runtime class of an object.</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 返回对象的运行时类。</li>
 <li><code>public int hashCode()</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a hash code value for the object.</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 返回对象的哈希值。</li>
 <li><code>public String toString()</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a string representation of the object.</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 返回对象的字符串表示。</li>
 </ul>
-<p>The <code>notify</code>, <code>notifyAll</code>, and <code>wait</code> methods of <code>Object</code> all play a part in synchronizing the activities of independently running threads in a program, which is discussed in a later 
-lesson
-and won&#39;t be covered here. There are five of these methods:</p>
+<p><code>Object</code> 对象中的 <code>notify</code>、<code>notifyAll</code> 和 <code>wait</code>
+    方法，用于同步程序中独立运行线程的活动，将在课程稍后讨论。这是其中的五个方法：</p>
 <ul>
 <li><code>public final void notify()</code></li>
 <li><code>public final void notifyAll()</code></li>
@@ -545,30 +544,34 @@ and won&#39;t be covered here. There are five of these methods:</p>
 <li><code>public final void wait(long timeout)</code></li>
 <li><code>public final void wait(long timeout, int nanos)</code></li>
 </ul>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;There are some subtle aspects to a number of these methods, especially the <code>clone</code> method.
-<hr /></div>
-<h2>The clone() Method</h2>
-<p>If a class, or one of its superclasses, implements the <code>Cloneable</code> interface, you can use the <code>clone()</code> method to create a copy from an existing object. To create a clone, you write:</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;这些方法有微妙之处，尤其是 <code>clone</code> 方法。<hr /></div>
+<h2>clone() 方法</h2>
+<p>如果一个类，或其中一个超类，实现了 <code>Cloneable</code> 接口，您就可以使用 <code>clone()</code> 方法创建现存对象的副本。要创建副本，编写代码：</p>
 <div class="codeblock"><pre>
 <i>aCloneableObject</i>.clone();
 </pre></div>
-<p><code>Object</code>&#39;s implementation of this method checks to see whether the object on which <code>clone()</code> was invoked implements the <code>Cloneable</code> interface. If the object does not, the method throws a <code>CloneNotSupportedException</code> exception. Exception handling will be covered in a later 
-lesson. 
-For the moment, you need to know that <code>clone()</code> must be declared as</p>
+<p>在 <code>Object</code> 中该方法的实现，会检查调用 <code>clone()</code> 方法的对象是否实现了 <code>Cloneable</code> 接口。如果没有实现，方法将抛出一个
+    <code>CloneNotSupportedException</code> 异常。异常处理将在后续课程中介绍。现在，您只需要知道 <code>clone()</code> 方法必须声明为</p>
 <div class="codeblock"><pre>
 protected Object clone() throws CloneNotSupportedException
 </pre></div>
-<p>or:</p>
+<p>或者：</p>
 <div class="codeblock"><pre>
 public Object clone() throws CloneNotSupportedException
 </pre></div>
-<p>if you are going to write a <code>clone()</code> method to override the one in <code>Object</code>.</p>
-<p>If the object on which <code>clone()</code> was invoked does implement the <code>Cloneable</code> interface, <code>Object</code>&#39;s implementation of the <code>clone()</code> method creates an object of the same class as the original object and initializes the new object&#39;s member variables to have the same values as the original object&#39;s corresponding member variables.</p>
-<p>The simplest way to make your class cloneable is to add <code>implements Cloneable</code> to your class&#39;s declaration. then your objects can invoke the <code>clone()</code> method.</p>
-<p>For some classes, the default behavior of <code>Object</code>&#39;s <code>clone()</code> method works just fine. If, however, an object contains a reference to an external object, say <code>ObjExternal</code>, you may need to override <code>clone()</code> to get correct behavior. Otherwise, a change in <code>ObjExternal</code> made by one object will be visible in its clone also. This means that the original object and its clone are not independent&#151;to decouple them, you must override <code>clone()</code> so that it clones the object <i>and</i> <code>ObjExternal</code>. Then the original object references <code>ObjExternal</code> and the clone references a clone of <code>ObjExternal</code>, so that the object and its clone are truly independent.</p>
-<h2>The equals() Method</h2>
-<p>The <code>equals()</code> method compares two objects for equality and returns <code>true</code> if they are equal. The <code>equals()</code> method provided in the <code>Object</code> class uses the identity operator (<code>==</code>) to determine whether two objects are equal. For primitive data types, this gives the correct result. For objects, however, it does not. The <code>equals()</code> method provided by <code>Object</code> tests whether the object <i>references</i> are equal&#151;that is, if the objects compared are the exact same object.</p>
-<p>To test whether two objects are equal in the sense of <i>equivalency</i> (containing the same information), you must override the <code>equals()</code> method. Here is an example of a <code>Book</code> class that overrides <code>equals()</code>:</p>
+<p>如果您要编写一个 <code>clone()</code> 方法来覆写 <code>Object</code> 中的那个。</p>
+<p>如果调用 <code>clone()</code> 方法的对象实现了 <code>Cloneable</code> 接口，<code>Object</code> 中的 <code>clone()</code>
+    方法实现，将创建与原始对象相同类型的对象，并将新对象的成员变量初始化为与原始对象对应的成员变量。</p>
+<p>使您的类可克隆的最简单的方式是在您的类声明中添加 <code>implements Cloneable</code>。然后您的对象就可以调用 <code>clone()</code> 方法了。</p>
+<p>对一些类来说，<code>Object</code> 中 <code>clone()</code> 方法的默认行为就够用了。然而，如果一个对象包含指向外部对象的引用，比如
+    <code>ObjExternal</code>，您可能需要覆写 <code>clone()</code> 方法以得到正确的行为。否则，<code>ObjExternal</code> 中的变化将对克隆对象可见。
+    这也就意味着原始对象和它的克隆对象并不是独立的&#151;为了分离它们，您必须覆写 <code>clone()</code> 方法，使其克隆对象和 <code>ObjExternal</code>。
+    然后，原始对象引用 <code>ObjExternal</code>，克隆的对象引用 <code>ObjExternal</code> 的克隆，这样原始对象和克隆对象才真正独立开来了。</p>
+<h2>equals() 方法</h2>
+<p><code>equals()</code> 方法比较两个对象的相等性，如果相等返回 <code>true</code>。<code>Object</code> 类中提供的 <code>equals()</code>
+    方法使用同一性操作符 (<code>==</code>) 来判定对象是否相等。对于基本数据类型，这将得到正确的结果。对于对象，则不会。<code>Object</code> 提供的
+    <code>equals()</code> 方法测试对象 <i>引用</i> 是否相等&#151;也就是说，如果比较的对象确实是同一个对象。</p>
+<p>为测试两个对象是相等的 (包含相同信息)，必须覆写 <code>equals()</code> 方法。这是一个例子，<code>Book</code> 类覆写了 <code>equals()</code> 方法：</p>
 <div class="codeblock"><pre>
 public class Book {
     String ISBN;
@@ -585,7 +588,7 @@ public class Book {
     }
 }
 </pre></div>
-<p>Consider this code that tests two instances of the <code>Book</code> class for equality:</p>
+<p>考虑这段测试两个 <code>Book</code> 类实例的相等性：</p>
 <div class="codeblock"><pre>
 // Swing Tutorial, 2nd edition
 Book firstBook  = new Book("0201914670");
@@ -596,39 +599,48 @@ if (firstBook.equals(secondBook)) {
     System.out.println("objects are not equal");
 }
 </pre></div>
-<p>This program displays <code>objects are equal</code> even though <code>firstBook</code> and <code>secondBook</code> reference two distinct objects. They are considered equal because the objects compared contain the same ISBN number.</p>
-<p>You should always override the <code>equals()</code> method if the identity operator is not appropriate for your class.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;If you override <code>equals()</code>, you must override <code>hashCode()</code> as well.
-<hr /></div>
-<h2>The finalize() Method</h2>
+<p>即使 <code>firstBook</code> 和 <code>secondBook</code> 是两个不同对象，这段程序也显示 <code>objects are euqal</code>。
+    它们被认为是相等的，因为比较的对象包含相同的 ISBN 码。</p>
+<p>如果同一性操作符不适合你的类，就应该覆写 <code>equals()</code> 方法。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;如果你覆写了 <code>equals()</code> 方法，就要同时覆写 <code>hashCode()</code> 方法。<hr /></div>
+<h2>finalize() 方法</h2>
 
-<p>The <code>Object</code> class provides a callback method, <code>finalize()</code>, that <i>may be</i> invoked on an object when it becomes garbage. <code>Object</code>&#39;s implementation of <code>finalize()</code> does nothing&#151;you can override <code>finalize()</code> to do cleanup, such as freeing resources.</p>
+<p><code>Object</code> 类提供了 <code>finalize()</code> 回调方法，可能在对象变为垃圾时调用。<code>Object</code> 类的 <code>finalize()</code>
+    实现没有做任何事情&#151;您可以覆写 <code>finalize()</code> 来做一些清理工作，比如释放资源。</p>
 
-<p>The <code>finalize()</code> method <em>may be</em> called automatically by the system, but when it is called, or even if it is called, is uncertain. Therefore, don't rely on this method to do your cleanup for you. For example, if you don&#39;t close file descriptors in your code after performing I/O and you expect <code>finalize()</code> to close them for you, you may run out of file descriptors. Instead, use a <code>try</code>-with resources statement to automatically close your application's resources. See 
-<a class="TutorialLink" target="_top" href="../../essential/exceptions/tryResourceClose.html">The try-with-resources Statement</a> and <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/considerations.html#sthref63">Finalization and Weak, Soft, and Phantom References</a> in <em>Java Platform, Standard Edition HotSpot Virtual Machine Garbage Collection Tuning Guide</em>.</p>
+<p><code>finalize()</code> 方法 <em>可能</em> 会被系统自动调用，但是它什么时候被调用，以及是否被调用都是不确定的。因此，不应该依赖这个方法来做清理。
+    比如，您在执行 I/O 操作后没有关闭文件描述符，并且您期望 <code>finalize()</code> 为你关闭它们，您可能耗尽文件描述符。您应该使用带资源的 <code>try</code> 语句自动关闭应用的资源。
+    查看 <em>Java 平台，标准版 Hotspot 虚拟机垃圾收集指南</em> 中的
+    <a class="TutorialLink" target="_top" href="../../essential/exceptions/tryResourceClose.html">try-with-resources 语句</a>
+    和 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/considerations.html#sthref63">终结器和弱、软、虚引用</a>。</p>
 
-<h2>The getClass() Method</h2>
-<p>You cannot override <code>getClass</code>.</p>
-<p>The <code>getClass()</code> method returns a <code>Class</code> object, which has methods you can use to get information about the class, such as its name (<code>getSimpleName()</code>), its superclass (<code>getSuperclass()</code>), and the interfaces it implements (<code>getInterfaces()</code>). For example, the following method gets and displays the class name of an object:</p>
+<h2>getClass() 方法</h2>
+<p>您不能覆写 <code>getClass</code>。</p>
+<p><code>getClass()</code> 方法返回一个 <code>Class</code> 对象，其包含可以用来获取类信息的方法，比如其名称 (<code>getSimpleName()</code>)，其超类
+    (<code>getSuperclass()</code>) 和其实现的接口 (<code>getInterfaces()</code>)。比如，下面的方法获取并显示对象的类名：</p>
 <div class="codeblock"><pre>
 void printClassName(Object obj) {
     System.out.println("The object's" + " class is " +
         obj.getClass().getSimpleName());
 }
 </pre></div>
-<p>The 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> class, in the <code>java.lang</code> package, has a large number of methods (more than 50). For example, you can test to see if the class is an annotation (<code>isAnnotation()</code>), an interface (<code>isInterface()</code>), or an enumeration (<code>isEnum()</code>). You can see what the object&#39;s fields are (<code>getFields()</code>) or what its methods are (<code>getMethods()</code>), and so on.</p>
-<h2>The hashCode() Method</h2>
-<p>The value returned by <code>hashCode()</code> is the object&#39;s hash code, which is an integer value generated by a hashing algorithm.</p>
-<p>By definition, if two objects are equal, their hash code <i>must also</i> be equal. If you override the <code>equals()</code> method, you change the way two objects are equated and <code>Object</code>&#39;s implementation of <code>hashCode()</code> is no longer valid. Therefore, if you override the <code>equals()</code> method, you must also override the <code>hashCode()</code> method as well.</p>
-<h2>The toString() Method</h2>
-<p>You should always consider overriding the <code>toString()</code> method in your classes.</p>
-<p>The <code>Object</code>&#39;s <code>toString()</code> method returns a <code>String</code> representation of the object, which is very useful for debugging. The <code>String</code> representation for an object depends entirely on the object, which is why you need to override <code>toString()</code> in your classes.</p>
-<p>You can use <code>toString()</code> along with <code>System.out.println()</code> to display a text representation of an object, such as an instance of <code>Book</code>:</p>
+<p><code>java.lang</code> 包中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">
+    <code>Class</code></a> 类有很多方法 (超过 50 个)。比如，您可以测试一个类是注解 (<code>isAnnotation()</code>)，
+    接口 (<code>isInterface()</code>)，还是枚举 (<code>isEnum()</code>)。您可以查看对象有哪些字段 (<code>getFields()</code>)
+    或有哪些方法 (<code>getMethods()</code>)。等等。</p>
+<h2>hashCode() 方法</h2>
+<p><code>hashCode()</code> 方法返回对象的哈希值，它是由哈希算法生成的一个整数值。</p>
+<p>根据定义，如果两个对象相等，那它们的哈希值 <i>必须</i> 相等。如果您覆写了 <code>equals()</code> 方法，就改变了两个对象相等的条件，此时 <code>Object</code> 中实现的
+    <code>hashCode()</code> 就不再适用。因此，如果您覆写了 <code>equals()</code> 方法，也必须覆写 <code>hashCode()</code> 方法。</p>
+<h2>toString() 方法</h2>
+<p>您应该总是考虑覆写您类中的 <code>toString()</code> 方法。</p>
+<p><code>Object</code> 中的 <code>toString()</code> 方法返回代表对象的 <code>String</code>，这对调试非常有帮助。一个对象的 <code>String</code>
+    表示完全依赖于对象，这也就是为什么要在您的类中覆写 <code>toString()</code> 方法。</p>
+<p>您可以使用 <code>toString()</code> 和 <code>System.out.println()</code> 打印一个对象的文本表示，比如一个 <code>Book</code> 类的实例：</p>
 <div class="codeblock"><pre>
 System.out.println(firstBook.toString());
 </pre></div>
-<p>which would, for a properly overridden <code>toString()</code> method, print something useful, like this:</p>
+<p>对于一个适当的覆写 <code>toString()</code> 方法，将打印一些有用的信息，比如：</p>
 <div class="codeblock"><pre>
 ISBN: 0201914670; The Swing Tutorial; A Guide to Constructing GUIs, 2nd Edition
 </pre></div>
@@ -659,8 +671,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Using the Keyword super
-        <br /><b>下一页：</b> Writing Final Classes and Methods
+        <b>上一页：</b> 使用 super 关键字
+        <br /><b>下一页：</b> final 类和 final 方法
     </div>
 </body>
 </html> 

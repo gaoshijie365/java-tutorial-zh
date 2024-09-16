@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Using the Keyword super (Java&trade; 教程 &gt;
+        <title>使用 super 关键字 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
-<div class="linkBHEAD"><a href="hidevariables.html">Hiding Fields</a></div>
-<div class="nolinkBHEAD">Using the Keyword super</div>
-<div class="linkBHEAD"><a href="objectclass.html">Object as a Superclass</a></div>
-<div class="linkBHEAD"><a href="final.html">Writing Final Classes and Methods</a></div>
-<div class="linkBHEAD"><a href="abstract.html">Abstract Methods and Classes</a></div>
-<div class="linkBHEAD"><a href="summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="nolinkBHEAD">使用 super 关键字</div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">final 类和 final 方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和抽象类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -514,12 +514,12 @@
                 <a target="_top" href="hidevariables.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="objectclass.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Using the Keyword super</h1></div>
+            <div id="PageTitle"><h1>使用 super 关键字</h1></div>
             <div id="PageContent">
 
 <!-- Using super -->
-<h2>Accessing Superclass Members</h2>
-<p>If your method overrides one of its superclass&#39;s methods, you can invoke the overridden method through the use of the keyword <code>super</code>. You can also use <code>super</code> to refer to a hidden field (although hiding fields is discouraged). Consider this class, <code>Superclass</code>:</p>
+<h2>访问超类成员</h2>
+<p>如果您的方法覆写了超类的方法，您可以使用 <code>super</code> 关键字调用被覆写的方法。您可以使用 <code>super</code> 指向隐藏字段 (尽管不建议隐藏字段)。考虑这个类，<code>Superclass</code>:</p>
 <div class="codeblock"><pre>
 public class Superclass {
 
@@ -528,7 +528,7 @@ public class Superclass {
     }
 }
 </pre></div>
-<p>Here is a subclass, called <code>Subclass</code>, that overrides <code>printMethod()</code>:</p>
+<p>这是一个子类，叫做 <code>Subclass</code>，其覆写了 <code>printMethod()</code>:</p>
 <div class="codeblock"><pre>
 public class Subclass extends Superclass {
 
@@ -543,14 +543,16 @@ public class Subclass extends Superclass {
     }
 }
 </pre></div>
-<p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code> inherited from <code>Superclass</code>, <code>Subclass</code> must use a qualified name, using <code>super</code> as shown. Compiling and executing <code>Subclass</code> prints the following:</p>
+<p>在 <code>Subclass</code> 中，简单名 <code>printMethod</code> 指向的是 <code>Subclass</code> 中声明的方法。要指向从 <code>Superclass</code>
+继承的 <code>printMethod()</code> 方法，在 <code>Subclass</code> 中必须使用限定名。编译并执行 <code>Subclass</code> 打印如下：</p>
 <div class="codeblock"><pre>
 Printed in Superclass.
 Printed in Subclass
 </pre></div>
-<h2>Subclass Constructors</h2>
-<p>The following example illustrates how to use the <code>super</code> keyword to invoke a superclass&#39;s constructor. Recall from the 
-<a class="TutorialLink" target="_top" href="subclasses.html"><code>Bicycle</code> </a> example that <code>MountainBike</code> is a subclass of <code>Bicycle</code>. Here is the <code>MountainBike</code> (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:</p>
+<h2>子类构造器</h2>
+<p>下面的例子演示了如何使用 <code>super</code> 关键字调用父类的构造器。回想
+<a class="TutorialLink" target="_top" href="subclasses.html"><code>Bicycle</code> </a> 例子，<code>MountainBike</code>
+    是 <code>Bicycle</code> 的子类。这是 <code>MountainBike</code> 的构造器，它调用了父类的构造器并添加了自己的初始化代码：</p>
 <div class="codeblock"><pre>
 public MountainBike(int startHeight, 
                     int startCadence,
@@ -560,19 +562,21 @@ public MountainBike(int startHeight,
     seatHeight = startHeight;
 }   
 </pre></div>
-<p>Invocation of a superclass constructor must be the first line in the subclass constructor.</p>
-<p>The syntax for calling a superclass constructor is</p>
+<p>对超类构造器的调用必须是子类构造器的第一行代码。</p>
+<p>调用超类构造器的语法是</p>
 <div class="codeblock"><pre>
 super();  
 </pre></div>
-or:
+或者：
 <div class="codeblock"><pre>
 super(parameter list);
 </pre></div>
-<p>With <code>super()</code>, the superclass no-argument constructor is called. With <code>super(parameter list)</code>, the superclass constructor with a matching parameter list is called.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the super class does not have a no-argument constructor, you will get a compile-time error. <code>Object</code> <i>does</i> have such a constructor, so if <code>Object</code> is the only superclass, there is no problem.
+<p>使用 <code>super()</code> 调用超类的无参构造器。使用<code>super(parameter list)</code> 调用参数列表匹配的超类构造器。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;如果一个构造器没有显式地调用超类构造器，Java 编译器自动插入对超类无参构造器的调用。
+    如果超类没有无参构造器，编译器将报错。 <code>Object</code> 有一个无参构造器，所以 <code>Object</code> 是唯一的父类是没问题的。
 <hr /></div>
-<p>If a subclass constructor invokes a constructor of its superclass, either explicitly or implicitly, you might think that there will be a whole chain of constructors called, all the way back to the constructor of <code>Object</code>. In fact, this is the case. It is called <i>constructor chaining</i>, and you need to be aware of it when there is a long line of class descent.</p>
+<p>不管是显式还是隐式，如果子类构造器调用了它超类的构造器，您可能回想这儿有一条完整的构造器调用链，最终都会调用到 <code>Object</code> 的构造器。
+    事实上，情况就是这样。这叫做 <i>构造器链</i>。</p>
 
 
         </div>
@@ -601,8 +605,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Hiding Fields
-        <br /><b>下一页：</b> Object as a Superclass
+        <b>上一页：</b> 隐藏字段
+        <br /><b>下一页：</b> Object 作为超类
     </div>
 </body>
 </html> 

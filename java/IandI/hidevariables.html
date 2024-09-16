@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Hiding Fields (Java&trade; 教程 &gt;
+        <title>隐藏字段 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
-<div class="nolinkBHEAD">Hiding Fields</div>
-<div class="linkBHEAD"><a href="super.html">Using the Keyword super</a></div>
-<div class="linkBHEAD"><a href="objectclass.html">Object as a Superclass</a></div>
-<div class="linkBHEAD"><a href="final.html">Writing Final Classes and Methods</a></div>
-<div class="linkBHEAD"><a href="abstract.html">Abstract Methods and Classes</a></div>
-<div class="linkBHEAD"><a href="summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="nolinkBHEAD">隐藏字段</div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">final 类和 final 方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和抽象类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -514,10 +514,11 @@
                 <a target="_top" href="polymorphism.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="super.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Hiding Fields</h1></div>
+            <div id="PageTitle"><h1>隐藏字段</h1></div>
             <div id="PageContent">
 
-<p>Within a class, a field that has the same name as a field in the superclass hides the superclass&#39;s field, even if their types are different. Within the subclass, the field in the superclass cannot be referenced by its simple name. Instead, the field must be accessed through <code>super</code>, which is covered in the next section. Generally speaking, we don&#39;t recommend hiding fields as it makes code difficult to read.</p>
+<p>在类中，一个字段的名称如果与父类中的字段同名，就隐藏了父类的字段，即使它们类型不同。在子类中，不能通过简单名引用父类中的字段。字段必须通过 <code>super</code> 访问，这将在下一节中介绍。
+一般来讲，我们不推荐隐藏字段，因为这使得代码难以阅读。</p>
 
 
         </div>
@@ -546,8 +547,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Polymorphism
-        <br /><b>下一页：</b> Using the Keyword super
+        <b>上一页：</b> 多态
+        <br /><b>下一页：</b> 使用 super 关键字
     </div>
 </body>
 </html> 

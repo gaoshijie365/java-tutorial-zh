@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Abstract Methods and Classes (Java&trade; 教程 &gt;
+        <title>抽象方法和抽象类 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
-<div class="linkBHEAD"><a href="hidevariables.html">Hiding Fields</a></div>
-<div class="linkBHEAD"><a href="super.html">Using the Keyword super</a></div>
-<div class="linkBHEAD"><a href="objectclass.html">Object as a Superclass</a></div>
-<div class="linkBHEAD"><a href="final.html">Writing Final Classes and Methods</a></div>
-<div class="nolinkBHEAD">Abstract Methods and Classes</div>
-<div class="linkBHEAD"><a href="summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">final 类和 final 方法</a></div>
+<div class="nolinkBHEAD">抽象方法和抽象类</div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -514,16 +514,16 @@
                 <a target="_top" href="final.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="summaryinherit.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Abstract Methods and Classes</h1></div>
+            <div id="PageTitle"><h1>抽象方法和抽象类</h1></div>
             <div id="PageContent">
 
-<!-- Abstract Methods and Classes -->
-<p>An <i>abstract class</i> is a class that is declared <code>abstract</code>&#151;it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.</p>
-<p>An <i>abstract method</i> is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:</p>
+<!-- 抽象方法和抽象类 -->
+<p><i>抽象类</i> 是声明为 <code>abstract</code> 的类&#151;它可以包含也可以不包含抽象方法。抽象类不能被实例化，但它们可以被子类化。</p>
+<p><i>抽象方法</i> 是只有声明没有实现的方法 (没有大括号，其后跟分号)，就像：</p>
 <div class="codeblock"><pre>
 abstract void moveTo(double deltaX, double deltaY);
 </pre></div>
-<p>If a class includes abstract methods, then the class itself <i>must</i> be declared <code>abstract</code>, as in:</p>
+<p>如果一个类包含抽象方法，类本身 <i>必须</i> 声明为 <code>abstract</code>，如在：</p>
 <div class="codeblock"><pre>
 public abstract class GraphicObject {
    // declare fields
@@ -531,51 +531,66 @@ public abstract class GraphicObject {
    abstract void draw();
 }
 </pre></div>
-<p>When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared <code>abstract</code>.</p>
-<div class="note"><hr /><strong>注意：</strong>&nbsp;Methods in an <i>interface</i> (see the
-<a class="TutorialLink" target="_top" href="../IandI/createinterface.html">接口</a> section) that are not declared as default or static are <i>implicitly</i> abstract, so the <code>abstract</code> modifier is not used with interface methods. (It can be used, but it is unnecessary.)
+<p>当抽象类被子类化时，子类通常提供父类中所有抽象方法的实现。然而，如果没有提供，子类也必须声明为 <code>abstract</code>。</p>
+<div class="note"><hr /><strong>注意：</strong>&nbsp;<i>接口</i> (查看 <a class="TutorialLink" target="_top"
+                                                                      href="../IandI/createinterface.html">接口</a>)
+    中未声明为默认或静态的方法，隐式地都是抽象的，所以接口中的方法没有使用 <code>abstract</code> 修饰符。(也可以使用，但没必要。)
 <hr /></div>
 
 
-<h2><a name="abstact_classes_compared_to_interfaces">Abstract Classes Compared to Interfaces</a></h2>
+<h2><a name="abstact_classes_compared_to_interfaces">抽象类与接口对比</a></h2>
 
-<p>Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain a mix of methods declared with or without an implementation. However, with abstract classes, you can declare fields that are not static and final, and define public, protected, and private concrete methods. With interfaces, all fields are automatically public, static, and final, and all methods that you declare or define (as default methods) are public. In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of interfaces.</p>
+<p>抽象类很像接口。您不能实例化它们，它们可以包含带实现或不带实现的方法声明。然而，抽象类中可以声明非静态和非 final 的字段，定义公有，受保护和私有的具体方法。
+    接口中所有的字段都自动地是公有，静态和 final 的，声明或定义 (如默认方法) 的所有方法都是公有的。此外，您只能扩展一个类，不管它是不是抽象的，但是您可以实现多个接口。</p>
 
-<p>Which should you use, abstract classes or interfaces?</p>
+<p>应该使用哪个，抽象类或接口？</p>
 
 <ul>
-  <li>Consider using abstract classes if any of these statements apply to your situation:
+  <li>考虑使用抽象类，如果下述陈述适用于您的情景：
     <ul>
-      <li>You want to share code among several closely related classes.</li>
-      <li>You expect that classes that extend your abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).</li>
-      <li>You want to declare non-static or non-final fields. This enables you to define methods that can access and modify the state of the object to which they belong.</li>
+      <li>您想在几个紧密相关的类之间共享代码。</li>
+      <li>您期望扩展自抽象类的类具有同样的字段或方法，或者要求其它访问修饰 (比如 protected 和 private) 符而不是 public。</li>
+      <li>您想要声明非静态或非 final 的字段。这使您可以定义方法来访问和修改它们所属对象的状态。</li>
     </ul>
   </li>
-  <li>Consider using interfaces if any of these statements apply to your situation:
+  <li>考虑使用接口，如果下述陈述适用于您的情景：
     <ul>
-      <li>You expect that unrelated classes would implement your interface. For example, the interfaces
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"><code>Comparable</code></a> and
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html"><code>Cloneable</code></a> are implemented by many unrelated classes.</li>
-      <li>You want to specify the behavior of a particular data type, but not concerned about who implements its behavior.</li>
-      <li>You want to take advantage of multiple inheritance of type.</li>
+      <li>您期望毫不相干的类实现您的接口。比如接口 <a class="APILink" target="_blank"
+                                                     href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html">
+          <code>Comparable</code></a> 和 <a class="APILink" target="_blank"
+                                            href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html">
+          <code>Cloneable</code></a> 就被许多毫无关系的类实现了。</li>
+      <li>您想要制定特定数据类型的行为，但是不关心谁实现了其行为。</li>
+      <li>您想要利用类型的多继承优势。</li>
     </ul>
   </li>
 </ul>
 
-<p>An example of an abstract class in the JDK is
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractMap.html"><code>AbstractMap</code></a>, which is part of the Collections Framework. Its subclasses (which include <code>HashMap</code>, <code>TreeMap</code>, and <code>ConcurrentHashMap</code>) share many methods (including <code>get</code>, <code>put</code>, <code>isEmpty</code>, <code>containsKey</code>, and <code>containsValue</code>) that <code>AbstractMap</code> defines.</p>
+<p>JDK 中的一个抽象类的例子是 <a class="APILink" target="_blank"
+                                 href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractMap.html">
+    <code>AbstractMap</code></a>，它是集合框架的一部分。它的子类 (包括 <code>HashMap</code>，<code>TreeMap</code> 和
+    <code>ConcurrentHashMap</code>) 共享许多 <code>AbstractMap</code> 定义的方法 (包括 <code>get</code>，<code>put</code>，
+    <code>isEmpty</code>，<code>containsKey</code> 和 <code>containsValue</code>)。</p>
 
-<p>An example of a class in the JDK that implements several interfaces is 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>, which implements the interfaces <code>Serializable</code>, <code>Cloneable</code>, and <code>Map&lt;K, V&gt;</code>. By reading this list of interfaces, you can infer that an instance of <code>HashMap</code> (regardless of the developer or company who implemented the class) can be cloned, is serializable (which means that it can be converted into a byte stream; 
-see the section
-<a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">Serializable Objects</a>), and has the functionality of a map. In addition, the <code>Map&lt;K, V&gt;</code> interface has been enhanced with many default methods such as <code>merge</code> and <code>forEach</code> that older classes that have implemented this interface do not have to define.</p>
+<p>JDK 中的一个实现多个接口的例子是 <a class="APILink" target="_blank"
+                                       href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">
+    <code>HashMap</code></a>，它实现了接口 <code>Serializable</code>，<code>Cloneable</code> 和 <code>Map&lt;K, V&gt;</code>。
+    通过阅读接口列表，您可以推断出 <code>HashMap</code> 实例 (无论是开发者或公司实现的类) 可以被克隆，可以序列化 (意思是可以转换成字节流，
+    查看 <a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">Serializable Objects</a>)，以及一个映射具有的功能。
+    此外，<code>Map&lt;K, V&gt;</code> 接口已经使用许多默认方法，比如 <code>merge</code> 和 <code>forEach</code> 增强了，旧的已经实现这个接口的类就不需要再定义了。</p>
 
-<p>Note that many software libraries use both abstract classes and interfaces; the <code>HashMap</code> class implements several interfaces and also extends the abstract class <code>AbstractMap</code>.</p>
+<p>注意，很多软件库同时使用了接口和抽象类，<code>HashMap</code> 类实现了几个接口，同时也扩展了抽象类 <code>AbstractMap</code>。</p>
 
-<h2>An Abstract Class Example</h2>
-<p>In an object-oriented drawing application, you can draw circles, rectangles, lines, Bezier curves, and many other graphic objects. These objects all have certain states (for example: position, orientation, line color, fill color) and behaviors (for example: moveTo, rotate, resize, draw) in common. Some of these states and behaviors are the same for all graphic objects (for example: position, fill color, and moveTo). Others require different implementations (for example, resize or draw). All <code>GraphicObject</code>s must be able to draw or resize themselves; they just differ in how they do it. This is a perfect situation for an abstract superclass. You can take advantage of the similarities and declare all the graphic objects to inherit from the same abstract parent object (for example, <code>GraphicObject</code>) as shown in 
-<span id="figure:classes-graphicObject.gif">the following figure.</span></p>
-<center><img src="../../figures/java/classes-graphicObject.gif" width="372" height="80" align="bottom" alt="Classes Rectangle, Line, Bezier, and Circle Inherit from GraphicObject " /></p><p class="FigureCaption">Classes Rectangle, Line, Bezier, and Circle Inherit from GraphicObject</p></center><p>First, you declare an abstract class, <code>GraphicObject</code>, to provide member variables and methods that are wholly shared by all subclasses, such as the current position and the <code>moveTo</code> method. <code>GraphicObject</code> also declares abstract methods for methods, such as <code>draw</code> or <code>resize</code>, that need to be implemented by all subclasses but must be implemented in different ways. The <code>GraphicObject</code> class can look something like this:</p>
+<h2>抽象类示例</h2>
+<p>在面向对象的绘图应用中，您可以绘制圆形、矩形、线、贝塞尔曲线和许多其它图形对象。这些对象都具有一些通用的状态 (比如，位置、方向、线的颜色、填充颜色) 和行为
+    (比如，移动、旋转、调整大小、绘制)，所有的图形对象都有一些相同的状态和行为 (比如：位置、填充颜色、移动)。其它的要求不同的实现 (比如，调整大小或绘制)。
+    所有 <code>GraphicObject</code> 必须可以绘制或调整大小，它们的区别仅在于如何实现。这是使用抽象类的绝佳场景。
+    您可以利用其相似性，并声明所有的图形对象都继承自同一个抽象父类 (例如，<code>GraphicObject</code>)，如
+    <span id="figure:classes-graphicObject.gif">下图</span> 所示。</p>
+<center><img src="../../figures/java/classes-graphicObject.gif" width="372" height="80" align="bottom" alt="Classes Rectangle, Line, Bezier, and Circle Inherit from GraphicObject " /></p><p class="FigureCaption">Classes Rectangle, Line, Bezier, and Circle Inherit from GraphicObject</p></center>
+<p>首先，声明一个抽象类 <code>GraphicObject</code>，提供所有子类共享的变量和方法，比如当前位置和 <code>moveTo</code> 方法。
+    <code>GraphicObject</code> 也声明了抽象方法，比如 <code>draw</code> 或 <code>resize</code>，这些方法需要被所有子类以不同的方式实现。
+    <code>GraphicObject</code> 类看起来类似：</p>
 <div class="codeblock"><pre>
 abstract class GraphicObject {
     int x, y;
@@ -587,7 +602,8 @@ abstract class GraphicObject {
     abstract void resize();
 }
 </pre></div>
-<p>Each nonabstract subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the <code>draw</code> and <code>resize</code> methods:</p>
+<p><code>GraphicObject</code> 的每个非抽象子类，比如 <code>Circle</code> 和 <code>Rectangle</code>，必须提供 <coe>draw</coe> 和
+    <code>resize</code> 方法的实现：</p>
 <div class="codeblock"><pre>
 class Circle extends GraphicObject {
     void draw() {
@@ -606,9 +622,9 @@ class Rectangle extends GraphicObject {
     }
 }
 </pre></div>
-<h2>When an Abstract Class Implements an Interface</h2>
-<p>In the section on 
-<a class="TutorialLink" target="_top" href="../IandI/createinterface.html"><code>接口</code></a>, it was noted that a class that implements an interface must implement <i>all</i> of the interface&#39;s methods. It is possible, however, to define a class that does not implement all of the interface's methods, provided that the class is declared to be <code>abstract</code>. For example,</p>
+<h2>当抽象类实现接口时</h2>
+<p>在 <a class="TutorialLink" target="_top" href="../IandI/createinterface.html"><code>接口</code></a> 一节，
+    我们知道实现接口的类必须实现接口的 <i>所有</i> 方法。然而，我们也可以定义一个未实现接口所有方法的类，这样的类必须声明为 <code>abstract</code>。比如：</p>
 <div class="codeblock"><pre>
 abstract class X implements Y {
   // implements all but one method of Y
@@ -618,9 +634,9 @@ class XX extends X {
   // implements the remaining method in Y
 }
 </pre></div>
-<p>In this case, class <code>X</code> must be <code>abstract</code> because it does not fully implement <code>Y</code>, but class <code>XX</code> does, in fact, implement <code>Y</code>.</p>
-<h2>Class Members</h2>
-<p>An abstract class may have <code>static</code> fields and <code>static</code> methods. You can use these static members with a class reference (for example, <code>AbstractClass.staticMethod()</code>) as you would with any other class.</p>
+<p>在本例中，<code>X</code> 类必须是 <code>abstract</code>，因为它并没有完全实现 <code>Y</code> 接口，但是类 <code>XX</code> 实现了 <code>Y</code>。</p>
+<h2>类成员</h2>
+<p>抽象类可能包含 <code>static</code> 字段和 <code>static</code> 方法。您可以通过类引用使用这些静态成员 (比如，<code>AbstractClass.staticMethod ()</code>)。</p>
 
 
         </div>
@@ -649,8 +665,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Writing Final Classes and Methods
-        <br /><b>下一页：</b> Summary of Inheritance
+        <b>上一页：</b> final 类和 final 方法
+        <br /><b>下一页：</b> 继承总结
     </div>
 </body>
 </html> 

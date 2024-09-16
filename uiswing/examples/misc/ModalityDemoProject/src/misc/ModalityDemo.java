@@ -386,7 +386,7 @@ public class ModalityDemo {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showConfirmDialog(null,
                         "I really like my book",
-                        "Question (application-modal dialog)",
+                        "问题 (application-modal dialog)",
                         JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE);
             }

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Writing Final Classes and Methods (Java&trade; 教程 &gt;
+        <title>final 类和 final 方法 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="polymorphism.html">Polymorphism</a></div>
-<div class="linkBHEAD"><a href="hidevariables.html">Hiding Fields</a></div>
-<div class="linkBHEAD"><a href="super.html">Using the Keyword super</a></div>
-<div class="linkBHEAD"><a href="objectclass.html">Object as a Superclass</a></div>
-<div class="nolinkBHEAD">Writing Final Classes and Methods</div>
-<div class="linkBHEAD"><a href="abstract.html">Abstract Methods and Classes</a></div>
-<div class="linkBHEAD"><a href="summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="nolinkBHEAD">final 类和 final 方法</div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和抽象类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
 </div>
     </div>
@@ -514,12 +514,14 @@
                 <a target="_top" href="objectclass.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="abstract.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>Writing Final Classes and Methods</h1></div>
+            <div id="PageTitle"><h1>final 类和 final 方法</h1></div>
             <div id="PageContent">
 
 <!-- Writing Final classes and Methods -->
-<p>You can declare some or all of a class&#39;s methods <i>final</i>. You use the <code>final</code> keyword in a method declaration to indicate that the method cannot be overridden by subclasses. The <code>Object</code> class does this&#151;a number of its methods are <code>final</code>.</p>
-<p>You might wish to make a method final if it has an implementation that should not be changed and it is critical to the consistent state of the object. For example, you might want to make the <code>getFirstPlayer</code> method in this <code>ChessAlgorithm</code> class final:</p>
+<p>您可以将类的方法声明为 <i>final</i>。在方法声明中使用 <code>final</code> 关键字意味着方法不能被子类覆写。<code>Object</code> 类就是这么做的&#151;它有许多方法是
+    <code>final</code> 的。</p>
+<p>您可能想使方法成为 final 的，如果它的实现不应该被改变，并且它对保持对象状态是至关重要的。比如，您可能想让 <code>ChessAlgorithm</code> 类中的
+    <code>getFirstPlayer</code> 成为 final 的：</p>
 <div class="codeblock"><pre>
 class ChessAlgorithm {
     enum ChessPlayer { WHITE, BLACK }
@@ -530,8 +532,8 @@ class ChessAlgorithm {
     ...
 }
 </pre></div>
-<p>Methods called from constructors should generally be declared final. If a constructor calls a non-final method, a subclass may redefine that method with surprising or undesirable results.</p>
-<p>Note that you can also declare an entire class final. A class that is declared final cannot be subclassed. This is particularly useful, for example, when creating an immutable class like the <code>String</code> class.</p>
+<p>构造器中调用的方法通常应该被声明为 final。如果构造器调用了一个非 final 的方法，子类可能会重新定义该方法，这将会产生未预期的结果。</p>
+<p>注意您也可以将整个类声明为 final 的。声明为 final 的类不能有子类。这非常有用，比如，当创建一个不可变的类时，比如 <code>String</code> 类。</p>
 
 
         </div>
@@ -560,8 +562,8 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Object as a Superclass
-        <br /><b>下一页：</b> Abstract Methods and Classes
+        <b>上一页：</b> Object 作为超类
+        <br /><b>下一页：</b> 抽象方法和抽象类
     </div>
 </body>
 </html> 

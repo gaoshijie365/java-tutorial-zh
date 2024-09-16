@@ -406,19 +406,19 @@
 <a class="TutorialLink" target="_top" href="../components/componentlist.html">how-to sections</a> to help you complete these questions and exercises.</p>
 <h2>问题</h2>
 <p><b>问题 1:</b> Find the component that best fits each of the following needs. Write down both the component's common name (such as "frame") and find the component&#39;s how-to page online.</p>
-<p><b>Question 1a</b>: A component that lets the user pick a color.<br />
+<p><b>问题 1a</b>: A component that lets the user pick a color.<br />
 <b>答案 1a</b>: <a href="../../uiswing/components/colorchooser.html">color chooser</a><br />
 <br />
-<b>Question 1b:</b> A component that displays an icon, but that doesn&#39;t react to user clicks.<br />
+<b>问题 1b:</b> A component that displays an icon, but that doesn&#39;t react to user clicks.<br />
 <b>答案 1b</b>: <a href="../../uiswing/components/label.html">label</a><br />
 <br />
-<b>Question 1c:</b> A component that looks like a button and that, when pressed, brings up a menu of items for the user to choose from.<br />
+<b>问题 1c:</b> A component that looks like a button and that, when pressed, brings up a menu of items for the user to choose from.<br />
 <b>答案 1c</b>: <a href="../../uiswing/components/combobox.html">uneditable combo box</a><br />
 <br />
-<b>Question 1d:</b> A container that looks like a frame, but that appears (usually with other, similar containers) within a real frame.<br />
+<b>问题 1d:</b> A container that looks like a frame, but that appears (usually with other, similar containers) within a real frame.<br />
 <b>答案 1d</b>: <a href="../../uiswing/components/internalframe.html">internal frame</a><br />
 <br />
-<b>Question 1e:</b> A container that lets the user determine how two components share a limited amount of space.<br />
+<b>问题 1e:</b> A container that lets the user determine how two components share a limited amount of space.<br />
 <b>答案 1e</b>: <a href="../../uiswing/components/splitpane.html">split pane</a></p>
 <p><b>问题 2:</b> Which method do you use to add a menu bar to a top-level container such as a <code>JFrame</code>?<br />
 <b>答案 2</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setJMenuBar(javax.swing.JMenuBar)">setJMenuBar</a></code></p>
@@ -426,9 +426,9 @@
 <b>答案 3</b>: <code>JRootPane</code>&#39;s <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JRootPane.html#setDefaultButton(javax.swing.JButton)">setDefaultButton</a></code> method. (You get the top-level container&#39;s root pane using the <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/RootPaneContainer.html#getRootPane()">getRootPane</a></code> method defined by the <code>RootPaneContainer</code> interface, which every top-level container implements.)</p>
 <p><b>问题 4:</b> Which method do you use to enable and disable components such as <code>JButton</code>s? What class is it defined in?<br />
 <b>答案 4</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#setEnabled(boolean)">setEnabled</a></code>, which is defined in the <code>Component</code> class</p>
-<p><b>Question 5a:</b> Which Swing components use <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListSelectionModel.html">ListSelectionModel</a></code>? [<i提示：</i>The "Use" link at the top of the specification for each interface and class takes you to a page showing where in the API that interface or class is referenced.]<br />
+<p><b>问题 5a:</b> Which Swing components use <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListSelectionModel.html">ListSelectionModel</a></code>? [<i提示：</i>The "Use" link at the top of the specification for each interface and class takes you to a page showing where in the API that interface or class is referenced.]<br />
 <b>答案 5a</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html">JList</a></code> and <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html">JTable</a></code></p>
-<p><b>Question 5b:</b> Do those components use any other models to handle other aspects of the components' state? If so, list the other models' types.<br />
+<p><b>问题 5b:</b> Do those components use any other models to handle other aspects of the components' state? If so, list the other models' types.<br />
 <b>答案 5b</b>: <code>JList</code> also uses a <code>ListModel</code>, which holds the list&#39;s data. <code>JTable</code> uses a <code>TableModel</code> to hold its data and a <code>TableColumnModel</code> to manage the table&#39;s columns.</p>
 <p><b>问题 6:</b> Which type of model holds a text component's content?<br />
 <b>答案 6</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html">Document</a></code><br /></p>

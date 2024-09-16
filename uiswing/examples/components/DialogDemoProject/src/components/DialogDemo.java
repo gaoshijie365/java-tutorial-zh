@@ -305,7 +305,7 @@ public class DialogDemo extends JPanel {
         radioButtons[1] = new JRadioButton("Information icon");
         radioButtons[1].setActionCommand(infoCommand);
 
-        radioButtons[2] = new JRadioButton("Question icon");
+        radioButtons[2] = new JRadioButton("问题 icon");
         radioButtons[2].setActionCommand(questionCommand);
 
         radioButtons[3] = new JRadioButton("Error icon");

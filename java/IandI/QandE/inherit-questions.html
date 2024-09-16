@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>问题和练习：Inheritance (Java&trade; 教程 &gt;
+        <title>问题和练习：继承 (Java&trade; 教程 &gt;
             学习 Java &gt; 接口和继承)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -486,14 +486,14 @@
 <div class="linkQUESTIONS"><a href="../QandE/interfaces-questions.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="../subclasses.html">继承</a></div>
 <div class="linkBHEAD"><a href="../multipleinheritance.html">状态、实现和类型的多重继承</a></div>
-<div class="linkBHEAD"><a href="../override.html">Overriding and Hiding Methods</a></div>
-<div class="linkBHEAD"><a href="../polymorphism.html">Polymorphism</a></div>
-<div class="linkBHEAD"><a href="../hidevariables.html">Hiding Fields</a></div>
-<div class="linkBHEAD"><a href="../super.html">Using the Keyword super</a></div>
-<div class="linkBHEAD"><a href="../objectclass.html">Object as a Superclass</a></div>
-<div class="linkBHEAD"><a href="../final.html">Writing Final Classes and Methods</a></div>
-<div class="linkBHEAD"><a href="../abstract.html">Abstract Methods and Classes</a></div>
-<div class="linkBHEAD"><a href="../summaryinherit.html">Summary of Inheritance</a></div>
+<div class="linkBHEAD"><a href="../override.html">覆写和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="../polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="../hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="../super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="../objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="../final.html">final 类和 final 方法</a></div>
+<div class="linkBHEAD"><a href="../abstract.html">抽象方法和抽象类</a></div>
+<div class="linkBHEAD"><a href="../summaryinherit.html">继承总结</a></div>
 <div class="nolinkQUESTIONS">问题和练习</div>
 </div>
     </div>
@@ -513,11 +513,11 @@
                 <a target="_top" href="../summaryinherit.html">&laquo;&nbsp;上一页</a>&nbsp;&bull;&nbsp;<a target="_top" href="../../TOC.html">目录</a>&nbsp;&bull;&nbsp;<a target="_top" href="../../data/index.html">下一页&nbsp;&raquo;</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">本教程基于 JDK 8 编写。教程中的示例和练习没有用到后续发布版本中的特性，并且可能使用过时的技术。<br/>查看 <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java 语言变更</a> 了解 Java SE 9 及后续发布版本的语言更新概要。<br/>查看 <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK 发布说明</a> 了解所有 JDK 发布版本关于新特性、增强、移除或废弃选项的信息。</p></div>
-            <div id="PageTitle"><h1>问题和练习：Inheritance</h1></div>
+            <div id="PageTitle"><h1>问题和练习：继承</h1></div>
             <div id="PageContent">
 
 <h2>问题</h2>
-<p>1. Consider the following two classes:</p>
+<p>1. 考虑下面两个类：</p>
 <div class="codeblock"><pre>
 public class ClassA {
     public void methodOne(int i) {
@@ -541,18 +541,19 @@ public class ClassB extends ClassA {
     }
 }
 </pre></div>
-<p>a. Which method overrides a method in the superclass?<br />
-b. Which method hides a method in the superclass?<br />
-c. What do the other methods do?<br />
+<p>a. 哪个方法覆写了父类中的方法？<br />
+b. 哪个方法隐藏了父类中的方法？<br />
+c. 其它方法做了什么？<br />
 <br />
-2. Consider the 
+2. 考虑在 <a class="TutorialLink" target="_top" href="../../javaOO/QandE/creating-questions.html ">问题和练习：类</a> 编写的
 <a class="SourceLink" target="_blank" href="../examples/Card.java" onclick="showCode('../../../displayCode.html', '../examples/Card.java'); return false;"><code>Card</code></a>, 
-<a class="SourceLink" target="_blank" href="../examples/Deck.java" onclick="showCode('../../../displayCode.html', '../examples/Deck.java'); return false;"><code>Deck</code></a>, and 
-<a class="SourceLink" target="_blank" href="../examples/DisplayDeck.java" onclick="showCode('../../../displayCode.html', '../examples/DisplayDeck.java'); return false;"><code>DisplayDeck</code></a> classes you wrote in 
-
-<a class="TutorialLink" target="_top" href="../../javaOO/QandE/creating-questions.html ">问题和练习：类</a>. What <code>Object</code> methods should each of these classes override?</p>
+<a class="SourceLink" target="_blank" href="../examples/Deck.java"
+   onclick="showCode('../../../displayCode.html', '../examples/Deck.java'); return false;"><code>Deck</code></a>, 和
+<a class="SourceLink" target="_blank" href="../examples/DisplayDeck.java"
+   onclick="showCode('../../../displayCode.html', '../examples/DisplayDeck.java'); return false;"><code>DisplayDeck
+</code></a> 类。这些类中的每一个应该覆写 <code>Object</code> 类中的什么方法？</p>
 <h2>练习</h2>
-<p>1. Write the implementations for the methods that you answered in question 2.</p>
+<p>1. 为问题 2 中您的答案编写实现。</p>
 <p><br /></p>
 <p>
 <a class="TutorialLink" target="_top" href="inherit-answers.html">核对答案。</a></p>
@@ -584,7 +585,7 @@ Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</
        
 </div>    
     <div class="PrintHeaders">
-        <b>上一页：</b> Summary of Inheritance
+        <b>上一页：</b> 继承总结
         <br /><b>下一页：</b> 数字和字符串
     </div>
 </body>
